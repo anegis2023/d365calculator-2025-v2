@@ -69,6 +69,81 @@ const Feature: React.FC<{
   </div>
 );
 
+const faqData = [
+  {
+    question: "Czym jest Microsoft Dynamics 365 Finance?",
+    answer: "Microsoft Dynamics 365 Finance to zaawansowany system ERP do zarządzania finansami, który wspiera organizacje w automatyzacji procesów księgowych, zarządzaniu podatkami, monitorowaniu przepływów gotówkowych i analizie danych finansowych."
+  },
+  {
+    question: "Jakie są główne funkcje Dynamics 365 Finance?",
+    answer: "Automatyzacja procesów księgowych i zamknięć finansowych, prognozowanie przepływów gotówkowych z wykorzystaniem AI, zarządzanie podatkami i zgodność z lokalnymi przepisami, analiza finansowa w czasie rzeczywistym, integracja z innymi produktami Microsoft, takimi jak Power BI i Excel, obsługa globalnych operacji finansowych."
+  },
+  {
+    question: "Czy Dynamics 365 Finance jest odpowiedni dla małych firm?",
+    answer: "Tak, rozwiązanie jest skalowalne i dostosowane do potrzeb zarówno małych, jak i dużych firm. System można łatwo rozbudowywać w miarę rozwoju przedsiębiorstwa."
+  },
+  {
+    question: "Czy Dynamics 365 Finance obsługuje różne waluty i języki?",
+    answer: "Tak, system obsługuje wiele walut, języków i regulacji podatkowych, co czyni go idealnym rozwiązaniem dla firm działających na rynkach międzynarodowych."
+  },
+  {
+    question: "Czy Dynamics 365 Finance wspiera zarządzanie podatkami?",
+    answer: "Tak, platforma umożliwia automatyczne obliczanie stawek podatkowych, zarządzanie odliczeniami oraz zgodność z przepisami podatkowymi obowiązującymi w różnych jurysdykcjach."
+  },
+  {
+    question: "Jak Dynamics 365 Finance pomaga w zarządzaniu przepływem gotówkowym?",
+    answer: "System oferuje zaawansowane narzędzia do prognozowania przepływów gotówkowych, co pozwala na dokładne planowanie finansowe i identyfikację potencjalnych problemów z płynnością."
+  },
+  {
+    question: "Czy Dynamics 365 Finance integruje się z innymi systemami?",
+    answer: "Tak, platforma integruje się z innymi rozwiązaniami Microsoft, takimi jak Power BI, SharePoint, Teams oraz zewnętrznymi systemami za pomocą API."
+  },
+  {
+    question: "Jakie są wymagania systemowe dla Dynamics 365 Finance?",
+    answer: "Dynamics 365 Finance działa w chmurze, co oznacza, że wymaga jedynie stabilnego połączenia internetowego i przeglądarki internetowej."
+  },
+  {
+    question: "Czy Dynamics 365 Finance wspiera zaawansowaną analitykę finansową?",
+    answer: "Tak, system wykorzystuje sztuczną inteligencję i zaawansowane narzędzia analityczne, które umożliwiają monitorowanie kluczowych wskaźników finansowych i generowanie interaktywnych raportów."
+  },
+  {
+    question: "Czy mogę dostosować Dynamics 365 Finance do potrzeb mojej firmy?",
+    answer: "Tak, system jest elastyczny i umożliwia dostosowanie procesów oraz konfiguracji do specyficznych wymagań firmy."
+  },
+  {
+    question: "Czy Dynamics 365 Finance oferuje wsparcie techniczne?",
+    answer: "Tak, Microsoft zapewnia wsparcie techniczne dla użytkowników Dynamics 365 Finance. Dostępne są również szkolenia online i obszerna dokumentacja."
+  },
+  {
+    question: "Czy istnieje możliwość przetestowania Dynamics 365 Finance przed zakupem?",
+    answer: "Tak, Microsoft oferuje bezpłatną wersję próbną, która pozwala na przetestowanie funkcjonalności systemu."
+  },
+  {
+    question: "Czy Dynamics 365 Finance pomaga w raportowaniu finansowym?",
+    answer: "Tak, system umożliwia automatyczne generowanie raportów finansowych, dostosowanych do lokalnych i międzynarodowych standardów księgowych."
+  },
+  {
+    question: "Jak Dynamics 365 Finance wspiera zamknięcia finansowe?",
+    answer: "Platforma automatyzuje procesy zamknięcia finansowego, redukując czas i błędy związane z manualnym przetwarzaniem danych."
+  },
+  {
+    question: "Czy Dynamics 365 Finance wspiera operacje globalne?",
+    answer: "Tak, system jest przystosowany do zarządzania finansami na skalę globalną, z uwzględnieniem lokalnych regulacji, walut i języków."
+  },
+  {
+    question: "Czy mogę korzystać z Dynamics 365 Finance na urządzeniach mobilnych?",
+    answer: "Tak, Dynamics 365 Finance oferuje aplikacje mobilne, które umożliwiają dostęp do danych i funkcji z dowolnego miejsca."
+  },
+  {
+    question: "Czy Dynamics 365 Finance wspiera zgodność z przepisami?",
+    answer: "Tak, platforma zapewnia zgodność z przepisami finansowymi i podatkowymi w różnych krajach, pomagając firmom unikać ryzyka prawnego."
+  },
+  {
+    question: "Jak Dynamics 365 Finance wspiera podejmowanie decyzji?",
+    answer: "System dostarcza zaawansowane analizy danych finansowych i prognozy, które umożliwiają podejmowanie świadomych decyzji opartych na faktach."
+  }
+];
+
 export default function DynamicsFinance() {
   const [activeTab, setActiveTab] = useState('overview');
   const { selectedModules, addModule } = useModuleBasket();
@@ -141,6 +216,11 @@ export default function DynamicsFinance() {
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
           />
+          <Tab
+            label="FAQ"
+            isActive={activeTab === 'faq'}
+            onClick={() => setActiveTab('faq')}
+          />
         </div>
 
         {/* Content */}
@@ -212,6 +292,20 @@ export default function DynamicsFinance() {
                   </div>
                 </div>
               </div>
+
+
+              <div className="space-y-6">
+                <div className="bg-[#128017] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#159019] cursor-pointer group">
+                  <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Finance?</h2>
+                  <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Dynamics 365 Finance to narzędzie, które dostarcza firmom przewagi konkurencyjnej dzięki zaawansowanym funkcjom, elastyczności i integracji z ekosystemem Microsoft. To kompleksowe rozwiązanie, które wspiera zarządzanie finansami na każdym etapie rozwoju organizacji.
+                  </p>
+                  <p className="text-lg leading-relaxed opacity-90 mt-4 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Zainwestuj w Dynamics 365 Finance i zobacz, jak Twoja firma osiąga nowe poziomy efektywności i przejrzystości finansowej.
+                  </p>
+                </div>
+              </div>
+
             </div>
           )}
 
@@ -227,6 +321,26 @@ export default function DynamicsFinance() {
                     title={feature.title}
                     description={feature.description}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'faq' && (
+            <div className="space-y-8">
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 text-[#128017]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

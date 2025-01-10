@@ -69,6 +69,89 @@ const Feature: React.FC<{
   </div>
 );
 
+const faqData = [
+  {
+    question: "Czym jest Microsoft Dynamics 365 Sales?",
+    answer: "Microsoft Dynamics 365 Sales to zaawansowane narzędzie CRM, które wspiera zespoły sprzedaży w zarządzaniu relacjami z klientami, automatyzacji procesów sprzedażowych oraz analizie danych w celu zwiększenia efektywności i wyników sprzedaży."
+  },
+  {
+    question: "Jakie są główne funkcje Dynamics 365 Sales?",
+    answer: "Inteligentne prognozowanie sprzedaży z wykorzystaniem AI, automatyzacja codziennych zadań sprzedażowych, personalizacja doświadczeń klientów, analiza danych i interaktywne raporty, integracja z aplikacjami Microsoft, takimi jak Outlook czy Teams, oraz mobilny dostęp do platformy."
+  },
+  {
+    question: "Czy Dynamics 365 Sales jest odpowiednie dla małych firm?",
+    answer: "Tak, rozwiązanie jest skalowalne i może być dostosowane do potrzeb zarówno małych, jak i dużych firm. Oferuje elastyczne plany i funkcje, które mogą być rozwijane w miarę wzrostu firmy."
+  },
+  {
+    question: "Czy mogę korzystać z Dynamics 365 Sales na urządzeniach mobilnych?",
+    answer: "Tak, Dynamics 365 Sales posiada aplikację mobilną, która umożliwia dostęp do danych i funkcji z dowolnego miejsca, co jest szczególnie przydatne dla zespołów pracujących w terenie."
+  },
+  {
+    question: "Jak Dynamics 365 Sales pomaga w prognozowaniu sprzedaży?",
+    answer: "Platforma wykorzystuje sztuczną inteligencję i analizę danych historycznych, aby przewidywać wyniki sprzedaży, identyfikować potencjalne szanse i wspierać podejmowanie decyzji."
+  },
+  {
+    question: "Czy Dynamics 365 Sales integruje się z innymi narzędziami?",
+    answer: "Tak, Dynamics 365 Sales bezproblemowo integruje się z innymi rozwiązaniami Microsoft, takimi jak Office 365, Teams, SharePoint czy Power BI, co zapewnia spójność danych i usprawnia współpracę."
+  },
+  {
+    question: "Czy rozwiązanie wspiera personalizację działań sprzedażowych?",
+    answer: "Tak, Dynamics 365 Sales umożliwia zbieranie i analizę danych o klientach, co pozwala na dostosowanie ofert i komunikacji do indywidualnych potrzeb."
+  },
+  {
+    question: "Jak Dynamics 365 Sales pomaga zwiększyć efektywność zespołu sprzedażowego?",
+    answer: "Dzięki automatyzacji procesów, takich jak zarządzanie zadaniami, śledzenie potencjalnych klientów i generowanie raportów, sprzedawcy mogą skupić się na budowaniu relacji z klientami."
+  },
+  {
+    question: "Jak rozpocząć pracę z Dynamics 365 Sales?",
+    answer: "Wystarczy skontaktować się z partnerem Microsoft lub odwiedzić stronę produktu, aby uzyskać informacje o licencjonowaniu, konfiguracji i wdrożeniu rozwiązania."
+  },
+  {
+    question: "Czy Dynamics 365 Sales oferuje wsparcie techniczne?",
+    answer: "Tak, Microsoft zapewnia wsparcie techniczne dla użytkowników Dynamics 365 Sales. Dodatkowo można korzystać z bogatej dokumentacji online oraz szkoleń."
+  },
+  {
+    question: "Czy mogę wypróbować Dynamics 365 Sales przed zakupem?",
+    answer: "Tak, Microsoft oferuje bezpłatne wersje próbne, które pozwalają przetestować funkcjonalności systemu przed podjęciem decyzji o zakupie."
+  },
+  {
+    question: "Jak Dynamics 365 Sales wspiera rozwój relacji z klientami?",
+    answer: "Rozwiązanie dostarcza narzędzi do monitorowania historii kontaktów, analizy preferencji klientów oraz dostosowania strategii do ich indywidualnych potrzeb."
+  },
+  {
+    question: "Jakie są korzyści z integracji Dynamics 365 Sales z Power BI?",
+    answer: "Power BI pozwala na zaawansowaną analizę danych sprzedażowych, wizualizację wyników oraz tworzenie interaktywnych raportów, które pomagają w podejmowaniu strategicznych decyzji."
+  },
+  {
+    question: "Jakie są wymagania systemowe dla Dynamics 365 Sales?",
+    answer: "Dynamics 365 Sales działa w chmurze, dzięki czemu nie wymaga instalacji lokalnych. Potrzebny jest jedynie dostęp do przeglądarki internetowej i stabilne połączenie z Internetem."
+  },
+  {
+    question: "Czy Dynamics 365 Sales wspiera zarządzanie lejkiem sprzedaży?",
+    answer: "Tak, system oferuje funkcje do monitorowania postępów w lejku sprzedażowym, identyfikacji kluczowych etapów oraz zarządzania szansami sprzedażowymi."
+  },
+  {
+    question: "Czy Dynamics 365 Sales obsługuje wiele języków?",
+    answer: "Tak, platforma jest dostępna w wielu wersjach językowych, w tym w języku polskim."
+  },
+  {
+    question: "Jak Dynamics 365 Sales wspiera współpracę zespołową?",
+    answer: "Integracja z Microsoft Teams i innymi narzędziami umożliwia efektywną komunikację, udostępnianie plików i wspólne zarządzanie projektami w czasie rzeczywistym."
+  },
+  {
+    question: "Czy Dynamics 365 Sales pomaga w analizie danych klientów?",
+    answer: "Tak, rozwiązanie umożliwia gromadzenie, analizę i wizualizację danych o klientach, co pozwala lepiej zrozumieć ich potrzeby i dostosować działania sprzedażowe."
+  },
+  {
+    question: "Czy rozwiązanie wspiera sprzedaż międzynarodową?",
+    answer: "Dynamics 365 Sales jest idealnym narzędziem do obsługi sprzedaży na rynkach międzynarodowych dzięki wielojęzyczności, integracji z systemami płatności oraz funkcjom zgodności z lokalnymi przepisami."
+  },
+  {
+    question: "Jak Dynamics 365 Sales wspiera zarządzanie relacjami z kluczowymi klientami (Key Account Management)?",
+    answer: "System pozwala na szczegółowe śledzenie działań związanych z kluczowymi klientami, monitorowanie ich preferencji oraz dostosowanie strategii do ich indywidualnych potrzeb."
+  }
+];
+
 export default function DynamicsSales() {
   const [activeTab, setActiveTab] = useState('overview');
   const { selectedModules, addModule } = useModuleBasket();
@@ -139,6 +222,11 @@ export default function DynamicsSales() {
             label="Funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
+          />
+          <Tab
+            label="FAQ"
+            isActive={activeTab === 'faq'}
+            onClick={() => setActiveTab('faq')}
           />
         </div>
 
@@ -211,6 +299,16 @@ export default function DynamicsSales() {
                   </div>
                 </div>
               </div>
+
+              <div className="space-y-6">
+                <div className="bg-[#00a2ed] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#0091d4] cursor-pointer group">
+                  <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Sales?</h2>
+                  <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Microsoft Dynamics 365 Sales to nie tylko narzędzie CRM – to kompleksowe rozwiązanie, które wspiera rozwój firmy na każdym etapie procesu sprzedażowego. Dzięki połączeniu zaawansowanej technologii, automatyzacji i elastyczności, platforma pomaga firmom osiągać lepsze wyniki biznesowe i budować trwałe relacje z klientami.
+                  </p>
+                </div>
+              </div>
+
             </div>
           )}
 
@@ -226,6 +324,26 @@ export default function DynamicsSales() {
                     title={feature.title}
                     description={feature.description}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'faq' && (
+            <div className="space-y-8">
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 text-[#107c10]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
