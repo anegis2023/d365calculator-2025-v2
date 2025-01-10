@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="space-y-4 w-[115%] mx-auto">
+          <div className="space-y-4 mx-auto">
             <h3 className="text-lg font-semibold">O ANEGIS</h3>
             <p className="text-gray-400">
             Grupa ANEGIS jest jednym z europejskich liderów w optymalizacji i automatyzacji procesów biznesowych. Swoje działania opiera na najnowszych rozwiązaniach technologicznych systemach ERP, CRM, MRP wykorzystujących sztuczną inteligencję, rozszerzoną rzeczywistość, systemy wizyjne, technologie kognitywne, cloud oraz systemach pracy zdalnej (modern workplace).
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4 ml-[35%]">
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold">Eksploruj</h3>
             <ul className="space-y-2">
               <li><Link to="/selection" className="text-gray-400 hover:text-white">O nas</Link></li>

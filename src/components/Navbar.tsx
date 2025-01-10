@@ -162,7 +162,7 @@ export function Navbar({ onLogoClick, isAdmin, userEmail, onLogout }: NavbarProp
         <div className="lg:hidden fixed inset-0 z-40">
           <div className="fixed inset-0 bg-black bg-opacity-25" onClick={() => setIsMenuOpen(false)}></div>
           <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50">
-            <div className="p-4">
+            <div className="p-4 pt-16">
               <div className="space-y-4">
                 {dynamicsProducts.map((product) => (
                   <Link
