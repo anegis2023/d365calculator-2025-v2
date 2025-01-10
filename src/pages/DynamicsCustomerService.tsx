@@ -145,7 +145,7 @@ export default function DynamicsCustomerService() {
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
                       <iframe
                         className="absolute top-0 left-0 w-full h-full"
-                        src="https://www.youtube.com/embed/ugPJcuS6Qo4?rel=0&showinfo=0&controls=1&autoplay=0"
+                        src="https://www.youtube.com/embed/9M984N2ip1g?rel=0&showinfo=0&controls=1&autoplay=0"
                         title="Microsoft Dynamics 365 Customer Service Video"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
