@@ -21,8 +21,23 @@ export function Navbar({ onLogoClick, isAdmin, userEmail, onLogout }: NavbarProp
       setHasScrolled(window.scrollY > 0);
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.dynamics-menu-container')) {
+        setIsDynamicsMenuOpen(false);
+      }
+      if (!target.closest('.user-menu-container')) {
+        setIsUserMenuOpen(false);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('click', handleClickOutside);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClickOutside);
+    };
   }, []);
 
   const handleLogoClick = () => {
@@ -71,7 +86,7 @@ export function Navbar({ onLogoClick, isAdmin, userEmail, onLogout }: NavbarProp
               </Link>
 
               <div className="hidden lg:flex lg:items-center lg:ml-8 space-x-8">
-                <div className="relative">
+                <div className="relative dynamics-menu-container">
                   <button
                     onClick={() => setIsDynamicsMenuOpen(!isDynamicsMenuOpen)}
                     className="flex items-center text-[#616161] hover:text-[#323130] text-sm"
@@ -104,7 +119,7 @@ export function Navbar({ onLogoClick, isAdmin, userEmail, onLogout }: NavbarProp
 
             <div className="flex items-center space-x-4">
               {isAdmin ? (
-                <div className="relative">
+                <div className="relative user-menu-container">
                   <button
                     onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
                     className="flex items-center space-x-2 text-[#616161] hover:text-[#323130] p-2 rounded-md"
