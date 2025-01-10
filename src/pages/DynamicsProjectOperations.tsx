@@ -149,12 +149,12 @@ export default function DynamicsProjectOperations() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
                       W dzisiejszym dynamicznym środowisku biznesowym, skuteczne zarządzanie projektami staje się kluczowym czynnikiem sukcesu organizacji. Firmy potrzebują narzędzi, które łączą zarządzanie projektami, zasobami i finansami w jednym rozwiązaniu. Microsoft Dynamics 365 Project Operations to kompleksowa platforma, która integruje wszystkie aspekty zarządzania projektami, umożliwiając organizacjom zwiększenie rentowności i efektywności realizowanych przedsięwzięć.
                     </p>
                   </div>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg min-h-[200px]">
                       <iframe
                         className="absolute top-0 left-0 w-full h-full min-h-[200px]"

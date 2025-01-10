@@ -149,12 +149,12 @@ export default function DynamicsHumanResources() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
                       W dzisiejszym dynamicznym środowisku biznesowym, efektywne zarządzanie zasobami ludzkimi staje się kluczowym czynnikiem sukcesu organizacji. Pracownicy oczekują spersonalizowanego podejścia do rozwoju i nowoczesnych narzędzi HR. Microsoft Dynamics 365 Human Resources to kompleksowa platforma, która łączy zaawansowane technologie z najlepszymi praktykami HR, umożliwiając organizacjom budowanie zaangażowanego i efektywnego zespołu.
                     </p>
                   </div>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg min-h-[200px]">
                       <iframe
                         className="absolute top-0 left-0 w-full h-full min-h-[200px]"

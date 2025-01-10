@@ -149,12 +149,12 @@ export default function DynamicsSupplyChain() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
                       W dzisiejszym dynamicznym środowisku biznesowym, efektywne zarządzanie łańcuchem dostaw jest kluczowe dla sukcesu organizacji. Microsoft Dynamics 365 Supply Chain to kompleksowe rozwiązanie, które łączy zaawansowaną analitykę, sztuczną inteligencję i automatyzację, umożliwiając firmom optymalizację procesów logistycznych, redukcję kosztów i zwiększenie wydajności operacyjnej.
                     </p>
                   </div>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg min-h-[200px]">
                       <iframe
                         className="absolute top-0 left-0 w-full h-full"

@@ -148,12 +148,12 @@ export default function DynamicsSales() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
                       W dynamicznie zmieniającym się świecie biznesu skuteczna sprzedaż nie opiera się już wyłącznie na tradycyjnych technikach. Współczesne organizacje potrzebują zaawansowanych narzędzi, które pozwolą na personalizację doświadczeń klientów, automatyzację procesów oraz skuteczne wykorzystanie danych w podejmowaniu decyzji. Takim rozwiązaniem jest Microsoft Dynamics 365 Sales – nowoczesna platforma CRM, która rewolucjonizuje sposób zarządzania sprzedażą.
                     </p>
                   </div>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg min-h-[200px]">
                       <iframe
                         className="absolute top-0 left-0 w-full h-full min-h-[200px]"

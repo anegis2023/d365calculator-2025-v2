@@ -144,12 +144,12 @@ export default function DynamicsCustomerService() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
                       W erze cyfrowej transformacji, jakość obsługi klienta stała się kluczowym czynnikiem sukcesu biznesowego. Klienci oczekują szybkiej, spersonalizowanej i efektywnej pomocy przez preferowane kanały komunikacji. Microsoft Dynamics 365 Customer Service to kompleksowa platforma, która łączy zaawansowane technologie AI z tradycyjnymi narzędziami obsługi klienta, umożliwiając organizacjom dostarczanie wyjątkowych doświadczeń w każdym punkcie kontaktu.
                     </p>
                   </div>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg min-h-[200px]">
                       <iframe
                         className="absolute top-0 left-0 w-full h-full min-h-[200px]"

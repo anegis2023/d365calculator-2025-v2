@@ -149,12 +149,12 @@ export default function DynamicsCustomerInsights() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
                       W dzisiejszym cyfrowym świecie, zrozumienie klienta jest kluczem do sukcesu biznesowego. Organizacje gromadzą ogromne ilości danych o klientach, ale prawdziwym wyzwaniem jest przekształcenie tych danych w wartościowe insighty i działania. Microsoft Dynamics 365 Customer Insights to zaawansowana platforma, która wykorzystuje sztuczną inteligencję i uczenie maszynowe do głębokiego zrozumienia zachowań klientów i personalizacji ich doświadczeń.
                     </p>
                   </div>
-                  <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
+                  <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg min-h-[200px]">
                       <iframe
                         className="absolute top-0 left-0 w-full h-full min-h-[200px]"
