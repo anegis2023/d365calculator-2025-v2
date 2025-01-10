@@ -3,8 +3,9 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaChartLine, FaCalculator, FaGlobe, FaShieldAlt, FaRobot, FaChartPie } from 'react-icons/fa';
+import { FaChartLine, FaMoneyBillWave, FaCalculator, FaGlobe, FaShieldAlt, FaChartBar } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
+import { modules } from '../data/modules';
 
 const seoData = {
   pageData: {
@@ -70,8 +71,19 @@ const Feature: React.FC<{
 
 export default function DynamicsFinance() {
   const [activeTab, setActiveTab] = useState('overview');
-  const { selectedModules } = useModuleBasket();
+  const { selectedModules, addModule } = useModuleBasket();
   const hasModules = selectedModules.length > 0;
+  
+  const isModuleInBasket = selectedModules.some(module => module.id === 2);
+
+  const handleAddToBasket = () => {
+    if (!isModuleInBasket) {
+      const financeModule = modules.find(m => m.id === 2);
+      if (financeModule) {
+        addModule(financeModule);
+      }
+    }
+  };
 
   const features = [
     {
@@ -80,7 +92,7 @@ export default function DynamicsFinance() {
       description: "Kompleksowe zarządzanie księgą główną, należnościami i zobowiązaniami. Automatyzacja procesów księgowych i raportowania."
     },
     {
-      icon: <FaCalculator />,
+      icon: <FaMoneyBillWave />,
       title: "Budżetowanie",
       description: "Zaawansowane narzędzia do planowania budżetu, prognozowania i kontroli kosztów. Elastyczne modele budżetowania."
     },
@@ -95,12 +107,12 @@ export default function DynamicsFinance() {
       description: "Monitorowanie i kontrola ryzyka finansowego. Zaawansowane narzędzia do audytu i compliance."
     },
     {
-      icon: <FaRobot />,
+      icon: <FaChartBar />,
       title: "Automatyzacja procesów",
       description: "Automatyzacja rutynowych operacji finansowych. Redukcja błędów i przyspieszenie procesów."
     },
     {
-      icon: <FaChartPie />,
+      icon: <FaCalculator />,
       title: "Analityka finansowa",
       description: "Zaawansowane raporty i analizy finansowe. Dashboardy i wskaźniki KPI w czasie rzeczywistym."
     }
@@ -112,8 +124,9 @@ export default function DynamicsFinance() {
       <Navbar />
       <DynamicsHeroSection
         title="Microsoft Dynamics 365 Finance"
-        description="Zoptymalizuj zarządzanie finansami firmy. Automatyzuj procesy finansowe, zwiększaj kontrolę i podejmuj lepsze decyzje biznesowe w oparciu o dane."
+        description="Usprawnij procesy finansowe, zautomatyzuj operacje księgowe i podejmuj lepsze decyzje biznesowe dzięki zaawansowanej analityce i sztucznej inteligencji."
         backgroundGradient="from-[#071630] via-[#107c10] to-[#00a2ed]"
+        onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
         {/* Tabs Navigation */}

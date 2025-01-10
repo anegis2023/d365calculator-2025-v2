@@ -5,12 +5,14 @@ interface DynamicsHeroSectionProps {
   title: string;
   description: string;
   backgroundGradient?: string;
+  onAddToBasket?: () => void;
 }
 
 export function DynamicsHeroSection({ 
   title, 
   description,
-  backgroundGradient = 'from-[#071630] via-[#00a2ed] to-[#ffb900]'
+  backgroundGradient = 'from-[#071630] via-[#00a2ed] to-[#ffb900]',
+  onAddToBasket
 }: DynamicsHeroSectionProps) {
   return (
     <div className="relative overflow-hidden bg-[#071630] text-white">
@@ -42,6 +44,14 @@ export function DynamicsHeroSection({
             <Link to="/kontakt" className="bg-transparent border-2 border-white text-white px-6 py-2.5 rounded-md font-semibold hover:bg-white/10 transition-colors">
               Umów prezentację
             </Link>
+            {onAddToBasket && (
+              <button
+                onClick={onAddToBasket}
+                className="bg-[#107c10] text-white px-6 py-2.5 rounded-md font-semibold hover:bg-[#0b5a0b] transition-colors"
+              >
+                Dodaj do kalkulacji
+              </button>
+            )}
           </div>
         </div>
       </div>

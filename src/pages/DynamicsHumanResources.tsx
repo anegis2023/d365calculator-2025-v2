@@ -3,8 +3,9 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaUsers, FaGraduationCap, FaChartBar, FaHandshake, FaClipboardCheck, FaClock } from 'react-icons/fa';
+import { FaUsers, FaChartLine, FaGraduationCap, FaClipboardCheck, FaHandshake, FaUserClock } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
+import { modules } from '../data/modules';
 
 const seoData = {
   pageData: {
@@ -70,8 +71,19 @@ const Feature: React.FC<{
 
 export default function DynamicsHumanResources() {
   const [activeTab, setActiveTab] = useState('overview');
-  const { selectedModules } = useModuleBasket();
+  const { selectedModules, addModule } = useModuleBasket();
   const hasModules = selectedModules.length > 0;
+  
+  const isModuleInBasket = selectedModules.some(module => module.id === 3);
+
+  const handleAddToBasket = () => {
+    if (!isModuleInBasket) {
+      const hrModule = modules.find(m => m.id === 3);
+      if (hrModule) {
+        addModule(hrModule);
+      }
+    }
+  };
 
   const features = [
     {
@@ -85,7 +97,7 @@ export default function DynamicsHumanResources() {
       description: "Planowanie ścieżek kariery, zarządzanie szkoleniami i kompetencjami. Identyfikacja i rozwój kluczowych talentów."
     },
     {
-      icon: <FaChartBar />,
+      icon: <FaChartLine />,
       title: "Analityka HR",
       description: "Zaawansowane raporty i analizy kadrowe. Monitorowanie wskaźników HR i trendów w organizacji."
     },
@@ -100,7 +112,7 @@ export default function DynamicsHumanResources() {
       description: "Kompleksowa obsługa benefitów pracowniczych. Automatyzacja procesów administracyjnych."
     },
     {
-      icon: <FaClock />,
+      icon: <FaUserClock />,
       title: "Zarządzanie czasem",
       description: "Planowanie czasu pracy, urlopy, nieobecności. Integracja z systemem płacowym."
     }
@@ -112,8 +124,9 @@ export default function DynamicsHumanResources() {
       <Navbar />
       <DynamicsHeroSection
         title="Microsoft Dynamics 365 Human Resources"
-        description="Zoptymalizuj procesy HR i zwiększ zaangażowanie pracowników. Zarządzaj talentami i buduj kulturę organizacyjną opartą na rozwoju."
+        description="Transformuj zarządzanie zasobami ludzkimi, automatyzuj procesy kadrowe i buduj lepsze doświadczenia pracowników dzięki zaawansowanym narzędziom HR."
         backgroundGradient="from-[#071630] via-[#107c10] to-[#00a2ed]"
+        onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
         {/* Tabs Navigation */}

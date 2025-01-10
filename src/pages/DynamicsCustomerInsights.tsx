@@ -3,8 +3,9 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaChartPie, FaUsers, FaRobot, FaDatabase, FaChartLine, FaLightbulb } from 'react-icons/fa';
+import { FaChartPie, FaUsers, FaRobot, FaChartBar, FaDatabase, FaLock } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
+import { modules } from '../data/modules';
 
 const seoData = {
   pageData: {
@@ -70,8 +71,19 @@ const Feature: React.FC<{
 
 export default function DynamicsCustomerInsights() {
   const [activeTab, setActiveTab] = useState('overview');
-  const { selectedModules } = useModuleBasket();
+  const { selectedModules, addModule } = useModuleBasket();
   const hasModules = selectedModules.length > 0;
+  
+  const isModuleInBasket = selectedModules.some(module => module.id === 7);
+
+  const handleAddToBasket = () => {
+    if (!isModuleInBasket) {
+      const customerInsightsModule = modules.find(m => m.id === 7);
+      if (customerInsightsModule) {
+        addModule(customerInsightsModule);
+      }
+    }
+  };
 
   const features = [
     {
@@ -95,12 +107,12 @@ export default function DynamicsCustomerInsights() {
       description: "Zapewnij wysoką jakość danych dzięki automatycznemu czyszczeniu, deduplikacji i wzbogacaniu profili klientów o dodatkowe informacje."
     },
     {
-      icon: <FaChartLine />,
+      icon: <FaChartBar />,
       title: "Analityka predykcyjna",
       description: "Przewiduj przyszłe zachowania klientów, identyfikuj ryzyko odejścia i odkrywaj nowe możliwości sprzedaży krzyżowej."
     },
     {
-      icon: <FaLightbulb />,
+      icon: <FaLock />,
       title: "Aktywacja insightów",
       description: "Przekształcaj analizy w konkretne działania. Automatycznie aktywuj kampanie marketingowe i personalizuj komunikację w czasie rzeczywistym."
     }
@@ -112,8 +124,9 @@ export default function DynamicsCustomerInsights() {
       <Navbar />
       <DynamicsHeroSection
         title="Microsoft Dynamics 365 Customer Insights"
-        description="Uzyskaj pełny obraz zachowań klientów. Analizuj dane i personalizuj interakcje w oparciu o rzeczywiste insighty."
+        description="Wykorzystaj sztuczną inteligencję do budowania kompleksowego obrazu klienta i dostarczania spersonalizowanych doświadczeń w czasie rzeczywistym."
         backgroundGradient="from-[#071630] via-[#107c10] to-[#00a2ed]"
+        onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
         {/* Tabs Navigation */}

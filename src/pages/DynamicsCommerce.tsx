@@ -5,6 +5,7 @@ import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
 import { FaShoppingCart, FaUsers, FaChartLine, FaMobileAlt, FaCloudDownloadAlt, FaShieldAlt } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
+import { modules } from '../data/modules';
 
 const seoData = {
   pageData: {
@@ -70,8 +71,19 @@ const Feature: React.FC<{
 
 export default function DynamicsCommerce() {
   const [activeTab, setActiveTab] = useState('overview');
-  const { selectedModules } = useModuleBasket();
+  const { selectedModules, addModule } = useModuleBasket();
   const hasModules = selectedModules.length > 0;
+  
+  const isModuleInBasket = selectedModules.some(module => module.id === 8);
+
+  const handleAddToBasket = () => {
+    if (!isModuleInBasket) {
+      const commerceModule = modules.find(m => m.id === 8);
+      if (commerceModule) {
+        addModule(commerceModule);
+      }
+    }
+  };
 
   const features = [
     {
@@ -114,6 +126,7 @@ export default function DynamicsCommerce() {
         title="Microsoft Dynamics 365 Commerce"
         description="Zbuduj nowoczesny biznes e-commerce. Dostarczaj spersonalizowane doświadczenia zakupowe i zwiększaj sprzedaż online."
         backgroundGradient="from-[#071630] via-[#107c10] to-[#00a2ed]"
+        onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
         {/* Tabs Navigation */}

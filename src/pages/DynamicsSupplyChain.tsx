@@ -5,6 +5,7 @@ import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
 import { FaTruck, FaWarehouse, FaIndustry, FaChartLine, FaBoxes, FaRobot } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
+import { modules } from '../data/modules';
 
 const seoData = {
   pageData: {
@@ -70,8 +71,19 @@ const Feature: React.FC<{
 
 export default function DynamicsSupplyChain() {
   const [activeTab, setActiveTab] = useState('overview');
-  const { selectedModules } = useModuleBasket();
+  const { selectedModules, addModule } = useModuleBasket();
   const hasModules = selectedModules.length > 0;
+  
+  const isModuleInBasket = selectedModules.some(module => module.id === 9);
+
+  const handleAddToBasket = () => {
+    if (!isModuleInBasket) {
+      const supplyChainModule = modules.find(m => m.id === 9);
+      if (supplyChainModule) {
+        addModule(supplyChainModule);
+      }
+    }
+  };
 
   const features = [
     {
@@ -112,8 +124,9 @@ export default function DynamicsSupplyChain() {
       <Navbar />
       <DynamicsHeroSection
         title="Microsoft Dynamics 365 Supply Chain"
-        description="Optymalizuj łańcuch dostaw i zwiększ wydajność operacyjną. Wykorzystaj sztuczną inteligencję do lepszego planowania i zarządzania zasobami."
+        description="Zoptymalizuj operacje logistyczne, produkcyjne i magazynowe. Wykorzystaj sztuczną inteligencję do przewidywania i rozwiązywania problemów, zanim wpłyną na Twój biznes."
         backgroundGradient="from-[#071630] via-[#107c10] to-[#00a2ed]"
+        onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
         {/* Tabs Navigation */}

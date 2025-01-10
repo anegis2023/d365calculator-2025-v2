@@ -5,6 +5,7 @@ import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
 import { FaChartLine, FaUserFriends, FaRobot, FaChartBar, FaMicrosoft, FaMobile } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
+import { modules } from '../data/modules';
 
 const seoData = {
   pageData: {
@@ -70,8 +71,19 @@ const Feature: React.FC<{
 
 export default function DynamicsSales() {
   const [activeTab, setActiveTab] = useState('overview');
-  const { selectedModules } = useModuleBasket();
+  const { selectedModules, addModule } = useModuleBasket();
   const hasModules = selectedModules.length > 0;
+  
+  const isModuleInBasket = selectedModules.some(module => module.id === 1);
+
+  const handleAddToBasket = () => {
+    if (!isModuleInBasket) {
+      const salesModule = modules.find(m => m.id === 1);
+      if (salesModule) {
+        addModule(salesModule);
+      }
+    }
+  };
 
   const features = [
     {
@@ -110,10 +122,10 @@ export default function DynamicsSales() {
     <>
       <MetaTags {...seoData} />
       <Navbar />
-      <DynamicsHeroSection
+      <DynamicsHeroSection 
         title="Microsoft Dynamics 365 Sales"
-        description="Zwiększ efektywność sprzedaży i buduj trwałe relacje z klientami. Wykorzystaj sztuczną inteligencję do lepszego prognozowania i zamykania transakcji."
-        backgroundGradient="from-[#071630] via-[#107c10] to-[#00a2ed]"
+        description="Podnieś efektywność swojego zespołu sprzedaży i przyspiesz finalizację transakcji, korzystając z CRM napędzanego technologią AI, który inteligentnie wspiera każde działanie handlowe."
+        onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
         {/* Tabs Navigation */}

@@ -5,6 +5,7 @@ import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
 import { FaTools, FaMapMarkedAlt, FaCalendarAlt, FaMobile, FaChartLine, FaCog } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
+import { modules } from '../data/modules';
 
 const seoData = {
   pageData: {
@@ -70,8 +71,19 @@ const Feature: React.FC<{
 
 export default function DynamicsFieldService() {
   const [activeTab, setActiveTab] = useState('overview');
-  const { selectedModules } = useModuleBasket();
+  const { selectedModules, addModule } = useModuleBasket();
   const hasModules = selectedModules.length > 0;
+  
+  const isModuleInBasket = selectedModules.some(module => module.id === 4);
+
+  const handleAddToBasket = () => {
+    if (!isModuleInBasket) {
+      const fieldServiceModule = modules.find(m => m.id === 4);
+      if (fieldServiceModule) {
+        addModule(fieldServiceModule);
+      }
+    }
+  };
 
   const features = [
     {
@@ -112,8 +124,9 @@ export default function DynamicsFieldService() {
       <Navbar />
       <DynamicsHeroSection
         title="Microsoft Dynamics 365 Field Service"
-        description="Optymalizuj pracę serwisantów w terenie. Zwiększ efektywność obsługi i zadowolenie klientów dzięki inteligentnemu zarządzaniu serwisem."
+        description="Zrewolucjonizuj swoje operacje serwisowe, zapewnij wyjątkową jakość obsługi i podnieś satysfakcję klientów na zupełnie nowy poziom."
         backgroundGradient="from-[#071630] via-[#107c10] to-[#00a2ed]"
+        onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
         {/* Tabs Navigation */}
