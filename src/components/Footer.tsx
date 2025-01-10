@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-4 pt-4">
               <a 
-                href="https://linkedin.com/company/your-company" 
+                href="https://www.linkedin.com/company/anegis-limited/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -24,21 +24,14 @@ const Footer: React.FC = () => {
                 <FaLinkedin size={24} />
               </a>
               <a 
-                href="https://youtube.com/c/your-company" 
+                href="https://www.youtube.com/@AnegisDynamics-AX-Partner" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <FaYoutube size={24} />
               </a>
-              <a 
-                href="https://facebook.com/your-company" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <FaFacebook size={24} />
-              </a>
+             
             </div>
           </div>
 
