@@ -158,32 +158,44 @@ export default function DynamicsSales() {
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Kluczowe wyzwania zespołów sprzedażowych</h2>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Rośnie liczba interakcji z klientami, a każde spotkanie wymaga indywidualnego podejścia.</li>
-                  <li>Złożone procesy sprzedażowe mogą prowadzić do utraty efektywności i opóźnień.</li>
-                  <li>Brak spójnych danych o klientach często utrudnia podejmowanie trafnych decyzji.</li>
-                  <li>Różnorodność kanałów komunikacji wymaga integracji narzędzi i danych w jednym miejscu.</li>
-                </ul>
+                <div className="space-y-4">
+                  <p className="text-gray-700">
+                    Zanim przejdziemy do omówienia funkcji Dynamics 365 Sales, warto zrozumieć, z jakimi wyzwaniami mierzą się współczesne działy sprzedaży:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                    <li>Rośnie liczba interakcji z klientami, a każde spotkanie wymaga indywidualnego podejścia.</li>
+                    <li>Złożone procesy sprzedażowe mogą prowadzić do utraty efektywności i opóźnień.</li>
+                    <li>Brak spójnych danych o klientach często utrudnia podejmowanie trafnych decyzji.</li>
+                    <li>Różnorodność kanałów komunikacji wymaga integracji narzędzi i danych w jednym miejscu.</li>
+                  </ul>
+                  <p className="text-gray-700 font-medium">
+                    Microsoft Dynamics 365 Sales odpowiada na te potrzeby, oferując kompleksowe wsparcie na każdym etapie procesu sprzedażowego.
+                  </p>
+                </div>
               </div>
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Oszczędność czasu na rutynowych zadaniach, skupienie się na budowaniu relacji z klientami.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności zespołu sprzedażowego</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dynamics 365 Sales pozwala sprzedawcom zaoszczędzić czas na rutynowych zadaniach, takich jak wprowadzanie danych czy generowanie raportów. Dzięki temu mogą oni skupić się na budowaniu wartościowych relacji z klientami.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Poprawa wyników</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Lepsze decyzje dzięki zaawansowanym narzędziom analitycznym i prognozom.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Poprawa wyników sprzedaży</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dostęp do zaawansowanych narzędzi analitycznych i prognoz opartych na danych pozwala zespołom sprzedaży działać bardziej efektywnie i podejmować lepsze decyzje.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zrozumienie klientów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Pełen obraz potrzeb klientów umożliwiający personalizację ofert.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze zrozumienie potrzeb klientów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Zgromadzone dane o klientach dają pełen obraz ich potrzeb, co umożliwia personalizację ofert i budowanie długoterminowych relacji.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Łatwa rozbudowa platformy wraz z rozwojem firmy.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skrócenie cyklu sprzedaży</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki automatyzacji procesów i szybkiemu dostępowi do informacji, sprzedawcy mogą szybciej finalizować transakcje, co przekłada się na lepsze wyniki finansowe firmy.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność i elastyczność</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dynamics 365 Sales dostosowuje się do potrzeb zarówno małych, jak i dużych przedsiębiorstw. W miarę rozwoju firmy, platforma może być łatwo rozbudowywana o dodatkowe funkcje.</p>
                   </div>
                 </div>
               </div>
