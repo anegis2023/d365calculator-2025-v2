@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaChartLine, FaMoneyBillWave, FaCalculator, FaGlobe, FaShieldAlt, FaChartBar } from 'react-icons/fa';
+import { FaBrain, FaCogs, FaFileInvoiceDollar, FaChartLine, FaMicrosoft, FaRobot } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -87,34 +87,34 @@ export default function DynamicsFinance() {
 
   const features = [
     {
+      icon: <FaBrain />,
+      title: "Zaawansowane planowanie i analiza finansowa",
+      description: "Dzięki sztucznej inteligencji i narzędziom analitycznym, system wspiera tworzenie precyzyjnych prognoz finansowych. Użytkownicy mogą przewidywać przychody, planować budżety i analizować dane w czasie rzeczywistym."
+    },
+    {
+      icon: <FaCogs />,
+      title: "Automatyzacja księgowości",
+      description: "Dynamics 365 Finance upraszcza codzienne zadania księgowe, takie jak rozliczenia czy generowanie raportów, co pozwala na szybsze zamknięcie okresów finansowych i minimalizuje błędy."
+    },
+    {
+      icon: <FaFileInvoiceDollar />,
+      title: "Efektywne zarządzanie podatkami",
+      description: "System obsługuje różne jurysdykcje podatkowe, umożliwiając automatyczne obliczanie stawek i zgodność z lokalnymi przepisami. Rozwiązanie wspiera także globalne operacje finansowe."
+    },
+    {
       icon: <FaChartLine />,
-      title: "Zarządzanie finansami",
-      description: "Kompleksowe zarządzanie księgą główną, należnościami i zobowiązaniami. Automatyzacja procesów księgowych i raportowania."
+      title: "Monitorowanie przepływów pieniężnych",
+      description: "System umożliwia prognozowanie przepływów gotówkowych z wykorzystaniem danych historycznych i bieżących, co pozwala na precyzyjne planowanie finansowe."
     },
     {
-      icon: <FaMoneyBillWave />,
-      title: "Budżetowanie",
-      description: "Zaawansowane narzędzia do planowania budżetu, prognozowania i kontroli kosztów. Elastyczne modele budżetowania."
+      icon: <FaMicrosoft />,
+      title: "Integracja z ekosystemem Microsoft",
+      description: "Dynamics 365 Finance płynnie współpracuje z aplikacjami Microsoft, takimi jak Power BI, Excel czy SharePoint, co ułatwia współpracę między działami i dostęp do spójnych danych."
     },
     {
-      icon: <FaGlobe />,
-      title: "Finanse globalne",
-      description: "Obsługa wielu walut, jednostek prawnych i standardów księgowych. Zgodność z lokalnymi przepisami podatkowymi."
-    },
-    {
-      icon: <FaShieldAlt />,
-      title: "Zarządzanie ryzykiem",
-      description: "Monitorowanie i kontrola ryzyka finansowego. Zaawansowane narzędzia do audytu i compliance."
-    },
-    {
-      icon: <FaChartBar />,
-      title: "Automatyzacja procesów",
-      description: "Automatyzacja rutynowych operacji finansowych. Redukcja błędów i przyspieszenie procesów."
-    },
-    {
-      icon: <FaCalculator />,
-      title: "Analityka finansowa",
-      description: "Zaawansowane raporty i analizy finansowe. Dashboardy i wskaźniki KPI w czasie rzeczywistym."
+      icon: <FaRobot />,
+      title: "Raportowanie i analityka wspierana przez AI",
+      description: "System oferuje zaawansowane narzędzia do analizy kluczowych wskaźników finansowych, dzięki czemu organizacje mogą podejmować decyzje oparte na danych."
     }
   ];
 
@@ -151,7 +151,7 @@ export default function DynamicsFinance() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
                     <p className="text-lg leading-relaxed">
-                      W dzisiejszym złożonym środowisku biznesowym, efektywne zarządzanie finansami staje się kluczowym czynnikiem sukcesu. Organizacje potrzebują zaawansowanych narzędzi do automatyzacji procesów finansowych, analizy danych i podejmowania strategicznych decyzji. Microsoft Dynamics 365 Finance to kompleksowa platforma, która łączy nowoczesne technologie z tradycyjnymi narzędziami finansowymi, umożliwiając organizacjom optymalizację operacji finansowych i zwiększenie kontroli nad finansami.
+                    Efektywne zarządzanie finansami to podstawa sukcesu każdej organizacji, niezależnie od jej wielkości czy branży. Microsoft Dynamics 365 Finance to rozwiązanie, które łączy zaawansowaną analitykę, automatyzację procesów oraz możliwość dostosowania do lokalnych i globalnych wymagań. Dzięki temu system wspiera przedsiębiorstwa w optymalizacji operacji finansowych i podejmowaniu trafnych decyzji opartych na danych.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
@@ -171,32 +171,44 @@ export default function DynamicsFinance() {
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Kluczowe wyzwania w zarządzaniu finansami</h2>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Automatyzacja i optymalizacja procesów finansowych</li>
-                  <li>Zgodność z przepisami i standardami księgowymi</li>
-                  <li>Zarządzanie ryzykiem finansowym</li>
-                  <li>Analiza i raportowanie danych finansowych</li>
-                </ul>
+                <div className="space-y-4">
+                  <p className="text-base leading-relaxed">
+                    Zarządzanie finansami w dynamicznie zmieniającym się otoczeniu biznesowym niesie za sobą wiele wyzwań:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-3">
+                    <li>Skuteczna kontrola nad złożonymi procesami finansowymi, które wymagają precyzji i szybkości działania.</li>
+                    <li>Konsolidacja danych pochodzących z różnych systemów i źródeł.</li>
+                    <li>Prognozowanie przepływów gotówkowych oraz wyników finansowych w oparciu o dane historyczne i bieżące.</li>
+                    <li>Elastyczność w dostosowywaniu operacji do lokalnych regulacji podatkowych i standardów międzynarodowych.</li>
+                  </ul>
+                  <p className="text-base leading-relaxed mt-4">
+                    Dynamics 365 Finance oferuje rozwiązania pozwalające pokonać te przeszkody i usprawnić procesy finansowe.
+                  </p>
+                </div>
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
+                <h2 className="text-2xl font-bold">Korzyści z wdrożenia Dynamics 365 Finance</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Wyższa efektywność</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja procesów zwiększa wydajność operacji finansowych.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Oszczędność czasu</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Zespoły finansowe mogą skupić się na działaniach strategicznych, eliminując konieczność ręcznego wykonywania powtarzalnych zadań.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsza kontrola</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Zwiększona przejrzystość i kontrola nad procesami finansowymi.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Globalna skalowalność</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">System umożliwia obsługę wielu walut, języków i przepisów, co czyni go idealnym rozwiązaniem dla firm o globalnym zasięgu.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zgodność z przepisami</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyczna aktualizacja i zgodność z regulacjami.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Wiarygodne dane</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dostęp do aktualnych i dokładnych danych pozwala na podejmowanie trafnych decyzji finansowych, co przekłada się na większą efektywność organizacji.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze decyzje</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Podejmowanie decyzji w oparciu o aktualne dane finansowe.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Elastyczność systemu</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dynamics 365 Finance rozwija się razem z firmą, oferując elastyczne funkcje i możliwość łatwej rozbudowy w miarę rosnących potrzeb.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Przejrzystość finansów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki konsolidacji danych z różnych systemów, organizacje zyskują pełen obraz swojej sytuacji finansowej.</p>
                   </div>
                 </div>
               </div>
