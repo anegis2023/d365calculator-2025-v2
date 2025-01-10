@@ -155,9 +155,9 @@ export default function DynamicsCustomerInsights() {
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2'}>
-                    <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+                    <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg min-h-[200px]">
                       <iframe
-                        className="absolute top-0 left-0 w-full h-full"
+                        className="absolute top-0 left-0 w-full h-full min-h-[200px]"
                         src="https://www.youtube.com/embed/u3q-CJ-21HY?rel=0&showinfo=0&controls=1&autoplay=0"
                         title="Microsoft Dynamics 365 Customer Insights Video"
                         frameBorder="0"
