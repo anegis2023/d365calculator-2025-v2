@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ms-blue: #0078d4;
+    --ms-blue-light: #50a9e8;
+    --ms-gray-100: #faf9f8;
+    --ms-gray-200: #f3f2f1;
+    --ms-gray-300: #edebe9;
+    --ms-gray-600: #605e5c;
+    --ms-gray-900: #323130;
+  }
+  
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-[#faf9f8] text-[#323130] m-0;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .ms-button {
+    @apply px-6 py-2 rounded-md font-semibold transition-colors duration-200;
+  }
+  
+  .ms-button-primary {
+    @apply bg-[#0078d4] text-white px-6 py-2.5 rounded-md font-semibold 
+           hover:bg-[#106ebe] transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-[#0078d4] focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .ms-button-secondary {
+    @apply bg-white text-[#323130] px-6 py-2.5 rounded-md font-semibold 
+           border border-[#8a8886] hover:bg-[#f3f2f1] transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-[#0078d4] focus:ring-offset-2;
+  }
+  
+  .ms-card {
+    @apply bg-white rounded-lg shadow-sm border border-[#edebe9]
+           transition-all duration-200;
+  }
+  
+  .ms-input {
+    @apply px-3 py-2 border border-[#8a8886] rounded-md text-[#323130]
+           focus:outline-none focus:ring-2 focus:ring-[#0078d4] focus:border-transparent
+           placeholder-[#605e5c];
+  }
+  
+  .ms-radio {
+    @apply text-[#0078d4] border-[#8a8886]
+           focus:ring-2 focus:ring-[#0078d4] focus:ring-offset-2;
+  }
+}

@@ -1,0 +1,101 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "all"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/?step=:step"
+  to = "/index.html"
+  status = 200
+  force = true
+  query = {step = ":step"}
+
+[[redirects]]
+  from = "/kontakt"
+  to = "/kontakt.html"
+  status = 200
+
+[[redirects]]
+  from = "/selection"
+  to = "/selection.html"
+  status = 200
+
+[[redirects]]
+  from = "/questions"
+  to = "/questions.html"
+  status = 200
+
+[[redirects]]
+  from = "/review"
+  to = "/review.html"
+  status = 200
+
+[[redirects]]
+  from = "/dynamics-365-sales"
+  to = "/dynamics-365-sales.html"
+  status = 200
+
+[[redirects]]
+  from = "/dynamics-365-finance"
+  to = "/dynamics-365-finance.html"
+  status = 200
+
+[[redirects]]
+  from = "/dynamics-365-supply-chain"
+  to = "/dynamics-365-supply-chain.html"
+  status = 200
+
+[[redirects]]
+  from = "/dynamics-365-field-service"
+  to = "/dynamics-365-field-service.html"
+  status = 200
+
+[[redirects]]
+  from = "/dynamics-365-project-operations"
+  to = "/dynamics-365-project-operations.html"
+  status = 200
+
+[[redirects]]
+  from = "/dynamics-365-customer-service"
+  to = "/dynamics-365-customer-service.html"
+  status = 200
+
+[[redirects]]
+  from = "/dynamics-365-customer-insights"
+  to = "/dynamics-365-customer-insights.html"
+  status = 200
+
+[[redirects]]
+  from = "/dynamics-365-commerce"
+  to = "/dynamics-365-commerce.html"
+  status = 200
+
+[[redirects]]
+  from = "/dynamics-365-human-resources"
+  to = "/dynamics-365-human-resources.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
