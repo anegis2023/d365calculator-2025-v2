@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaHeadset, FaRobot, FaChartLine, FaUsers, FaComments, FaMobileAlt } from 'react-icons/fa';
+import { FaHeadset, FaUser, FaCogs, FaRobot, FaBook, FaMicrosoft } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -88,28 +88,33 @@ export default function DynamicsCustomerService() {
   const features = [
     {
       icon: <FaHeadset />,
-      title: "Wielokanałowa obsługa",
-      description: "Zapewnij spójną obsługę klienta przez telefon, email, chat, media społecznościowe i inne kanały komunikacji."
+      title: "Zarządzanie wieloma kanałami komunikacji",
+      description: "System integruje różne kanały, takie jak e-mail, czat, media społecznościowe czy telefon, umożliwiając klientom wybór najwygodniejszego sposobu kontaktu."
+    },
+    {
+      icon: <FaUser />,
+      title: "Pełny widok klienta",
+      description: "Dynamics 365 Customer Service konsoliduje dane z różnych źródeł, tworząc kompleksowy profil klienta, który jest dostępny dla pracowników obsługi w czasie rzeczywistym."
+    },
+    {
+      icon: <FaCogs />,
+      title: "Automatyzacja procesów obsługi",
+      description: "System wspiera automatyzację rutynowych zadań, takich jak przypisywanie zgłoszeń czy generowanie odpowiedzi, co pozwala pracownikom skupić się na bardziej złożonych problemach."
     },
     {
       icon: <FaRobot />,
-      title: "AI i Virtual Agents",
-      description: "Wykorzystuj chatboty i wirtualnych asystentów do automatycznej obsługi podstawowych zapytań i szybkiego rozwiązywania problemów."
+      title: "Wykorzystanie sztucznej inteligencji (AI)",
+      description: "Platforma wykorzystuje AI do analizy zgłoszeń, przewidywania problemów klientów oraz sugerowania najlepszych rozwiązan."
     },
     {
-      icon: <FaChartLine />,
-      title: "Analityka i raporty",
-      description: "Monitoruj kluczowe wskaźniki obsługi klienta, analizuj trendy i optymalizuj procesy w oparciu o dane."
+      icon: <FaBook />,
+      title: "Baza wiedzy",
+      description: "Dynamics 365 Customer Service umożliwia tworzenie i zarządzanie bazą wiedzy, co pozwala klientom na samodzielne znajdowanie odpowiedzi na pytania."
     },
     {
-      icon: <FaComments />,
-      title: "Zarządzanie wiedzą",
-      description: "Twórz i zarządzaj bazą wiedzy, która pomaga agentom szybko znajdować rozwiązania i udzielać precyzyjnych odpowiedzi."
-    },
-    {
-      icon: <FaMobileAlt />,
-      title: "Mobilna obsługa",
-      description: "Zapewnij agentom dostęp do narzędzi i informacji z dowolnego miejsca dzięki aplikacji mobilnej."
+      icon: <FaMicrosoft />,
+      title: "Integracja z ekosystemem Microsoft",
+      description: "Pełna integracja z narzędziami, takimi jak Teams, Outlook czy Power BI, umożliwia efektywną współpracę między zespołami oraz zaawansowaną analizę danych."
     }
   ];
 
@@ -222,33 +227,51 @@ export default function DynamicsCustomerService() {
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Kluczowe wyzwania w obsłudze klienta</h2>
+                <p>Zanim przejdziemy do omówienia funkcji Dynamics 365 Customer Service, warto zrozumieć, jakie wyzwania stoją przed współczesnymi organizacjami:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Rosnące oczekiwania klientów dotyczące szybkości i jakości obsługi</li>
-                  <li>Potrzeba obsługi wielu kanałów komunikacji</li>
-                  <li>Efektywne zarządzanie wiedzą i szkolenie agentów</li>
-                  <li>Automatyzacja rutynowych zadań i procesów</li>
+                  <li>Klienci oczekują szybkich i spersonalizowanych odpowiedzi w różnych kanałach komunikacji.</li>
+                  <li>Rozproszone dane o klientach utrudniają skuteczne zarządzanie ich zgłoszeniami.</li>
+                  <li>Brak narzędzi do automatyzacji procesów zwiększa czas i koszty obsługi klienta.</li>
+                  <li>Organizacje potrzebują systemu, który pozwoli im przewidywać problemy klientów i działać proaktywnie.</li>
                 </ul>
+                <p>Dynamics 365 Customer Service oferuje rozwiązania, które pomagają firmom sprostać tym wyzwaniom.</p>
               </div>
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Wyższa satysfakcja klientów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Szybsza i bardziej efektywna obsługa zwiększa zadowolenie klientów.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">1. Poprawa satysfakcji klientów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki spersonalizowanej obsłudze i szybkiemu rozwiązywaniu problemów klienci czują się docenieni i bardziej lojalni wobec marki.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Efektywność agentów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Lepsze narzędzia i automatyzacja zwiększają produktywność zespołu.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">2. Redukcja kosztów obsługi klienta</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja procesów i możliwość samodzielnego rozwiązywania problemów przez klientów pozwala obniżyć koszty operacyjne.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Redukcja kosztów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja i self-service obniżają koszty obsługi.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">3. Zwiększenie efektywności zespołu</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Pracownicy mają dostęp do pełnych danych o klientach i zaawansowanych narzędzi, co pozwala im pracować szybciej i skuteczniej.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność obsługi</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Łatwe dostosowanie do rosnących potrzeb biznesu.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">4. Proaktywne podejście do obsługi</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki AI i analizie danych firmy mogą przewidywać potrzeby klientów i rozwiązywać problemy, zanim one się pojawią.</p>
                   </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">5. Skalowalność i elastyczność</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">System można dostosować do specyficznych potrzeb firmy, co sprawia, że jest idealnym rozwiązaniem zarówno dla małych, jak i dużych organizacji.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-[#8c1f91] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#7a1b7e] cursor-pointer group">
+                  <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Customer Service?</h2>
+                  <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Microsoft Dynamics 365 Customer Service to zaawansowana platforma, która umożliwia firmom dostarczanie wyjątkowej obsługi klienta. Dzięki spersonalizowanemu podejściu, automatyzacji i integracji z innymi narzędziami Microsoft, organizacje mogą budować długotrwałe relacje z klientami, zwiększać ich satysfakcję i osiągać lepsze wyniki biznesowe.
+                  </p>
+                  <p className="text-lg leading-relaxed opacity-90 mt-4 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Zainwestuj w Dynamics 365 Customer Service, aby zapewnić swoim klientom obsługę na najwyższym poziomie i wyróżnić swoją firmę na tle konkurencji.
+                  </p>
                 </div>
               </div>
             </div>
