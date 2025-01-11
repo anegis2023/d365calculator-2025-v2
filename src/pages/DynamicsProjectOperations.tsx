@@ -118,6 +118,57 @@ export default function DynamicsProjectOperations() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Czym jest Microsoft Dynamics 365 Project Operations?",
+      answer: "Microsoft Dynamics 365 Project Operations to kompleksowe rozwiązanie do zarządzania projektami, które łączy funkcje planowania projektów, zarządzania zasobami, rozliczania czasu pracy i kosztów oraz analizy finansowej. System umożliwia efektywne prowadzenie projektów od sprzedaży po realizację."
+    },
+    {
+      question: "Jakie są główne funkcje Dynamics 365 Project Operations?",
+      answer: "Główne funkcje obejmują: zarządzanie projektami, planowanie zasobów, śledzenie czasu i wydatków, zarządzanie budżetem, fakturowanie projektowe, prognozowanie przychodów oraz integrację z innymi narzędziami Microsoft."
+    },
+    {
+      question: "Jak system wspiera zarządzanie projektami?",
+      answer: "System oferuje narzędzia do planowania projektów, tworzenia harmonogramów, przydzielania zasobów, śledzenia postępów, zarządzania ryzykiem oraz raportowania stanu projektów w czasie rzeczywistym."
+    },
+    {
+      question: "Jakie są możliwości zarządzania zasobami?",
+      answer: "Platforma umożliwia optymalne planowanie zasobów, zarządzanie dostępnością pracowników, dopasowywanie umiejętności do zadań oraz monitorowanie wykorzystania zasobów w projektach."
+    },
+    {
+      question: "Jak działa rozliczanie czasu i kosztów?",
+      answer: "System zapewnia narzędzia do rejestracji czasu pracy, śledzenia wydatków projektowych, zatwierdzania arkuszy czasu pracy i wydatków oraz automatycznego rozliczania kosztów projektowych."
+    },
+    {
+      question: "Jakie są możliwości analizy finansowej?",
+      answer: "Project Operations dostarcza zaawansowane narzędzia do analizy rentowności projektów, śledzenia budżetów, prognozowania przychodów oraz generowania raportów finansowych."
+    },
+    {
+      question: "Jak system integruje się z innymi narzędziami Microsoft?",
+      answer: "Platforma płynnie integruje się z Microsoft Teams, Project for the Web, Office 365 oraz innymi aplikacjami Dynamics 365, zapewniając spójne środowisko pracy."
+    },
+    {
+      question: "Jakie są możliwości raportowania?",
+      answer: "System oferuje wszechstronne narzędzia do raportowania, w tym dashboardy projektowe, raporty finansowe, analizy wydajności oraz integrację z Power BI dla zaawansowanej analityki."
+    },
+    {
+      question: "Jak wygląda proces fakturowania projektów?",
+      answer: "Platforma automatyzuje proces fakturowania, uwzględniając różne modele rozliczeń (fixed-price, time & material), śledzenie kamieni milowych oraz zatwierdzanie faktur."
+    },
+    {
+      question: "Czy system wspiera pracę zdalną?",
+      answer: "Tak, dzięki dostępowi przez przeglądarkę i integracji z Microsoft Teams, system umożliwia efektywną pracę zdalną i współpracę zespołów projektowych."
+    },
+    {
+      question: "Jak wygląda proces wdrożenia?",
+      answer: "Wdrożenie obejmuje konfigurację systemu, dostosowanie do procesów organizacji, migrację danych projektowych, szkolenia użytkowników oraz wsparcie techniczne."
+    },
+    {
+      question: "Czy dostępna jest wersja testowa?",
+      answer: "Tak, Microsoft oferuje wersję próbną Dynamics 365 Project Operations, która pozwala na przetestowanie funkcjonalności przed podjęciem decyzji o wdrożeniu."
+    }
+  ];
+
   return (
     <>
       <MetaTags {...seoData} />
@@ -140,6 +191,11 @@ export default function DynamicsProjectOperations() {
             label="Funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
+          />
+          <Tab
+            label="FAQ"
+            isActive={activeTab === 'faq'}
+            onClick={() => setActiveTab('faq')}
           />
         </div>
 
@@ -215,6 +271,26 @@ export default function DynamicsProjectOperations() {
                     title={feature.title}
                     description={feature.description}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'faq' && (
+            <div className="space-y-8">
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      {faq.answer}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

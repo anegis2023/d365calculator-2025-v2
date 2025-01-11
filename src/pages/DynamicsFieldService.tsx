@@ -118,6 +118,57 @@ export default function DynamicsFieldService() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Czym jest Microsoft Dynamics 365 Field Service?",
+      answer: "Microsoft Dynamics 365 Field Service to kompleksowe rozwiązanie do zarządzania serwisem terenowym, które optymalizuje pracę techników, planowanie zadań i zarządzanie zasobami. System umożliwia efektywną obsługę klientów w terenie przy wykorzystaniu najnowszych technologii."
+    },
+    {
+      question: "Jakie są główne funkcje Dynamics 365 Field Service?",
+      answer: "Główne funkcje obejmują: inteligentne planowanie zasobów, optymalizację tras, zarządzanie harmonogramami, mobilny dostęp dla techników, zarządzanie zapasami, predykcyjne utrzymanie, oraz integrację z IoT dla monitorowania urządzeń."
+    },
+    {
+      question: "Jak działa optymalizacja harmonogramów w Field Service?",
+      answer: "System wykorzystuje sztuczną inteligencję do automatycznego planowania zadań, uwzględniając lokalizację, umiejętności techników, dostępność części zamiennych i priorytety zleceń, co maksymalizuje efektywność pracy."
+    },
+    {
+      question: "Jakie korzyści daje integracja z IoT?",
+      answer: "Integracja z IoT umożliwia zdalne monitorowanie urządzeń, przewidywanie awarii, automatyczne generowanie zleceń serwisowych oraz optymalizację konserwacji prewencyjnej."
+    },
+    {
+      question: "Jak Field Service wspiera techników w terenie?",
+      answer: "Technicy mają dostęp do mobilnej aplikacji z pełną funkcjonalnością, w tym do historii serwisowej, dokumentacji technicznej, map i nawigacji oraz możliwości raportowania pracy w czasie rzeczywistym."
+    },
+    {
+      question: "Czy system wspiera zarządzanie częściami zamiennymi?",
+      answer: "Tak, platforma oferuje kompleksowe zarządzanie magazynem części zamiennych, śledzenie zapasów w pojazdach serwisowych, automatyczne uzupełnianie zapasów i optymalizację dostępności części."
+    },
+    {
+      question: "Jak wygląda proces wdrożenia Field Service?",
+      answer: "Wdrożenie obejmuje konfigurację systemu, integrację z istniejącymi systemami, szkolenia techników i dyspozytorów, konfigurację mobilnych urządzeń oraz optymalizację procesów serwisowych."
+    },
+    {
+      question: "Jakie są możliwości raportowania i analityki?",
+      answer: "System oferuje zaawansowane dashboardy i raporty dotyczące wydajności serwisu, czasu reakcji, kosztów, zadowolenia klientów oraz wykorzystania zasobów, z możliwością integracji z Power BI."
+    },
+    {
+      question: "Czy Field Service integruje się z innymi systemami?",
+      answer: "Tak, platforma integruje się z innymi aplikacjami Microsoft Dynamics 365, systemami ERP, CRM oraz zewnętrznymi aplikacjami poprzez standardowe API i konektory."
+    },
+    {
+      question: "Jak system wspiera obsługę klienta?",
+      answer: "Field Service umożliwia śledzenie historii serwisowej, komunikację z klientami, zbieranie opinii po wykonaniu usługi oraz dostęp do portalu samoobsługowego dla klientów."
+    },
+    {
+      question: "Jakie są wymagania systemowe?",
+      answer: "System działa w chmurze Microsoft Azure, wymaga stabilnego połączenia internetowego oraz kompatybilnych urządzeń mobilnych dla techników terenowych."
+    },
+    {
+      question: "Czy dostępna jest wersja testowa?",
+      answer: "Tak, Microsoft oferuje wersję próbną Dynamics 365 Field Service, która pozwala na przetestowanie funkcjonalności przed wdrożeniem."
+    }
+  ];
+
   return (
     <>
       <MetaTags {...seoData} />
@@ -140,6 +191,11 @@ export default function DynamicsFieldService() {
             label="Funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
+          />
+          <Tab
+            label="FAQ"
+            isActive={activeTab === 'faq'}
+            onClick={() => setActiveTab('faq')}
           />
         </div>
 
@@ -215,6 +271,26 @@ export default function DynamicsFieldService() {
                     title={feature.title}
                     description={feature.description}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'faq' && (
+            <div className="space-y-8">
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      {faq.answer}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

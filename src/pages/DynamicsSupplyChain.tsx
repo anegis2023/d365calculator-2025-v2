@@ -118,6 +118,57 @@ export default function DynamicsSupplyChain() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Czym jest Microsoft Dynamics 365 Supply Chain?",
+      answer: "Microsoft Dynamics 365 Supply Chain to kompleksowe rozwiązanie do zarządzania łańcuchem dostaw, które integruje procesy produkcji, magazynowania, planowania i dystrybucji. System wykorzystuje zaawansowane technologie do optymalizacji operacji i zwiększenia widoczności w całym łańcuchu dostaw."
+    },
+    {
+      question: "Jakie są główne funkcje Dynamics 365 Supply Chain?",
+      answer: "Główne funkcje obejmują: zarządzanie produkcją, planowanie zasobów, zarządzanie magazynem, optymalizację zapasów, zarządzanie zamówieniami, prognozowanie popytu, śledzenie jakości oraz integrację z IoT."
+    },
+    {
+      question: "Jak system wspiera planowanie produkcji?",
+      answer: "System oferuje zaawansowane narzędzia do planowania produkcji, w tym harmonogramowanie zasobów, zarządzanie recepturami, kontrolę jakości, oraz optymalizację wykorzystania maszyn i pracowników."
+    },
+    {
+      question: "Jakie są możliwości zarządzania magazynem?",
+      answer: "Platforma zapewnia kompleksowe zarządzanie magazynem, w tym optymalizację przestrzeni magazynowej, zarządzanie lokalizacjami, obsługę kodów kreskowych, oraz automatyzację procesów magazynowych."
+    },
+    {
+      question: "Jak działa prognozowanie popytu?",
+      answer: "System wykorzystuje sztuczną inteligencję do analizy historycznych danych sprzedaży, trendów rynkowych i sezonowości, co pozwala na dokładne prognozowanie popytu i optymalizację poziomów zapasów."
+    },
+    {
+      question: "Jakie korzyści daje integracja z IoT?",
+      answer: "Integracja z IoT umożliwia monitorowanie maszyn produkcyjnych w czasie rzeczywistym, przewidywanie awarii, optymalizację wykorzystania zasobów oraz automatyzację procesów konserwacji."
+    },
+    {
+      question: "Jak system wspiera zarządzanie jakością?",
+      answer: "Platforma oferuje narzędzia do kontroli jakości, śledzenia partii produkcyjnych, zarządzania certyfikatami jakości oraz automatyzacji testów i inspekcji."
+    },
+    {
+      question: "Jakie są możliwości raportowania?",
+      answer: "System dostarcza zaawansowane narzędzia analityczne i dashboardy do monitorowania KPI, efektywności produkcji, poziomu zapasów oraz wydajności łańcucha dostaw, z możliwością integracji z Power BI."
+    },
+    {
+      question: "Jak wygląda integracja z innymi systemami?",
+      answer: "Dynamics 365 Supply Chain integruje się z innymi aplikacjami Microsoft, systemami ERP, platformami e-commerce oraz systemami partnerów biznesowych poprzez standardowe API i konektory."
+    },
+    {
+      question: "Czy system wspiera handel międzynarodowy?",
+      answer: "Tak, platforma obsługuje operacje międzynarodowe, w tym zarządzanie wieloma walutami, zgodność z lokalnymi przepisami oraz śledzenie przesyłek międzynarodowych."
+    },
+    {
+      question: "Jak wygląda proces wdrożenia?",
+      answer: "Wdrożenie obejmuje analizę procesów biznesowych, konfigurację systemu, migrację danych, integrację z istniejącymi systemami, szkolenia użytkowników oraz wsparcie techniczne."
+    },
+    {
+      question: "Czy dostępna jest wersja testowa?",
+      answer: "Tak, Microsoft oferuje wersję próbną Dynamics 365 Supply Chain, która pozwala na przetestowanie funkcjonalności przed podjęciem decyzji o wdrożeniu."
+    }
+  ];
+
   return (
     <>
       <MetaTags {...seoData} />
@@ -140,6 +191,11 @@ export default function DynamicsSupplyChain() {
             label="Funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
+          />
+          <Tab
+            label="FAQ"
+            isActive={activeTab === 'faq'}
+            onClick={() => setActiveTab('faq')}
           />
         </div>
 
@@ -216,6 +272,26 @@ export default function DynamicsSupplyChain() {
                     title={feature.title}
                     description={feature.description}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'faq' && (
+            <div className="space-y-8">
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      {faq.answer}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

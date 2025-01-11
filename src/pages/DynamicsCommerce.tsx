@@ -118,6 +118,57 @@ export default function DynamicsCommerce() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Czym jest Microsoft Dynamics 365 Commerce?",
+      answer: "Microsoft Dynamics 365 Commerce to kompleksowa platforma do zarządzania handlem detalicznym, która łączy sprzedaż stacjonarną, online i mobilną. System umożliwia tworzenie spójnych, spersonalizowanych doświadczeń zakupowych we wszystkich kanałach sprzedaży."
+    },
+    {
+      question: "Jakie są główne funkcje Dynamics 365 Commerce?",
+      answer: "Główne funkcje obejmują: zarządzanie sklepem internetowym, obsługę punktów sprzedaży (POS), zarządzanie zapasami, marketing i promocje, obsługę klienta, analitykę sprzedaży oraz integrację z systemami płatności."
+    },
+    {
+      question: "Jak system wspiera sprzedaż wielokanałową?",
+      answer: "Platforma zapewnia spójne doświadczenie zakupowe we wszystkich kanałach, synchronizację danych w czasie rzeczywistym, jednolity system zarządzania zamówieniami oraz zintegrowaną obsługę klienta."
+    },
+    {
+      question: "Jakie są możliwości personalizacji?",
+      answer: "System oferuje zaawansowane narzędzia do personalizacji treści, rekomendacji produktów, promocji i ofert specjalnych w oparciu o zachowania klientów i dane analityczne."
+    },
+    {
+      question: "Jak działa system POS?",
+      answer: "System POS oferuje nowoczesne rozwiązania dla sprzedaży stacjonarnej, w tym obsługę transakcji, zarządzanie kasami, programy lojalnościowe, oraz integrację z urządzeniami peryferyjnymi."
+    },
+    {
+      question: "Jakie są możliwości zarządzania zapasami?",
+      answer: "Platforma umożliwia zarządzanie zapasami w czasie rzeczywistym, synchronizację stanów magazynowych między kanałami, automatyczne uzupełnianie zapasów oraz optymalizację dostępności produktów."
+    },
+    {
+      question: "Jak system wspiera marketing i promocje?",
+      answer: "System oferuje narzędzia do zarządzania kampaniami marketingowymi, programami lojalnościowymi, promocjami i rabatami, z możliwością personalizacji ofert dla różnych segmentów klientów."
+    },
+    {
+      question: "Jakie są możliwości analityczne?",
+      answer: "Dynamics 365 Commerce dostarcza zaawansowane narzędzia analityczne do śledzenia sprzedaży, zachowań klientów, efektywności promocji oraz wydajności kanałów sprzedaży."
+    },
+    {
+      question: "Jak wygląda integracja z innymi systemami?",
+      answer: "Platforma integruje się z innymi aplikacjami Microsoft Dynamics 365, systemami płatności, dostawcami logistycznymi oraz zewnętrznymi marketplace'ami."
+    },
+    {
+      question: "Czy system wspiera sprzedaż międzynarodową?",
+      answer: "Tak, platforma obsługuje sprzedaż międzynarodową, w tym wielojęzyczność, różne waluty, lokalne regulacje podatkowe oraz dostosowanie do specyfiki różnych rynków."
+    },
+    {
+      question: "Jak wygląda proces wdrożenia?",
+      answer: "Wdrożenie obejmuje konfigurację sklepu online, systemów POS, integrację z istniejącymi systemami, migrację danych, szkolenia pracowników oraz wsparcie techniczne."
+    },
+    {
+      question: "Czy dostępna jest wersja testowa?",
+      answer: "Tak, Microsoft oferuje wersję próbną Dynamics 365 Commerce, która pozwala na przetestowanie funkcjonalności przed podjęciem decyzji o wdrożeniu."
+    }
+  ];
+
   return (
     <>
       <MetaTags {...seoData} />
@@ -140,6 +191,11 @@ export default function DynamicsCommerce() {
             label="Funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
+          />
+          <Tab
+            label="FAQ"
+            isActive={activeTab === 'faq'}
+            onClick={() => setActiveTab('faq')}
           />
         </div>
 
@@ -215,6 +271,26 @@ export default function DynamicsCommerce() {
                     title={feature.title}
                     description={feature.description}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'faq' && (
+            <div className="space-y-8">
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      {faq.answer}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

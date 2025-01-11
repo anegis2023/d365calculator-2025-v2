@@ -113,6 +113,57 @@ export default function DynamicsCustomerService() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Czym jest Microsoft Dynamics 365 Customer Service?",
+      answer: "Microsoft Dynamics 365 Customer Service to kompleksowe rozwiązanie do obsługi klienta, które umożliwia firmom dostarczanie spersonalizowanego wsparcia poprzez wiele kanałów komunikacji, automatyzację procesów i wykorzystanie sztucznej inteligencji."
+    },
+    {
+      question: "Jakie są główne funkcje Dynamics 365 Customer Service?",
+      answer: "Główne funkcje obejmują: wielokanałową obsługę klienta, zarządzanie zgłoszeniami, bazę wiedzy, analitykę w czasie rzeczywistym, integrację z portalem samoobsługowym, automatyzację procesów oraz wsparcie AI w rozwiązywaniu problemów."
+    },
+    {
+      question: "Jak Dynamics 365 Customer Service wspiera pracę zdalną?",
+      answer: "System umożliwia pracę z dowolnego miejsca poprzez dostęp w chmurze, oferuje narzędzia do współpracy zespołowej, integrację z Microsoft Teams oraz mobilny dostęp do wszystkich funkcji."
+    },
+    {
+      question: "Czy system oferuje funkcje samoobsługowe dla klientów?",
+      answer: "Tak, platforma zawiera portal samoobsługowy, bazę wiedzy, chatboty AI oraz możliwość automatycznego rozwiązywania typowych problemów, co pozwala klientom na samodzielne znajdowanie odpowiedzi."
+    },
+    {
+      question: "Jak działa integracja z innymi aplikacjami Microsoft?",
+      answer: "System płynnie integruje się z innymi aplikacjami Microsoft 365, w tym Teams, Outlook, SharePoint oraz Power Platform, umożliwiając efektywną współpracę i automatyzację procesów."
+    },
+    {
+      question: "Jakie są możliwości personalizacji systemu?",
+      answer: "Dynamics 365 Customer Service można dostosować do specyficznych potrzeb firmy poprzez konfigurację procesów, tworzenie niestandardowych pulpitów, raportów oraz integrację z zewnętrznymi systemami."
+    },
+    {
+      question: "Czy system wspiera obsługę wielojęzyczną?",
+      answer: "Tak, platforma obsługuje wiele języków i może być używana w organizacjach międzynarodowych, umożliwiając obsługę klientów w ich rodzimych językach."
+    },
+    {
+      question: "Jak wygląda proces wdrożenia systemu?",
+      answer: "Wdrożenie obejmuje analizę potrzeb, konfigurację systemu, migrację danych, szkolenia użytkowników oraz wsparcie techniczne. Proces jest wspierany przez certyfikowanych partnerów Microsoft."
+    },
+    {
+      question: "Jakie są wymagania systemowe?",
+      answer: "System działa w chmurze Microsoft Azure i wymaga jedynie przeglądarki internetowej oraz stabilnego połączenia z internetem. Dostępne są również aplikacje mobilne na iOS i Android."
+    },
+    {
+      question: "Jak system wspiera analitykę i raportowanie?",
+      answer: "Oferuje zaawansowane narzędzia analityczne, dashboardy w czasie rzeczywistym, raporty niestandardowe oraz integrację z Power BI dla głębszej analizy danych."
+    },
+    {
+      question: "Czy dostępna jest wersja testowa?",
+      answer: "Tak, Microsoft oferuje wersję próbną Dynamics 365 Customer Service, która pozwala na przetestowanie funkcjonalności przed podjęciem decyzji o wdrożeniu."
+    },
+    {
+      question: "Jak system zapewnia bezpieczeństwo danych?",
+      answer: "Platforma wykorzystuje zaawansowane mechanizmy bezpieczeństwa Microsoft Azure, w tym szyfrowanie danych, kontrolę dostępu oraz zgodność z globalnymi standardami bezpieczeństwa."
+    }
+  ];
+
   return (
     <>
       <MetaTags {...seoData} />
@@ -136,6 +187,11 @@ export default function DynamicsCustomerService() {
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
           />
+          <Tab
+            label="FAQ"
+            isActive={activeTab === 'faq'}
+            onClick={() => setActiveTab('faq')}
+          />
         </div>
 
         {/* Content */}
@@ -146,7 +202,7 @@ export default function DynamicsCustomerService() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                      W erze cyfrowej transformacji, jakość obsługi klienta stała się kluczowym czynnikiem sukcesu biznesowego. Klienci oczekują szybkiej, spersonalizowanej i efektywnej pomocy przez preferowane kanały komunikacji. Microsoft Dynamics 365 Customer Service to kompleksowa platforma, która łączy zaawansowane technologie AI z tradycyjnymi narzędziami obsługi klienta, umożliwiając organizacjom dostarczanie wyjątkowych doświadczeń w każdym punkcie kontaktu.
+                    Współczesny klient oczekuje nie tylko produktów najwyższej jakości, ale również obsługi, która sprosta jego potrzebom i oczekiwaniom. W dynamicznym środowisku biznesowym firmy muszą szybko reagować na pytania klientów, rozwiązywać problemy i budować długotrwałe relacje oparte na zaufaniu. Takim narzędziem jest Microsoft Dynamics 365 Customer Service – zaawansowana platforma, która umożliwia firmom dostarczanie spersonalizowanej, efektywnej i niezawodnej obsługi klienta.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -210,6 +266,26 @@ export default function DynamicsCustomerService() {
                     title={feature.title}
                     description={feature.description}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'faq' && (
+            <div className="space-y-8">
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      {faq.answer}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

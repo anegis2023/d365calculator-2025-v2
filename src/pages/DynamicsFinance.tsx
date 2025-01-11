@@ -332,12 +332,12 @@ export default function DynamicsFinance() {
                 {faqData.map((faq, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl"
+                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
                   >
-                    <h3 className="text-xl font-semibold mb-4 text-[#128017]">
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
                       {faq.question}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                       {faq.answer}
                     </p>
                   </div>

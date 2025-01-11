@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaChartPie, FaUsers, FaRobot, FaChartBar, FaDatabase, FaLock } from 'react-icons/fa';
+import { FaChartPie, FaUsers, FaRobot, FaChartBar, FaDatabase, FaLock, FaUserPlus, FaRoute, FaMicrosoft } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -87,34 +87,104 @@ export default function DynamicsCustomerInsights() {
 
   const features = [
     {
-      icon: <FaChartPie />,
-      title: "Unifikacja danych klientów",
-      description: "Łącz dane z różnych źródeł w jeden spójny profil klienta. Wykorzystuj informacje z systemów CRM, ERP, mediów społecznościowych i innych źródeł."
+      icon: <FaDatabase />,
+      title: "Ujednolicanie danych klientów",
+      description: "System integruje dane z różnych źródeł, takich jak systemy CRM, transakcyjne bazy danych czy platformy analityczne, tworząc jeden spójny widok klienta."
     },
     {
-      icon: <FaUsers />,
-      title: "Segmentacja klientów",
-      description: "Twórz precyzyjne segmenty klientów w oparciu o ich zachowania, preferencje i historię interakcji. Dostosowuj strategie marketingowe do konkretnych grup."
+      icon: <FaUserPlus />,
+      title: "Wzbogacanie profili klientów",
+      description: "Dzieki integracji z danymi Microsoft i partnerów, platforma pozwala wzbogacić profile klientów o dodatkowe informacje, takie jak dane demograficzne czy preferencje zakupowe."
+    },
+    {
+      icon: <FaRoute />,
+      title: "Orkiestracja podróży klienta w czasie rzeczywistym",
+      description: "Dynamics 365 Customer Insights umożliwia tworzenie spersonalizowanych ścieżek klienta, dostosowanych do ich aktualnych interakcji i zachowań."
     },
     {
       icon: <FaRobot />,
-      title: "AI i Machine Learning",
-      description: "Wykorzystuj zaawansowane algorytmy do przewidywania zachowań klientów, analizy sentymentu i automatycznego wykrywania wzorców."
+      title: "Wykorzystanie sztucznej inteligencji (AI)",
+      description: "Platforma wspiera firmy w przewidywaniu kluczowych zachowań klientów, takich jak rezygnacja z usług czy prawdopodobieństwo zakupu, co pozwala na lepsze planowanie działań."
     },
     {
-      icon: <FaDatabase />,
-      title: "Zarządzanie danymi",
-      description: "Zapewnij wysoką jakość danych dzięki automatycznemu czyszczeniu, deduplikacji i wzbogacaniu profili klientów o dodatkowe informacje."
+      icon: <FaMicrosoft />,
+      title: "Integracja z ekosystemem Microsoft",
+      description: "Pełna kompatybilności z innymi narzędziami Microsoft, takimi jak Dynamics 365 Sales, Power BI czy Microsoft Teams, pozwala na kompleksowe zarządzanie danymi klientów."
+    }
+  ];
+
+  const faqData = [
+    {
+      question: "Czym jest Microsoft Dynamics 365 Customer Insights?",
+      answer: "Microsoft Dynamics 365 Customer Insights to platforma danych klientów (CDP), która umożliwia organizacjom zbieranie, integrację i analizę danych klientów z różnych źródeł, aby tworzyć spersonalizowane doświadczenia i lepiej zrozumieć ich potrzeby."
     },
     {
-      icon: <FaChartBar />,
-      title: "Analityka predykcyjna",
-      description: "Przewiduj przyszłe zachowania klientów, identyfikuj ryzyko odejścia i odkrywaj nowe możliwości sprzedaży krzyżowej."
+      question: "Jakie są główne funkcje Dynamics 365 Customer Insights?",
+      answer: "Ujednolicanie danych klientów z różnych systemów.\nWzbogacanie profili klientów o dodatkowe dane demograficzne i behawioralne.\nOrkiestracja spersonalizowanych podróży klienta w czasie rzeczywistym.\nAnaliza i prognozowanie zachowań klientów z wykorzystaniem AI.\nIntegracja z narzędziami Microsoft, takimi jak Power BI, Dynamics 365 Sales czy Teams."
     },
     {
-      icon: <FaLock />,
-      title: "Aktywacja insightów",
-      description: "Przekształcaj analizy w konkretne działania. Automatycznie aktywuj kampanie marketingowe i personalizuj komunikację w czasie rzeczywistym."
+      question: "Dla kogo jest przeznaczone to rozwiązanie?",
+      answer: "Dynamics 365 Customer Insights jest przeznaczone dla firm każdej wielkości, które chcą lepiej zrozumieć swoich klientów i dostarczać spersonalizowane doświadczenia, niezależnie od branży – od marketingu i sprzedaży po obsługę klienta."
+    },
+    {
+      question: "Jak Dynamics 365 Customer Insights wspiera personalizację działań?",
+      answer: "Platforma tworzy pełny widok klienta, gromadząc dane z różnych źródeł, takich jak CRM, bazy danych i kanały komunikacji. Pozwala to firmom dostosowywać oferty, kampanie marketingowe i interakcje w czasie rzeczywistym."
+    },
+    {
+      question: "Czy Dynamics 365 Customer Insights integruje się z innymi systemami?",
+      answer: "Tak, Dynamics 365 Customer Insights integruje się z narzędziami Microsoft, takimi jak Dynamics 365 Sales, Power BI czy Teams, a także z zewnętrznymi systemami za pomocą API."
+    },
+    {
+      question: "Jakie korzyści przynosi Dynamics 365 Customer Insights działowi marketingu?",
+      answer: "Platforma umożliwia segmentację klientów, tworzenie spersonalizowanych kampanii marketingowych i mierzenie ich skuteczności. Dzięki temu zespoły marketingowe mogą zwiększyć efektywność swoich działań i współczynnik konwersji."
+    },
+    {
+      question: "Jak Dynamics 365 Customer Insights wspiera dział sprzedaży?",
+      answer: "Zespoły sprzedaży mają dostęp do pełnych profili klientów, co pozwala im lepiej dostosowywać oferty, identyfikować potencjalne szanse sprzedażowe i szybciej zamykać transakcje."
+    },
+    {
+      question: "Czy mogę używać Dynamics 365 Customer Insights do prognozowania zachowań klientów?",
+      answer: "Tak, platforma wykorzystuje sztuczną inteligencję i modele uczenia maszynowego do przewidywania kluczowych zachowań klientów, takich jak rezygnacja z usług czy prawdopodobieństwo zakupu."
+    },
+    {
+      question: "Czy Dynamics 365 Customer Insights obsługuje dane w czasie rzeczywistym?",
+      answer: "Tak, platforma umożliwia orkiestrację działań w czasie rzeczywistym, co pozwala firmom reagować na bieżące interakcje klientów."
+    },
+    {
+      question: "Czy system pozwala na integrację z danymi zewnętrznymi?",
+      answer: "Tak, Dynamics 365 Customer Insights umożliwia integrację danych zewnętrznych, takich jak dane demograficzne, behawioralne czy dane transakcyjne, co wzbogaca profile klientów."
+    },
+    {
+      question: "Jak Dynamics 365 Customer Insights wspiera obsługę klienta?",
+      answer: "Dzięki pełnym profilom klientów, pracownicy obsługi klienta mają szybki dostęp do historii interakcji i preferencji klientów, co pozwala na bardziej efektywne rozwiązywanie problemów."
+    },
+    {
+      question: "Czy Dynamics 365 Customer Insights jest dostępny na urządzeniach mobilnych?",
+      answer: "Dynamics 365 Customer Insights jest częścią chmurowego ekosystemu Microsoft i może być używany na dowolnym urządzeniu z dostępem do internetu."
+    },
+    {
+      question: "Czy Dynamics 365 Customer Insights oferuje zaawansowane raportowanie?",
+      answer: "Tak, system integruje się z Power BI, co umożliwia tworzenie interaktywnych raportów i wizualizacji, które pomagają w analizie danych klientów i podejmowaniu decyzji biznesowych."
+    },
+    {
+      question: "Jakie są wymagania systemowe dla Dynamics 365 Customer Insights?",
+      answer: "Platforma działa w chmurze, co oznacza, że wymaga jedynie przeglądarki internetowej i stabilnego połączenia z internetem."
+    },
+    {
+      question: "Czy mogę przetestować Dynamics 365 Customer Insights przed zakupem?",
+      answer: "Tak, Microsoft oferuje bezpłatną wersję próbną, która pozwala przetestować funkcjonalności systemu przed podjęciem decyzji o zakupie."
+    },
+    {
+      question: "Jakie są dostępne opcje subskrypcji dla Dynamics 365 Customer Insights?",
+      answer: "Microsoft oferuje elastyczne modele subskrypcji dostosowane do potrzeb różnych firm. Szczegółowe informacje na temat dostępnych planów można znaleźć na stronie produktu."
+    },
+    {
+      question: "Czy system wspiera zgodność z przepisami dotyczącymi ochrony danych, np. RODO?",
+      answer: "Tak, Dynamics 365 Customer Insights został zaprojektowany z myślą o zgodności z przepisami dotyczącymi ochrony danych, w tym RODO, zapewniając bezpieczeństwo i ochronę danych klientów."
+    },
+    {
+      question: "Jak Dynamics 365 Customer Insights wspiera podejmowanie decyzji?",
+      answer: "Platforma dostarcza zaawansowane analizy i prognozy, które umożliwiają menedżerom podejmowanie decyzji opartych na danych, zwiększając efektywność działań biznesowych."
     }
   ];
 
@@ -141,6 +211,11 @@ export default function DynamicsCustomerInsights() {
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
           />
+          <Tab
+            label="FAQ"
+            isActive={activeTab === 'faq'}
+            onClick={() => setActiveTab('faq')}
+          />
         </div>
 
         {/* Content */}
@@ -151,7 +226,7 @@ export default function DynamicsCustomerInsights() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                      W dzisiejszym cyfrowym świecie, zrozumienie klienta jest kluczem do sukcesu biznesowego. Organizacje gromadzą ogromne ilości danych o klientach, ale prawdziwym wyzwaniem jest przekształcenie tych danych w wartościowe insighty i działania. Microsoft Dynamics 365 Customer Insights to zaawansowana platforma, która wykorzystuje sztuczną inteligencję i uczenie maszynowe do głębokiego zrozumienia zachowań klientów i personalizacji ich doświadczeń.
+                    Budowanie trwałych relacji z klientami wymaga zrozumienia ich potrzeb i preferencji. Współczesne organizacje poszukują narzędzi, które umożliwią im integrację danych z różnych źródeł, analizę zachowań oraz personalizację działań. Takim rozwiązaniem jest Microsoft Dynamics 365 Customer Insights – zaawansowana platforma, która rewolucjonizuje sposób, w jaki firmy zarządzają danymi klientów i budują z nimi relacje.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -170,34 +245,66 @@ export default function DynamicsCustomerInsights() {
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Kluczowe wyzwania w zarządzaniu danymi klientów</h2>
+                <h2 className="text-2xl font-bold">Kluczowe wyzwania w zarządzaniu relacjami z klientami</h2>
+                <p className="mb-4">
+                  Zanim przejdziemy do omówienia funkcji Dynamics 365 Customer Insights, warto zrozumieć wyzwania, które stoją przed firmami:
+                </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Rozproszone dane w wielu systemach i aplikacjach</li>
-                  <li>Trudności w tworzeniu spójnego obrazu klienta</li>
-                  <li>Potrzeba zaawansowanej analityki i predykcji</li>
-                  <li>Wymagania dotyczące prywatności i bezpieczeństwa danych</li>
+                  <li>Dane klientów są rozproszone w różnych systemach, co utrudnia ich analizę.</li>
+                  <li>Brak pełnego obrazu klienta ogranicza możliwości personalizacji działań.</li>
+                  <li>Skomplikowane procesy analityczne wymagają dużo czasu i zasobów.</li>
+                  <li>Trudności w dostarczaniu spersonalizowanych doświadczeń w czasie rzeczywistym.</li>
                 </ul>
+                <p className="mt-4">
+                  Dynamics 365 Customer Insights oferuje rozwiązania pozwalające na pokonanie tych przeszkód.
+                </p>
               </div>
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze zrozumienie klientów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Pełny widok 360° zachowań i preferencji klientów.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">1. Lepsze zrozumienie klientów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Dzięki ujednoliceniu danych organizacje zyskują pełny obraz klientów, co pozwala na lepsze dostosowanie oferty i komunikacji.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Personalizacja doświadczeń</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dostosowanie komunikacji i ofert do indywidualnych potrzeb.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">2. Personalizacja działań marketingowych</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      System umożliwia tworzenie precyzyjnie dopasowanych kampanii marketingowych, co zwiększa ich skuteczność.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększona retencja</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Przewidywanie i zapobieganie odejściom klientów.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">3. Zwiększenie efektywności sprzedaży</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Zespoły sprzedaży mają dostęp do aktualnych informacji o klientach, co pozwala na bardziej trafne działania i szybsze zamykanie transakcji.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Efektywność operacyjna</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja procesów i optymalizacja działań marketingowych.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">4. Szybsze podejmowanie decyzji</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Zaawansowana analityka i prognozy wspierają menedżerów w podejmowaniu decyzji opartych na danych.
+                    </p>
                   </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">5. Skalowalność i elastyczność</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      System można łatwo dostosować do specyficznych potrzeb firmy, zarówno w małych, jak i dużych organizacjach.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-[#128017] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#0f6813] cursor-pointer group">
+                  <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Customer Insights?</h2>
+                  <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Microsoft Dynamics 365 Customer Insights to narzędzie, które pozwala firmom budować lepsze relacje z klientami dzięki zaawansowanej analityce, personalizacji działań i integracji z ekosystemem Microsoft. To kompleksowe rozwiązanie dla organizacji, które chcą dostarczać swoim klientom spersonalizowane, responsywne i efektywne doświadczenia.
+                  </p>
+                  <p className="text-lg leading-relaxed opacity-90 mt-4 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Zainwestuj w Dynamics 365 Customer Insights, aby zrozumieć swoich klientów i rozwijać swoje działania na rynku z większą skutecznością.
+                  </p>
                 </div>
               </div>
             </div>
@@ -215,6 +322,26 @@ export default function DynamicsCustomerInsights() {
                     title={feature.title}
                     description={feature.description}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'faq' && (
+            <div className="space-y-8">
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      {faq.answer}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

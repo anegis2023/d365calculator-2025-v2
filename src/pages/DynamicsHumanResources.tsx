@@ -118,6 +118,57 @@ export default function DynamicsHumanResources() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Czym jest Microsoft Dynamics 365 Human Resources?",
+      answer: "Microsoft Dynamics 365 Human Resources to kompleksowe rozwiązanie do zarządzania zasobami ludzkimi, które wspiera wszystkie aspekty HR - od rekrutacji, przez onboarding, rozwój pracowników, po zarządzanie świadczeniami i wynagrodzeniami."
+    },
+    {
+      question: "Jakie są główne funkcje Dynamics 365 Human Resources?",
+      answer: "Główne funkcje obejmują: zarządzanie rekrutacją, onboarding pracowników, administrację świadczeniami, zarządzanie wydajnością, planowanie rozwoju, samoobsługę pracowniczą, analitykę HR oraz integrację z systemami płacowymi."
+    },
+    {
+      question: "Jak system wspiera proces rekrutacji?",
+      answer: "System oferuje narzędzia do zarządzania całym procesem rekrutacji, w tym publikację ogłoszeń, śledzenie kandydatów, ocenę aplikacji, planowanie rozmów kwalifikacyjnych oraz onboarding nowych pracowników."
+    },
+    {
+      question: "Jakie możliwości samoobsługi oferuje system?",
+      answer: "Portal samoobsługowy umożliwia pracownikom zarządzanie swoimi danymi osobowymi, świadczeniami, czasem pracy, urlopami, oraz dostęp do szkoleń i dokumentów HR bez konieczności kontaktu z działem kadr."
+    },
+    {
+      question: "Jak działa analityka HR w systemie?",
+      answer: "System dostarcza zaawansowane narzędzia analityczne do monitorowania wskaźników HR, trendów zatrudnienia, rotacji pracowników, kosztów personalnych oraz efektywności programów rozwojowych."
+    },
+    {
+      question: "Czy system wspiera zarządzanie szkoleniami?",
+      answer: "Tak, platforma umożliwia planowanie i zarządzanie szkoleniami, śledzenie postępów pracowników, certyfikacji oraz kompetencji, a także oferuje integrację z platformami e-learningowymi."
+    },
+    {
+      question: "Jak wygląda integracja z systemami płacowymi?",
+      answer: "Dynamics 365 HR integruje się z popularnymi systemami płacowymi, umożliwiając automatyczne przetwarzanie danych o czasie pracy, nieobecnościach i świadczeniach do naliczania wynagrodzeń."
+    },
+    {
+      question: "Jakie są możliwości raportowania?",
+      answer: "System oferuje szeroki zakres predefiniowanych raportów HR oraz możliwość tworzenia własnych zestawień z wykorzystaniem Power BI, co pozwala na szczegółową analizę danych kadrowych."
+    },
+    {
+      question: "Jak system wspiera zgodność z przepisami?",
+      answer: "Platforma jest regularnie aktualizowana o najnowsze wymogi prawne i regulacyjne, wspierając zgodność z lokalnymi przepisami prawa pracy i ochrony danych osobowych."
+    },
+    {
+      question: "Czy system działa w chmurze?",
+      answer: "Tak, Dynamics 365 HR jest rozwiązaniem chmurowym, co zapewnia dostęp z dowolnego miejsca, automatyczne aktualizacje oraz wysokie bezpieczeństwo danych."
+    },
+    {
+      question: "Jak wygląda proces wdrożenia systemu?",
+      answer: "Wdrożenie obejmuje analizę potrzeb, konfigurację systemu, migrację danych, integrację z istniejącymi systemami, szkolenia użytkowników oraz wsparcie techniczne."
+    },
+    {
+      question: "Czy dostępna jest wersja testowa?",
+      answer: "Tak, Microsoft oferuje wersję próbną Dynamics 365 Human Resources, która pozwala na przetestowanie funkcjonalności przed podjęciem decyzji o wdrożeniu."
+    }
+  ];
+
   return (
     <>
       <MetaTags {...seoData} />
@@ -140,6 +191,11 @@ export default function DynamicsHumanResources() {
             label="Funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
+          />
+          <Tab
+            label="FAQ"
+            isActive={activeTab === 'faq'}
+            onClick={() => setActiveTab('faq')}
           />
         </div>
 
@@ -215,6 +271,26 @@ export default function DynamicsHumanResources() {
                     title={feature.title}
                     description={feature.description}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'faq' && (
+            <div className="space-y-8">
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      {faq.answer}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
