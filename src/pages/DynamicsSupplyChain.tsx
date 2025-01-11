@@ -18,11 +18,11 @@ const seoData = {
     "@type": "WebPage",
     "name": "Microsoft Dynamics 365 Supply Chain",
     "description": "Optymalizuj łańcuch dostaw i zwiększ wydajność operacyjną z Microsoft Dynamics 365 Supply Chain. Wykorzystaj sztuczną inteligencję do lepszego planowania i zarządzania zasobami.",
-    "url": "https://d365calculator.netlify.app/dynamics-365-supply-chain",
+    "url": "https://dynamics365.com.pl/dynamics-365-supply-chain",
     "publisher": {
       "@type": "Organization",
       "name": "ANEGIS",
-      "url": "https://d365calculator.netlify.app"
+      "url": "https://dynamics365.com.pl"
     }
   }
 };

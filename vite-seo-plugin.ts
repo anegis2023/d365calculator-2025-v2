@@ -31,11 +31,11 @@ function getMetaTagsForRoute(route: string): string {
   metaTags.push(`<meta property="og:title" content="${pageMetaData.title}">`);
   metaTags.push(`<meta property="og:description" content="${pageMetaData.description}">`);
   metaTags.push(`<meta property="og:type" content="${pageMetaData.ogType || 'website'}">`);
-  metaTags.push(`<meta property="og:url" content="https://d365calculator.netlify.app/${route ? route : ''}">`);
+  metaTags.push(`<meta property="og:url" content="https://dynamics365.com.pl/${route ? route : ''}">`);
   metaTags.push(`<meta property="og:site_name" content="Kalkulator licencji Microsoft Dynamics 365 by ANEGIS">`);
   
   // Add canonical URL
-  metaTags.push(`<link rel="canonical" href="https://d365calculator.netlify.app/${route ? route : ''}">`);
+  metaTags.push(`<link rel="canonical" href="https://dynamics365.com.pl/${route ? route : ''}">`);
   
   // Add schema
   if (pageMetaData.schema) {

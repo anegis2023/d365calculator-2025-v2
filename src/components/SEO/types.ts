@@ -6,6 +6,7 @@ export interface SeoProps {
 export interface MetaTags {
   title: string;
   description: string;
+  keywords: string;
   ogType?: string;
   image?: string;
   canonical?: string;

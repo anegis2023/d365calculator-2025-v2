@@ -2,87 +2,116 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { getPageMetaData } from './src/components/SEO/pageMetaData';
 
-function generateMetaTags(route: string) {
+function generateMetaTags(route: string, mode: string) {
   const metadata = getPageMetaData(route);
-  const baseUrl = 'https://d365calculator.netlify.app';
+  const baseUrl = 'https://dynamics365.com.pl';
   const fullUrl = route ? `${baseUrl}/${route}` : baseUrl;
 
-  return `
+  // 1. Required meta tags (charset and viewport)
+  const requiredTags = `
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />`;
+
+  // 2. Icon
+  const iconTag = `
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />`;
+
+  // 3. Title and basic meta tags
+  const basicTags = `
     <title>${metadata.title}</title>
     <meta name="title" content="${metadata.title}" />
     <meta name="description" content="${metadata.description}" />
+    <meta name="keywords" content="${metadata.keywords}" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="Polish" />
-    <meta name="author" content="ANEGIS" />
-    
+    <meta name="author" content="ANEGIS" />`;
+
+  // 4. Open Graph / Facebook
+  const openGraphTags = `
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="${metadata.ogType || 'website'}" />
     <meta property="og:url" content="${fullUrl}" />
     <meta property="og:title" content="${metadata.title}" />
     <meta property="og:description" content="${metadata.description}" />
-    <meta property="og:site_name" content="Kalkulator licencji Microsoft Dynamics 365 by ANEGIS" />
-    
+    <meta property="og:site_name" content="Kalkulator licencji Microsoft Dynamics 365 by ANEGIS" />`;
+
+  // 5. Twitter
+  const twitterTags = `
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="${fullUrl}" />
     <meta property="twitter:title" content="${metadata.title}" />
-    <meta property="twitter:description" content="${metadata.description}" />
-    
+    <meta property="twitter:description" content="${metadata.description}" />`;
+
+  // 6. Canonical URL
+  const canonicalTag = `
     <!-- Canonical URL -->
-    <link rel="canonical" href="${fullUrl}" />
-    
+    <link rel="canonical" href="${fullUrl}" />`;
+
+  // 7. Schema.org JSON-LD
+  const schemaTag = `
     <!-- Schema.org -->
     <script type="application/ld+json">
-      ${JSON.stringify(metadata.schema, null, 2)}
+      ${JSON.stringify(metadata.schema || {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": metadata.title,
+        "description": metadata.description,
+        "url": fullUrl,
+        "publisher": {
+          "@type": "Organization",
+          "name": "ANEGIS",
+          "url": baseUrl
+        }
+      }, null, 2)}
     </script>`;
+
+  // Development-specific scripts
+  const devScripts = mode === 'development' ? `
+    <!-- Development Mode Scripts -->
+    <script type="module">
+      import RefreshRuntime from "/@react-refresh"
+      RefreshRuntime.injectIntoGlobalHook(window)
+      window.$RefreshReg$ = () => {}
+      window.$RefreshSig$ = () => (type) => type
+      window.__vite_plugin_react_preamble_installed__ = true
+    </script>
+    <script type="module" src="/@vite/client"></script>` : '';
+
+  // Combine all tags in the correct order
+  return `${requiredTags}${iconTag}${basicTags}${openGraphTags}${twitterTags}${canonicalTag}${schemaTag}${mode === 'development' ? devScripts : ''}`;
 }
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     {
       name: 'html-transform',
       transformIndexHtml(html, ctx) {
-        // Get the route based on the file being processed
         let route = '';
-        if (ctx.filename.includes('index.html')) {
-          route = '';
-        } else if (ctx.filename.includes('kontakt.html')) {
-          route = 'kontakt';
-        } else if (ctx.filename.includes('dynamics-365-sales.html')) {
-          route = 'dynamics-365-sales';
-        } else if (ctx.filename.includes('dynamics-365-finance.html')) {
-          route = 'dynamics-365-finance';
-        } else if (ctx.filename.includes('dynamics-365-supply-chain.html')) {
-          route = 'dynamics-365-supply-chain';
-        } else if (ctx.filename.includes('dynamics-365-field-service.html')) {
-          route = 'dynamics-365-field-service';
-        } else if (ctx.filename.includes('dynamics-365-project-operations.html')) {
-          route = 'dynamics-365-project-operations';
-        } else if (ctx.filename.includes('dynamics-365-customer-service.html')) {
-          route = 'dynamics-365-customer-service';
-        } else if (ctx.filename.includes('dynamics-365-customer-insights.html')) {
-          route = 'dynamics-365-customer-insights';
-        } else if (ctx.filename.includes('dynamics-365-commerce.html')) {
-          route = 'dynamics-365-commerce';
-        } else if (ctx.filename.includes('dynamics-365-human-resources.html')) {
-          route = 'dynamics-365-human-resources';
-        } else if (ctx.filename.includes('selection.html')) {
-          route = 'selection';
-        } else if (ctx.filename.includes('questions.html')) {
-          route = 'questions';
-        } else if (ctx.filename.includes('review.html')) {
-          route = 'review';
+        if (ctx.filename) {
+          route = ctx.filename
+            .replace(/^.*[\/\\]/, '') // Remove path
+            .replace(/\.html$/, ''); // Remove .html extension
+          
+          // Handle index.html specially
+          if (route === 'index') {
+            route = '';
+          }
         }
 
-        // Find the head tag and insert meta tags after it
-        const metaTags = generateMetaTags(route);
+        // In production, remove any existing development scripts
+        if (mode === 'production') {
+          html = html.replace(/<script type="module">[\s\S]*?<\/script>/g, '');
+          html = html.replace(/<script type="module" src="\/@vite\/client"><\/script>/g, '');
+        }
+
         return html.replace(
-          /<head>/, 
-          `<head>\n    ${metaTags}`
+          /<\/head>/,
+          `${generateMetaTags(route, mode)}\n  </head>`
         );
-      },
+      }
     }
   ],
   build: {
@@ -111,4 +140,4 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-});
+}));

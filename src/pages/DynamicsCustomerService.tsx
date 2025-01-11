@@ -18,11 +18,11 @@ const seoData = {
     "@type": "WebPage",
     "name": "Microsoft Dynamics 365 Customer Service",
     "description": "Zapewnij najwyższą jakość obsługi klienta z Microsoft Dynamics 365 Customer Service. Wykorzystaj sztuczną inteligencję do personalizacji interakcji i zwiększenia satysfakcji klientów.",
-    "url": "https://d365calculator.netlify.app/dynamics-365-customer-service",
+    "url": "https://dynamics365.com.pl/dynamics-365-customer-service",
     "publisher": {
       "@type": "Organization",
       "name": "ANEGIS",
-      "url": "https://d365calculator.netlify.app"
+      "url": "https://dynamics365.com.pl"
     }
   }
 };

@@ -18,11 +18,11 @@ const seoData = {
     "@type": "WebPage",
     "name": "Microsoft Dynamics 365 Human Resources",
     "description": "Zoptymalizuj procesy HR i zwiększ zaangażowanie pracowników z Microsoft Dynamics 365 Human Resources. Zarządzaj talentami i buduj kulturę organizacyjną opartą na rozwoju.",
-    "url": "https://d365calculator.netlify.app/dynamics-365-human-resources",
+    "url": "https://dynamics365.com.pl/dynamics-365-human-resources",
     "publisher": {
       "@type": "Organization",
       "name": "ANEGIS",
-      "url": "https://d365calculator.netlify.app"
+      "url": "https://dynamics365.com.pl"
     }
   }
 };

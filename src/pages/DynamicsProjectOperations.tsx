@@ -18,11 +18,11 @@ const seoData = {
     "@type": "WebPage",
     "name": "Microsoft Dynamics 365 Project Operations",
     "description": "Zwiększ rentowność projektów i produktywność zespołów z Microsoft Dynamics 365 Project Operations. Zarządzaj projektami, zasobami i finansami w jednym miejscu.",
-    "url": "https://d365calculator.netlify.app/dynamics-365-project-operations",
+    "url": "https://dynamics365.com.pl/dynamics-365-project-operations",
     "publisher": {
       "@type": "Organization",
       "name": "ANEGIS",
-      "url": "https://d365calculator.netlify.app"
+      "url": "https://dynamics365.com.pl"
     }
   }
 };

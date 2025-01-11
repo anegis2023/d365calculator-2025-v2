@@ -18,11 +18,11 @@ const seoData = {
     "@type": "WebPage",
     "name": "Microsoft Dynamics 365 Customer Insights",
     "description": "Uzyskaj pełny obraz zachowań klientów z Microsoft Dynamics 365 Customer Insights. Analizuj dane i personalizuj interakcje w oparciu o rzeczywiste insighty.",
-    "url": "https://d365calculator.netlify.app/dynamics-365-customer-insights",
+    "url": "https://dynamics365.com.pl/dynamics-365-customer-insights",
     "publisher": {
       "@type": "Organization",
       "name": "ANEGIS",
-      "url": "https://d365calculator.netlify.app"
+      "url": "https://dynamics365.com.pl"
     }
   }
 };

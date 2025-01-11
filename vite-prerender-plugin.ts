@@ -17,7 +17,7 @@ const routes: RouteConfig[] = [
 
 function generateMetaTags(route: string) {
   const metadata = getPageMetaData(route);
-  const baseUrl = 'https://d365calculator.netlify.app';
+  const baseUrl = 'https://dynamics365.com.pl';
   const fullUrl = route ? `${baseUrl}/${route}` : baseUrl;
 
   return `

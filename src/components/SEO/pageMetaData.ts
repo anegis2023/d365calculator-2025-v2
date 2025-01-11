@@ -9,6 +9,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
     '': {
       title: "Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS | Dobierz odpowiednie licencje dla firmy",
       description: "Profesjonalny kalkulator licencji Microsoft Dynamics 365. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
+      keywords: "Microsoft Dynamics 365, kalkulator licencji, licencje Dynamics 365, ERP, CRM, ANEGIS, koszty licencji, optymalizacja licencji",
       ogType: 'website',
       schema: {
         ...BASE_WEBSITE_SCHEMA,
@@ -28,6 +29,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
     'selection': {
       title: "Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS | Wybierz moduły",
       description: "Wybierz moduły Microsoft Dynamics 365 odpowiednie dla Twojej firmy. Porównaj funkcje i znajdź optymalne rozwiązanie.",
+      keywords: "moduły Dynamics 365, wybór modułów, funkcje Dynamics 365, porównanie modułów, Microsoft Dynamics 365",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -38,6 +40,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
     'questions': {
       title: "Konfiguracja Licencji Microsoft Dynamics 365 by ANEGIS | Kalkulator Licencji",
       description: "Skonfiguruj wybrane moduły Microsoft Dynamics 365 według potrzeb Twojej firmy. Odpowiedz na pytania, aby otrzymać optymalne rekomendacje.",
+      keywords: "konfiguracja Dynamics 365, ustawienia licencji, rekomendacje licencji, dostosowanie Dynamics 365",
       schema: {
         "@context": "https://schema.org",
         "@type": "QAPage",
@@ -50,6 +53,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
     'review': {
       title: "Podsumowanie Kalkulacji Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Przejrzyj szczegółowe podsumowanie kalkulacji licencji Microsoft Dynamics 365. Sprawdź koszty i rekomendacje dla Twojej firmy.",
+      keywords: "kalkulacja licencji, koszty Dynamics 365, podsumowanie licencji, rekomendacje licencji, Microsoft Dynamics 365",
       schema: {
         "@context": "https://schema.org",
         "@type": "Review",
@@ -60,6 +64,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
     'kontakt': {
       title: "Kontakt | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Skontaktuj się z nami w sprawie licencji Microsoft Dynamics 365. Nasi eksperci pomogą dobrać optymalne rozwiązanie dla Twojej firmy.",
+      keywords: "kontakt ANEGIS, pomoc Dynamics 365, eksperci Dynamics 365, doradztwo licencyjne",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
@@ -80,153 +85,162 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
     'dynamics-365-sales': {
       title: "Microsoft Dynamics 365 Sales | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Odkryj możliwości Microsoft Dynamics 365 Sales. Zwiększ efektywność sprzedaży, automatyzuj procesy i buduj trwałe relacje z klientami.",
+      keywords: "Dynamics 365 Sales, CRM, zarządzanie sprzedażą, automatyzacja sprzedaży, relacje z klientami, licencje Sales",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Microsoft Dynamics 365 Sales",
         "description": "Odkryj możliwości Microsoft Dynamics 365 Sales. Zwiększ efektywność sprzedaży, automatyzuj procesy i buduj trwałe relacje z klientami.",
-        "url": "https://d365calculator.netlify.app/dynamics-365-sales",
+        "url": "https://dynamics365.com.pl/dynamics-365-sales",
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
-          "url": "https://d365calculator.netlify.app"
+          "url": "https://dynamics365.com.pl"
+        }
+      }
+    },
+    'dynamics-365-customer-service': {
+      title: "Microsoft Dynamics 365 Customer Service | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
+      description: "Microsoft Dynamics 365 Customer Service - kompleksowe rozwiązanie do obsługi klienta. Podnieś jakość wsparcia i zwiększ satysfakcję klientów.",
+      keywords: "Dynamics 365 Customer Service, obsługa klienta, wsparcie klienta, service desk, licencje Customer Service",
+      ogType: 'website',
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Microsoft Dynamics 365 Customer Service",
+        "description": "Microsoft Dynamics 365 Customer Service - kompleksowe rozwiązanie do obsługi klienta. Podnieś jakość wsparcia i zwiększ satysfakcję klientów.",
+        "url": "https://dynamics365.com.pl/dynamics-365-customer-service",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ANEGIS",
+          "url": "https://dynamics365.com.pl"
         }
       }
     },
     'dynamics-365-field-service': {
       title: "Microsoft Dynamics 365 Field Service | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Zarządzaj serwisem terenowym z Microsoft Dynamics 365 Field Service. Optymalizuj pracę serwisantów i podnoś jakość obsługi klienta.",
+      keywords: "Dynamics 365 Field Service, serwis terenowy, zarządzanie serwisem, mobilni pracownicy, licencje Field Service",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Microsoft Dynamics 365 Field Service",
         "description": "Zarządzaj serwisem terenowym z Microsoft Dynamics 365 Field Service. Optymalizuj pracę serwisantów i podnoś jakość obsługi klienta.",
-        "url": "https://d365calculator.netlify.app/dynamics-365-field-service",
+        "url": "https://dynamics365.com.pl/dynamics-365-field-service",
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
-          "url": "https://d365calculator.netlify.app"
-        }
-      }
-    },
-    'dynamics-365-finance': {
-      title: "Microsoft Dynamics 365 Finance | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
-      description: "Zarządzaj finansami firmy z Microsoft Dynamics 365 Finance. Automatyzuj procesy finansowe, zwiększaj kontrolę i podejmuj lepsze decyzje biznesowe.",
-      ogType: 'website',
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Finance",
-        "description": "Zarządzaj finansami firmy z Microsoft Dynamics 365 Finance. Automatyzuj procesy finansowe, zwiększaj kontrolę i podejmuj lepsze decyzje biznesowe.",
-        "url": "https://d365calculator.netlify.app/dynamics-365-finance",
-        "publisher": {
-          "@type": "Organization",
-          "name": "ANEGIS",
-          "url": "https://d365calculator.netlify.app"
-        }
-      }
-    },
-    'dynamics-365-supply-chain': {
-      title: "Microsoft Dynamics 365 Supply Chain Management | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
-      description: "Optymalizuj łańcuch dostaw z Microsoft Dynamics 365 Supply Chain Management. Zwiększ wydajność operacyjną i usprawnij procesy logistyczne.",
-      ogType: 'website',
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Supply Chain Management",
-        "description": "Optymalizuj łańcuch dostaw z Microsoft Dynamics 365 Supply Chain Management. Zwiększ wydajność operacyjną i usprawnij procesy logistyczne.",
-        "url": "https://d365calculator.netlify.app/dynamics-365-supply-chain",
-        "publisher": {
-          "@type": "Organization",
-          "name": "ANEGIS",
-          "url": "https://d365calculator.netlify.app"
+          "url": "https://dynamics365.com.pl"
         }
       }
     },
     'dynamics-365-project-operations': {
       title: "Microsoft Dynamics 365 Project Operations | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Efektywnie zarządzaj projektami z Microsoft Dynamics 365 Project Operations. Optymalizuj zasoby, kontroluj koszty i zwiększaj rentowność projektów.",
+      keywords: "Dynamics 365 Project Operations, zarządzanie projektami, projekty, harmonogramy, budżety projektów, licencje Project Operations",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Microsoft Dynamics 365 Project Operations",
         "description": "Efektywnie zarządzaj projektami z Microsoft Dynamics 365 Project Operations. Optymalizuj zasoby, kontroluj koszty i zwiększaj rentowność projektów.",
-        "url": "https://d365calculator.netlify.app/dynamics-365-project-operations",
+        "url": "https://dynamics365.com.pl/dynamics-365-project-operations",
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
-          "url": "https://d365calculator.netlify.app"
+          "url": "https://dynamics365.com.pl"
         }
       }
     },
-    'dynamics-365-customer-service': {
-      title: "Microsoft Dynamics 365 Customer Service | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
-      description: "Podnieś jakość obsługi klienta z Microsoft Dynamics 365 Customer Service. Automatyzuj procesy obsługi i zwiększaj satysfakcję klientów.",
+    'dynamics-365-finance': {
+      title: "Microsoft Dynamics 365 Finance | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
+      description: "Microsoft Dynamics 365 Finance - nowoczesne zarządzanie finansami. Automatyzuj procesy finansowe i podejmuj lepsze decyzje biznesowe.",
+      keywords: "Dynamics 365 Finance, zarządzanie finansami, księgowość, controlling, finanse przedsiębiorstw, licencje Finance",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Customer Service",
-        "description": "Podnieś jakość obsługi klienta z Microsoft Dynamics 365 Customer Service. Automatyzuj procesy obsługi i zwiększaj satysfakcję klientów.",
-        "url": "https://d365calculator.netlify.app/dynamics-365-customer-service",
+        "name": "Microsoft Dynamics 365 Finance",
+        "description": "Microsoft Dynamics 365 Finance - nowoczesne zarządzanie finansami. Automatyzuj procesy finansowe i podejmuj lepsze decyzje biznesowe.",
+        "url": "https://dynamics365.com.pl/dynamics-365-finance",
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
-          "url": "https://d365calculator.netlify.app"
+          "url": "https://dynamics365.com.pl"
         }
       }
     },
-    'dynamics-365-customer-insights': {
-      title: "Microsoft Dynamics 365 Customer Insights | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
-      description: "Poznaj lepiej swoich klientów z Microsoft Dynamics 365 Customer Insights. Analizuj dane klientów i personalizuj ich doświadczenia.",
+    'dynamics-365-supply-chain': {
+      title: "Microsoft Dynamics 365 Supply Chain Management | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
+      description: "Optymalizuj łańcuch dostaw z Microsoft Dynamics 365 Supply Chain Management. Zarządzaj produkcją, magazynem i logistyką w jednym systemie.",
+      keywords: "Dynamics 365 Supply Chain, łańcuch dostaw, zarządzanie magazynem, produkcja, logistyka, licencje Supply Chain",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Customer Insights",
-        "description": "Poznaj lepiej swoich klientów z Microsoft Dynamics 365 Customer Insights. Analizuj dane klientów i personalizuj ich doświadczenia.",
-        "url": "https://d365calculator.netlify.app/dynamics-365-customer-insights",
+        "name": "Microsoft Dynamics 365 Supply Chain Management",
+        "description": "Optymalizuj łańcuch dostaw z Microsoft Dynamics 365 Supply Chain Management. Zarządzaj produkcją, magazynem i logistyką w jednym systemie.",
+        "url": "https://dynamics365.com.pl/dynamics-365-supply-chain",
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
-          "url": "https://d365calculator.netlify.app"
+          "url": "https://dynamics365.com.pl"
         }
       }
     },
     'dynamics-365-commerce': {
       title: "Microsoft Dynamics 365 Commerce | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Rozwijaj swój biznes e-commerce z Microsoft Dynamics 365 Commerce. Zarządzaj sprzedażą wielokanałową i twórz spersonalizowane doświadczenia zakupowe.",
+      keywords: "Dynamics 365 Commerce, e-commerce, handel detaliczny, sprzedaż wielokanałowa, POS, licencje Commerce",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Microsoft Dynamics 365 Commerce",
         "description": "Rozwijaj swój biznes e-commerce z Microsoft Dynamics 365 Commerce. Zarządzaj sprzedażą wielokanałową i twórz spersonalizowane doświadczenia zakupowe.",
-        "url": "https://d365calculator.netlify.app/dynamics-365-commerce",
+        "url": "https://dynamics365.com.pl/dynamics-365-commerce",
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
-          "url": "https://d365calculator.netlify.app"
+          "url": "https://dynamics365.com.pl"
         }
       }
     },
     'dynamics-365-human-resources': {
       title: "Microsoft Dynamics 365 Human Resources | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
-      description: "Zarządzaj zasobami ludzkimi z Microsoft Dynamics 365 Human Resources. Automatyzuj procesy HR i zwiększaj zaangażowanie pracowników.",
+      description: "Efektywne zarządzanie zasobami ludzkimi z Microsoft Dynamics 365 HR. Optymalizuj procesy kadrowe i wspieraj rozwój pracowników.",
+      keywords: "Dynamics 365 HR, Human Resources, zarządzanie kadrami, HR, rozwój pracowników, licencje HR",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Microsoft Dynamics 365 Human Resources",
-        "description": "Zarządzaj zasobami ludzkimi z Microsoft Dynamics 365 Human Resources. Automatyzuj procesy HR i zwiększaj zaangażowanie pracowników.",
-        "url": "https://d365calculator.netlify.app/dynamics-365-human-resources",
+        "description": "Efektywne zarządzanie zasobami ludzkimi z Microsoft Dynamics 365 HR. Optymalizuj procesy kadrowe i wspieraj rozwój pracowników.",
+        "url": "https://dynamics365.com.pl/dynamics-365-human-resources",
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
-          "url": "https://d365calculator.netlify.app"
+          "url": "https://dynamics365.com.pl"
+        }
+      }
+    },
+    'dynamics-365-customer-insights': {
+      title: "Microsoft Dynamics 365 Customer Insights | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
+      description: "Poznaj swoich klientów lepiej z Microsoft Dynamics 365 Customer Insights. Analizuj dane klientów i personalizuj ich doświadczenia.",
+      keywords: "Dynamics 365 Customer Insights, analiza klientów, personalizacja, dane klientów, AI w biznesie, licencje Customer Insights",
+      ogType: 'website',
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Microsoft Dynamics 365 Customer Insights",
+        "description": "Poznaj swoich klientów lepiej z Microsoft Dynamics 365 Customer Insights. Analizuj dane klientów i personalizuj ich doświadczenia.",
+        "url": "https://dynamics365.com.pl/dynamics-365-customer-insights",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ANEGIS",
+          "url": "https://dynamics365.com.pl"
         }
       }
     }

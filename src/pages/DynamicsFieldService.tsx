@@ -17,12 +17,12 @@ const seoData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Microsoft Dynamics 365 Field Service",
-    "description": "Optymalizuj pracę serwisantów w terenie z Microsoft Dynamics 365 Field Service. Zwiększ efektywność obsługi i zadowolenie klientów dzięki inteligentnemu zarządzaniu serwisem.",
-    "url": "https://d365calculator.netlify.app/dynamics-365-field-service",
+    "description": "Optymalizuj pracę serwisantów w terenie z Microsoft Dynamics 365 Field Service. Zwiększ efektywność obsługi i zadowolenie klientów dzieki inteligentnemu zarządzaniu serwisem.",
+    "url": "https://dynamics365.com.pl/dynamics-365-field-service",
     "publisher": {
       "@type": "Organization",
       "name": "ANEGIS",
-      "url": "https://d365calculator.netlify.app"
+      "url": "https://dynamics365.com.pl"
     }
   }
 };

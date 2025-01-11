@@ -18,11 +18,11 @@ const seoData = {
     "@type": "WebPage",
     "name": "Microsoft Dynamics 365 Sales",
     "description": "Zwiększ efektywność sprzedaży z Microsoft Dynamics 365 Sales. Wykorzystaj sztuczną inteligencję do lepszego prognozowania i zamykania transakcji.",
-    "url": "https://d365calculator.netlify.app/dynamics-365-sales",
+    "url": "https://dynamics365.com.pl/dynamics-365-sales",
     "publisher": {
       "@type": "Organization",
       "name": "ANEGIS",
-      "url": "https://d365calculator.netlify.app"
+      "url": "https://dynamics365.com.pl"
     }
   }
 };
