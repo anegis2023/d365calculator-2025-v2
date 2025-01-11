@@ -40,8 +40,41 @@ function MainApp() {
     const stepParam = params.get('step');
     if (stepParam && ['selection', 'questions', 'review'].includes(stepParam)) {
       setStep(stepParam as 'selection' | 'questions' | 'review');
+      
+      // Initialize moduleSelections if we're moving to questions step
+      if (stepParam === 'questions' && selectedModules.length > 0) {
+        const initialSelections = selectedModules.map(module => ({
+          moduleId: module.id,
+          users: 0,
+          answers: {},
+          sharedUsers: []
+        }));
+        setModuleSelections(initialSelections);
+        setCurrentModuleIndex(0);
+      }
     }
-  }, [location.search]);
+  }, [location.search, selectedModules]);
+
+  useEffect(() => {
+    if (step === 'questions' && selectedModules.length > 0 && moduleSelections.length === 0) {
+      const initialSelections = selectedModules.map(module => ({
+        moduleId: module.id,
+        users: 0,
+        answers: {},
+        sharedUsers: []
+      }));
+      setModuleSelections(initialSelections);
+      setCurrentModuleIndex(0);
+    }
+  }, [step, selectedModules, moduleSelections.length]);
+
+  useEffect(() => {
+    scrollToTop();
+  }, [currentModuleIndex]);
+
+  useEffect(() => {
+    scrollToTop();
+  }, [location.pathname]);
 
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>, module: Module) => {
     event.dataTransfer.setData('moduleId', module.id.toString());
@@ -111,9 +144,9 @@ function MainApp() {
   const currentSelection = moduleSelections[currentModuleIndex];
 
   const areAllQuestionsAnswered = () => {
-    if (!currentModule || !currentSelection) return false;
+    if (!currentModule || !currentSelection || !currentSelection.answers) return false;
     return currentModule.questions.every(question => 
-      currentSelection.answers[question.id] !== undefined
+      currentSelection.answers && currentSelection.answers[question.id] !== undefined
     );
   };
 
@@ -196,7 +229,7 @@ function MainApp() {
                     key={question.id}
                     question={question}
                     moduleUsers={currentSelection?.users || 0}
-                    value={currentSelection?.answers[question.id]}
+                    value={currentSelection?.answers?.[question.id]}
                     onChange={(answer) => handleAnswer(question.id, answer)}
                   />
                 ))}
@@ -223,12 +256,16 @@ function MainApp() {
                       if (!areAllQuestionsAnswered()) {
                         return;
                       }
+                      
                       if (currentModuleIndex < selectedModules.length - 1) {
                         setCurrentModuleIndex(currentModuleIndex + 1);
                         scrollToTop();
                       } else {
-                        setStep('review');
-                        scrollToTop();
+                        // First scroll to top, then change step
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        setTimeout(() => {
+                          setStep('review');
+                        }, 100);
                       }
                     }}
                     disabled={!areAllQuestionsAnswered()}
@@ -288,7 +325,7 @@ function MainApp() {
                           <p className="text-base font-medium text-[#323130] mb-2">Odpowiedzi:</p>
                           <div className="space-y-3">
                             {module.questions.map((question) => {
-                              const answer = selection.answers[question.id];
+                              const answer = selection?.answers?.[question.id];
                               return (
                                 <div key={question.id} className="text-sm">
                                   <p className="text-[#323130] font-medium mb-1">{question.text}</p>
@@ -324,13 +361,16 @@ function MainApp() {
                   }}
                   className="ms-button-secondary"
                 >
-                  Powrót do pytań
+                  Wróć do pytań
                 </button>
                 <button
-                  onClick={() => setIsContactFormOpen(true)}
+                  onClick={() => {
+                    setIsContactFormOpen(true);
+                    scrollToTop();
+                  }}
                   className="ms-button-primary"
                 >
-                  Wyślij
+                  Wyślij zapytanie
                 </button>
               </div>
             </div>

@@ -64,7 +64,10 @@ export function InquiryBasket({ modules, onRemove, onDrop, onDragOver, onContinu
           {modules.length > 0 && (
             <button
               onClick={onContinue}
-              className="w-full mt-6 px-4 py-2 bg-[#0078d4] text-white rounded-md hover:bg-[#106ebe] transition-colors font-semibold"
+              disabled={modules.length === 0}
+              className={`w-full ms-button-primary ${
+                modules.length === 0 ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
               Kontynuuj
             </button>
@@ -103,7 +106,10 @@ export function InquiryBasket({ modules, onRemove, onDrop, onDragOver, onContinu
             </div>
             <button
               onClick={onContinue}
-              className="w-full px-4 py-2.5 bg-[#0078d4] text-white rounded-md hover:bg-[#106ebe] transition-colors font-semibold shadow-sm"
+              disabled={modules.length === 0}
+              className={`w-full ms-button-primary ${
+                modules.length === 0 ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
               Kontynuuj
             </button>
