@@ -74,11 +74,11 @@ export default function DynamicsHumanResources() {
   const { selectedModules, addModule } = useModuleBasket();
   const hasModules = selectedModules.length > 0;
   
-  const isModuleInBasket = selectedModules.some(module => module.id === 3);
+  const isModuleInBasket = selectedModules.some(module => module.id === 9);
 
   const handleAddToBasket = () => {
     if (!isModuleInBasket) {
-      const hrModule = modules.find(m => m.id === 3);
+      const hrModule = modules.find(m => m.id === 9);
       if (hrModule) {
         addModule(hrModule);
       }
