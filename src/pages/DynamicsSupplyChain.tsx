@@ -257,6 +257,18 @@ export default function DynamicsSupplyChain() {
                   </div>
                 </div>
               </div>
+
+              <div className="space-y-6">
+                <div className="bg-[#004b8c] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#003d73] cursor-pointer group">
+                  <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Supply Chain Management?</h2>
+                  <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Microsoft Dynamics 365 Supply Chain Management to zaawansowane rozwiązanie do zarządzania łańcuchem dostaw, które umożliwia firmom optymalizację procesów logistycznych i produkcyjnych. Dzięki inteligentnym funkcjom planowania, monitorowania i analityki, organizacje mogą zwiększać efektywność operacyjną i elastycznie reagować na zmiany rynkowe.
+                  </p>
+                  <p className="text-lg leading-relaxed opacity-90 mt-4 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Zainwestuj w Dynamics 365 Supply Chain Management, aby zoptymalizować swój łańcuch dostaw i zwiększyć konkurencyjność swojej firmy.
+                  </p>
+                </div>
+              </div>
             </div>
           )}
 

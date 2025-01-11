@@ -256,6 +256,18 @@ export default function DynamicsHumanResources() {
                   </div>
                 </div>
               </div>
+
+              <div className="space-y-6">
+                <div className="bg-[#008272] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#006e60] cursor-pointer group">
+                  <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Human Resources?</h2>
+                  <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Microsoft Dynamics 365 Human Resources to nowoczesne rozwiązanie do zarządzania zasobami ludzkimi, które wspiera organizacje w budowaniu efektywnych zespołów i rozwoju pracowników. Dzięki automatyzacji procesów HR, zaawansowanej analityce i narzędziom do zarządzania talentami, firmy mogą tworzyć lepsze środowisko pracy i osiągać lepsze wyniki biznesowe.
+                  </p>
+                  <p className="text-lg leading-relaxed opacity-90 mt-4 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Zainwestuj w Dynamics 365 Human Resources, aby zoptymalizować procesy HR i stworzyć lepsze miejsce pracy dla swoich pracowników.
+                  </p>
+                </div>
+              </div>
             </div>
           )}
 

@@ -256,6 +256,18 @@ export default function DynamicsProjectOperations() {
                   </div>
                 </div>
               </div>
+
+              <div className="space-y-6">
+                <div className="bg-[#31b6cc] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#2ca3b7] cursor-pointer group">
+                  <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Project Operations?</h2>
+                  <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Microsoft Dynamics 365 Project Operations to kompleksowe rozwiązanie do zarządzania projektami, które łączy sprzedaż, planowanie zasobów, zarządzanie projektami i rozliczenia w jednym systemie. Dzięki zaawansowanym funkcjom i integracji z ekosystemem Microsoft, organizacje mogą zwiększać efektywność projektów i osiągać lepsze wyniki biznesowe.
+                  </p>
+                  <p className="text-lg leading-relaxed opacity-90 mt-4 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Zainwestuj w Dynamics 365 Project Operations, aby usprawnić zarządzanie projektami i zwiększyć rentowność swojej organizacji.
+                  </p>
+                </div>
+              </div>
             </div>
           )}
 

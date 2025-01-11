@@ -256,6 +256,18 @@ export default function DynamicsFieldService() {
                   </div>
                 </div>
               </div>
+
+              <div className="space-y-6">
+                <div className="bg-[#ff6a00] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#e65f00] cursor-pointer group">
+                  <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Field Service?</h2>
+                  <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Microsoft Dynamics 365 Field Service to zaawansowane rozwiązanie do zarządzania serwisem terenowym, które optymalizuje pracę techników i podnosi jakość obsługi klienta. Dzięki inteligentnym funkcjom planowania, monitorowania i raportowania, organizacje mogą zwiększać efektywność operacyjną i satysfakcję klientów.
+                  </p>
+                  <p className="text-lg leading-relaxed opacity-90 mt-4 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                    Zainwestuj w Dynamics 365 Field Service, aby zrewolucjonizować swoją obsługę serwisową i dostarczać klientom usługi na najwyższym poziomie.
+                  </p>
+                </div>
+              </div>
             </div>
           )}
 
