@@ -31,6 +31,7 @@ function MainApp() {
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   const [moduleSelections, setModuleSelections] = useState<ModuleSelection[]>([]);
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const [expandedAnswers, setExpandedAnswers] = useState<Record<number, boolean>>({});
 
   const { selectedModules, addModule, removeModule } = useModuleStore();
   const location = useLocation();
@@ -69,11 +70,19 @@ function MainApp() {
   }, [step, selectedModules, moduleSelections.length]);
 
   useEffect(() => {
-    scrollToTop();
+    if (step === 'review') {
+      window.scrollTo(0, 0);
+    }
+  }, [step]);
+
+  useEffect(() => {
+    if (currentModuleIndex > 0) {
+      window.scrollTo(0, 0);
+    }
   }, [currentModuleIndex]);
 
   useEffect(() => {
-    scrollToTop();
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>, module: Module) => {
@@ -137,7 +146,14 @@ function MainApp() {
     setStep('selection');
     setCurrentModuleIndex(0);
     setModuleSelections([]);
-    scrollToTop();
+    window.scrollTo(0, 0);
+  };
+
+  const toggleAnswers = (moduleId: number) => {
+    setExpandedAnswers(prev => ({
+      ...prev,
+      [moduleId]: !prev[moduleId]
+    }));
   };
 
   const currentModule = selectedModules[currentModuleIndex];
@@ -196,7 +212,7 @@ function MainApp() {
                       setModuleSelections(initialSelections);
                       setCurrentModuleIndex(0);
                       setStep('questions');
-                      scrollToTop();
+                      window.scrollTo(0, 0);
                     }}
                   />
                 </div>
@@ -239,7 +255,7 @@ function MainApp() {
                 <button
                   onClick={() => {
                     setStep('selection');
-                    scrollToTop();
+                    window.scrollTo(0, 0);
                   }}
                   className="ms-button-secondary"
                 >
@@ -259,13 +275,11 @@ function MainApp() {
                       
                       if (currentModuleIndex < selectedModules.length - 1) {
                         setCurrentModuleIndex(currentModuleIndex + 1);
-                        scrollToTop();
                       } else {
-                        // First scroll to top, then change step
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        window.scrollTo(0, 0);
                         setTimeout(() => {
                           setStep('review');
-                        }, 100);
+                        }, 50);
                       }
                     }}
                     disabled={!areAllQuestionsAnswered()}
@@ -280,71 +294,154 @@ function MainApp() {
 
           {step === 'review' && (
             <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-semibold text-[#323130] mb-2">
-                  Podsumowanie wybranych modułów
-                </h2>
-                <p className="text-[#605e5c]">
-                  Sprawdź wybrane moduły i ich konfigurację.
-                </p>
+              {/* Header and Summary Section */}
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 lg:gap-8">
+                <div className="flex-1">
+                  <h2 className="text-2xl lg:text-3xl font-semibold text-[#323130] mb-2">
+                    Podsumowanie wybranych modułów
+                  </h2>
+                  <p className="text-[#605e5c] mb-4 lg:mb-8">
+                    Sprawdź wybrane moduły i ich konfigurację.
+                  </p>
+                </div>
+
+                {/* Total Users Summary Card */}
+                <div className="w-full lg:w-auto lg:min-w-[300px] bg-white rounded-xl shadow-lg p-4 lg:p-6 flex-shrink-0">
+                  <h3 className="text-lg lg:text-xl font-semibold text-[#323130] mb-3 lg:mb-4">Łączna liczba użytkowników</h3>
+                  <div className="flex items-center justify-between bg-gray-50 rounded-lg p-4">
+                    <div>
+                      <p className="text-sm text-[#605e5c] mb-1">Wszyscy użytkownicy</p>
+                      <p className="text-2xl lg:text-3xl font-semibold text-[#323130]">
+                        {moduleSelections.reduce((total, selection) => total + selection.users, 0)}
+                      </p>
+                    </div>
+                    <div className="w-10 h-10 lg:w-12 lg:h-12 bg-[#0078d4] rounded-full flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 lg:h-6 lg:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="space-y-6">
+              {/* Modules Grid */}
+              <div className={`grid gap-4 lg:gap-8 mx-auto w-full ${
+                moduleSelections.length === 1 
+                  ? 'max-w-3xl' 
+                  : moduleSelections.length === 2 
+                    ? 'max-w-5xl grid-cols-1 lg:grid-cols-2' 
+                    : 'grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'
+              }`}>
                 {moduleSelections.map((selection) => {
                   const module = modules.find(m => m.id === selection.moduleId);
                   if (!module) return null;
 
                   return (
-                    <div key={selection.moduleId} className="ms-card p-6">
-                      <h3 className="text-xl font-semibold text-[#323130] mb-4">{module.name}</h3>
-                      <div className="space-y-6">
-                        <div>
-                          <p className="text-base text-[#323130]">
-                            <span className="font-medium">Liczba użytkowników:</span> {selection.users}
-                          </p>
+                    <div key={selection.moduleId} className={`bg-white rounded-xl shadow-lg overflow-hidden flex flex-col ${
+                      moduleSelections.length === 1 ? 'max-w-3xl mx-auto w-full' : ''
+                    }`}>
+                      {/* Header */}
+                      <div className="bg-gradient-to-r from-[#0078d4] to-[#106ebe] p-4 lg:p-6 min-h-[90px] lg:min-h-[120px] flex items-center">
+                        <div className="flex items-start gap-3 lg:gap-4 w-full">
+                          {module.imageUrl && (
+                            <img
+                              src={module.imageUrl}
+                              alt={module.name}
+                              className="w-10 h-10 lg:w-12 lg:h-12 object-contain bg-white rounded-lg p-2 flex-shrink-0"
+                            />
+                          )}
+                          <h3 className="text-xl lg:text-2xl font-semibold text-white leading-tight">{module.name}</h3>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-4 lg:p-6 space-y-6 lg:space-y-8 flex-1 flex flex-col">
+                        {/* Users Section */}
+                        <div className="bg-gray-50 rounded-lg p-4">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <p className="text-sm text-[#605e5c] mb-1">Liczba użytkowników</p>
+                              <p className="text-2xl lg:text-3xl font-semibold text-[#323130]">{selection.users}</p>
+                            </div>
+                            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-[#0078d4] rounded-full flex items-center justify-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 lg:h-6 lg:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                              </svg>
+                            </div>
+                          </div>
                         </div>
                         
+                        {/* Shared Users Section */}
                         {selection.sharedUsers.length > 0 && (
-                          <div>
-                            <p className="text-base font-medium text-[#323130] mb-2">Użytkownicy współdzieleni:</p>
-                            <ul className="space-y-2">
+                          <div className="bg-gray-50 rounded-lg p-4">
+                            <h4 className="text-base font-medium text-[#323130] mb-3">Użytkownicy współdzieleni</h4>
+                            <div className="space-y-2">
                               {selection.sharedUsers.map(shared => {
                                 const targetModule = modules.find(m => m.id === shared.targetModuleId);
                                 return (
-                                  <li key={shared.targetModuleId} className="text-sm text-[#605e5c] flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-[#0078d4]" />
-                                    {shared.count} {shared.count === 1 ? 'użytkownik korzysta również z' : 'użytkowników korzysta również z'} {targetModule?.name}
-                                  </li>
+                                  <div key={shared.targetModuleId} className="flex items-center gap-3 text-sm text-[#605e5c]">
+                                    <div className="w-2 h-2 rounded-full bg-[#0078d4]" />
+                                    <span>
+                                      {shared.count} {shared.count === 1 ? 'użytkownik korzysta również z' : 'użytkowników korzysta również z'} {targetModule?.name}
+                                    </span>
+                                  </div>
                                 );
                               })}
-                            </ul>
+                            </div>
                           </div>
                         )}
 
-                        <div>
-                          <p className="text-base font-medium text-[#323130] mb-2">Odpowiedzi:</p>
-                          <div className="space-y-3">
-                            {module.questions.map((question) => {
-                              const answer = selection?.answers?.[question.id];
-                              return (
-                                <div key={question.id} className="text-sm">
-                                  <p className="text-[#323130] font-medium mb-1">{question.text}</p>
-                                  <p className="text-[#605e5c]">
+                        {/* Answers Section */}
+                        <div className="space-y-4 mt-auto">
+                          <button
+                            onClick={() => toggleAnswers(selection.moduleId)}
+                            className="w-full flex items-center justify-between bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors"
+                          >
+                            <div className="flex items-center gap-2">
+                              <h4 className="text-base font-medium text-[#323130]">Odpowiedzi</h4>
+                              <span className="text-sm text-[#605e5c]">
+                                ({module.questions.length} {module.questions.length === 1 ? 'pytanie' : 'pytań'})
+                              </span>
+                            </div>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className={`h-5 w-5 text-[#323130] transform transition-transform ${
+                                expandedAnswers[selection.moduleId] ? 'rotate-180' : ''
+                              }`}
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </button>
+                          
+                          {expandedAnswers[selection.moduleId] && (
+                            <div className="grid grid-cols-1 gap-4 animate-fadeIn">
+                              {module.questions.map((question) => {
+                                const answer = selection?.answers?.[question.id];
+                                return (
+                                  <div key={question.id} className="bg-gray-50 rounded-lg p-4">
+                                    <p className="text-sm font-medium text-[#323130] mb-2">{question.text}</p>
                                     {answer ? (
-                                      <>
-                                        Odpowiedź: {answer.response}
+                                      <div className="space-y-1">
+                                        <p className="text-sm text-[#605e5c]">
+                                          <span className="font-medium">Odpowiedź:</span> {answer.response}
+                                        </p>
                                         {answer.count !== undefined && (
-                                          <>, Użytkownicy: {answer.count}</>
+                                          <p className="text-sm text-[#605e5c]">
+                                            <span className="font-medium">Użytkownicy:</span> {answer.count}
+                                          </p>
                                         )}
-                                      </>
+                                      </div>
                                     ) : (
-                                      'Brak odpowiedzi'
+                                      <p className="text-sm text-red-500">Brak odpowiedzi</p>
                                     )}
-                                  </p>
-                                </div>
-                              );
-                            })}
-                          </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -357,7 +454,7 @@ function MainApp() {
                   onClick={() => {
                     setCurrentModuleIndex(selectedModules.length - 1);
                     setStep('questions');
-                    scrollToTop();
+                    window.scrollTo(0, 0);
                   }}
                   className="ms-button-secondary"
                 >
@@ -366,7 +463,7 @@ function MainApp() {
                 <button
                   onClick={() => {
                     setIsContactFormOpen(true);
-                    scrollToTop();
+                    window.scrollTo(0, 0);
                   }}
                   className="ms-button-primary"
                 >
