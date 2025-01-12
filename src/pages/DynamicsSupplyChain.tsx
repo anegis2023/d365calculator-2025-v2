@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaTruck, FaWarehouse, FaIndustry, FaChartLine, FaBoxes, FaRobot } from 'react-icons/fa';
+import { FaTruck, FaWarehouse, FaIndustry, FaChartLine, FaBoxes, FaRobot, FaBrain, FaMicrosoft } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -87,34 +87,34 @@ export default function DynamicsSupplyChain() {
 
   const features = [
     {
-      icon: <FaTruck />,
-      title: "Zarządzanie transportem",
-      description: "Optymalizacja tras, śledzenie przesyłek w czasie rzeczywistym i zarządzanie flotą transportową."
-    },
-    {
       icon: <FaWarehouse />,
-      title: "Zarządzanie magazynem",
-      description: "Efektywne zarządzanie przestrzenią magazynową, zapasami i procesami logistycznymi."
-    },
-    {
-      icon: <FaIndustry />,
-      title: "Planowanie produkcji",
-      description: "Zaawansowane planowanie produkcji, harmonogramowanie i optymalizacja procesów wytwórczych."
+      title: "Planowanie zapasów i produkcji",
+      description: "Optymalne zarządzanie zapasami i planowanie produkcji na podstawie danych historycznych, prognoz popytu oraz bieżących zamówień."
     },
     {
       icon: <FaChartLine />,
-      title: "Analityka łańcucha dostaw",
-      description: "Zaawansowana analityka i raporty w czasie rzeczywistym dla lepszego podejmowania decyzji."
-    },
-    {
-      icon: <FaBoxes />,
-      title: "Zarządzanie zapasami",
-      description: "Optymalizacja poziomów zapasów, automatyczne uzupełnianie i prognozowanie popytu."
+      title: "Monitorowanie procesów w czasie rzeczywistym",
+      description: "Dzięki integracji z IoT, system pozwala na bieżące śledzenie procesów produkcyjnych, logistycznych i magazynowych, co zapewnia pełną widoczność w łańcuchu dostaw."
     },
     {
       icon: <FaRobot />,
-      title: "Automatyzacja procesów",
-      description: "Wykorzystanie AI i automatyzacji do optymalizacji procesów w łańcuchu dostaw."
+      title: "Automatyzacja operacji magazynowych",
+      description: "Dynamics 365 Supply Chain Management wspiera automatyzację operacji, takich jak zarządzanie zapasami, kompletacja zamówień czy kontrola jakości, co minimalizuje ryzyko błędów i podnosi efektywność."
+    },
+    {
+      icon: <FaTruck />,
+      title: "Optymalizacja transportu",
+      description: "System pozwala na planowanie tras, monitorowanie dostaw oraz zarządzanie kosztami transportu, co przekłada się na sprawniejszą logistykę."
+    },
+    {
+      icon: <FaBrain />,
+      title: "Wykorzystanie sztucznej inteligencji (AI)",
+      description: "Dzięki zaawansowanym algorytmom AI, platforma umożliwia przewidywanie potencjalnych zakłóceń w łańcuchu dostaw oraz sugerowanie działań zapobiegawczych."
+    },
+    {
+      icon: <FaMicrosoft />,
+      title: "Integracja z ekosystemem Microsoft",
+      description: "Pełna kompatybilność z innymi narzędziami, takimi jak Power BI, Dynamics 365 Finance czy Teams, umożliwia skuteczną współpracę między działami."
     }
   ];
 
@@ -207,7 +207,7 @@ export default function DynamicsSupplyChain() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                      W dzisiejszym dynamicznym środowisku biznesowym, efektywne zarządzanie łańcuchem dostaw jest kluczowe dla sukcesu organizacji. Microsoft Dynamics 365 Supply Chain to kompleksowe rozwiązanie, które łączy zaawansowaną analitykę, sztuczną inteligencję i automatyzację, umożliwiając firmom optymalizację procesów logistycznych, redukcję kosztów i zwiększenie wydajności operacyjnej.
+                    Zarządzanie łańcuchem dostaw to jeden z kluczowych elementów współczesnego biznesu, wymagający efektywności, elastyczności oraz precyzji. W obliczu globalizacji, rosnących oczekiwań klientów i złożoności procesów operacyjnych firmy potrzebują narzędzi, które pomogą im sprostać tym wyzwaniom. Microsoft Dynamics 365 Supply Chain Management dostarcza rozwiązania, które umożliwiają organizacjom lepsze zarządzanie procesami, precyzyjne prognozowanie potrzeb oraz zwiększanie wartości na każdym etapie łańcucha dostaw.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -228,32 +228,42 @@ export default function DynamicsSupplyChain() {
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Kluczowe wyzwania w zarządzaniu łańcuchem dostaw</h2>
+                <p className="text-lg leading-relaxed">
+                  Zanim przejdziemy do szczegółowego omówienia funkcji Dynamics 365 Supply Chain Management, warto zrozumieć wyzwania, które często pojawiają się w organizacjach:
+                </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Optymalizacja zapasów i procesów magazynowych</li>
-                  <li>Efektywne planowanie produkcji i dostaw</li>
-                  <li>Zarządzanie transportem i logistyką</li>
-                  <li>Przewidywanie i reagowanie na zmiany popytu</li>
+                  <li>Niedokładne prognozy popytu prowadzące do nadwyżeki zapasów lub ich niedoboru.</li>
+                  <li>Brak widoczności w czasie rzeczywistym w procesach logistycznych.</li>
+                  <li>Trudności w zarządzaniu złożonymi operacjami produkcyjnymi i magazynowymi.</li>
+                  <li>Konieczność dostosowania się do zmieniających się warunków rynkowych i wymagań klientów.</li>
                 </ul>
+                <p className="text-lg leading-relaxed">
+                  Dynamics 365 Supply Chain Management rozwiązuje te problemy, oferując narzędzia do kompleksowego zarządzania operacjami.
+                </p>
               </div>
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Niższe koszty operacyjne</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Optymalizacja procesów i redukcja kosztów magazynowania.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności operacyjnej</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki automatyzacji i optymalizacji procesów, organizacje mogą szybciej reagować na zmiany rynkowe i potrzeby klientów.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Większa wydajność</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja procesów i optymalizacja wykorzystania zasobów.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Redukcja kosztów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Precyzyjne prognozowanie popytu i zarządzanie zapasami minimalizują koszty magazynowania oraz ryzyko nadwyżeki.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsza widoczność</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Pełna przejrzystość procesów w całym łańcuchu dostaw.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Poprawa satysfakcji klientów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki sprawnej logistyce i szybszym dostawom firmy mogą lepiej sprostać oczekiwaniom klientów.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Szybsza reakcja</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Błyskawiczne reagowanie na zmiany rynkowe i potrzeby klientów.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność i elastyczność</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">System dostosowuje się do potrzeb organizacji, umożliwiając łatwą rozbudowę funkcji w miarę rozwoju firmy.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze podejmowanie decyzji</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Zaawansowana analityka i raportowanie wspierają liderów w podejmowaniu trafnych decyzji opartych na danych.</p>
                   </div>
                 </div>
               </div>

@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaShoppingCart, FaUsers, FaChartLine, FaMobileAlt, FaCloudDownloadAlt, FaShieldAlt } from 'react-icons/fa';
+import { FaShoppingCart, FaUsers, FaBoxes, FaStore, FaChartLine, FaMicrosoft } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -88,33 +88,33 @@ export default function DynamicsCommerce() {
   const features = [
     {
       icon: <FaShoppingCart />,
-      title: "Omnichannel Commerce",
-      description: "Zapewnij spójne doświadczenia zakupowe we wszystkich kanałach sprzedaży. Integruj sklepy stacjonarne, online i mobilne w jednej platformie."
+      title: "Wielokanałowe zarządzanie sprzedażą",
+      description: "Platforma umożliwia integrację różnych kanałów sprzedaży, zapewniając klientom spójne doświadczenia zakupowe, niezależnie od miejsca zakupu."
     },
     {
       icon: <FaUsers />,
-      title: "Personalizacja doświadczeń",
-      description: "Wykorzystaj sztuczną inteligencję do tworzenia spersonalizowanych rekomendacji i dostosowywania treści do preferencji klientów."
+      title: "Personalizacja doświadczeń klienta",
+      description: "Dzięki dostępowi do danych o preferencjach, historii zakupów i zachowaniach klientów, system pozwala tworzyć spersonalizowane oferty i kampanie marketingowe."
+    },
+    {
+      icon: <FaBoxes />,
+      title: "Zarządzanie zapasami i logistyką",
+      description: "Dynamics 365 Commerce zapewnia pełną kontrolę nad stanami magazynowymi i procesami logistycznymi, co minimalizuje ryzyko braków produktowych i usprawnia dostawy."
+    },
+    {
+      icon: <FaStore />,
+      title: "Integracja sprzedaży online i offline",
+      description: "System łączy dane ze sklepów stacjonarnych i platform e-commerce, umożliwiając centralne zarządzanie operacjami i lepszą obsługę klientów."
     },
     {
       icon: <FaChartLine />,
-      title: "Analityka sprzedaży",
-      description: "Monitoruj wyniki sprzedaży w czasie rzeczywistym, analizuj zachowania klientów i optymalizuj strategie marketingowe w oparciu o dane."
+      title: "Zaawansowana analityka",
+      description: "Wbudowane narzędzia analityczne wspierane przez AI umożliwiają monitorowanie wskaźników sprzedaży, zachowań klientów i skuteczności kampanii w czasie rzeczywistym."
     },
     {
-      icon: <FaMobileAlt />,
-      title: "Aplikacje mobilne",
-      description: "Dostarczaj nowoczesne doświadczenia zakupowe na urządzeniach mobilnych. Umożliw klientom łatwe zakupy z dowolnego miejsca."
-    },
-    {
-      icon: <FaCloudDownloadAlt />,
-      title: "Integracja systemów",
-      description: "Łącz się z popularnymi systemami płatności, logistyki i zarządzania zapasami. Automatyzuj procesy i zwiększaj efektywność operacyjną."
-    },
-    {
-      icon: <FaShieldAlt />,
-      title: "Bezpieczeństwo transakcji",
-      description: "Chroń dane klientów i transakcje dzięki zaawansowanym mechanizmom bezpieczeństwa i zgodności z regulacjami."
+      icon: <FaMicrosoft />,
+      title: "Integracja z ekosystemem Microsoft",
+      description: "Pełna kompatybilność z aplikacjami Microsoft, takimi jak Power BI, Dynamics 365 Supply Chain Management czy Microsoft Teams, pozwala na efektywną współpracę między działami i usprawnienie procesów."
     }
   ];
 
@@ -207,7 +207,7 @@ export default function DynamicsCommerce() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                      W erze cyfrowej transformacji, sukces w handlu detalicznym zależy od umiejętności dostarczania spójnych i angażujących doświadczeń zakupowych we wszystkich kanałach sprzedaży. Współczesni konsumenci oczekują personalizacji, wygody i płynnej integracji między zakupami online i offline. Microsoft Dynamics 365 Commerce to kompleksowa platforma, która pomaga sprostać tym wyzwaniom i przekształcić sposób prowadzenia sprzedaży detalicznej.
+                    Handel, zarówno tradycyjny, jak i cyfrowy, zmienia się w dynamicznym tempie. Firmy muszą sprostać rosnącym oczekiwaniom klientów, zarządzać złożonymi procesami wielokanałowymi i zapewnić doskonałe doświadczenia na każdym etapie podróży zakupowej. Microsoft Dynamics 365 Commerce to nowoczesna platforma, która wspiera organizacje w tworzeniu spójnych, personalizowanych i skutecznych strategii handlowych, niezależnie od kanału sprzedaży. System pomaga w integracji sprzedaży online i offline, umożliwiając lepszą obsługę klientów oraz optymalizację operacji biznesowych. Dzięki zaawansowanym narzędziom analitycznym pozwala również przewidywać trendy i dostosowywać działania do dynamicznie zmieniającego się rynku.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -227,32 +227,42 @@ export default function DynamicsCommerce() {
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Kluczowe wyzwania w handlu detalicznym</h2>
+                <p className="text-lg leading-relaxed">
+                  Współczesny handel wiąże się z wieloma wyzwaniami, które wymagają innowacyjnych rozwiązań:
+                </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Rosnące oczekiwania klientów dotyczące personalizacji i wygody zakupów</li>
-                  <li>Potrzeba integracji kanałów sprzedaży online i offline</li>
-                  <li>Zarządzanie zapasami w czasie rzeczywistym</li>
-                  <li>Analiza zachowań klientów i optymalizacja strategii sprzedaży</li>
+                  <li>Zapewnienie spójnego doświadczenia klienta w wielu kanałach (sklepy stacjonarne, online, aplikacje mobilne).</li>
+                  <li>Brak centralizacji danych o klientach i ich zakupach.</li>
+                  <li>Złożoność procesów logistycznych i zarządzania zapasami.</li>
+                  <li>Rosnąca konkurencja na rynku e-commerce i konieczność wyróżnienia się ofertą.</li>
                 </ul>
+                <p className="text-lg leading-relaxed">
+                  Dynamics 365 Commerce pomaga firmom skutecznie rozwiązywać te problemy, dostarczając narzędzia do kompleksowego zarządzania operacjami handlowymi.
+                </p>
               </div>
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie sprzedaży</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Personalizacja i optymalizacja doświadczeń zakupowych prowadzi do większej konwersji.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Spójne doświadczenie klienta</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Zapewnienie jednolitych wrażeń zakupowych we wszystkich kanałach buduje zaufanie klientów i zwiększa ich lojalność.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Efektywność operacyjna</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja procesów i integracja systemów redukuje koszty operacyjne.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze zarządzanie operacjami</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Centralizacja danych i automatyzacja procesów pozwalają na skuteczniejsze zarządzanie operacjami handlowymi i szybsze podejmowanie decyzji.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lojalność klientów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Spójne doświadczenia we wszystkich kanałach budują długotrwałe relacje.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności marketingu</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki personalizacji ofert i kampanii organizacje mogą lepiej docierać do klientów i zwiększać sprzedaż.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Elastyczna platforma rozwija się wraz z Twoim biznesem.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Redukcja kosztów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Optymalizacja zapasów i procesów logistycznych pozwala obniżyć koszty operacyjne i zminimalizować straty.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność i elastyczność</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">System dostosowuje się do zmieniających się potrzeb biznesowych, umożliwiając rozwój organizacji w dynamicznym środowisku rynkowym.</p>
                   </div>
                 </div>
               </div>
