@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaTools, FaMapMarkedAlt, FaCalendarAlt, FaMobile, FaChartLine, FaCog } from 'react-icons/fa';
+import { FaTools, FaMapMarkedAlt, FaCalendarAlt, FaMobile, FaChartLine, FaCog, FaUsers, FaRobot, FaMicrosoft } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -87,34 +87,34 @@ export default function DynamicsFieldService() {
 
   const features = [
     {
-      icon: <FaTools />,
-      title: "Zarządzanie zleceniami",
-      description: "Efektywne planowanie, przydzielanie i śledzenie zleceń serwisowych. Automatyczne powiadomienia i aktualizacje statusów."
-    },
-    {
-      icon: <FaMapMarkedAlt />,
-      title: "Optymalizacja tras",
-      description: "Inteligentne planowanie tras z uwzględnieniem lokalizacji, priorytetów i dostępności serwisantów. Redukcja czasu i kosztów przejazdów."
-    },
-    {
       icon: <FaCalendarAlt />,
-      title: "Harmonogramowanie",
-      description: "Zaawansowane narzędzia do planowania pracy serwisantów z uwzględnieniem ich umiejętności, dostępności i lokalizacji."
+      title: "Optymalizacja harmonogramów",
+      description: "System umożliwia automatyczne przydzielanie zadań na podstawie lokalizacji, dostępności i umiejętności techników, co minimalizuje czas podróży i zwiększa efektywność."
+    },
+    {
+      icon: <FaTools />,
+      title: "Zarządzanie zleceniami serwisowymi",
+      description: "Dynamics 365 Field Service pozwala tworzyć, śledzić i zarządzać zleceniami w czasie rzeczywistym, zapewniając pełną przejrzystość procesu."
+    },
+    {
+      icon: <FaUsers />,
+      title: "Pełny widok klienta",
+      description: "Platforma integruje dane klientów i sprzętu, umożliwiając technikom terenowym dostęp do historii serwisowej, szczegółów gwarancji i instrukcji technicznych."
+    },
+    {
+      icon: <FaRobot />,
+      title: "Wykorzystanie sztucznej inteligencji (AI)",
+      description: "AI wspiera przewidywanie awarii sprzętu i proponowanie działań zapobiegawczych, co minimalizuje przestoje i zwiększa zadowolenie klientów."
     },
     {
       icon: <FaMobile />,
-      title: "Aplikacja mobilna",
-      description: "Dostęp do wszystkich niezbędnych informacji i narzędzi w terenie. Możliwość pracy offline i automatyczna synchronizacja danych."
+      title: "Aplikacje mobilne",
+      description: "Dynamics 365 Field Service oferuje aplikacje mobilne dla techników terenowych, umożliwiając dostęp do zleceń, dokumentacji i narzędzi w dowolnym miejscu."
     },
     {
-      icon: <FaChartLine />,
-      title: "Analityka serwisu",
-      description: "Szczegółowe raporty i analizy wydajności serwisu. Monitorowanie KPI i optymalizacja procesów w oparciu o dane."
-    },
-    {
-      icon: <FaCog />,
-      title: "Zarządzanie zasobami",
-      description: "Efektywne zarządzanie częściami zamiennymi, narzędziami i flotą pojazdów. Automatyczne uzupełnianie zapasów."
+      icon: <FaMicrosoft />,
+      title: "Integracja z ekosystemem Microsoft",
+      description: "Pełna integracja z narzędziami Microsoft, takimi jak Teams, Power BI czy Dynamics 365 Customer Service, umożliwia kompleksowe zarządzanie usługami i współpracę między zespołami."
     }
   ];
 
@@ -207,7 +207,7 @@ export default function DynamicsFieldService() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                      W dzisiejszym dynamicznym środowisku biznesowym, efektywne zarządzanie serwisem w terenie staje się kluczowym elementem sukcesu. Klienci oczekują szybkiej i profesjonalnej obsługi, a firmy potrzebują narzędzi do optymalizacji pracy serwisantów i redukcji kosztów. Microsoft Dynamics 365 Field Service to kompleksowa platforma, która łączy zaawansowane technologie z praktycznymi narzędziami do zarządzania serwisem, umożliwiając organizacjom dostarczanie wyjątkowej jakości usług w terenie.
+                    Współczesny klient oczekuje usług na najwyższym poziomie – szybkich, niezawodnych i dostosowanych do swoich potrzeb. Firmy świadczące usługi terenowe często stoją przed wyzwaniem, jak skutecznie zarządzać zleceniami, optymalizować zasoby i zapewnić jakość obsługi, która zadowoli klientów. Microsoft Dynamics 365 Field Service to rozwiązanie, które pomaga sprostać tym oczekiwaniom i znacząco usprawnić realizację usług w terenie.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -226,33 +226,39 @@ export default function DynamicsFieldService() {
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Kluczowe wyzwania w serwisie terenowym</h2>
+                <h2 className="text-2xl font-bold">Kluczowe wyzwania w zarządzaniu usługami terenowymi</h2>
+                <p>Zanim przejdziemy do omówienia funkcji Dynamics 365 Field Service, warto zrozumieć wyzwania, które stoją przed firmami:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Efektywne planowanie i optymalizacja tras serwisantów</li>
-                  <li>Zarządzanie częściami zamiennymi i narzędziami</li>
-                  <li>Komunikacja i koordynacja zespołów w terenie</li>
-                  <li>Monitorowanie i poprawa wydajności serwisu</li>
+                  <li>Trudności w koordynacji pracowników terenowych i optymalizacji harmonogramów.</li>
+                  <li>Brak pełnej widoczności danych o klientach i sprzęcie w terenie.</li>
+                  <li>Problemy z szybką reakcją na zgłoszenia i nieprzewidziane problemy.</li>
+                  <li>Konieczność zapewnienia klientom przejrzystości i wysokiego standardu obsługi.</li>
                 </ul>
+                <p>Dynamics 365 Field Service pomaga firmom pokonać te wyzwania, dostarczając kompleksowe narzędzia do zarządzania operacjami w terenie.</p>
               </div>
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Wyższa efektywność</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Optymalizacja tras i harmonogramów zwiększa liczbę obsłużonych zleceń.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności operacyjnej</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki optymalizacji harmonogramów i automatyzacji procesów organizacje mogą szybciej i sprawniej realizować zlecenia.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Redukcja kosztów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Mniejsze zużycie paliwa i lepsze wykorzystanie zasobów.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Poprawa satysfakcji klientów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Przejrzyste procesy i szybka reakcja na zgłoszenia zwiększają zaufanie klientów i budują ich lojalność.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zadowolenie klientów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Szybsza i bardziej profesjonalna obsługa w terenie.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Redukcja kosztów operacyjnych</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja i przewidywanie awarii pozwalają na ograniczenie kosztów związanych z nieplanowanymi przestojami i naprawami.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsza kontrola</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Pełna widoczność operacji i zasobów w terenie.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność i elastyczność</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dynamics 365 Field Service można dostosować do specyficznych potrzeb firmy, zarówno w małych, jak i dużych organizacjach.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Proaktywne podejście do obsługi</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki wykorzystaniu AI i IoT firmy mogą przewidywać potrzeby klientów i działać zapobiegawczo, zanim pojawią się problemy.</p>
                   </div>
                 </div>
               </div>
