@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaUsers, FaChartLine, FaGraduationCap, FaClipboardCheck, FaHandshake, FaUserClock } from 'react-icons/fa';
+import { FaUsers, FaUserPlus, FaMoneyBillWave, FaGraduationCap, FaChartLine, FaMicrosoft } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -88,33 +88,33 @@ export default function DynamicsHumanResources() {
   const features = [
     {
       icon: <FaUsers />,
-      title: "Zarządzanie pracownikami",
-      description: "Kompleksowe zarządzanie danymi pracowników, onboardingiem i offboardingiem. Automatyzacja procesów kadrowych."
+      title: "Zarządzanie danymi pracowników",
+      description: "System umożliwia centralizację wszystkich danych o pracownikach, takich jak dane personalne, historia zatrudnienia czy umiejętności, co pozwala na pełny wgląd w zasoby ludzkie organizacji."
+    },
+    {
+      icon: <FaUserPlus />,
+      title: "Planowanie i analiza zatrudnienia",
+      description: "Dynamics 365 Human Resources wspiera planowanie zatrudnienia na podstawie aktualnych i przyszłych potrzeb organizacji, umożliwiając bardziej strategiczne podejście do rekrutacji."
+    },
+    {
+      icon: <FaMoneyBillWave />,
+      title: "Zarządzanie wynagrodzeniami i benefitami",
+      description: "Platforma automatyzuje procesy związane z wynagrodzeniami, premiami i dodatkowymi benefitami, zapewniając przejrzystość i zgodność z polityką firmy."
     },
     {
       icon: <FaGraduationCap />,
-      title: "Rozwój talentów",
-      description: "Planowanie ścieżek kariery, zarządzanie szkoleniami i kompetencjami. Identyfikacja i rozwój kluczowych talentów."
+      title: "Rozwój i szkolenia pracowników",
+      description: "System wspiera tworzenie spersonalizowanych ścieżek rozwoju i programów szkoleniowych, pomagając pracownikom rozwijać swoje umiejętności i osiągać cele zawodowe."
     },
     {
       icon: <FaChartLine />,
       title: "Analityka HR",
-      description: "Zaawansowane raporty i analizy kadrowe. Monitorowanie wskaźników HR i trendów w organizacji."
+      description: "Wbudowane narzędzia analityczne dostarczają wglądu w kluczowe wskaźniki, takie jak rotacja pracowników, zaangażowanie czy efektywność rekrutacji, co pozwala na podejmowanie lepszych decyzji."
     },
     {
-      icon: <FaHandshake />,
-      title: "Employee Experience",
-      description: "Narzędzia do zwiększania zaangażowania pracowników. Portale samoobsługowe i komunikacja wewnętrzna."
-    },
-    {
-      icon: <FaClipboardCheck />,
-      title: "Zarządzanie świadczeniami",
-      description: "Kompleksowa obsługa benefitów pracowniczych. Automatyzacja procesów administracyjnych."
-    },
-    {
-      icon: <FaUserClock />,
-      title: "Zarządzanie czasem",
-      description: "Planowanie czasu pracy, urlopy, nieobecności. Integracja z systemem płacowym."
+      icon: <FaMicrosoft />,
+      title: "Integracja z ekosystemem Microsoft",
+      description: "Dynamics 365 Human Resources współpracuje z innymi aplikacjami, takimi jak Teams czy Power BI, co umożliwia efektywną współpracę i zaawansowaną analizę danych HR."
     }
   ];
 
@@ -207,7 +207,7 @@ export default function DynamicsHumanResources() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                      W dzisiejszym dynamicznym środowisku biznesowym, efektywne zarządzanie zasobami ludzkimi staje się kluczowym czynnikiem sukcesu organizacji. Pracownicy oczekują spersonalizowanego podejścia do rozwoju i nowoczesnych narzędzi HR. Microsoft Dynamics 365 Human Resources to kompleksowa platforma, która łączy zaawansowane technologie z najlepszymi praktykami HR, umożliwiając organizacjom budowanie zaangażowanego i efektywnego zespołu.
+                    Zarządzanie zasobami ludzkimi odgrywa kluczową rolę w budowaniu silnych organizacji. Współczesne działy HR stoją przed wyzwaniem optymalizacji procesów rekrutacyjnych, rozwoju pracowników i zarządzania ich doświadczeniami w miejscu pracy. Microsoft Dynamics 365 Human Resources to kompleksowe rozwiązanie, które pozwala organizacjom skutecznie zarządzać wszystkimi aspektami kapitału ludzkiego, wspierając zarówno codzienne operacje, jak i długoterminowe strategie. Platforma oferuje zaawansowane narzędzia, które pozwalają zwiększyć efektywność pracy zespołów HR oraz zoptymalizować zarządzanie talentami. Dodatkowo umożliwia organizacjom dostosowanie procesów do dynamicznie zmieniających się potrzeb rynku pracy.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -227,32 +227,38 @@ export default function DynamicsHumanResources() {
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Kluczowe wyzwania w zarządzaniu HR</h2>
+                <p className="mt-4">Działy HR muszą sprostać różnorodnym wyzwaniom, które wpływają na efektywność organizacji:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Przyciąganie i utrzymanie talentów</li>
-                  <li>Rozwój i szkolenie pracowników</li>
-                  <li>Automatyzacja procesów HR</li>
-                  <li>Zarządzanie zaangażowaniem pracowników</li>
+                  <li>Trudności w identyfikacji i przyciąganiu najlepszych talentów.</li>
+                  <li>Zarządzanie zróżnicowanymi potrzebami pracowników w dynamicznym środowisku.</li>
+                  <li>Brak przejrzystości w obszarze wynagrodzeń, benefitów i ścieżek rozwoju.</li>
+                  <li>Trudności w mierzeniu efektywności działań HR i ich wpływu na organizację.</li>
                 </ul>
+                <p className="mt-4">Dynamics 365 Human Resources rozwiązuje te problemy, oferując zaawansowane narzędzia do zarządzania personelem.</p>
               </div>
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Wyższa efektywność HR</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja procesów zwiększa wydajność działu HR.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności operacyjnej</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja procesów HR pozwala zespołom skupić się na strategicznych działaniach, zamiast na rutynowych zadaniach administracyjnych.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze doświadczenia</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Nowoczesne narzędzia zwiększają satysfakcję pracowników.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Poprawa doświadczenia pracowników</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Spersonalizowane podejście do rozwoju i wynagrodzeń zwiększa zaangażowanie i satysfakcję pracowników.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Rozwój talentów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Efektywne zarządzanie rozwojem i karierą pracowników.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze podejmowanie decyzji</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki dostępowi do zaawansowanej analityki liderzy mogą podejmować decyzje oparte na danych, co wspiera osiąganie celów organizacyjnych.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze decyzje</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Podejmowanie decyzji w oparciu o dane HR.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zgodność z przepisami</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Platforma zapewnia zgodność z lokalnymi i międzynarodowymi przepisami dotyczącymi zarządzania zasobami ludzkimi, minimalizując ryzyko prawne.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność i elastyczność</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">System można łatwo dostosować do potrzeb zarówno małych firm, jak i dużych korporacji, wspierając rozwój organizacji.</p>
                   </div>
                 </div>
               </div>

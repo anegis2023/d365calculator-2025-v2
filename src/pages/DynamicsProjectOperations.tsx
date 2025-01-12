@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaProjectDiagram, FaUsers, FaChartLine, FaCalendarAlt, FaMoneyBillWave, FaClipboardCheck } from 'react-icons/fa';
+import { FaProjectDiagram, FaMoneyBillWave, FaUsers, FaChartLine, FaCogs, FaMicrosoft } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -88,33 +88,33 @@ export default function DynamicsProjectOperations() {
   const features = [
     {
       icon: <FaProjectDiagram />,
-      title: "Zarządzanie projektami",
-      description: "Kompleksowe narzędzia do planowania, realizacji i monitorowania projektów. Zarządzanie zadaniami i kamieniami milowymi."
-    },
-    {
-      icon: <FaUsers />,
-      title: "Zarządzanie zasobami",
-      description: "Efektywna alokacja zasobów, planowanie wykorzystania i monitorowanie dostępności zespołów projektowych."
-    },
-    {
-      icon: <FaChartLine />,
-      title: "Analityka projektowa",
-      description: "Zaawansowane raporty i analizy wydajności projektów. Monitorowanie KPI i trendów w czasie rzeczywistym."
-    },
-    {
-      icon: <FaCalendarAlt />,
-      title: "Harmonogramowanie",
-      description: "Zaawansowane narzędzia do planowania projektów i zadań. Śledzenie postępów i zarządzanie terminami."
+      title: "Planowanie projektów i zasobów",
+      description: "System umożliwia precyzyjne planowanie harmonogramów, alokację zasobów i monitorowanie postępu prac, co pozwala uniknąć opóźnień."
     },
     {
       icon: <FaMoneyBillWave />,
-      title: "Finanse projektowe",
-      description: "Zarządzanie budżetami, kosztami i przychodami projektów. Automatyzacja rozliczeń i fakturowania."
+      title: "Zarządzanie kosztami i budżetem",
+      description: "Dynamics 365 Project Operations oferuje zaawansowane narzędzia do monitorowania kosztów w czasie rzeczywistym, co umożliwia lepszą kontrolę nad budżetem i zwiększenie rentowności."
     },
     {
-      icon: <FaClipboardCheck />,
-      title: "Zarządzanie dostawami",
-      description: "Kontrola nad zakupami projektowymi, dostawami i zarządzanie umowami z podwykonawcami."
+      icon: <FaUsers />,
+      title: "Integracja zespołów i komunikacja",
+      description: "Platforma wspiera współpracę między zespołami dzięki integracji z narzędziami takimi jak Microsoft Teams, co usprawnia komunikację i dzielenie się informacjami."
+    },
+    {
+      icon: <FaChartLine />,
+      title: "Zaawansowana analityka i raportowanie",
+      description: "Wbudowane funkcje analityczne dostarczają wglądu w kluczowe wskaźniki projektowe, takie jak rentowność, wykorzystanie zasobów czy realizacja kamieni milowych."
+    },
+    {
+      icon: <FaCogs />,
+      title: "Automatyzacja procesów",
+      description: "System automatyzuje powtarzalne zadania, takie jak fakturowanie, śledzenie wydatków czy generowanie raportów, co pozwala zespołom skupić się na strategicznych aspektach projektu."
+    },
+    {
+      icon: <FaMicrosoft />,
+      title: "Integracja z ekosystemem Microsoft",
+      description: "Dynamics 365 Project Operations płynnie współpracuje z aplikacjami Microsoft, takimi jak Power BI, Dynamics 365 Finance i Dynamics 365 Sales, umożliwiając kompleksowe zarządzanie projektami w całej organizacji."
     }
   ];
 
@@ -207,7 +207,7 @@ export default function DynamicsProjectOperations() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                      W dzisiejszym dynamicznym środowisku biznesowym, skuteczne zarządzanie projektami staje się kluczowym czynnikiem sukcesu organizacji. Firmy potrzebują narzędzi, które łączą zarządzanie projektami, zasobami i finansami w jednym rozwiązaniu. Microsoft Dynamics 365 Project Operations to kompleksowa platforma, która integruje wszystkie aspekty zarządzania projektami, umożliwiając organizacjom zwiększenie rentowności i efektywności realizowanych przedsięwzięć.
+                    Zarządzanie projektami wymaga precyzji, efektywnej komunikacji i elastyczności. Współczesne firmy realizujące złożone projekty stają przed wyzwaniem integracji zespołów, optymalizacji zasobów i monitorowania kosztów. Microsoft Dynamics 365 Project Operations to rozwiązanie, które łączy wszystkie aspekty zarządzania projektami w jednej platformie, umożliwiając organizacjom efektywne realizowanie nawet najbardziej wymagających przedsięwzięć. System pozwala na pełną kontrolę nad harmonogramami i kosztami, co przekłada się na lepszą organizację pracy. Dzięki wbudowanym funkcjom analitycznym umożliwia także przewidywanie potencjalnych problemów i szybkie podejmowanie decyzji.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -227,32 +227,38 @@ export default function DynamicsProjectOperations() {
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Kluczowe wyzwania w zarządzaniu projektami</h2>
+                <p className="mt-4">Efektywne prowadzenie projektów wymaga rozwiązywania licznych problemów, takich jak:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Efektywne planowanie i kontrola projektów</li>
-                  <li>Optymalne wykorzystanie zasobów</li>
-                  <li>Kontrola budżetów i kosztów</li>
-                  <li>Zarządzanie ryzykiem projektowym</li>
+                  <li>Brak przejrzystości w planowaniu zasobów i harmonogramach.</li>
+                  <li>Trudności w kontrolowaniu kosztów i rentowności projektów.</li>
+                  <li>Problemy z integracją zespołów pracujących w różnych lokalizacjach.</li>
+                  <li>Brak centralizacji danych projektowych, co utrudnia podejmowanie decyzji opartych na faktach.</li>
                 </ul>
+                <p className="mt-4">Dynamics 365 Project Operations pozwala firmom pokonać te bariery, dostarczając zaawansowane narzędzia do zarządzania projektami.</p>
               </div>
 
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Wyższa rentowność</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Lepsza kontrola kosztów i efektywniejsze wykorzystanie zasobów.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności projektów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki zaawansowanym narzędziom planowania i automatyzacji procesów organizacje mogą realizować projekty szybciej i sprawniej.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Większa produktywność</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Usprawnienie procesów i automatyzacja rutynowych zadań.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Poprawa rentowności</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Precyzyjne monitorowanie kosztów i kontrola budżetu pozwalają zwiększyć opłacalność realizowanych projektów.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsza kontrola</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Pełna widoczność postępów i wydajności projektów.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Ułatwiona współpraca zespołów</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Integracja zespołów i centralizacja danych projektowych zwiększają efektywność komunikacji i eliminują silosy informacyjne.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze decyzje</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Podejmowanie decyzji w oparciu o aktualne dane projektowe.</p>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze podejmowanie decyzji</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dostęp do danych w czasie rzeczywistym wspiera liderów w podejmowaniu trafnych decyzji opartych na analizach.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność i elastyczność</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">System dostosowuje się do potrzeb organizacji, umożliwiając łatwą adaptację w dynamicznie zmieniającym się środowisku biznesowym.</p>
                   </div>
                 </div>
               </div>
