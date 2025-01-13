@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { useNavigate } from 'react-router-dom';
-import { FaFileExcel, FaTrash } from 'react-icons/fa';
+import { FaFileExcel, FaTrash, FaEye } from 'react-icons/fa';
 import { generateExcelFile } from '../utils/excelExport';
 import { ModuleSelection } from '../types';
+import { AdminModuleReview } from './AdminModuleReview'; 
 
 interface FormSubmission {
   id: string;
@@ -27,6 +28,7 @@ export default function AdminDashboard() {
   const [submissions, setSubmissions] = useState<FormSubmission[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedSubmission, setSelectedSubmission] = useState<FormSubmission | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -139,6 +141,14 @@ export default function AdminDashboard() {
               </div>
               <div className="flex gap-2">
                 <button
+                  onClick={() => setSelectedSubmission(submission)}
+                  className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                  title="Podgląd szczegółów"
+                >
+                  <FaEye className="text-xl" />
+                  <span>Podgląd</span>
+                </button>
+                <button
                   onClick={() => generateExcelFile(submission)}
                   className="flex items-center gap-2 px-3 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
                   title="Eksportuj do Excel"
@@ -179,6 +189,12 @@ export default function AdminDashboard() {
           </div>
         ))}
       </div>
+      {selectedSubmission && (
+        <AdminModuleReview
+          submission={selectedSubmission}
+          onClose={() => setSelectedSubmission(null)}
+        />
+      )}
     </div>
   );
 }
