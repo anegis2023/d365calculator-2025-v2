@@ -141,6 +141,7 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
+    copyPublicDir: true
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
