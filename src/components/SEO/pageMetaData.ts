@@ -104,6 +104,91 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
           "@type": "Organization",
           "name": "ANEGIS",
           "url": "https://dynamics365.com.pl"
+        },
+        "mainEntity": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Czym jest Microsoft Dynamics 365 Sales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Sales to zaawansowane narzędzie CRM, które wspiera zespoły sprzedaży w zarządzaniu relacjami z klientami, automatyzacji procesów sprzedażowych oraz analizie danych w celu zwiększenia efektywności i wyników sprzedaży."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne funkcje Dynamics 365 Sales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Inteligentne prognozowanie sprzedaży z wykorzystaniem AI, automatyzacja codziennych zadań sprzedażowych, personalizacja doświadczeń klientów, analiza danych i interaktywne raporty, integracja z aplikacjami Microsoft, takimi jak Outlook czy Teams, oraz mobilny dostęp do platformy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Dynamics 365 Sales jest odpowiednie dla małych firm?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, rozwiązanie jest skalowalne i może być dostosowane do potrzeb zarówno małych, jak i dużych firm. Oferuje elastyczne plany i funkcje, które mogą być rozwijane w miarę wzrostu firmy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mogę korzystać z Dynamics 365 Sales na urządzeniach mobilnych?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Dynamics 365 Sales posiada aplikację mobilną, która umożliwia dostęp do danych i funkcji z dowolnego miejsca, co jest szczególnie przydatne dla zespołów pracujących w terenie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Dynamics 365 Sales pomaga w prognozowaniu sprzedaży?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Platforma wykorzystuje sztuczną inteligencję i analizę danych historycznych, aby przewidywać wyniki sprzedaży, identyfikować potencjalne szanse i wspierać podejmowanie decyzji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Dynamics 365 Sales integruje się z innymi narzędziami?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Dynamics 365 Sales bezproblemowo integruje się z innymi rozwiązaniami Microsoft, takimi jak Office 365, Teams, SharePoint czy Power BI, co zapewnia spójność danych i usprawnia współpracę."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Dynamics 365 Sales wspiera współpracę zespołową?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Integracja z Microsoft Teams i innymi narzędziami umożliwia efektywną komunikację, udostępnianie plików i wspólne zarządzanie projektami w czasie rzeczywistym."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak rozpocząć pracę z Dynamics 365 Sales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wystarczy skontaktować się z partnerem Microsoft lub odwiedzić stronę produktu, aby uzyskać informacje o licencjonowaniu, konfiguracji i wdrożeniu rozwiązania."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mogę wypróbować Dynamics 365 Sales przed zakupem?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft oferuje bezpłatne wersje próbne, które pozwalają przetestować funkcjonalności systemu przed podjęciem decyzji o zakupie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są korzyści z integracji Dynamics 365 Sales z Power BI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Power BI pozwala na zaawansowaną analizę danych sprzedażowych, wizualizację wyników oraz tworzenie interaktywnych raportów, które pomagają w podejmowaniu strategicznych decyzji."
+              }
+            }
+          ]
         }
       }
     },
