@@ -28,7 +28,14 @@ function generateMetaTags(route: string, mode: string) {
     <meta name="keywords" content="${metadata.keywords}" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="Polish" />
-    <meta name="author" content="ANEGIS" />`;
+    <meta name="author" content="ANEGIS" />
+    <!-- Leadinfo tracking code -->
+    <script>
+    (function(l,e,a,d,i,n,f,o){if(!l[i]){l.GlobalLeadinfoNamespace=l.GlobalLeadinfoNamespace||[];
+    l.GlobalLeadinfoNamespace.push(i);l[i]=function(){(l[i].q=l[i].q||[]).push(arguments)};l[i].t=l[i].t||n;
+    l[i].q=l[i].q||[];o=e.createElement(a);f=e.getElementsByTagName(a)[0];o.async=1;o.src=d;f.parentNode.insertBefore(o,f);}
+    }(window,document,'script','https://cdn.leadinfo.net/ping.js','leadinfo','LI-6784FFF469D66'));
+    </script>`;
 
   // 4. Open Graph / Facebook
   const openGraphTags = `
