@@ -22,6 +22,13 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "PLN"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "156",
+            "bestRating": "5",
+            "worstRating": "1"
           }
         }
       }
