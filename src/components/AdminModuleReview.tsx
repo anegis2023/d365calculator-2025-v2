@@ -28,7 +28,7 @@ export function AdminModuleReview({ submission, onClose }: AdminModuleReviewProp
 
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 max-w-5xl w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 max-w-[1280px] w-full max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-start mb-8">
           <div>
             <h2 className="text-2xl font-semibold text-gray-900 mb-2">Szczegóły zgłoszenia</h2>
