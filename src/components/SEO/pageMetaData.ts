@@ -96,32 +96,146 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Sales",
-        "description": "Odkryj możliwości Microsoft Dynamics 365 Sales. Zwiększ efektywność sprzedaży, automatyzuj procesy i buduj trwałe relacje z klientami.",
+        "@type": "WebApplication",
+        "name": "Microsoft Dynamics 365 Sales - Kalkulator Licencji",
+        "applicationCategory": "BusinessApplication",
+        "description": "Kalkulator licencji Microsoft Dynamics 365 Sales. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
         "url": "https://dynamics365.com.pl/dynamics-365-sales",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
           "url": "https://dynamics365.com.pl"
+        },
+        "hasPart": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Microsoft Dynamics 365 Sales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Sales to kompleksowe rozwiązanie do zarządzania sprzedażą. Umożliwia efektywne zarządzanie leadami, szansami sprzedażowymi, automatyzację procesów sprzedaży oraz budowanie trwałych relacji z klientami poprzez zaawansowane narzędzia CRM."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne korzyści z wdrożenia Sales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Główne korzyści to: zwiększenie efektywności sprzedaży, lepsza konwersja leadów, automatyzacja procesów sprzedażowych, dokładniejsze prognozowanie sprzedaży oraz skuteczniejsze budowanie i utrzymywanie relacji z klientami."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Sales pomaga w zarządzaniu sprzedażą?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "System oferuje zaawansowane narzędzia do zarządzania procesem sprzedaży, w tym: śledzenie leadów i szans sprzedażowych, automatyzację zadań, analitykę sprzedaży, integrację z narzędziami komunikacji oraz wsparcie sztucznej inteligencji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Sales wykorzystuje sztuczną inteligencję?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft Dynamics 365 Sales wykorzystuje sztuczną inteligencję do analizy danych sprzedażowych, przewidywania zachowań klientów, sugerowania następnych najlepszych działań oraz automatyzacji rutynowych zadań sprzedażowych."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są wymagania licencyjne dla Sales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Licencje Sales są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcje sprzedażowe, a dodatkowe moduły można dokupić według potrzeb."
+              }
+            }
+          ]
         }
       }
     },
     'dynamics-365-customer-service': {
       title: "Microsoft Dynamics 365 Customer Service | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Microsoft Dynamics 365 Customer Service - kompleksowe rozwiązanie do obsługi klienta. Podnieś jakość wsparcia i zwiększ satysfakcję klientów.",
-      keywords: "Dynamics 365 Customer Service, obsługa klienta, wsparcie klienta, service desk, licencje Customer Service",
+      keywords: "Dynamics 365 Customer Service, obsługa klienta, wsparcie klienta, help desk, licencje Customer Service",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Customer Service",
-        "description": "Microsoft Dynamics 365 Customer Service - kompleksowe rozwiązanie do obsługi klienta. Podnieś jakość wsparcia i zwiększ satysfakcję klientów.",
+        "@type": "WebApplication",
+        "name": "Microsoft Dynamics 365 Customer Service - Kalkulator Licencji",
+        "applicationCategory": "BusinessApplication",
+        "description": "Kalkulator licencji Microsoft Dynamics 365 Customer Service. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
         "url": "https://dynamics365.com.pl/dynamics-365-customer-service",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
           "url": "https://dynamics365.com.pl"
+        },
+        "hasPart": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Microsoft Dynamics 365 Customer Service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Customer Service to kompleksowe rozwiązanie do obsługi klienta. Umożliwia efektywne zarządzanie zgłoszeniami, wielokanałową komunikację z klientami, automatyzację procesów obsługi oraz podnoszenie jakości wsparcia poprzez wykorzystanie sztucznej inteligencji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne korzyści z wdrożenia Customer Service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Główne korzyści to: szybsza i bardziej efektywna obsługa klienta, redukcja czasu rozwiązywania problemów, zwiększenie satysfakcji klientów, lepsza organizacja pracy zespołu wsparcia oraz automatyzacja powtarzalnych zadań."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Customer Service pomaga w obsłudze klienta?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "System oferuje zaawansowane narzędzia do zarządzania zgłoszeniami, bazę wiedzy, omnichannel routing, automatyczne przydzielanie spraw, analitykę obsługi klienta oraz integrację z różnymi kanałami komunikacji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Customer Service wykorzystuje sztuczną inteligencję?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft Dynamics 365 Customer Service wykorzystuje sztuczną inteligencję do automatyzacji obsługi, sugerowania rozwiązań, analizy sentymentu klientów oraz optymalizacji procesów wsparcia, co znacząco podnosi jakość i efektywność obsługi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są wymagania licencyjne dla Customer Service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Licencje Customer Service są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności obsługi klienta, a dodatkowe moduły można dokupić według potrzeb."
+              }
+            }
+          ]
         }
       }
     },
@@ -203,108 +317,450 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
     'dynamics-365-project-operations': {
       title: "Microsoft Dynamics 365 Project Operations | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Efektywnie zarządzaj projektami z Microsoft Dynamics 365 Project Operations. Optymalizuj zasoby, kontroluj koszty i zwiększaj rentowność projektów.",
-      keywords: "Dynamics 365 Project Operations, zarządzanie projektami, projekty, harmonogramy, budżety projektów, licencje Project Operations",
+      keywords: "Dynamics 365 Project Operations, zarządzanie projektami, kontrola kosztów, optymalizacja zasobów, licencje Project Operations",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Project Operations",
-        "description": "Efektywnie zarządzaj projektami z Microsoft Dynamics 365 Project Operations. Optymalizuj zasoby, kontroluj koszty i zwiększaj rentowność projektów.",
+        "@type": "WebApplication",
+        "name": "Microsoft Dynamics 365 Project Operations - Kalkulator Licencji",
+        "applicationCategory": "BusinessApplication",
+        "description": "Kalkulator licencji Microsoft Dynamics 365 Project Operations. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
         "url": "https://dynamics365.com.pl/dynamics-365-project-operations",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
           "url": "https://dynamics365.com.pl"
+        },
+        "hasPart": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Microsoft Dynamics 365 Project Operations?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Project Operations to kompleksowe rozwiązanie do zarządzania projektami. Umożliwia efektywne planowanie zasobów, kontrolę kosztów, zarządzanie budżetami oraz optymalizację procesów projektowych w celu zwiększenia rentowności i sukcesu projektów."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne korzyści z wdrożenia Project Operations?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Główne korzyści to: lepsza kontrola nad budżetami projektowymi, optymalizacja wykorzystania zasobów, zwiększenie rentowności projektów, dokładniejsze prognozowanie i planowanie, oraz usprawnienie współpracy zespołowej poprzez zintegrowane narzędzia projektowe."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Project Operations pomaga w zarządzaniu zasobami?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Project Operations oferuje zaawansowane narzędzia do zarządzania zasobami, umożliwiając optymalne przydzielanie pracowników do projektów, śledzenie dostępności zasobów, planowanie obciążenia pracy oraz monitorowanie wykorzystania zasobów w czasie rzeczywistym."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Project Operations integruje się z innymi narzędziami projektowymi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft Dynamics 365 Project Operations oferuje szerokie możliwości integracji z innymi narzędziami Microsoft, takimi jak Microsoft Project, Teams, czy Office 365, co zapewnia spójne środowisko pracy i efektywną współpracę zespołową."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są wymagania licencyjne dla Project Operations?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Licencje Project Operations są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności zarządzania projektami, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań."
+              }
+            }
+          ]
         }
       }
     },
     'dynamics-365-finance': {
       title: "Microsoft Dynamics 365 Finance | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Microsoft Dynamics 365 Finance - nowoczesne zarządzanie finansami. Automatyzuj procesy finansowe i podejmuj lepsze decyzje biznesowe.",
-      keywords: "Dynamics 365 Finance, zarządzanie finansami, księgowość, controlling, finanse przedsiębiorstw, licencje Finance",
+      keywords: "Dynamics 365 Finance, zarządzanie finansami, automatyzacja procesów finansowych, licencje Finance",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Finance",
-        "description": "Microsoft Dynamics 365 Finance - nowoczesne zarządzanie finansami. Automatyzuj procesy finansowe i podejmuj lepsze decyzje biznesowe.",
+        "@type": "WebApplication",
+        "name": "Microsoft Dynamics 365 Finance - Kalkulator Licencji",
+        "applicationCategory": "BusinessApplication",
+        "description": "Kalkulator licencji Microsoft Dynamics 365 Finance. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
         "url": "https://dynamics365.com.pl/dynamics-365-finance",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
           "url": "https://dynamics365.com.pl"
+        },
+        "hasPart": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Microsoft Dynamics 365 Finance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Finance to kompleksowe rozwiązanie do zarządzania finansami przedsiębiorstwa. Umożliwia automatyzację procesów finansowych, zarządzanie księgowością, kontrolę budżetów oraz generowanie szczegółowych raportów finansowych dla lepszego podejmowania decyzji biznesowych."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne korzyści z wdrożenia Finance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Główne korzyści to: automatyzacja procesów finansowych, lepsza kontrola nad przepływami pieniężnymi, zwiększona dokładność raportowania finansowego, efektywniejsze zarządzanie budżetami oraz zgodność z globalnymi standardami rachunkowości i regulacjami prawnymi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Finance pomaga w zarządzaniu finansami?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Finance oferuje zaawansowane narzędzia do zarządzania księgowością, automatycznego księgowania, prognozowania finansowego, zarządzania należnościami i zobowiązaniami, oraz generowania kompleksowych raportów finansowych w czasie rzeczywistym."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Finance integruje się z innymi systemami finansowymi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft Dynamics 365 Finance oferuje szerokie możliwości integracji z innymi systemami finansowymi i bankowymi, systemami ERP, oraz narzędziami Microsoft, co zapewnia płynny przepływ danych i spójność informacji finansowych."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są wymagania licencyjne dla Finance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Licencje Finance są dostępne w różnych wariantach, dostosowanych do wielkości organizacji i zakresu wykorzystywanych funkcjonalności. Podstawowa licencja obejmuje kluczowe funkcje finansowe, a dodatkowe moduły można dokupić według potrzeb."
+              }
+            }
+          ]
         }
       }
     },
     'dynamics-365-supply-chain': {
       title: "Microsoft Dynamics 365 Supply Chain Management | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Optymalizuj łańcuch dostaw z Microsoft Dynamics 365 Supply Chain Management. Zarządzaj produkcją, magazynem i logistyką w jednym systemie.",
-      keywords: "Dynamics 365 Supply Chain, łańcuch dostaw, zarządzanie magazynem, produkcja, logistyka, licencje Supply Chain",
+      keywords: "Dynamics 365 Supply Chain Management, zarządzanie łańcuchem dostaw, zarządzanie produkcją, zarządzanie magazynem, licencje Supply Chain",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Supply Chain Management",
-        "description": "Optymalizuj łańcuch dostaw z Microsoft Dynamics 365 Supply Chain Management. Zarządzaj produkcją, magazynem i logistyką w jednym systemie.",
+        "@type": "WebApplication",
+        "name": "Microsoft Dynamics 365 Supply Chain Management - Kalkulator Licencji",
+        "applicationCategory": "BusinessApplication",
+        "description": "Kalkulator licencji Microsoft Dynamics 365 Supply Chain Management. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
         "url": "https://dynamics365.com.pl/dynamics-365-supply-chain",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
           "url": "https://dynamics365.com.pl"
+        },
+        "hasPart": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Microsoft Dynamics 365 Supply Chain Management?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Supply Chain Management to kompleksowe rozwiązanie do zarządzania łańcuchem dostaw. Umożliwia efektywne zarządzanie produkcją, magazynem, logistyką oraz planowanie zasobów w jednym zintegrowanym systemie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne korzyści z wdrożenia Supply Chain Management?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Główne korzyści to: optymalizacja procesów produkcyjnych, efektywne zarządzanie zapasami, lepsza kontrola nad łańcuchem dostaw, zwiększenie wydajności operacyjnej, oraz redukcja kosztów poprzez automatyzację i integrację procesów."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Supply Chain Management pomaga w zarządzaniu produkcją?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "System oferuje zaawansowane narzędzia do planowania produkcji, zarządzania zasobami produkcyjnymi, kontroli jakości, harmonogramowania zadań oraz monitorowania wydajności produkcji w czasie rzeczywistym."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Supply Chain Management integruje się z innymi systemami?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft Dynamics 365 Supply Chain Management oferuje szerokie możliwości integracji z innymi systemami ERP, systemami magazynowymi, oraz narzędziami Microsoft, co zapewnia płynny przepływ informacji w całym łańcuchu dostaw."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są wymagania licencyjne dla Supply Chain Management?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Licencje Supply Chain Management są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności, a dodatkowe moduły można dokupić według potrzeb."
+              }
+            }
+          ]
         }
       }
     },
     'dynamics-365-commerce': {
       title: "Microsoft Dynamics 365 Commerce | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Rozwijaj swój biznes e-commerce z Microsoft Dynamics 365 Commerce. Zarządzaj sprzedażą wielokanałową i twórz spersonalizowane doświadczenia zakupowe.",
-      keywords: "Dynamics 365 Commerce, e-commerce, handel detaliczny, sprzedaż wielokanałowa, POS, licencje Commerce",
+      keywords: "Dynamics 365 Commerce, e-commerce, sprzedaż wielokanałowa, personalizacja zakupów, licencje Commerce",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Commerce",
-        "description": "Rozwijaj swój biznes e-commerce z Microsoft Dynamics 365 Commerce. Zarządzaj sprzedażą wielokanałową i twórz spersonalizowane doświadczenia zakupowe.",
+        "@type": "WebApplication",
+        "name": "Microsoft Dynamics 365 Commerce - Kalkulator Licencji",
+        "applicationCategory": "BusinessApplication",
+        "description": "Kalkulator licencji Microsoft Dynamics 365 Commerce. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
         "url": "https://dynamics365.com.pl/dynamics-365-commerce",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
           "url": "https://dynamics365.com.pl"
+        },
+        "hasPart": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Microsoft Dynamics 365 Commerce?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Commerce to kompleksowe rozwiązanie do zarządzania sprzedażą wielokanałową. Umożliwia prowadzenie sprzedaży online i stacjonarnej, personalizację doświadczeń zakupowych oraz efektywne zarządzanie całym procesem sprzedaży."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne korzyści z wdrożenia Commerce?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Główne korzyści to: ujednolicone zarządzanie sprzedażą we wszystkich kanałach, personalizacja doświadczeń zakupowych, zwiększenie konwersji sprzedaży, efektywna obsługa klienta oraz integracja procesów back-office z front-office."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Commerce pomaga w zarządzaniu e-commerce?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Commerce oferuje zaawansowane narzędzia do zarządzania sklepem internetowym, w tym: zarządzanie katalogiem produktów, personalizację treści, obsługę promocji i rabatów, zarządzanie zamówieniami oraz analizę zachowań klientów."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Commerce wspiera sprzedaż wielokanałową?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft Dynamics 365 Commerce oferuje pełne wsparcie dla sprzedaży wielokanałowej, umożliwiając zarządzanie sprzedażą online, mobilną i stacjonarną w jednym systemie, z synchronizacją danych w czasie rzeczywistym."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są wymagania licencyjne dla Commerce?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Licencje Commerce są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności e-commerce, a dodatkowe moduły można dokupić według potrzeb."
+              }
+            }
+          ]
         }
       }
     },
     'dynamics-365-human-resources': {
       title: "Microsoft Dynamics 365 Human Resources | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Efektywne zarządzanie zasobami ludzkimi z Microsoft Dynamics 365 HR. Optymalizuj procesy kadrowe i wspieraj rozwój pracowników.",
-      keywords: "Dynamics 365 HR, Human Resources, zarządzanie kadrami, HR, rozwój pracowników, licencje HR",
+      keywords: "Dynamics 365 Human Resources, zarządzanie zasobami ludzkimi, HR, procesy kadrowe, licencje HR",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Human Resources",
-        "description": "Efektywne zarządzanie zasobami ludzkimi z Microsoft Dynamics 365 HR. Optymalizuj procesy kadrowe i wspieraj rozwój pracowników.",
+        "@type": "WebApplication",
+        "name": "Microsoft Dynamics 365 Human Resources - Kalkulator Licencji",
+        "applicationCategory": "BusinessApplication",
+        "description": "Kalkulator licencji Microsoft Dynamics 365 Human Resources. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
         "url": "https://dynamics365.com.pl/dynamics-365-human-resources",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
           "url": "https://dynamics365.com.pl"
+        },
+        "hasPart": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Microsoft Dynamics 365 Human Resources?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Human Resources to kompleksowe rozwiązanie do zarządzania zasobami ludzkimi. Umożliwia efektywne zarządzanie procesami kadrowymi, rekrutacją, szkoleniami, świadczeniami pracowniczymi oraz wspiera rozwój i zaangażowanie pracowników."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne korzyści z wdrożenia Human Resources?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Główne korzyści to: automatyzacja procesów kadrowych, efektywniejsza rekrutacja i onboarding, lepsze zarządzanie talentami, optymalizacja świadczeń pracowniczych oraz dokładniejsza analiza danych HR wspierająca podejmowanie decyzji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Human Resources pomaga w zarządzaniu pracownikami?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "System oferuje zaawansowane narzędzia do zarządzania cyklem życia pracownika, w tym: rekrutację, onboarding, rozwój kompetencji, oceny pracownicze, zarządzanie świadczeniami oraz planowanie ścieżek kariery."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Human Resources integruje się z innymi systemami HR?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft Dynamics 365 Human Resources oferuje szerokie możliwości integracji z innymi systemami HR, systemami płacowymi oraz narzędziami Microsoft, co zapewnia kompleksowe zarządzanie procesami kadrowymi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są wymagania licencyjne dla Human Resources?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Licencje Human Resources są dostępne w różnych wariantach, dostosowanych do wielkości organizacji i zakresu wykorzystywanych funkcjonalności. Podstawowa licencja obejmuje kluczowe funkcje HR, a dodatkowe moduły można dokupić według potrzeb."
+              }
+            }
+          ]
         }
       }
     },
     'dynamics-365-customer-insights': {
       title: "Microsoft Dynamics 365 Customer Insights | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Poznaj swoich klientów lepiej z Microsoft Dynamics 365 Customer Insights. Analizuj dane klientów i personalizuj ich doświadczenia.",
-      keywords: "Dynamics 365 Customer Insights, analiza klientów, personalizacja, dane klientów, AI w biznesie, licencje Customer Insights",
+      keywords: "Dynamics 365 Customer Insights, analiza danych klientów, personalizacja doświadczeń, customer data platform, licencje Customer Insights",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Customer Insights",
-        "description": "Poznaj swoich klientów lepiej z Microsoft Dynamics 365 Customer Insights. Analizuj dane klientów i personalizuj ich doświadczenia.",
+        "@type": "WebApplication",
+        "name": "Microsoft Dynamics 365 Customer Insights - Kalkulator Licencji",
+        "applicationCategory": "BusinessApplication",
+        "description": "Kalkulator licencji Microsoft Dynamics 365 Customer Insights. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
         "url": "https://dynamics365.com.pl/dynamics-365-customer-insights",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
           "url": "https://dynamics365.com.pl"
+        },
+        "hasPart": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Microsoft Dynamics 365 Customer Insights?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Customer Insights to zaawansowane rozwiązanie do analizy danych klientów. Umożliwia tworzenie unified customer profile, analizę zachowań klientów, segmentację oraz personalizację doświadczeń klientów w oparciu o dane ze wszystkich kanałów kontaktu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne korzyści z wdrożenia Customer Insights?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Główne korzyści to: lepsze zrozumienie potrzeb klientów, precyzyjna segmentacja, personalizacja komunikacji i ofert, przewidywanie zachowań klientów oraz podejmowanie decyzji biznesowych w oparciu o rzeczywiste dane."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Customer Insights pomaga w analizie danych klientów?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "System oferuje zaawansowane narzędzia do zbierania i analizy danych klientów z różnych źródeł, tworzenia unified customer profile, segmentacji klientów, analizy ścieżek zakupowych oraz przewidywania przyszłych zachowań klientów."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Customer Insights integruje się z innymi systemami?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft Dynamics 365 Customer Insights oferuje szerokie możliwości integracji z innymi systemami CRM, narzędziami analitycznymi oraz aplikacjami Microsoft, co pozwala na kompleksową analizę danych klientów ze wszystkich źródeł."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są wymagania licencyjne dla Customer Insights?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Licencje Customer Insights są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcje analityczne, a dodatkowe moduły można dokupić według potrzeb."
+              }
+            }
+          ]
         }
       }
     }
