@@ -1,8 +1,3 @@
-export interface SeoProps {
-  pageData?: any;
-  customSchema?: object;
-}
-
 export interface MetaTags {
   title: string;
   description: string;
@@ -11,4 +6,8 @@ export interface MetaTags {
   image?: string;
   canonical?: string;
   schema?: object;
+}
+
+export interface SeoProps {
+  pageData?: any;
 }
