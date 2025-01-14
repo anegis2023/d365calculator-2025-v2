@@ -133,7 +133,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Kalkulator Licencji Microsoft Dynamics 365",
+        "name": "Microsoft Dynamics 365 Field Service - Kalkulator Licencji",
         "applicationCategory": "BusinessApplication",
         "description": "Kalkulator licencji Microsoft Dynamics 365 Field Service. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
         "url": "https://dynamics365.com.pl/dynamics-365-field-service",
