@@ -135,9 +135,9 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
         "@graph": [
           {
             "@type": "WebApplication",
-            "name": "Microsoft Dynamics 365 Field Service",
+            "name": "Kalkulator Licencji Microsoft Dynamics 365",
             "applicationCategory": "BusinessApplication",
-            "description": "Zarządzaj serwisem terenowym z Microsoft Dynamics 365 Field Service. Optymalizuj pracę serwisantów i podnoś jakość obsługi klienta.",
+            "description": "Kalkulator licencji Microsoft Dynamics 365 Field Service. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
             "url": "https://dynamics365.com.pl/dynamics-365-field-service",
             "operatingSystem": "All",
             "aggregateRating": {
@@ -181,6 +181,22 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Tak, Microsoft Dynamics 365 Field Service oferuje zaawansowaną aplikację mobilną, która umożliwia serwisantom dostęp do wszystkich niezbędnych informacji i narzędzi w terenie, włączając harmonogramy, dane klientów, historię serwisową i dokumentację techniczną."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Jak Field Service pomaga w optymalizacji pracy serwisantów?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Field Service wykorzystuje zaawansowane algorytmy do optymalizacji tras i harmonogramów, automatycznego przydzielania zadań najbardziej odpowiednim serwisantom, oraz zapewnia dostęp do wszystkich niezbędnych informacji i dokumentacji w terenie, co znacząco zwiększa efektywność pracy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Jakie są wymagania licencyjne dla Field Service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Licencje Field Service są dostępne w różnych wariantach, dostosowanych do potrzeb organizacji. Podstawowa licencja obejmuje dostęp do głównych funkcjonalności, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań firmy."
                 }
               }
             ]
