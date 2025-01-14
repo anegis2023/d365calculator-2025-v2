@@ -5,7 +5,7 @@ import { InquiryBasket } from './components/InquiryBasket';
 import { QuestionForm } from './components/QuestionForm';
 import { SharedUsersForm } from './components/SharedUsersForm';
 import { modules } from './data/modules';
-import { Module, ModuleSelection, Question, QuestionAnswer } from './types';
+import { Module, ModuleSelection } from './types';
 import { HeroSection } from './components/HeroSection';
 import { Navbar } from './components/Navbar';
 import { ContactForm } from './components/ContactForm';
@@ -117,7 +117,7 @@ function MainApp() {
     });
   };
 
-  const handleAnswer = (questionId: string, answer: QuestionAnswer) => {
+  const handleAnswer = (questionId: string, answer: { response: string; count?: number }) => {
     setModuleSelections(prev => {
       const newSelections = [...prev];
       newSelections[currentModuleIndex] = {
@@ -372,7 +372,7 @@ function MainApp() {
                         </div>
                         
                         {/* Shared Users Section */}
-                        {selection.sharedUsers.length > 0 && (
+                        {Array.isArray(selection.sharedUsers) && selection.sharedUsers.length > 0 && (
                           <div className="bg-gray-50 rounded-lg p-4">
                             <h4 className="text-base font-medium text-[#323130] mb-3">Użytkownicy współdzieleni</h4>
                             <div className="space-y-2">
@@ -418,28 +418,25 @@ function MainApp() {
                           
                           {expandedAnswers[selection.moduleId] && (
                             <div className="grid grid-cols-1 gap-4 animate-fadeIn">
-                              {module.questions.map((question) => {
-                                const answer = selection?.answers?.[question.id];
-                                return (
-                                  <div key={question.id} className="bg-gray-50 rounded-lg p-4">
-                                    <p className="text-sm font-medium text-[#323130] mb-2">{question.text}</p>
-                                    {answer ? (
-                                      <div className="space-y-1">
+                              {module.questions.map((question) => (
+                                <div key={question.id} className="bg-gray-50 rounded-lg p-4">
+                                  <p className="text-sm font-medium text-[#323130] mb-2">{question.text}</p>
+                                  {selection.answers && selection.answers[question.id] ? (
+                                    <div className="space-y-1">
+                                      <p className="text-sm text-[#605e5c]">
+                                        <span className="font-medium">Odpowiedź:</span> {selection.answers[question.id].response}
+                                      </p>
+                                      {selection.answers[question.id].count !== undefined && (
                                         <p className="text-sm text-[#605e5c]">
-                                          <span className="font-medium">Odpowiedź:</span> {answer.response}
+                                          <span className="font-medium">Użytkownicy:</span> {selection.answers[question.id].count}
                                         </p>
-                                        {answer.count !== undefined && (
-                                          <p className="text-sm text-[#605e5c]">
-                                            <span className="font-medium">Użytkownicy:</span> {answer.count}
-                                          </p>
-                                        )}
-                                      </div>
-                                    ) : (
-                                      <p className="text-sm text-red-500">Brak odpowiedzi</p>
-                                    )}
-                                  </div>
-                                );
-                              })}
+                                      )}
+                                    </div>
+                                  ) : (
+                                    <p className="text-sm text-red-500">Brak odpowiedzi</p>
+                                  )}
+                                </div>
+                              ))}
                             </div>
                           )}
                         </div>
