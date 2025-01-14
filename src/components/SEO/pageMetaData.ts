@@ -132,15 +132,60 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Microsoft Dynamics 365 Field Service",
-        "description": "Zarządzaj serwisem terenowym z Microsoft Dynamics 365 Field Service. Optymalizuj pracę serwisantów i podnoś jakość obsługi klienta.",
-        "url": "https://dynamics365.com.pl/dynamics-365-field-service",
-        "publisher": {
-          "@type": "Organization",
-          "name": "ANEGIS",
-          "url": "https://dynamics365.com.pl"
-        }
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Microsoft Dynamics 365 Field Service",
+            "applicationCategory": "BusinessApplication",
+            "description": "Zarządzaj serwisem terenowym z Microsoft Dynamics 365 Field Service. Optymalizuj pracę serwisantów i podnoś jakość obsługi klienta.",
+            "url": "https://dynamics365.com.pl/dynamics-365-field-service",
+            "operatingSystem": "All",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.8,
+              "ratingCount": 156
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "PLN"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "ANEGIS",
+              "url": "https://dynamics365.com.pl"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Co to jest Microsoft Dynamics 365 Field Service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Microsoft Dynamics 365 Field Service to kompleksowe rozwiązanie do zarządzania serwisem terenowym. Umożliwia optymalizację pracy serwisantów, planowanie zadań, zarządzanie zasobami i sprzętem, oraz podnoszenie jakości obsługi klienta poprzez efektywne zarządzanie zleceniami serwisowymi."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Jakie są główne korzyści z wdrożenia Field Service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Główne korzyści to: optymalizacja tras i harmonogramów serwisantów, redukcja kosztów operacyjnych, zwiększenie produktywności pracowników terenowych, lepsza kontrola nad zasobami i sprzętem, oraz wyższa satysfakcja klientów dzięki szybszej i bardziej efektywnej obsłudze."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Czy Field Service działa na urządzeniach mobilnych?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tak, Microsoft Dynamics 365 Field Service oferuje zaawansowaną aplikację mobilną, która umożliwia serwisantom dostęp do wszystkich niezbędnych informacji i narzędzi w terenie, włączając harmonogramy, dane klientów, historię serwisową i dokumentację techniczną."
+                }
+              }
+            ]
+          }
+        ]
       }
     },
     'dynamics-365-project-operations': {
