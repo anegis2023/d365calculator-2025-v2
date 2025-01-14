@@ -132,76 +132,72 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebApplication",
-            "name": "Kalkulator Licencji Microsoft Dynamics 365",
-            "applicationCategory": "BusinessApplication",
-            "description": "Kalkulator licencji Microsoft Dynamics 365 Field Service. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
-            "url": "https://dynamics365.com.pl/dynamics-365-field-service",
-            "operatingSystem": "All",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": 4.8,
-              "ratingCount": 156
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "PLN"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "ANEGIS",
-              "url": "https://dynamics365.com.pl"
-            }
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Co to jest Microsoft Dynamics 365 Field Service?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Microsoft Dynamics 365 Field Service to kompleksowe rozwiązanie do zarządzania serwisem terenowym. Umożliwia optymalizację pracy serwisantów, planowanie zadań, zarządzanie zasobami i sprzętem, oraz podnoszenie jakości obsługi klienta poprzez efektywne zarządzanie zleceniami serwisowymi."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Jakie są główne korzyści z wdrożenia Field Service?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Główne korzyści to: optymalizacja tras i harmonogramów serwisantów, redukcja kosztów operacyjnych, zwiększenie produktywności pracowników terenowych, lepsza kontrola nad zasobami i sprzętem, oraz wyższa satysfakcja klientów dzięki szybszej i bardziej efektywnej obsłudze."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Czy Field Service działa na urządzeniach mobilnych?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Tak, Microsoft Dynamics 365 Field Service oferuje zaawansowaną aplikację mobilną, która umożliwia serwisantom dostęp do wszystkich niezbędnych informacji i narzędzi w terenie, włączając harmonogramy, dane klientów, historię serwisową i dokumentację techniczną."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Jak Field Service pomaga w optymalizacji pracy serwisantów?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Field Service wykorzystuje zaawansowane algorytmy do optymalizacji tras i harmonogramów, automatycznego przydzielania zadań najbardziej odpowiednim serwisantom, oraz zapewnia dostęp do wszystkich niezbędnych informacji i dokumentacji w terenie, co znacząco zwiększa efektywność pracy."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Jakie są wymagania licencyjne dla Field Service?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Licencje Field Service są dostępne w różnych wariantach, dostosowanych do potrzeb organizacji. Podstawowa licencja obejmuje dostęp do głównych funkcjonalności, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań firmy."
-                }
+        "@type": "WebApplication",
+        "name": "Kalkulator Licencji Microsoft Dynamics 365",
+        "applicationCategory": "BusinessApplication",
+        "description": "Kalkulator licencji Microsoft Dynamics 365 Field Service. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
+        "url": "https://dynamics365.com.pl/dynamics-365-field-service",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "PLN"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ANEGIS",
+          "url": "https://dynamics365.com.pl"
+        },
+        "hasPart": {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Co to jest Microsoft Dynamics 365 Field Service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Microsoft Dynamics 365 Field Service to kompleksowe rozwiązanie do zarządzania serwisem terenowym. Umożliwia optymalizację pracy serwisantów, planowanie zadań, zarządzanie zasobami i sprzętem, oraz podnoszenie jakości obsługi klienta poprzez efektywne zarządzanie zleceniami serwisowymi."
               }
-            ]
-          }
-        ]
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są główne korzyści z wdrożenia Field Service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Główne korzyści to: optymalizacja tras i harmonogramów serwisantów, redukcja kosztów operacyjnych, zwiększenie produktywności pracowników terenowych, lepsza kontrola nad zasobami i sprzętem, oraz wyższa satysfakcja klientów dzięki szybszej i bardziej efektywnej obsłudze."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Field Service działa na urządzeniach mobilnych?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, Microsoft Dynamics 365 Field Service oferuje zaawansowaną aplikację mobilną, która umożliwia serwisantom dostęp do wszystkich niezbędnych informacji i narzędzi w terenie, włączając harmonogramy, dane klientów, historię serwisową i dokumentację techniczną."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak Field Service pomaga w optymalizacji pracy serwisantów?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Field Service wykorzystuje zaawansowane algorytmy do optymalizacji tras i harmonogramów, automatycznego przydzielania zadań najbardziej odpowiednim serwisantom, oraz zapewnia dostęp do wszystkich niezbędnych informacji i dokumentacji w terenie, co znacząco zwiększa efektywność pracy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są wymagania licencyjne dla Field Service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Licencje Field Service są dostępne w różnych wariantach, dostosowanych do potrzeb organizacji. Podstawowa licencja obejmuje dostęp do głównych funkcjonalności, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań firmy."
+              }
+            }
+          ]
+        }
       }
     },
     'dynamics-365-project-operations': {
