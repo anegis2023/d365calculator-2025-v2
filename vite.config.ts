@@ -51,7 +51,8 @@ function generateMetaTags(route: string, mode: string) {
     <meta property="og:url" content="${fullUrl}" />
     <meta property="og:title" content="${metadata.title}" />
     <meta property="og:description" content="${metadata.description}" />
-    <meta property="og:site_name" content="Kalkulator licencji Microsoft Dynamics 365 by ANEGIS" />`;
+    <meta property="og:site_name" content="Kalkulator licencji Microsoft Dynamics 365 by ANEGIS" />
+    <meta property="og:image" content="https://cdn.prod.website-files.com/5c8f846a0fcf5a79e8c7dd24/67866d5197eec2f2a2f8c08f_d365compl.jpg" />`;
 
   // 5. Twitter
   const twitterTags = `
