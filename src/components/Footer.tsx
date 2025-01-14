@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaYoutube, FaFacebook } from 'react-icons/fa';
+import PrivacyPolicyModal from './PrivacyPolicyModal';
 
 const Footer: React.FC = () => {
+  const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
+
   return (
     <footer className="bg-gray-900 text-white mt-auto">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -82,16 +85,20 @@ const Footer: React.FC = () => {
               {new Date().getFullYear()} ANEGIS Sp. z o.o. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <button 
+                onClick={() => setIsPrivacyPolicyOpen(true)}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                Terms of Service
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
+      <PrivacyPolicyModal 
+        isOpen={isPrivacyPolicyOpen}
+        onClose={() => setIsPrivacyPolicyOpen(false)}
+      />
     </footer>
   );
 };
