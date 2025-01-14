@@ -59,24 +59,6 @@ function generateMetaTags(route: string, mode: string) {
     <!-- Canonical URL -->
     <link rel="canonical" href="${fullUrl}" />`;
 
-  // 7. Schema.org JSON-LD
-  const schemaTag = `
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-      ${JSON.stringify(metadata.schema || {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": metadata.title,
-        "description": metadata.description,
-        "url": fullUrl,
-        "publisher": {
-          "@type": "Organization",
-          "name": "ANEGIS",
-          "url": baseUrl
-        }
-      }, null, 2)}
-    </script>`;
-
   // Development-specific scripts
   const devScripts = mode === 'development' ? `
     <!-- Development Mode Scripts -->
@@ -90,7 +72,7 @@ function generateMetaTags(route: string, mode: string) {
     <script type="module" src="/@vite/client"></script>` : '';
 
   // Combine all tags in the correct order
-  return `${requiredTags}${iconTag}${basicTags}${openGraphTags}${twitterTags}${canonicalTag}${schemaTag}${mode === 'development' ? devScripts : ''}`;
+  return `${requiredTags}${iconTag}${basicTags}${openGraphTags}${twitterTags}${canonicalTag}${mode === 'development' ? devScripts : ''}`;
 }
 
 // https://vitejs.dev/config/
