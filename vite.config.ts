@@ -10,7 +10,14 @@ function generateMetaTags(route: string, mode: string) {
   // 1. Required meta tags (charset and viewport)
   const requiredTags = `
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />`;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N6BTQSVS');</script>
+    <!-- End Google Tag Manager -->`;
 
   // 2. Icon
   const iconTag = `
@@ -101,23 +108,16 @@ export default defineConfig(({ mode }) => ({
     {
       name: 'html-transform',
       transformIndexHtml(html, ctx) {
-        let route = '';
-        if (ctx.filename) {
-          route = ctx.filename
-            .replace(/^.*[\/\\]/, '') // Remove path
-            .replace(/\.html$/, ''); // Remove .html extension
-
-          // Handle index.html specially
-          if (route === 'index') {
-            route = '';
-          }
-        }
-
-        // In production, remove any existing development scripts
-        if (mode === 'production') {
-          html = html.replace(/<script type="module">[\s\S]*?<\/script>/g, '');
-          html = html.replace(/<script type="module" src="\/@vite\/client"><\/script>/g, '');
-        }
+        // Extract the route from the filename
+        const filename = ctx.filename || '';
+        const route = filename.replace(/^.*[\\\/]/, '').replace('.html', '');
+        
+        // Add GTM noscript tag after body opening tag
+        html = html.replace('<body>', `<body>
+          <!-- Google Tag Manager (noscript) -->
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6BTQSVS"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+          <!-- End Google Tag Manager (noscript) -->`);
 
         return html.replace(
           /<\/head>/,
