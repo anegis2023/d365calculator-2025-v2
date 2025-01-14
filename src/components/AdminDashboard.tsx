@@ -146,7 +146,7 @@ export default function AdminDashboard() {
                   title="Podgląd szczegółów"
                 >
                   <FaEye className="text-xl" />
-                  <span>Podgląd</span>
+                  <span className="hidden sm:inline">Podgląd</span>
                 </button>
                 <button
                   onClick={() => generateExcelFile(submission)}
@@ -154,7 +154,7 @@ export default function AdminDashboard() {
                   title="Eksportuj do Excel"
                 >
                   <FaFileExcel className="text-xl" />
-                  <span>Eksportuj</span>
+                  <span className="hidden sm:inline">Eksportuj</span>
                 </button>
                 <button
                   onClick={() => handleDelete(submission.id)}
@@ -162,7 +162,7 @@ export default function AdminDashboard() {
                   title="Usuń zgłoszenie"
                 >
                   <FaTrash className="text-xl" />
-                  <span>Usuń</span>
+                  <span className="hidden sm:inline">Usuń</span>
                 </button>
               </div>
             </div>
