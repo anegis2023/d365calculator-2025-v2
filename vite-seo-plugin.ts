@@ -20,23 +20,23 @@ function getMetaTagsForRoute(route: string): string {
 
   // Add title
   metaTags.push(`<title>${pageMetaData.title}</title>`);
-  
+
   // Add meta description
   metaTags.push(`<meta name="description" content="${pageMetaData.description}">`);
-  
+
   // Add robots
   metaTags.push(`<meta name="robots" content="index, follow">`);
-  
+
   // Add OpenGraph tags
   metaTags.push(`<meta property="og:title" content="${pageMetaData.title}">`);
   metaTags.push(`<meta property="og:description" content="${pageMetaData.description}">`);
   metaTags.push(`<meta property="og:type" content="${pageMetaData.ogType || 'website'}">`);
   metaTags.push(`<meta property="og:url" content="https://dynamics365.com.pl/${route ? route : ''}">`);
   metaTags.push(`<meta property="og:site_name" content="Kalkulator licencji Microsoft Dynamics 365 by ANEGIS">`);
-  
+
   // Add canonical URL
-  metaTags.push(`<link rel="canonical" href="https://dynamics365.com.pl/${route ? route : ''}">`);
-  
+  metaTags.push(`<link rel="canonical" href="https://dynamics365.com.pl${route ? '/' + route : ''}">`);
+
   // Add schema
   if (pageMetaData.schema) {
     metaTags.push(`<script type="application/ld+json">${JSON.stringify(pageMetaData.schema)}</script>`);
@@ -99,10 +99,10 @@ export default function seoPlugin(): Plugin {
       transform(html: string, { filename }) {
         // Get the route from the filename
         const route = ROUTES_MAP[filename] || '';
-        
+
         // Get meta tags for the route
         const seoContent = getMetaTagsForRoute(route);
-        
+
         // Extract and inject meta tags
         const metaTags = extractMetaTags(seoContent);
         return injectMetaTags(html, metaTags);
