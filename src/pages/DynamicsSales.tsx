@@ -238,7 +238,10 @@ export default function DynamicsSales() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                      W dynamicznie zmieniającym się świecie biznesu skuteczna sprzedaż nie opiera się już wyłącznie na tradycyjnych technikach. Współczesne organizacje potrzebują zaawansowanych narzędzi, które pozwolą na personalizację doświadczeń klientów, automatyzację procesów oraz skuteczne wykorzystanie danych w podejmowaniu decyzji. Takim rozwiązaniem jest Microsoft Dynamics 365 Sales – nowoczesna platforma CRM, która rewolucjonizuje sposób zarządzania sprzedażą.
+                      <strong>Microsoft Dynamics 365 Sales</strong> to zaawansowane rozwiązanie CRM, które kompleksowo wspiera zespoły sprzedażowe w realizacji celów i budowaniu trwałych relacji z klientami. System <strong>automatyzuje kluczowe etapy procesu sprzedaży</strong>, od generowania leadów po finalizację transakcji, co pozwala zespołom skupić się na działaniach strategicznych. Dzięki <strong>zaawansowanym narzędziom analitycznym</strong> umożliwia analizę kluczowych wskaźników wydajności (KPI), prognozowanie wyników sprzedaży oraz ocenę efektywności działań. 
+                    </p>
+                    <p className="text-lg leading-relaxed mt-4">
+                      Dynamics 365 Sales <strong>integruje się z innymi narzędziami Microsoft</strong>, takimi jak Microsoft 365, LinkedIn czy Power BI, co zwiększa produktywność i ułatwia współpracę. Wykorzystanie <strong>sztucznej inteligencji</strong> pozwala na analizę interakcji z klientami, sugerowanie najlepszych działań i przewidywanie wyników, co przyspiesza zamykanie transakcji i budowanie wartościowych relacji. To nowoczesne narzędzie dostarcza zespołom sprzedażowym wszystko, czego potrzebują, aby sprostać wyzwaniom rynku i przewyższać oczekiwania klientów.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>

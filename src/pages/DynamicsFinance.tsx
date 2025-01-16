@@ -231,7 +231,7 @@ export default function DynamicsFinance() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                    Efektywne zarządzanie finansami to podstawa sukcesu każdej organizacji, niezależnie od jej wielkości czy branży. Microsoft Dynamics 365 Finance to rozwiązanie, które łączy zaawansowaną analitykę, automatyzację procesów oraz możliwość dostosowania do lokalnych i globalnych wymagań. Dzięki temu system wspiera przedsiębiorstwa w optymalizacji operacji finansowych i podejmowaniu trafnych decyzji opartych na danych.
+                    Efektywne zarządzanie finansami to podstawa sukcesu każdej organizacji, niezależnie od jej wielkości czy branży. <strong>Microsoft Dynamics 365 Finance</strong> to rozwiązanie, które łączy zaawansowaną analitykę, automatyzację procesów oraz możliwość dostosowania do lokalnych i globalnych wymagań. Dzięki temu system wspiera przedsiębiorstwa w optymalizacji operacji finansowych i podejmowaniu trafnych decyzji opartych na danych.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -290,9 +290,16 @@ export default function DynamicsFinance() {
                     <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Przejrzystość finansów</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki konsolidacji danych z różnych systemów, organizacje zyskują pełen obraz swojej sytuacji finansowej.</p>
                   </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Automatyzacja procesów finansowych</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dynamics 365 Finance automatyzuje kluczowe procesy finansowe, takie jak generowanie raportów czy zarządzanie budżetami. Przykładowo, automatyczne generowanie faktur pozwala firmom zaoszczędzić czas i uniknąć błędów ludzkich.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności operacyjnej</h3>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki zaawansowanym funkcjom analitycznym i integracji z innymi narzędziami, Dynamics 365 Finance wspiera firmy w poprawie procesów operacyjnych. Przykłady zastosowań obejmują lepsze zarządzanie zasobami w sektorze produkcyjnym oraz szybsze podejmowanie decyzji w handlu.</p>
+                  </div>
                 </div>
               </div>
-
 
               <div className="space-y-6">
                 <div className="bg-[#128017] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#159019] cursor-pointer group">
