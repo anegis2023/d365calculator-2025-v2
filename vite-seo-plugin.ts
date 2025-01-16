@@ -24,8 +24,12 @@ function getMetaTagsForRoute(route: string): string {
   // Add meta description
   metaTags.push(`<meta name="description" content="${pageMetaData.description}">`);
 
-  // Add robots
-  metaTags.push(`<meta name="robots" content="index, follow">`);
+  // Add robots meta tag - noindex,nofollow for selection page
+  if (route === 'selection') {
+    metaTags.push(`<meta name="robots" content="noindex, nofollow">`);
+  } else {
+    metaTags.push(`<meta name="robots" content="index, follow">`);
+  }
 
   // Add OpenGraph tags
   metaTags.push(`<meta property="og:title" content="${pageMetaData.title}">`);
