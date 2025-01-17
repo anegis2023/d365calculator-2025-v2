@@ -177,7 +177,7 @@ function MainApp() {
             <div>
               <div className="mb-8">
                 <h2 className="text-3xl font-semibold text-[#323130] mb-2">
-                  Przygotuj szczegółową kalkulację dla wybranych aplikacji Dynamics 365.
+                  Przygotuj szczegółową kalkulację kosztu wdrożenia wybranych aplikacji Dynamics 365.
                 </h2>
                 <p className="text-[#605e5c]">
                   Wybierz interesujące Cię moduły i dodaj je do koszyka zapytań, aby otrzymać szczegółową kalkulację.
