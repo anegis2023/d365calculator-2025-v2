@@ -111,7 +111,12 @@ export default defineConfig(({ mode }) => ({
       transformIndexHtml(html, ctx) {
         // Extract the route from the filename
         const filename = ctx.filename || '';
-        const route = filename.replace(/^.*[\\\/]/, '').replace('.html', '');
+        let route = filename.replace(/^.*[\\\/]/, '').replace('.html', '');
+        
+        // Handle special cases
+        if (route === 'index') {
+          route = '';
+        }
         
         // Add GTM noscript tag after body opening tag
         html = html.replace('<body>', `<body>
@@ -120,9 +125,12 @@ export default defineConfig(({ mode }) => ({
           height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <!-- End Google Tag Manager (noscript) -->`);
 
+        // Generate meta tags for the specific route
+        const metaTags = generateMetaTags(route, mode);
+        
         return html.replace(
           /<\/head>/,
-          `${generateMetaTags(route, mode)}\n  </head>`
+          `${metaTags}\n  </head>`
         );
       }
     }
