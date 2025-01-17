@@ -1,20 +1,30 @@
+export type QuestionResponse = string;
+
+export interface QuestionAnswer {
+  response: QuestionResponse;
+  count?: number;
+}
+
+export interface Question {
+  id: string;
+  text: string;
+  explanation: string;
+  type: 'yesNoCount';
+  required?: boolean;
+}
+
 export interface Module {
   id: number;
   name: string;
   imageUrl?: string;
   description: string;
-  questions: {
-    id: string;
-    text: string;
-    type: 'text' | 'number';
-    required?: boolean;
-  }[];
+  questions: Question[];
 }
 
 export interface ModuleSelection {
   moduleId: number;
   users: number;
-  answers?: Record<string, { response: string; count?: number }>;
+  answers?: Record<string, QuestionAnswer>;
   sharedUsers?: { targetModuleId: number; count: number }[];
 }
 

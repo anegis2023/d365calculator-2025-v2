@@ -8,7 +8,7 @@ import {
   formatPolishPhone,
   formatNIP,
 } from '../utils/validators';
-import { ModuleSelection, QuestionAnswer } from '../types';
+import { ModuleSelection } from '../types';
 import { submitForm } from '../services/formSubmission';
 
 interface ContactFormProps {

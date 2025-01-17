@@ -130,7 +130,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są główne korzyści z wdrożenia Sales?",
+              "name": "Jakie są główne korzyści z wdrożenia Microsoft Dynamics 365 Sales?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Główne korzyści to: zwiększenie efektywności sprzedaży, lepsza konwersja leadów, automatyzacja procesów sprzedażowych, dokładniejsze prognozowanie sprzedaży oraz skuteczniejsze budowanie i utrzymywanie relacji z klientami."
@@ -138,7 +138,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jak Sales pomaga w zarządzaniu sprzedażą?",
+              "name": "Jak Microsoft Dynamics 365 Sales pomaga w zarządzaniu sprzedażą?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "System oferuje zaawansowane narzędzia do zarządzania procesem sprzedaży, w tym: śledzenie leadów i szans sprzedażowych, automatyzację zadań, analitykę sprzedaży, integrację z narzędziami komunikacji oraz wsparcie sztucznej inteligencji."
@@ -146,7 +146,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Czy Sales wykorzystuje sztuczną inteligencję?",
+              "name": "Czy Microsoft Dynamics 365 Sales wykorzystuje sztuczną inteligencję?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Tak, Microsoft Dynamics 365 Sales wykorzystuje sztuczną inteligencję do analizy danych sprzedażowych, przewidywania zachowań klientów, sugerowania następnych najlepszych działań oraz automatyzacji rutynowych zadań sprzedażowych."
@@ -154,7 +154,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są wymagania licencyjne dla Sales?",
+              "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Sales?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Licencje Sales są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcje sprzedażowe, a dodatkowe moduły można dokupić według potrzeb."
@@ -205,7 +205,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są główne korzyści z wdrożenia Customer Service?",
+              "name": "Jakie są główne korzyści z wdrożenia Microsoft Dynamics 365 Customer Service?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Główne korzyści to: szybsza i bardziej efektywna obsługa klienta, redukcja czasu rozwiązywania problemów, zwiększenie satysfakcji klientów, lepsza organizacja pracy zespołu wsparcia oraz automatyzacja powtarzalnych zadań."
@@ -213,7 +213,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jak Customer Service pomaga w obsłudze klienta?",
+              "name": "Jak Microsoft Dynamics 365 Customer Service pomaga w obsłudze klienta?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "System oferuje zaawansowane narzędzia do zarządzania zgłoszeniami, bazę wiedzy, omnichannel routing, automatyczne przydzielanie spraw, analitykę obsługi klienta oraz integrację z różnymi kanałami komunikacji."
@@ -221,7 +221,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Czy Customer Service wykorzystuje sztuczną inteligencję?",
+              "name": "Czy Microsft Dynamics 365 Customer Service wykorzystuje sztuczną inteligencję?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Tak, Microsoft Dynamics 365 Customer Service wykorzystuje sztuczną inteligencję do automatyzacji obsługi, sugerowania rozwiązań, analizy sentymentu klientów oraz optymalizacji procesów wsparcia, co znacząco podnosi jakość i efektywność obsługi."
@@ -229,7 +229,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są wymagania licencyjne dla Customer Service?",
+              "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Customer Service?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Licencje Customer Service są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności obsługi klienta, a dodatkowe moduły można dokupić według potrzeb."
@@ -280,7 +280,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są główne korzyści z wdrożenia Field Service?",
+              "name": "Jakie są główne korzyści z wdrożenia Microsoft Dynamics 365 Field Service?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Główne korzyści to: optymalizacja tras i harmonogramów serwisantów, redukcja kosztów operacyjnych, zwiększenie produktywności pracowników terenowych, lepsza kontrola nad zasobami i sprzętem, oraz wyższa satysfakcja klientów dzięki szybszej i bardziej efektywnej obsłudze."
@@ -288,7 +288,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Czy Field Service działa na urządzeniach mobilnych?",
+              "name": "Czy Microsoft Dynamics 365 Field Service działa na urządzeniach mobilnych?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Tak, Microsoft Dynamics 365 Field Service oferuje zaawansowaną aplikację mobilną, która umożliwia serwisantom dostęp do wszystkich niezbędnych informacji i narzędzi w terenie, włączając harmonogramy, dane klientów, historię serwisową i dokumentację techniczną."
@@ -296,7 +296,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jak Field Service pomaga w optymalizacji pracy serwisantów?",
+              "name": "Jak Microsoft Dynamics 365 Field Service pomaga w optymalizacji pracy serwisantów?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Field Service wykorzystuje zaawansowane algorytmy do optymalizacji tras i harmonogramów, automatycznego przydzielania zadań najbardziej odpowiednim serwisantom, oraz zapewnia dostęp do wszystkich niezbędnych informacji i dokumentacji w terenie, co znacząco zwiększa efektywność pracy."
@@ -304,7 +304,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są wymagania licencyjne dla Field Service?",
+              "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Field Service?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Licencje Field Service są dostępne w różnych wariantach, dostosowanych do potrzeb organizacji. Podstawowa licencja obejmuje dostęp do głównych funkcjonalności, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań firmy."
@@ -355,7 +355,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są główne korzyści z wdrożenia Project Operations?",
+              "name": "Jakie są główne korzyści z wdrożenia Microsoft Dynamics 365Project Operations?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Główne korzyści to: lepsza kontrola nad budżetami projektowymi, optymalizacja wykorzystania zasobów, zwiększenie rentowności projektów, dokładniejsze prognozowanie i planowanie, oraz usprawnienie współpracy zespołowej poprzez zintegrowane narzędzia projektowe."
@@ -363,7 +363,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jak Project Operations pomaga w zarządzaniu zasobami?",
+              "name": "Jak Microsoft Dynamics 365 Project Operations pomaga w zarządzaniu zasobami?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Project Operations oferuje zaawansowane narzędzia do zarządzania zasobami, umożliwiając optymalne przydzielanie pracowników do projektów, śledzenie dostępności zasobów, planowanie obciążenia pracy oraz monitorowanie wykorzystania zasobów w czasie rzeczywistym."
@@ -371,7 +371,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Czy Project Operations integruje się z innymi narzędziami projektowymi?",
+              "name": "Czy Microsoft Dynamics 365Project Operations integruje się z innymi narzędziami projektowymi?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Tak, Microsoft Dynamics 365 Project Operations oferuje szerokie możliwości integracji z innymi narzędziami Microsoft, takimi jak Microsoft Project, Teams, czy Office 365, co zapewnia spójne środowisko pracy i efektywną współpracę zespołową."
@@ -379,7 +379,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są wymagania licencyjne dla Project Operations?",
+              "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Project Operations?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Licencje Project Operations są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności zarządzania projektami, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań."
