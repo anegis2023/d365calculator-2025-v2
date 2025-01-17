@@ -765,96 +765,37 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       }
     },
     'przyklady-wdrozen': {
-      title: "Przykłady Wdrożeń Microsoft Dynamics 365 | ANEGIS",
-      description: "Zobacz przykłady udanych wdrożeń Microsoft Dynamics 365. Poznaj historie sukcesu i dowiedz się, jak system może wspierać rozwój Twojej firmy.",
-      keywords: "wdrożenia Dynamics 365, przykłady implementacji, historie sukcesu, case studies, Microsoft Dynamics 365, ANEGIS",
-      ogType: 'article',
+      title: "Przykłady wdrożeń rozwiązań Microsoft Dynamics 365",
+      description: "Poznaj historie sukcesu firm, które wdrożyły Microsoft Dynamics 365. Zobacz, jak nasze rozwiązania pomagają transformować biznesy i osiągać lepsze wyniki.",
+      keywords: "wdrożenia Dynamics 365, historie sukcesu, case studies, transformacja cyfrowa, Microsoft Dynamics 365, ANEGIS",
+      ogType: 'website',
       schema: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Przykłady Wdrożeń Microsoft Dynamics 365",
-        "description": "Zobacz przykłady udanych wdrożeń Microsoft Dynamics 365. Poznaj historie sukcesu i dowiedz się, jak system może wspierać rozwój Twojej firmy.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "ANEGIS",
-          "url": "https://dynamics365.com.pl"
-        },
+        "@type": "CollectionPage",
+        "name": "Przykłady wdrożeń rozwiązań Microsoft Dynamics 365",
+        "description": "Poznaj historie sukcesu firm, które wdrożyły Microsoft Dynamics 365. Zobacz, jak nasze rozwiązania pomagają transformować biznesy i osiągać lepsze wyniki.",
         "mainEntity": {
           "@type": "ItemList",
-          "numberOfItems": 4,
           "itemListElement": [
             {
               "@type": "Article",
-              "position": 1,
-              "url": "https://dynamics365.com.pl/przyklady-wdrozen#bbk",
-              "name": "Transformacja cyfrowa sprzedaży: BBK S.A.",
-              "headline": "Transformacja cyfrowa sprzedaży: Nowoczesne narzędzia dla BBK S.A.",
-              "description": "Firma BBK S.A., lider na rynku wyposażenia wnętrz w Polsce, stojąca za markami home&you oraz Essex, wdrożyła Microsoft Dynamics 365 dla optymalizacji procesów biznesowych.",
-              "articleSection": "Case Study",
-              "datePublished": "2024-01-17",
-              "author": {
-                "@type": "Organization",
-                "name": "ANEGIS"
-              }
+              "name": "Transformacja cyfrowa sprzedaży: Nowoczesne narzędzia dla BBK S.A.",
+              "description": "Firma BBK S.A., lider na rynku wyposażenia wnętrz w Polsce, stojąca za markami home&you oraz Essex, podjęła decyzję o modernizacji swoich procesów biznesowych, aby sprostać wyzwaniom współczesnego handlu detalicznego."
             },
             {
               "@type": "Article",
-              "position": 2,
-              "url": "https://dynamics365.com.pl/przyklady-wdrozen#hoffmann",
-              "name": "Transformacja cyfrowa: Hoffmann SE",
-              "headline": "Transformacja cyfrowa sprzedaży: Nowoczesne narzędzia dla Hoffmann SE",
-              "description": "Firma Hoffmann SE zmodernizowała infrastrukturę IT z Microsoft Dynamics 365 dla lepszej obsługi klientów i efektywności operacyjnej.",
-              "articleSection": "Case Study",
-              "datePublished": "2024-01-17",
-              "author": {
-                "@type": "Organization",
-                "name": "ANEGIS"
-              }
+              "name": "Transformacja cyfrowa sprzedaży: Nowoczesne narzędzia dla Hoffmann SE",
+              "description": "Firma Hoffmann SE, lider w dostarczaniu wysokiej jakości narzędzi i wyposażenia przemysłowego, stanęła przed wyzwaniem modernizacji swojej infrastruktury IT, aby sprostać rosnącym wymaganiom klientów oraz zapewnić sprawną obsługę w dynamicznie zmieniającym się środowisku przemysłowym."
             },
             {
               "@type": "Article",
-              "position": 3,
-              "url": "https://dynamics365.com.pl/przyklady-wdrozen#sandvik",
-              "name": "Transformacja obsługi klienta: Sandvik Coromant",
-              "headline": "Transformacja cyfrowa obsługi klienta: Nowoczesne Narzędzia w Sandvik Coromant",
-              "description": "Sandvik Coromant przeprowadził kompleksową transformację procesów obsługi klienta wykorzystując Microsoft Dynamics 365.",
-              "articleSection": "Case Study",
-              "datePublished": "2024-01-17",
-              "author": {
-                "@type": "Organization",
-                "name": "ANEGIS"
-              }
+              "name": "Transformacja cyfrowa obsługi klienta: Nowoczesne Narzędzia w Sandvik Coromant",
+              "description": "Sandvik Coromant, część globalnej grupy inżynierii przemysłowej Sandvik, jako lider w produkcji narzędzi i technologii obróbki metali, postawił na kompleksową transformację swoich procesów obsługi klienta."
             },
             {
               "@type": "Article",
-              "position": 4,
-              "url": "https://dynamics365.com.pl/przyklady-wdrozen#pepsi",
-              "name": "Transformacja operacji: G&J Pepsi-Cola Bottlers",
-              "headline": "Transformacja cyfrowa operacji biznesowych: Nowoczesne rozwiązania w G&J Pepsi-Cola Bottlers",
-              "description": "G&J Pepsi-Cola Bottlers zoptymalizowała obsługę klientów i zwiększyła przychody dzięki wdrożeniu Microsoft Dynamics 365.",
-              "articleSection": "Case Study",
-              "datePublished": "2024-01-17",
-              "author": {
-                "@type": "Organization",
-                "name": "ANEGIS"
-              }
-            }
-          ]
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Strona główna",
-              "item": "https://dynamics365.com.pl"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Przykłady Wdrożeń",
-              "item": "https://dynamics365.com.pl/przyklady-wdrozen"
+              "name": "Transformacja cyfrowa operacji biznesowych: Nowoczesne rozwiązania w G&J Pepsi-Cola Bottlers",
+              "description": "G&J Pepsi-Cola Bottlers, największa niezależna, rodzinna franczyza Pepsi w USA, zrealizowała kompleksową transformację cyfrową, mającą na celu optymalizację obsługi klientów, zwiększenie przychodów oraz redukcję kosztów operacyjnych."
             }
           ]
         }

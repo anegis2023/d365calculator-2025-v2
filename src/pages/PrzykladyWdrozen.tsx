@@ -353,11 +353,49 @@ const CustomerStoryCard: React.FC<{ story: CustomerStory }> = ({ story }) => {
 
 const PrzykladyWdrozen: React.FC = () => {
   const [selectedSolutions, setSelectedSolutions] = useState<Set<string>>(new Set());
-  const [selectedStory, setSelectedStory] = useState<CustomerStory | null>(null);
+
+  // Get unique solutions for filter
+  const availableSolutions = useMemo(() => {
+    const solutions = new Set<string>();
+    customerStories.forEach(story => {
+      story.solutions.forEach(solution => {
+        solutions.add(solution.name);
+      });
+    });
+    return Array.from(solutions);
+  }, []);
+
+  // Toggle solution selection
+  const toggleSolution = (solution: string) => {
+    const newSelected = new Set(selectedSolutions);
+    if (newSelected.has(solution)) {
+      newSelected.delete(solution);
+    } else {
+      newSelected.add(solution);
+    }
+    setSelectedSolutions(newSelected);
+  };
+
+  // Clear all filters
+  const clearFilters = () => {
+    setSelectedSolutions(new Set());
+  };
+
+  // Filter stories based on selected solutions
+  const filteredStories = useMemo(() => {
+    if (selectedSolutions.size === 0) {
+      return customerStories;
+    }
+    return customerStories.filter(story =>
+      story.solutions.some(solution => selectedSolutions.has(solution.name))
+    );
+  }, [selectedSolutions]);
+
+  const metaData = getPageMetaData('przyklady-wdrozen');
 
   return (
     <>
-      <MetaTags pageData={{}} />
+      <MetaTags pageData={{ route: 'przyklady-wdrozen' }} />
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         
@@ -377,7 +415,7 @@ const PrzykladyWdrozen: React.FC = () => {
               <p className="text-gray-600 mb-2">Wybierz rozwiązania, aby filtrować historie:</p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
-                  onClick={() => setSelectedSolutions(new Set())}
+                  onClick={clearFilters}
                   className={`px-4 py-2 rounded text-sm font-semibold transition-colors duration-200 ${
                     selectedSolutions.size === 0
                       ? 'bg-[#0078D4] text-white'
@@ -386,30 +424,17 @@ const PrzykladyWdrozen: React.FC = () => {
                 >
                   Wszystkie rozwiązania
                 </button>
-                {customerStories.flatMap(story => story.solutions).map((solution, index) => (
+                {availableSolutions.map((solution) => (
                   <button
-                    key={index}
-                    onClick={() => {
-                      const newSelected = new Set(selectedSolutions);
-                      if (newSelected.has(solution.name)) {
-                        newSelected.delete(solution.name);
-                      } else {
-                        newSelected.add(solution.name);
-                      }
-                      setSelectedSolutions(newSelected);
-                    }}
+                    key={solution}
+                    onClick={() => toggleSolution(solution)}
                     className={`inline-flex items-center px-4 py-2 rounded text-sm font-semibold transition-colors duration-200 ${
-                      selectedSolutions.has(solution.name)
+                      selectedSolutions.has(solution)
                         ? 'bg-[#0078D4] text-white'
                         : 'bg-white text-[#0078D4] border border-[#0078D4] hover:bg-[#0078D4] hover:text-white'
                     }`}
                   >
-                    <img 
-                      src={solution.logo} 
-                      alt={`${solution.name} logo`}
-                      className="w-5 h-5 mr-2"
-                    />
-                    {solution.name}
+                    {solution}
                   </button>
                 ))}
               </div>
@@ -418,16 +443,12 @@ const PrzykladyWdrozen: React.FC = () => {
 
           {/* Case studies grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {customerStories.filter(story =>
-              selectedSolutions.size === 0 || story.solutions.some(solution => selectedSolutions.has(solution.name))
-            ).map((story, index) => (
+            {filteredStories.map((story, index) => (
               <CustomerStoryCard key={index} story={story} />
             ))}
           </div>
 
-          {customerStories.filter(story =>
-            selectedSolutions.size === 0 || story.solutions.some(solution => selectedSolutions.has(solution.name))
-          ).length === 0 && (
+          {filteredStories.length === 0 && (
             <div className="text-center text-gray-600 mt-8">
               Nie znaleziono historii sukcesu dla wybranych rozwiązań.
             </div>

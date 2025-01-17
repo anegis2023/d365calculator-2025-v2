@@ -6,8 +6,7 @@ import { MetaTagsProps } from './types';
 
 export const MetaTags: React.FC<MetaTagsProps> = ({ pageData }) => {
   const location = useLocation();
-  const path = location.pathname.replace(/^\//, '');
-  const currentUrl = `https://dynamics365.com.pl${location.pathname}`;
+  const path = location.pathname;
   
   const pageMetaData = getPageMetaData(path, pageData);
   
@@ -19,17 +18,12 @@ export const MetaTags: React.FC<MetaTagsProps> = ({ pageData }) => {
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={pageMetaData.ogType || 'website'} />
-      <meta property="og:url" content={currentUrl} />
       <meta property="og:title" content={pageMetaData.title} />
       <meta property="og:description" content={pageMetaData.description} />
       
       {/* Twitter */}
-      <meta property="twitter:url" content={currentUrl} />
       <meta name="twitter:title" content={pageMetaData.title} />
       <meta name="twitter:description" content={pageMetaData.description} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={currentUrl} />
     </Helmet>
   );
 };
