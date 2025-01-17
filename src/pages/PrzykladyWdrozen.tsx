@@ -125,7 +125,7 @@ const customerStories: CustomerStory[] = [
       },
       {
         name: "Dynamics 365 Customer Service",
-        logo: "c:\Users\ADMINI~1\AppData\Local\Temp\Dynamics-365-Customer-Service.svg",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Customer-Service?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
         link: "dynamics-365-customer-service"
       }
     ],
