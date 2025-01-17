@@ -56,15 +56,6 @@ const customerStories: CustomerStory[] = [
         name: "Dynamics 365 Supply Chain Management",
         logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Supply-Chain-Management?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
         link: "dynamics-365-supply-chain-management"
-      },{
-        name: "Dynamics 365",
-        logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Dynamics365_17x17",
-        link: "/"
-      },
-      {
-        name: "Microsoft 365",
-        logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/M365_17x17",
-        link: "/"
       }
     ],
     imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/BBK%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
@@ -100,7 +91,7 @@ const customerStories: CustomerStory[] = [
         link: "dynamics-365-customer-insights"
       },
       {
-        name: "Dynamics 365 field service",
+        name: "Dynamics 365 Field service",
         logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Field-Service?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
         link: "dynamics-365-field-service"
       }
@@ -169,11 +160,6 @@ const customerStories: CustomerStory[] = [
         name: "Dynamics 365 Field Service",
         logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Field-Service?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
         link: "dynamics-365-field-service"
-      },
-      {
-        name: "Dynamics 365",
-        logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Dynamics365_17x17",
-        link: "/"
       },
       {
         name: "Microsoft Copilot",
