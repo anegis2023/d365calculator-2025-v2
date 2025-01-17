@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { getPageMetaData } from './pageMetaData';
-import { SeoProps } from './types';
+import { MetaTagsProps } from './types';
 
-export const MetaTags: React.FC<SeoProps> = ({ pageData }) => {
+export const MetaTags: React.FC<MetaTagsProps> = ({ pageData }) => {
   const location = useLocation();
   const path = location.pathname;
   

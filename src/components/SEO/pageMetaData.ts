@@ -1,11 +1,11 @@
 import { BASE_WEBSITE_SCHEMA } from './constants';
-import { MetaTags } from './types';
+import { MetaTagsData } from './types';
 
-export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
+export const getPageMetaData = (path: string, pageData?: Record<string, any>): MetaTagsData => {
   // Remove leading slash if present
   const normalizedPath = path.replace(/^\//, '');
 
-  const metaData: { [key: string]: MetaTags } = {
+  const metaData: { [key: string]: MetaTagsData } = {
     '': {
       title: "Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS | Dobierz odpowiednie licencje dla firmy",
       description: "Profesjonalny kalkulator licencji Microsoft Dynamics 365. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
@@ -374,7 +374,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
               "name": "Czy Microsoft Dynamics 365Project Operations integruje się z innymi narzędziami projektowymi?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Tak, Microsoft Dynamics 365 Project Operations oferuje szerokie możliwości integracji z innymi narzędziami Microsoft, takimi jak Microsoft Project, Teams, czy Office 365, co zapewnia spójne środowisko pracy i efektywną współpracę zespołową."
+                "text": "Tak, Microsoft Dynamics 365 Project Operations oferuje szerokie możliwości integracji z innymi systemami Microsoft, takimi jak Microsoft Project, Teams, czy Office 365, co zapewnia spójne środowisko pracy i efektywną współpracę zespołową."
               }
             },
             {

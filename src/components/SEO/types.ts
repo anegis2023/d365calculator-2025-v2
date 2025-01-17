@@ -1,4 +1,4 @@
-export interface MetaTags {
+export interface MetaTagsData {
   title: string;
   description: string;
   keywords: string;
@@ -8,6 +8,6 @@ export interface MetaTags {
   schema?: object;
 }
 
-export interface SeoProps {
-  pageData?: any;
+export interface MetaTagsProps {
+  pageData?: Record<string, any>;
 }
