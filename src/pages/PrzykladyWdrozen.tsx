@@ -351,6 +351,14 @@ const CustomerStoryCard: React.FC<{ story: CustomerStory }> = ({ story }) => {
   );
 };
 
+const seoData = {
+  pageData: {
+    title: "Przykłady Wdrożeń Microsoft Dynamics 365 | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
+    description: "Zobacz przykłady udanych wdrożeń Microsoft Dynamics 365. Poznaj historie sukcesu i dowiedz się, jak firmy wykorzystują system do rozwoju biznesu.",
+    ogType: 'website'
+  }
+};
+
 const PrzykladyWdrozen: React.FC = () => {
   const [selectedSolutions, setSelectedSolutions] = useState<Set<string>>(new Set());
 
@@ -391,11 +399,9 @@ const PrzykladyWdrozen: React.FC = () => {
     );
   }, [selectedSolutions]);
 
-  const metaData = getPageMetaData('przyklady-wdrozen');
-
   return (
     <>
-      <MetaTags pageData={{ route: 'przyklady-wdrozen' }} />
+      <MetaTags pageData={seoData.pageData} />
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         
