@@ -9,8 +9,9 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
     '': {
       title: "Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS | Dobierz odpowiednie licencje dla firmy",
       description: "Profesjonalny kalkulator licencji Microsoft Dynamics 365. Dobierz odpowiednie licencje, oblicz koszty i zoptymalizuj wydatki na licencje w swojej firmie.",
-      keywords: "Microsoft Dynamics 365, kalkulator licencji, licencje Dynamics 365, ERP, CRM, ANEGIS, koszty licencji, optymalizacja licencji",
-      ogType: 'website',
+      keywords: "kalkulator licencji dynamics 365, licencje microsoft dynamics 365, koszty licencji dynamics 365, dynamics 365 pricing",
+      ogType: "website",
+      siteName: "Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       schema: {
         ...BASE_WEBSITE_SCHEMA,
         "mainEntity": {
@@ -73,6 +74,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Skontaktuj się z nami w sprawie licencji Microsoft Dynamics 365. Nasi eksperci pomogą dobrać optymalne rozwiązanie dla Twojej firmy.",
       keywords: "kontakt ANEGIS, pomoc Dynamics 365, eksperci Dynamics 365, doradztwo licencyjne",
       ogType: 'website',
+      siteName: "Kontakt - Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       schema: {
         "@context": "https://schema.org",
         "@type": "ContactPage",
@@ -94,6 +96,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Odkryj możliwości Microsoft Dynamics 365 Sales. Zwiększ efektywność sprzedaży, automatyzuj procesy i buduj trwałe relacje z klientami.",
       keywords: "Dynamics 365 Sales, CRM, zarządzanie sprzedażą, automatyzacja sprzedaży, relacje z klientami, licencje Sales",
       ogType: 'website',
+      siteName: "Microsoft Dynamics 365 Sales",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -169,6 +172,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Microsoft Dynamics 365 Customer Service - kompleksowe rozwiązanie do obsługi klienta. Podnieś jakość wsparcia i zwiększ satysfakcję klientów.",
       keywords: "Dynamics 365 Customer Service, obsługa klienta, wsparcie klienta, help desk, licencje Customer Service",
       ogType: 'website',
+      siteName: "Microsoft Dynamics 365 Customer Service",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -244,6 +248,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Zarządzaj serwisem terenowym z Microsoft Dynamics 365 Field Service. Optymalizuj pracę serwisantów i podnoś jakość obsługi klienta.",
       keywords: "Microsoft Dynamics 365 Field Service, serwis terenowy, zarządzanie serwisem, mobilni pracownicy, licencje Field Service",
       ogType: 'website',
+      siteName: "Microsoft Dynamics 365 Field Service",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -319,6 +324,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Efektywnie zarządzaj projektami z Microsoft Dynamics 365 Project Operations. Optymalizuj zasoby, kontroluj koszty i zwiększaj rentowność projektów.",
       keywords: "Dynamics 365 Project Operations, zarządzanie projektami, kontrola kosztów, optymalizacja zasobów, licencje Project Operations",
       ogType: 'website',
+      siteName: "Microsoft Dynamics 365 Project Operations",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -394,6 +400,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Microsoft Dynamics 365 Finance - nowoczesne zarządzanie finansami. Automatyzuj procesy finansowe i podejmuj lepsze decyzje biznesowe.",
       keywords: "Microsoft Dynamics 365 Finance, D365 Finance, Dynamics 365, zarządzanie finansami, automatyzacja procesów finansowych, licencje Finance",
       ogType: 'website',
+      siteName: "Microsoft Dynamics 365 Finance",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -469,6 +476,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Optymalizuj łańcuch dostaw z Microsoft Dynamics 365 Supply Chain Management. Zarządzaj produkcją, magazynem i logistyką w jednym systemie.",
       keywords: "Dynamics 365 Supply Chain Management, zarządzanie łańcuchem dostaw, zarządzanie produkcją, zarządzanie magazynem, licencje Supply Chain",
       ogType: 'website',
+      siteName: "Microsoft Dynamics 365 Supply Chain Management",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -544,6 +552,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Rozwijaj swój biznes e-commerce z Microsoft Dynamics 365 Commerce. Zarządzaj sprzedażą wielokanałową i twórz spersonalizowane doświadczenia zakupowe.",
       keywords: "Dynamics 365 Commerce, e-commerce, sprzedaż wielokanałowa, personalizacja zakupów, licencje Commerce",
       ogType: 'website',
+      siteName: "Microsoft Dynamics 365 Commerce",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -619,6 +628,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Efektywne zarządzanie zasobami ludzkimi z Microsoft Dynamics 365 HR. Optymalizuj procesy kadrowe i wspieraj rozwój pracowników.",
       keywords: "Dynamics 365 Human Resources, zarządzanie zasobami ludzkimi, HR, procesy kadrowe, licencje HR",
       ogType: 'website',
+      siteName: "Microsoft Dynamics 365 Human Resources",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",
@@ -694,6 +704,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
       description: "Poznaj swoich klientów lepiej z Microsoft Dynamics 365 Customer Insights. Analizuj dane klientów i personalizuj ich doświadczenia.",
       keywords: "Dynamics 365 Customer Insights, analiza danych klientów, personalizacja doświadczeń, customer data platform, licencje Customer Insights",
       ogType: 'website',
+      siteName: "Microsoft Dynamics 365 Customer Insights",
       schema: {
         "@context": "https://schema.org",
         "@type": "WebApplication",

@@ -6,6 +6,7 @@ export interface MetaTagsData {
   image?: string;
   canonical?: string;
   schema?: object;
+  siteName?: string;
 }
 
 export interface MetaTagsProps {

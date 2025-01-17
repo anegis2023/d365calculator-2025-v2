@@ -15,6 +15,9 @@ export const MetaTags: React.FC<MetaTagsProps> = ({ pageData }) => {
       <title>{pageMetaData.title}</title>
       <meta name="description" content={pageMetaData.description} />
       <meta name="keywords" content={pageMetaData.keywords} />
+      {pageMetaData.siteName && (
+        <meta name="google-site-name" content={pageMetaData.siteName} />
+      )}
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={pageMetaData.ogType || 'website'} />
@@ -24,6 +27,12 @@ export const MetaTags: React.FC<MetaTagsProps> = ({ pageData }) => {
       {/* Twitter */}
       <meta name="twitter:title" content={pageMetaData.title} />
       <meta name="twitter:description" content={pageMetaData.description} />
+      
+      {pageMetaData.schema && (
+        <script type="application/ld+json">
+          {JSON.stringify(pageMetaData.schema)}
+        </script>
+      )}
     </Helmet>
   );
 };
