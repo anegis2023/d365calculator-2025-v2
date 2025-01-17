@@ -307,7 +307,7 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
               "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Field Service?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Licencje Microsft Dynamics 365 Field Service są dostępne w różnych wariantach, dostosowanych do potrzeb organizacji. Podstawowa licencja obejmuje dostęp do głównych funkcjonalności, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań firmy."
+                "text": "Licencje Microsft Dynamics 365 Field Service są dostępne w różnych wariantach, dostosowanych do potrzeb organizacji. Podstawowa licencja obejmuje dostęp do głównych funkcjonalności, a dodatkowe moduły można dokupić według potrzeb."
               }
             }
           ]
@@ -775,6 +775,12 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
         "name": "Przykłady Wdrożeń Microsoft Dynamics 365",
         "description": "Historie sukcesu i przykłady wdrożeń Microsoft Dynamics 365",
         "url": "https://dynamics365.com.pl/przyklady-wdrozen",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "ratingCount": 156
+        },
         "publisher": {
           "@type": "Organization",
           "name": "ANEGIS",
@@ -786,7 +792,12 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
             {
               "@type": "Article",
               "name": "Transformacja cyfrowa sprzedaży: Nowoczesne narzędzia dla BBK S.A.",
-              "description": "Firma BBK S.A., lider na rynku wyposażenia wnętrz w Polsce, stojąca za markami home&you oraz Essex, podjęła decyzję o modernizacji swoich procesów biznesowych, aby sprostać wyzwaniom współczesnego handlu detalicznego."
+              "description": "Firma BBK S.A., lider na rynku wyposażenia wnętrz w Polsce, stojąca za markami home&you oraz Essex, podjęła decyzję o modernizacji swoich procesów biznesowych, aby sprostać wyzwaniom współczesnego handlu detalicznego.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "ANEGIS",
+                "url": "https://dynamics365.com.pl"
+              }
             }
           ]
         }
