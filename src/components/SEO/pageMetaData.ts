@@ -157,7 +157,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
               "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Sales?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Licencje Sales są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcje sprzedażowe, a dodatkowe moduły można dokupić według potrzeb."
+                "text": "Licencje Microsoft Dynamics 365 Sales są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcje sprzedażowe, a dodatkowe moduły można dokupić według potrzeb."
               }
             }
           ]
@@ -232,7 +232,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
               "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Customer Service?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Licencje Customer Service są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności obsługi klienta, a dodatkowe moduły można dokupić według potrzeb."
+                "text": "Licencje Microsoft Dynamics 365 Customer Service są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności obsługi klienta, a dodatkowe moduły można dokupić według potrzeb."
               }
             }
           ]
@@ -242,7 +242,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
     'dynamics-365-field-service': {
       title: "Microsoft Dynamics 365 Field Service | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Zarządzaj serwisem terenowym z Microsoft Dynamics 365 Field Service. Optymalizuj pracę serwisantów i podnoś jakość obsługi klienta.",
-      keywords: "Dynamics 365 Field Service, serwis terenowy, zarządzanie serwisem, mobilni pracownicy, licencje Field Service",
+      keywords: "Microsoft Dynamics 365 Field Service, serwis terenowy, zarządzanie serwisem, mobilni pracownicy, licencje Field Service",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
@@ -299,7 +299,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
               "name": "Jak Microsoft Dynamics 365 Field Service pomaga w optymalizacji pracy serwisantów?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Field Service wykorzystuje zaawansowane algorytmy do optymalizacji tras i harmonogramów, automatycznego przydzielania zadań najbardziej odpowiednim serwisantom, oraz zapewnia dostęp do wszystkich niezbędnych informacji i dokumentacji w terenie, co znacząco zwiększa efektywność pracy."
+                "text": "Microsoft Dynamics 365 Field Service wykorzystuje zaawansowane algorytmy do optymalizacji tras i harmonogramów, automatycznego przydzielania zadań najbardziej odpowiednim serwisantom, oraz zapewnia dostęp do wszystkich niezbędnych informacji i dokumentacji w terenie, co znacząco zwiększa efektywność pracy."
               }
             },
             {
@@ -307,7 +307,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
               "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Field Service?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Licencje Field Service są dostępne w różnych wariantach, dostosowanych do potrzeb organizacji. Podstawowa licencja obejmuje dostęp do głównych funkcjonalności, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań firmy."
+                "text": "Licencje Microsft Dynamics 365 Field Service są dostępne w różnych wariantach, dostosowanych do potrzeb organizacji. Podstawowa licencja obejmuje dostęp do głównych funkcjonalności, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań firmy."
               }
             }
           ]
@@ -366,7 +366,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
               "name": "Jak Microsoft Dynamics 365 Project Operations pomaga w zarządzaniu zasobami?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Project Operations oferuje zaawansowane narzędzia do zarządzania zasobami, umożliwiając optymalne przydzielanie pracowników do projektów, śledzenie dostępności zasobów, planowanie obciążenia pracy oraz monitorowanie wykorzystania zasobów w czasie rzeczywistym."
+                "text": "Microsoft Dynamics 365 Project Operations oferuje zaawansowane narzędzia do zarządzania zasobami, umożliwiając optymalne przydzielanie pracowników do projektów, śledzenie dostępności zasobów, planowanie obciążenia pracy oraz monitorowanie wykorzystania zasobów w czasie rzeczywistym."
               }
             },
             {
@@ -382,7 +382,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
               "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Project Operations?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Licencje Project Operations są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności zarządzania projektami, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań."
+                "text": "Licencje Microsoft Dynamics 365 Project Operations są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności zarządzania projektami, a dodatkowe moduły można dokupić w zależności od specyficznych wymagań."
               }
             }
           ]
@@ -392,7 +392,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
     'dynamics-365-finance': {
       title: "Microsoft Dynamics 365 Finance | Kalkulator Licencji Microsoft Dynamics 365 by ANEGIS",
       description: "Microsoft Dynamics 365 Finance - nowoczesne zarządzanie finansami. Automatyzuj procesy finansowe i podejmuj lepsze decyzje biznesowe.",
-      keywords: "Dynamics 365 Finance, zarządzanie finansami, automatyzacja procesów finansowych, licencje Finance",
+      keywords: "Microsoft Dynamics 365 Finance, D365 Finance, Dynamics 365, zarządzanie finansami, automatyzacja procesów finansowych, licencje Finance",
       ogType: 'website',
       schema: {
         "@context": "https://schema.org",
@@ -580,7 +580,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są główne korzyści z wdrożenia Commerce?",
+              "name": "Jakie są główne korzyści z wdrożenia Microsoft Dynamics 365 Commerce?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Główne korzyści to: ujednolicone zarządzanie sprzedażą we wszystkich kanałach, personalizacja doświadczeń zakupowych, zwiększenie konwersji sprzedaży, efektywna obsługa klienta oraz integracja procesów back-office z front-office."
@@ -588,7 +588,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jak Commerce pomaga w zarządzaniu e-commerce?",
+              "name": "Jak Microsoft Dynamics 365 Commerce pomaga w zarządzaniu e-commerce?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Commerce oferuje zaawansowane narzędzia do zarządzania sklepem internetowym, w tym: zarządzanie katalogiem produktów, personalizację treści, obsługę promocji i rabatów, zarządzanie zamówieniami oraz analizę zachowań klientów."
@@ -596,7 +596,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Czy Commerce wspiera sprzedaż wielokanałową?",
+              "name": "Czy MIcrosoft Dynamics 365 Commerce wspiera sprzedaż wielokanałową?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Tak, Microsoft Dynamics 365 Commerce oferuje pełne wsparcie dla sprzedaży wielokanałowej, umożliwiając zarządzanie sprzedażą online, mobilną i stacjonarną w jednym systemie, z synchronizacją danych w czasie rzeczywistym."
@@ -604,7 +604,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są wymagania licencyjne dla Commerce?",
+              "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Commerce?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Licencje Commerce są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcjonalności e-commerce, a dodatkowe moduły można dokupić według potrzeb."
@@ -655,7 +655,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są główne korzyści z wdrożenia Human Resources?",
+              "name": "Jakie są główne korzyści z wdrożenia Microsoft Dynamics 365 Human Resources?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Główne korzyści to: automatyzacja procesów kadrowych, efektywniejsza rekrutacja i onboarding, lepsze zarządzanie talentami, optymalizacja świadczeń pracowniczych oraz dokładniejsza analiza danych HR wspierająca podejmowanie decyzji."
@@ -663,7 +663,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jak Human Resources pomaga w zarządzaniu pracownikami?",
+              "name": "Jak Microsoft Dynamics 365 Human Resources pomaga w zarządzaniu pracownikami?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "System oferuje zaawansowane narzędzia do zarządzania cyklem życia pracownika, w tym: rekrutację, onboarding, rozwój kompetencji, oceny pracownicze, zarządzanie świadczeniami oraz planowanie ścieżek kariery."
@@ -671,7 +671,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Czy Human Resources integruje się z innymi systemami HR?",
+              "name": "Czy Microsoft Dynamics 365 Human Resources integruje się z innymi systemami HR?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Tak, Microsoft Dynamics 365 Human Resources oferuje szerokie możliwości integracji z innymi systemami HR, systemami płacowymi oraz narzędziami Microsoft, co zapewnia kompleksowe zarządzanie procesami kadrowymi."
@@ -679,7 +679,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są wymagania licencyjne dla Human Resources?",
+              "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Human Resources?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Licencje Human Resources są dostępne w różnych wariantach, dostosowanych do wielkości organizacji i zakresu wykorzystywanych funkcjonalności. Podstawowa licencja obejmuje kluczowe funkcje HR, a dodatkowe moduły można dokupić według potrzeb."
@@ -730,7 +730,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są główne korzyści z wdrożenia Customer Insights?",
+              "name": "Jakie są główne korzyści z wdrożenia Microsoft Dynamics 365 Customer Insights?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Główne korzyści to: lepsze zrozumienie potrzeb klientów, precyzyjna segmentacja, personalizacja komunikacji i ofert, przewidywanie zachowań klientów oraz podejmowanie decyzji biznesowych w oparciu o rzeczywiste dane."
@@ -738,7 +738,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jak Customer Insights pomaga w analizie danych klientów?",
+              "name": "Jak Microsoft Dynamics 365 Customer Insights pomaga w analizie danych klientów?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "System oferuje zaawansowane narzędzia do zbierania i analizy danych klientów z różnych źródeł, tworzenia unified customer profile, segmentacji klientów, analizy ścieżek zakupowych oraz przewidywania przyszłych zachowań klientów."
@@ -746,7 +746,7 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Czy Customer Insights integruje się z innymi systemami?",
+              "name": "Czy Microsoft Dynamics 365 Customer Insights integruje się z innymi systemami?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Tak, Microsoft Dynamics 365 Customer Insights oferuje szerokie możliwości integracji z innymi systemami CRM, narzędziami analitycznymi oraz aplikacjami Microsoft, co pozwala na kompleksową analizę danych klientów ze wszystkich źródeł."
@@ -754,10 +754,10 @@ export const getPageMetaData = (path: string, pageData?: any): MetaTags => {
             },
             {
               "@type": "Question",
-              "name": "Jakie są wymagania licencyjne dla Customer Insights?",
+              "name": "Jakie są wymagania licencyjne dla Microsoft Dynamics 365 Customer Insights?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Licencje Customer Insights są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcje analityczne, a dodatkowe moduły można dokupić według potrzeb."
+                "text": "Licencje Microsoft Dynamics 365 Customer Insights są dostępne w różnych wariantach, dostosowanych do skali działalności i potrzeb organizacji. Podstawowa licencja obejmuje kluczowe funkcje analityczne, a dodatkowe moduły można dokupić według potrzeb."
               }
             }
           ]
