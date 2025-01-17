@@ -141,6 +141,7 @@ export default defineConfig(({ mode }) => ({
         'dynamics-365-customer-insights': './dynamics-365-customer-insights.html',
         'dynamics-365-commerce': './dynamics-365-commerce.html',
         'dynamics-365-human-resources': './dynamics-365-human-resources.html',
+        'przyklady-wdrozen': './przyklady-wdrozen.html',
         selection: './selection.html',
         questions: './questions.html',
         review: './review.html'

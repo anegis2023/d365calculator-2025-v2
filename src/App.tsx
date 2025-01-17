@@ -22,6 +22,7 @@ import DynamicsCustomerService from './pages/DynamicsCustomerService';
 import DynamicsCustomerInsights from './pages/DynamicsCustomerInsights';
 import DynamicsCommerce from './pages/DynamicsCommerce';
 import DynamicsHumanResources from './pages/DynamicsHumanResources';
+import PrzykladyWdrozen from './pages/PrzykladyWdrozen';
 import { useModuleStore } from './store/moduleStore';
 import { ModuleBasketProvider } from './context/ModuleBasketContext';
 import Footer from './components/Footer';
@@ -495,14 +496,15 @@ function App() {
               <Route path="/admin" element={<AdminPage />} />
               <Route path="/kontakt" element={<KontaktPage />} />
               <Route path="/dynamics-365-sales" element={<DynamicsSales />} />
-              <Route path="/dynamics-365-finance" element={<DynamicsFinance />} />
-              <Route path="/dynamics-365-supply-chain" element={<DynamicsSupplyChain />} />
+              <Route path="/dynamics-365-customer-service" element={<DynamicsCustomerService />} />
               <Route path="/dynamics-365-field-service" element={<DynamicsFieldService />} />
               <Route path="/dynamics-365-project-operations" element={<DynamicsProjectOperations />} />
-              <Route path="/dynamics-365-customer-service" element={<DynamicsCustomerService />} />
-              <Route path="/dynamics-365-customer-insights" element={<DynamicsCustomerInsights />} />
+              <Route path="/dynamics-365-finance" element={<DynamicsFinance />} />
+              <Route path="/dynamics-365-supply-chain" element={<DynamicsSupplyChain />} />
               <Route path="/dynamics-365-commerce" element={<DynamicsCommerce />} />
               <Route path="/dynamics-365-human-resources" element={<DynamicsHumanResources />} />
+              <Route path="/dynamics-365-customer-insights" element={<DynamicsCustomerInsights />} />
+              <Route path="/przyklady-wdrozen" element={<PrzykladyWdrozen />} />
             </Routes>
           </div>
           <Footer />

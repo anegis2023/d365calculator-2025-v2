@@ -763,6 +763,43 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
           ]
         }
       }
+    },
+    'przyklady-wdrozen': {
+      title: "Przykłady wdrożeń rozwiązań Microsoft Dynamics 365",
+      description: "Poznaj historie sukcesu firm, które wdrożyły Microsoft Dynamics 365. Zobacz, jak nasze rozwiązania pomagają transformować biznesy i osiągać lepsze wyniki.",
+      keywords: "wdrożenia Dynamics 365, historie sukcesu, case studies, transformacja cyfrowa, Microsoft Dynamics 365, ANEGIS",
+      ogType: 'website',
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Przykłady wdrożeń rozwiązań Microsoft Dynamics 365",
+        "description": "Poznaj historie sukcesu firm, które wdrożyły Microsoft Dynamics 365. Zobacz, jak nasze rozwiązania pomagają transformować biznesy i osiągać lepsze wyniki.",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "Article",
+              "name": "Transformacja cyfrowa sprzedaży: Nowoczesne narzędzia dla BBK S.A.",
+              "description": "Firma BBK S.A., lider na rynku wyposażenia wnętrz w Polsce, stojąca za markami home&you oraz Essex, podjęła decyzję o modernizacji swoich procesów biznesowych, aby sprostać wyzwaniom współczesnego handlu detalicznego."
+            },
+            {
+              "@type": "Article",
+              "name": "Transformacja cyfrowa sprzedaży: Nowoczesne narzędzia dla Hoffmann SE",
+              "description": "Firma Hoffmann SE, lider w dostarczaniu wysokiej jakości narzędzi i wyposażenia przemysłowego, stanęła przed wyzwaniem modernizacji swojej infrastruktury IT, aby sprostać rosnącym wymaganiom klientów oraz zapewnić sprawną obsługę w dynamicznie zmieniającym się środowisku przemysłowym."
+            },
+            {
+              "@type": "Article",
+              "name": "Transformacja cyfrowa obsługi klienta: Nowoczesne Narzędzia w Sandvik Coromant",
+              "description": "Sandvik Coromant, część globalnej grupy inżynierii przemysłowej Sandvik, jako lider w produkcji narzędzi i technologii obróbki metali, postawił na kompleksową transformację swoich procesów obsługi klienta."
+            },
+            {
+              "@type": "Article",
+              "name": "Transformacja cyfrowa operacji biznesowych: Nowoczesne rozwiązania w G&J Pepsi-Cola Bottlers",
+              "description": "G&J Pepsi-Cola Bottlers, największa niezależna, rodzinna franczyza Pepsi w USA, zrealizowała kompleksową transformację cyfrową, mającą na celu optymalizację obsługi klientów, zwiększenie przychodów oraz redukcję kosztów operacyjnych."
+            }
+          ]
+        }
+      }
     }
   };
 

@@ -59,6 +59,11 @@ export function Navbar({ onLogoClick, isAdmin, userEmail, onLogout }: NavbarProp
     { name: 'Human Resources', path: '/dynamics-365-human-resources' },
   ];
 
+  const navigationItems = [
+    { name: 'Przykłady wdrożeń', href: '/przyklady-wdrozen' },
+    { name: 'Kontakt', href: '/kontakt' },
+  ];
+
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 bg-white border-b border-[#e1dfdd] z-50 transition-shadow ${
@@ -111,9 +116,15 @@ export function Navbar({ onLogoClick, isAdmin, userEmail, onLogout }: NavbarProp
                   )}
                 </div>
                 
-                <Link to="/kontakt" className="text-[#616161] hover:text-[#323130] text-sm">
-                  Kontakt
-                </Link>
+                {navigationItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="text-[#616161] hover:text-[#323130] text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -174,13 +185,16 @@ export function Navbar({ onLogoClick, isAdmin, userEmail, onLogout }: NavbarProp
                     {product.name}
                   </Link>
                 ))}
-                <Link
-                  to="/kontakt"
-                  className="block text-[#616161] hover:text-[#323130] text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Kontakt
-                </Link>
+                {navigationItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="block text-[#616161] hover:text-[#323130] text-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
