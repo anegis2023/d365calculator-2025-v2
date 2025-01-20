@@ -49,8 +49,8 @@ const customerStories: CustomerStory[] = [
     solutions: [
       {
         name: "Dynamics 365 Finance",
-        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Sales?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
-        link: "/dynamics-365-finance"
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Finance?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-finance"
       },
       {
         name: "Dynamics 365 Supply Chain Management",
@@ -275,6 +275,45 @@ const customerStories: CustomerStory[] = [
     ],
     imageUrl: "https://www.microsoft.com/content/dam/microsoft/customer-proof-points/final/605109/18861-lexmark-international-dynamics-365-customer-service/assets/en/Lexmark%20International%20Header%20Image.jpeg?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
     logoUrl: "https://www.microsoft.com/content/dam/microsoft/customer-proof-points/final/605109/18861-lexmark-international-dynamics-365-customer-service/assets/en/Lexmark%20International%20Logo.png?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
+  },
+  {
+    title: "Transformacja cyfrowa zarządzania i łańcucha dostaw w Koppert",
+    description: "Firma Koppert, globalny lider w dostarczaniu naturalnych rozwiązań dla rolnictwa i ogrodnictwa, podjąła kompleksową transformację cyfrową swoich procesów operacyjnych i sprzedażowych. Dzięki wdrożeniu Microsoft Dynamics 365 Finance, Supply Chain Management oraz Sales, Koppert zyskał elastyczną i skalowalną platformę ERP, która wspiera szybkie dostosowanie się do zmieniających się wymagań rynku oraz dynamiczny rozwój firmy. ",
+    fullDescription: {
+      intro: "Firma Koppert, globalny lider w dostarczaniu naturalnych rozwiązań dla rolnictwa i ogrodnictwa, podjąła kompleksową transformację cyfrową swoich procesów operacyjnych i sprzedażowych. Dzięki wdrożeniu Microsoft Dynamics 365 Finance, Supply Chain Management oraz Sales, Koppert zyskał elastyczną i skalowalną platformę ERP, która wspiera szybkie dostosowanie się do zmieniających się wymagań rynku oraz dynamiczny rozwój firmy. ",
+      projectDescription: "Kluczowym wyzwaniem było zapewnienie niezawodności w zarządzaniu łańcuchem dostaw, gdzie większość produktów to organizmy żywe o ograniczonym czasie żywotności. Dzięki centralizacji danych i automatyzacji procesów firma poprawiła efektywność w takich obszarach jak logistyka, planowanie produkcji, zarządzanie zamówieniami oraz zgodność z lokalnymi przepisami w 30 krajach, gdzie prowadzi działalność. Zintegrowane funkcje Dynamics 365, takie jak śledzenie partii i skanowanie w czasie rzeczywistym, zapewniły pełną transparentność i dokładność w łańcuchu dostaw, osiągając ponad 99-procentową zgodność dostaw.\n\nTransformacja została przeprowadzona w kilku fazach, począwszy od wdrożenia podstawowych funkcji finansowych i zakupowych w Holandii, aż po rozbudowane moduły zarządzania produkcją, magazynami oraz e-commerce. Kluczowe procesy, takie jak przetwarzanie zamówień między jednostkami, zostały ustandaryzowane i zautomatyzowane, co zaowocowało zwiększeniem efektywności o 28%. Integracja z rozwiązaniami zewnętrznymi, takimi jak Sana do e-commerce i Optimizer do prognozowania, została zrealizowana za pomocą Microsoft Logic Apps, co uprościło integrację z systemami zewnętrznymi w chmurze.\n\nDynamics 365 zapewnił również lepsze zarządzanie relacjami z klientami dzięki synchronizacji danych w czasie rzeczywistym oraz integracji z aplikacjami mobilnymi i Outlookiem. Pracownicy zyskali pełną widoczność ścieżki klienta, co umożliwiło bardziej spersonalizowaną obsługę i szybsze konwertowanie leadów na nowych klientów.\n\nW ramach dalszego rozwoju Koppert planuje rozszerzenie wdrożenia na kolejne kraje, takie jak Meksyk i Brazylia, oraz testowanie rozwiązań IoT do monitorowania warunków transportu produktów w czasie rzeczywistym. ",
+      keyPoints: [
+        "Wdrożenie Microsoft Dynamics 365 Finance, Supply Chain Management oraz Sales jako elastycznego, skalowalnego i kompleksowego systemu ERP ",
+        "Centralizacja danych i automatyzacja procesów w obszarze logistyki, planowania produkcji, zarządzania zamówieniami oraz zapewnienie zgodności z lokalnymi przepisami w 30 krajach ",
+        "Osiągnięcie pełnej transparentności łańcucha dostaw i ponad 99% zgodności dostaw dzięki zintegrowanym funkcjom śledzenia partii i skanowania w czasie rzeczywistym  ",
+        "Ustandaryzowanie i automatyzacja kluczowych procesów, takich jak przetwarzanie zamówień między jednostkami, i zwiększenie efektywności procesów o 28% ",
+        "Integracja z rozwiązaniami zewnętrznymi (Sana do e-commerce, Optimizer do prognozowania) za pomocą Microsoft Logic Apps ",
+        "Poprawa zarządzania relacjami z klientami dzięki synchronizacji danych w czasie rzeczywistym, aplikacjom mobilnym i integracji z Outlookiem ",
+        "Przygotowanie środowiska pod wdrożenie w Meksyku i Brazylii oraz testowanie rozwiązań IoT"
+      ]
+    },
+    industry: "Rolnictwo i ogrodnictwo",
+    companySize: "1000-9999 pracowników",
+    country: "Holandia",
+    solutions: [
+      {
+        name: "Dynamics 365 Sales",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Sales?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "/dynamics-365-sales"
+      },
+      {
+        name: "Dynamics 365 Finance",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Finance?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-finance"
+      },
+      {
+        name: "Dynamics 365 Supply Chain Management",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Supply-Chain-Management?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-supply-chain"
+      }
+    ],
+    imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Koppert%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
+    logoUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Koppert%20Logo?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
   }
 ];
 
