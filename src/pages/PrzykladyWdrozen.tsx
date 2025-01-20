@@ -169,6 +169,32 @@ const customerStories: CustomerStory[] = [
     ],
     imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/G-J%20Pepsi-Cola%20Bottlers%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
     logoUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/G%20and%20J%20Pepsi-Cola%20Bottlers%20Logo?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
+  },
+  {
+    title: "Transformacja sprzedaży i zarządzania projektami budowlanymi w DEHN SE",
+    description: "Firma DEHN SE, światowy lider w dziedzinie ochrony odgromowej, zrealizowała transformację cyfrową swoich procesów sprzedażowych, aby sprostać wyzwaniom związanym z długotrwałymi projektami budowlanymi i częstymi zmianami planów. ",
+    fullDescription: {
+      intro: "Firma DEHN SE, światowy lider w dziedzinie ochrony odgromowej, zrealizowała transformację cyfrową swoich procesów sprzedażowych, aby sprostać wyzwaniom związanym z długotrwałymi projektami budowlanymi i częstymi zmianami planów. ",
+      projectDescription: "Tradycyjne podejście, oparte na rozproszonych listach i narzędziach, powodowało brak przejrzystości w zarządzaniu informacjami projektowymi i utrudniało efektywną obsługę klientów. Odpowiedzią na te wyzwania było wdrożenie systemu Dynamics 365 Sales jako centralnej platformy zarządzania sprzedażą i relacjami z klientami.\n\nDzięki wdrożeniu systemu Dynamics 365 DEHN SE scentralizował zarządzanie informacjami o projektach, umożliwiając swoim zespołom sprzedaży dostęp do pełnej historii projektów budowlanych i kontaktów w czasie rzeczywistym. Rozwiązanie to, określane jako „Sales 4.0”, pozwoliło firmie zautomatyzować kluczowe procesy, takie jak planowanie działań sprzedażowych, zarządzanie kontaktami czy dostosowywanie rozwiązań ochrony odgromowej do zmieniających się wymagań projektów.\n\nNowy system Dynamics 365 umożliwia precyzyjne zarządzanie działaniami sprzedażowymi. Ponadto, scentralizowany dostęp do danych pozwala szybciej reagować na zmiany w planach budowy, takie jak modyfikacje konstrukcji dachów czy wysokości budynków, bez zakłócania procesu sprzedaży.\n\nTransformacja „Sales 4.0” przyniosła również korzyści w innych krajach, takich jak Włochy, gdzie proces sprzedaży, realizowany zarówno bezpośrednio, jak i przez zewnętrznych sprzedawców, został uproszczony i zintegrowany w ramach jednej platformy. ",
+      keyPoints: [
+        "Wdrożenie Dynamics 365 Sales jako centralnej platformy zarządzania sprzedażą i relacjami z klientami",
+        "Centralizacja zarządzania informacjami o projektach z dostępem do pełnej historii projektów i kontaktów w czasie rzeczywistym",
+        "Wdrożenie koncepcji „Sales 4.0”, zwiększającej efektywność działań sprzedażowych i wspierającej adaptację do dynamicznych wymagań projektów budowlanych",
+        "Automatyzacja procesów sprzedażowych i szybsze reagowanie na zmiany w planach budowy"
+      ]
+    },
+    industry: "Produkcja dyskretna",
+    companySize: "1000 - 9,999 pracowników",
+    country: "Niemcy",
+    solutions: [
+      {
+        name: "Dynamics 365 Sales",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Sales?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "/dynamics-365-sales"
+      }
+    ],
+    imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/18892_DEHN%20SE%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1900&hei=550&qlt=100&fmt=png-alpha&fit=crop",
+    logoUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/18892_DEHN%20SE%20Logo?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
   }
 ];
 
