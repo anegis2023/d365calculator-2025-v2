@@ -314,6 +314,54 @@ const customerStories: CustomerStory[] = [
     ],
     imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Koppert%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
     logoUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Koppert%20Logo?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
+  },
+  {
+    title: "Transformacja cyfrowa operacji i sprzedaży w Foley, Inc.",
+    description: "Firma Foley, Inc., autoryzowany dealer Cat®, przeprowadziła kompleksową transformację cyfrową, wdrażając Microsoft Dynamics 365 oraz specjalistyczne rozwiązanie NAXT365 dla branży sprzętu ciężkiego. Modernizacja infrastruktury IT była odpowiedzią na wyzwania związane z wieloletnim korzystaniem z rozproszonych systemów, które ograniczały efektywność operacyjną i możliwość skalowania działalności. ",
+    fullDescription: {
+      intro: "Firma Foley, Inc., autoryzowany dealer Cat®, przeprowadziła kompleksową transformację cyfrową, wdrażając Microsoft Dynamics 365 oraz specjalistyczne rozwiązanie NAXT365 dla branży sprzętu ciężkiego. Modernizacja infrastruktury IT była odpowiedzią na wyzwania związane z wieloletnim korzystaniem z rozproszonych systemów, które ograniczały efektywność operacyjną i możliwość skalowania działalności.",
+      projectDescription: "Dzięki wdrożeniu Dynamics 365 i stworzeniu zintegrowanego środowiska ERP we wszystkich obszarach działalności firma uprościła codzienne procesy, zyskała jedno źródło danych i zwiększyła efektywność operacyjną, eliminując potrzebę korzystania z ponad 70 aplikacji używanych wcześniej. Transformacja przyniosła usprawnienia we wszystkich najważniejszych procesach operacyjnych.\n\nW obszarze finansów wdrożenie nowego systemu zakupowego, zintegrowanego z zatwierdzonymi dostawcami, pozwoliło na zapewnienie spójności procesów zakupowych i redukcję opóźnień w akceptacji zamówień.\n\nZarządzanie łańcuchem dostaw i magazynami zostało usprawnione dzięki nowoczesnym funkcjom, takim jak obsługa cyklu życia materiałów i liczenie cykliczne, a dodatkowa integracja z interfejsami Cat® wprowadziła możliwość śledzenia zamówień w czasie rzeczywistym, zwiększając transparentność i kontrolę nad logistyką.\n\nW obszarze zarządzania projektami wdrożenie systemu Dynamics 365 otworzyło nowe możliwości precyzyjnego prognozowania oraz automatyzacji procesów fakturowania i budżetowania. Firma wyeliminowała także konieczność korzystania z tradycyjnych arkuszy Excel.\n\nW obszarze serwisu wprowadzono automatyczne alerty dotyczące stanu gwarancji czy konieczności przeprowadzenia konserwacji, co skróciło czas przygotowania zleceń serwisowych o 15–20 minut. Dodatkowo odpowiednio skonfigurowane systemy automatyzują procesy związane z rabatami.\n\nFoley kontynuuje rozwój systemu Dynamics 365, planując wdrożenie dodatkowych funkcji w działach sprzedaży i wynajmu, takich jak natychmiastowe zatwierdzanie finansowania czy systemowa widoczność dostępności sprzętu w czasie rzeczywistym.",
+      keyPoints: [
+        "Zastąpienie rozproszonych systemów zintegrowanym środowiskiem ERP opartym na Dynamics 365 i NAXT365 i wyeliminowanie ponad 70 aplikacji ",
+        "Wdrożenie systemu zakupowego zintegrowanego z zatwierdzonymi dostawcami, co zapewniło spójność procesów i redukcję opóźnień w akceptacji zamówień",
+        "Wdrożenie nowych funkcji, takich jak obsługa cyklu życia materiałów i liczenie cykliczne, usprawniło zarządzanie magazynami ",
+        "Integracja z interfejsami Cat® umożliwiła śledzenie zamówień w czasie rzeczywistym ",
+        "Wdrożenie Dynamics 365 zapewniło precyzyjne prognozowanie oraz automatyzację procesów fakturowania i budżetowania, eliminując potrzebę korzystania z arkuszy Excel  ",
+        "Przygotowanie środowiska pod wdrożenie funkcjonalności: natychmiastowego zatwierdzania finansowania oraz systemowej widoczności dostępności sprzętu w czasie rzeczywistym "
+      ]
+    },
+    industry: "Produkcja dyskretna",
+    companySize: "1000-9999 pracowników",
+    country: "USA",
+    solutions: [
+      {
+        name: "Dynamics 365 Sales",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Sales?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "/dynamics-365-sales"
+      },
+      {
+        name: "Dynamics 365 Finance",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Finance?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-finance"
+      },
+      {
+        name: "Dynamics 365 Supply Chain Management",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Supply-Chain-Management?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-supply-chain"
+      },
+      {
+        name: "Dynamics 365 Field Service",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Field-Service?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-field-service"
+      },
+      {
+        name: "Dynamics 365 Customer Insights",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Customer-Insights?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-customer-insights"
+      }
+    ],
+    imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Foley%20Inc%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
+    logoUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Foley%20Inc%20Logo?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
   }
 ];
 
