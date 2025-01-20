@@ -67,7 +67,7 @@ export const modules: Module[] = [
     questions: [
       {
         id: 'advanced_finance',
-        text: 'Czy będziesz potrzebował poniższych funkcjonalności D365 Finansce (1)? Jeśli tak to ilu użytkowników będzie ich potrzebowało?',
+        text: 'Czy będziesz potrzebował którejkolwiek z poniższych funkcjonalności D365 Finansce (1)? Jeśli tak to ilu użytkowników będzie ich potrzebowało?',
         explanation: `1. Zaawansowana rachunkowość kosztów i analiza rentowności.
 2. Zarządzanie złożonymi konsolidacjami finansowymi dla wielu jednostek prawnych.
 3. Zaawansowane narzędzia do planowania i prognozowania dla zarządzania wydajnością finansową.
@@ -82,7 +82,7 @@ export const modules: Module[] = [
       },
       {
         id: 'basic_finance',
-        text: 'Czy będziesz potrzebował poniższych funkcjonalności D365 Finansce (2)? Jeśli tak to ilu użytkowników będzie ich potrzebowało?',
+        text: 'Czy będziesz potrzebował którejkolwiek z poniższych funkcjonalności D365 Finansce (2)? Jeśli tak to ilu użytkowników będzie ich potrzebowało?',
         explanation: `1. Zarządzanie kontami księgi głównej, wpisami do dziennika oraz strukturami kont.
 2. Obsługa procesów zobowiązań (accounts payable) i należności (accounts receivable).
 3. Nadzór nad przepływami pieniężnymi, zarządzaniem kredytami i windykacją należności.
@@ -97,7 +97,7 @@ export const modules: Module[] = [
       },
       {
         id: 'standard_finance_users',
-        text: 'Ilu użytkownikom modułu Finance wystarczą poniższe funkcje (1):',
+        text: 'Ilu użytkownikom modułu Finance wystarczy, którakolwiek z poniższych funkcjonalności (1):',
         explanation: `1. Tworzenie i aktualizacja zamówień zakupu oraz faktur dostawców.
 2. Składanie i przeglądanie wniosków o zwrot wydatków.
 3. Przetwarzanie płatności oraz monitorowanie ich statusów.
@@ -112,7 +112,7 @@ export const modules: Module[] = [
       },
       {
         id: 'basic_finance_users',
-        text: 'Ilu użytkownikom modułu Finance wystarczą poniższe funkcje (2):',
+        text: 'Ilu użytkownikom modułu Finance wystarczy którakolwiek z poniższych funkcjonalności (2):',
         explanation: `1. Przeglądanie raportów finansowych i pulpitów nawigacyjnych bez możliwości edycji.
 2. Zatwierdzanie przepływów pracy, takich jak zamówienia zakupu czy korekty budżetu.
 3. Składanie raportów wydatków lub wprowadzanie podstawowych aktualizacji.
