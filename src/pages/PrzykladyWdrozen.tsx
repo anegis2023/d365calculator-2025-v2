@@ -195,6 +195,86 @@ const customerStories: CustomerStory[] = [
     ],
     imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/18892_DEHN%20SE%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1900&hei=550&qlt=100&fmt=png-alpha&fit=crop",
     logoUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/18892_DEHN%20SE%20Logo?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
+  },
+  {
+    title: "Transformacja cyfrowa obsługi klienta w Vattenfall AB",
+    description: "Vattenfall AB, jedna z największych w Europie firm energetycznych, zrealizowała transformację cyfrową, aby zapewnić swoim klientom nowoczesne i zintegrowane doświadczenia oraz wspierać cele zrównoważonego rozwoju.",
+    fullDescription: {
+      intro: "Vattenfall AB, jedna z największych w Europie firm energetycznych, zrealizowała transformację cyfrową, aby zapewnić swoim klientom nowoczesne i zintegrowane doświadczenia oraz wspierać cele zrównoważonego rozwoju.",
+      projectDescription: "Firma stawia sobie za cel umożliwienie życia bez paliw kopalnych w ciągu jednego pokolenia. Kluczowym krokiem w realizacji tego celu było wdrożenie zintegrowanej platformy CRM opartej na rozwiązaniach Microsoft Dynamics 365 Marketing, Sales i Customer Service, które usprawniły procesy sprzedażowe i obsługi klienta.\n\nPrzed wdrożeniem firma zmagała się z wyzwaniami wynikającymi z rozproszonych systemów marketingowych, sprzedażowych i billingowych. Brak centralizacji danych utrudniał pracownikom szybkie znajdowanie potrzebnych informacji, co negatywnie wpływało na doświadczenie klienta i ograniczało zaangażowanie w działania proekologiczne. Dynamics 365 umożliwił firmie uproszczenie pracy zespołów sprzedaży i obsługi klienta, zmniejszając liczbę narzędzi wymaganych do obsługi zapytań z ośmiu do jednego. Dzięki temu pracownicy mogli skupić się na dialogu z klientami, a nie na złożonych zadaniach administracyjnych.\n\nVattenfall wykorzystał również Dynamics 365 w projekcie budowy sieci stacji ładowania pojazdów elektrycznych pod marką InCharge, która obejmuje już 40 000 punktów ładowania w Europie Północnej. Dzięki rozwiązaniom CRM, firma zapewnia wysoką jakość obsługi klientów indywidualnych i biznesowych, optymalizuje harmonogramy instalacji oraz koordynuje działania zespołów sprzedaży i serwisu. Centralizacja danych w Dynamics 365 pozwala na personalizację obsługi i lepsze zaangażowanie klientów w produkty i usługi zorientowane na zrównoważony rozwój.",
+      keyPoints: [
+        "Wdrożenie Microsoft Dynamics 365 Marketing, Sales i Customer Service jako zintegrowanej platformy CRM usprawniającej procesy sprzedażowe i obsługi klienta",
+        "Redukcja liczby narzędzi wymaganych do obsługi zapytań z ośmiu do jednego ",
+        "Centralizacja danych i personalizacja obsługi klientów indywidualnych i biznesowych",
+        "Wsparcie projektu budowy sieci stacji ładowania pojazdów elektrycznych InCharge poprzez optymalizację harmonogramów instalacji i koordynację działań zespołów sprzedaży i serwisu w systemie Dynamics 365"
+      ]
+    },
+    industry: "Energetyczna",
+    companySize: "10000 + pracowników",
+    country: "Szwecja",
+    solutions: [
+      {
+        name: "Dynamics 365 Sales",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Sales?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "/dynamics-365-sales"
+      },
+      {
+        name: "Dynamics 365 Customer Insights",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Customer-Insights?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-customer-insights"
+      },
+      {
+        name: "Dynamics 365 Customer Service",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Customer-Service?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-customer-service"
+      },
+      {
+        name: "Dynamics 365 Field Service",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Field-Service?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-field-service"
+      }
+    ],
+    imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Vattenfall%20AB%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
+    logoUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Vattenfall%20AB%20Logo?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
+  },
+  {
+    title: "Transformacja cyfrowa obsługi klienta: nowoczesne podejście do zarządzania relacjami w Lexmark",
+    description: "Lexmark, globalny lider w dziedzinie drukowania, technologii IoT i rozwiązań chmurowych, zrealizował kompleksową transformację cyfrową swoich procesów sprzedaży i obsługi klienta, wdrażając aplikacje Microsoft Dynamics 365 Sales, Customer Service i Field Service. Celem projektu było zastąpienie przestarzałych systemów Salesforce i Siebel zintegrowanym, chmurowym rozwiązaniem.",
+    fullDescription: {
+      intro: "Lexmark, globalny lider w dziedzinie drukowania, technologii IoT i rozwiązań chmurowych, zrealizował kompleksową transformację cyfrową swoich procesów sprzedaży i obsługi klienta, wdrażając aplikacje Microsoft Dynamics 365 Sales, Customer Service i Field Service. Celem projektu było zastąpienie przestarzałych systemów Salesforce i Siebel zintegrowanym, chmurowym rozwiązaniem. ",
+      projectDescription: "Dzięki Dynamics 365 Lexmark uzyskał centralną platformę omnichannel, która zapewnia pełną widoczność ścieżki klienta – od pierwszego kontaktu, przez sprzedaż, po obsługę posprzedażową. Zespoły sprzedaży i obsługi klienta zyskały dostęp do spójnych danych w czasie rzeczywistym, co umożliwiło lepsze prognozowanie, szybsze konfiguracje ofert oraz redukcję liczby poprawek wycen o 43%. Wdrożenie zintegrowanego systemu CPQ (Configure, Price, Quote) pozwoliło na przyspieszenie procesów sprzedażowych i zwiększenie precyzji zamówień.\n\nUsprawnienia w obszarze obsługi klienta zaowocowały 20% wzrostem produktywności techników terenowych dzięki aplikacji mobilnej Dynamics 365 Field Service. Automatyczne planowanie tras, dynamiczna logika przydzielania zleceń oraz szybki dostęp do materiałów serwisowych sprawiły, że Lexmark może teraz efektywnie realizować naprawy w terenie, skracając czas reakcji i poprawiając wskaźnik rozwiązywania problemów przy pierwszej wizycie. W call center skrócenie czasu rozmów o średnio trzy minuty przełożyło się na wzrost produktywności o 23% i oszczędności rzędu miliona dolarów rocznie.\n\nIntegracja Dynamics 365 z SAP S4/Hana umożliwiła dokładniejsze zarządzanie poziomami zapasów i automatyczne generowanie zamówień uzupełniających dla partnerów biznesowych. Ponadto Lexmark wdrożył interaktywny Customer Governance Portfolio (CGP), który dzięki raportom Power BI pozwala zespołom sprzedaży i serwisu na bieżąco monitorować działania klientów i podejmować szybkie decyzje, wzmacniając zaufanie do oferowanych rozwiązań.",
+      keyPoints: [
+        "Zastąpienie przestarzałych systemów Salesforce i Siebel zintegrowanym, chmurowym rozwiązaniem Microsoft Dynamics 365 ",
+        "Wdrożenie aplikacji Microsoft Dynamics 365 Sales, Customer Service i Field Service jako centralnej platformy omnichannel zapewniającej pełną widoczność ścieżki klienta",
+        "Usprawnienie procesów sprzedażowych dzięki zintegrowanemu systemowi CPQ (Configure, Price, Quote), przyspieszenie konfiguracji ofert oraz redukcja liczby poprawek wycen o 43% ",
+        "Wzrost produktywności techników terenowych o 20% dzięki Dynamics 365 Field Service, obejmujący automatyczne planowanie tras i dynamiczną logikę przydzielania zleceń",
+        "Skrócenie czasu rozmów w call center o średnio trzy minuty, co przełożyło się na wzrost produktywności o 23% i roczne oszczędności w wysokości miliona dolarów ",
+        "Integracja Dynamics 365 z SAP S4/Hana, umożliwiająca dokładniejsze zarządzanie poziomami zapasów i automatyczne generowanie zamówień uzupełniających",
+        "Wdrożenie interaktywnego Customer Governance Portfolio (CGP) z raportami Power BI, wspierającego monitorowanie działań klientów i szybkie podejmowanie decyzji"
+      ]
+    },
+    industry: "Technologiczna i produkcyjna",
+    companySize: "10000 + pracowników",
+    country: "USA",
+    solutions: [
+      {
+        name: "Dynamics 365 Sales",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Sales?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "/dynamics-365-sales"
+      },
+      {
+        name: "Dynamics 365 Customer Service",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Customer-Service?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-customer-service"
+      },
+      {
+        name: "Dynamics 365 Field Service",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Field-Service?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "dynamics-365-field-service"
+      }
+    ],
+    imageUrl: "https://www.microsoft.com/content/dam/microsoft/customer-proof-points/final/605109/18861-lexmark-international-dynamics-365-customer-service/assets/en/Lexmark%20International%20Header%20Image.jpeg?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
+    logoUrl: "https://www.microsoft.com/content/dam/microsoft/customer-proof-points/final/605109/18861-lexmark-international-dynamics-365-customer-service/assets/en/Lexmark%20International%20Logo.png?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
   }
 ];
 
