@@ -802,6 +802,31 @@ export const getPageMetaData = (path: string, pageData?: Record<string, any>): M
               "@type": "Article",
               "name": "Transformacja cyfrowa operacji biznesowych: Nowoczesne rozwiązania w G&J Pepsi-Cola Bottlers",
               "description": "G&J Pepsi-Cola Bottlers, największa niezależna, rodzinna franczyza Pepsi w USA, zrealizowała kompleksową transformację cyfrową, mającą na celu optymalizację obsługi klientów, zwiększenie przychodów oraz redukcję kosztów operacyjnych."
+            },
+            {
+              "@type": "Article",
+              "name": "Transformacja sprzedaży i zarządzania projektami budowlanymi w DEHN SE",
+              "description": "Firma DEHN SE, światowy lider w dziedzinie ochrony odgromowej, zrealizowała transformację cyfrową swoich procesów sprzedażowych, aby sprostać wyzwaniom związanym z długotrwałymi projektami budowlanymi i częstymi zmianami planów."
+            },
+            {
+              "@type": "Article",
+              "name": "Transformacja cyfrowa obsługi klienta w Vattenfall AB",
+              "description": "Vattenfall AB, jedna z największych w Europie firm energetycznych, zrealizowała transformację cyfrową, aby zapewnić swoim klientom nowoczesne i zintegrowane doświadczenia oraz wspierać cele zrównoważonego rozwoju."
+            },
+            {
+              "@type": "Article",
+              "name": "Transformacja cyfrowa obsługi klienta:nowoczesne podejście do zarządzania relacjami w Lexmark",
+              "description": "Lexmark, globalny lider w dziedzinie drukowania, technologii IoT i rozwiązań chmurowych, zrealizował kompleksową transformację cyfrową swoich procesów sprzedaży i obsługi klienta, wdrażając aplikacje Microsoft Dynamics 365 Sales, Customer Service i Field Service. Celem projektu było zastąpienie przestarzałych systemów Salesforce i Siebel zintegrowanym, chmurowym rozwiązaniem. "
+            },
+            {
+              "@type": "Article",
+              "name": "Transformacja cyfrowa zarządzania i łańcucha dostaw w Koppert",
+              "description": "Firma Koppert, globalny lider w dostarczaniu naturalnych rozwiązań dla rolnictwa i ogrodnictwa, podjąła kompleksową transformację cyfrową swoich procesów operacyjnych i sprzedażowych. Dzięki wdrożeniu Microsoft Dynamics 365 Finance, Supply Chain Management oraz Sales, Koppert zyskał elastyczną i skalowalną platformę ERP, która wspiera szybkie dostosowanie się do zmieniających się wymagań rynku oraz dynamiczny rozwój firmy. "
+            },
+            {
+              "@type": "Article",
+              "name": "Transformacja cyfrowa operacji i sprzedaży w Foley, Inc.",
+              "description": "Firma Foley, Inc., autoryzowany dealer Cat®, przeprowadziła kompleksową transformację cyfrową, wdrażając Microsoft Dynamics 365 oraz specjalistyczne rozwiązanie NAXT365 dla branży sprzętu ciężkiego. Modernizacja infrastruktury IT była odpowiedzią na wyzwania związane z wieloletnim korzystaniem z rozproszonych systemów, które ograniczały efektywność operacyjną i możliwość skalowania działalności."
             }
           ]
         }
