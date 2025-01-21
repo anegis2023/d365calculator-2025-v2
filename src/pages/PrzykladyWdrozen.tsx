@@ -361,6 +361,36 @@ const customerStories: CustomerStory[] = [
     ],
     imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Foley%20Inc%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
     logoUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Foley%20Inc%20Logo?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
+  },
+  {
+    title: "Transformacja cyfrowa w sektorze energetycznym w HERON Group ",
+    description: "HERON Group, lider na rynku energetycznym w Grecji, stanął przed wyzwaniem dostosowania swojej infrastruktury CRM do rosnącej bazy klientów oraz złożoności obsługi wielokanałowych ścieżek zakupowych.",
+    fullDescription: {
+      intro: "HERON Group, lider na rynku energetycznym w Grecji, stanął przed wyzwaniem dostosowania swojej infrastruktury CRM do rosnącej bazy klientów oraz złożoności obsługi wielokanałowych ścieżek zakupowych.",
+      projectDescription: "W odpowiedzi na te wyzwania firma wdrożyła Dynamics 365 Energy Accelerator – rozwiązanie chmurowe opracowane przez Data Communication na bazie Microsoft Dynamics 365 Sales i Customer Service, dostosowane do specyfiki sektora energetycznego. W efekcie transformacji HERON Group zwiększyła dwukrotnie bazę klientów z obszaru energii elektrycznej i pięciokrotnie liczbę klientów z obszaru gazu ziemnego; zmniejszyła koszty operacyjne o 15% i podniosła wskaźnik Net Promoter Score (NPS) o 20 punktów.\n\nNowa platforma CRM, oparta na chmurze Azure, zapewnia HERON niezawodność działania na poziomie 99,99% i zaawansowane mechanizmy ochrony danych. Dzięki integracji 17 systemów, w tym platform billingowych i zarządzania fakturami, HERON zyskał centralny punkt dostępu do danych, umożliwiający pełną kontrolę nad procesami sprzedaży i obsługi klienta.\n\nAutomatyzacja procesów i wdrożenie funkcji samoobsługowych pozwoliły na skrócenie czasu obsługi klienta o 26%, zmniejszenie liczby zapytań do biura obsługi o 20% i 30-procentowy wzrost interakcji samoobsługowych, dzięki czemu klienci mogą wygodnie realizować takie zadania jak płatności czy zmiany w umowach.\n\nDynamics 365 Energy Accelerator stał się fundamentem efektywnego zarządzania rozproszoną siecią ponad 3 000 pracowników zewnętrznych. Dzięki integracji z portalem partnerskim i systemem CRM pracownicy mają dostęp do danych w czasie rzeczywistym, co umożliwia spersonalizowaną obsługę klientów we wszystkich kanałach, od strony internetowej po chatboty i aplikacje mobilne.\n\nDodatkowo, zaawansowane raportowanie oparte na Power BI dostarcza zarządowi szczegółowych analiz klientów i wyników sprzedaży, co wspiera podejmowanie trafnych decyzji biznesowych oraz optymalizację strategii marketingowych. W dalszych krokach HERON planuje wdrożenie Dynamics 365 Marketing do zaawansowanej automatyzacji kampanii oraz wykorzystanie sztucznej inteligencji do optymalizacji procesów wewnętrznych. ",
+      keyPoints: [
+        "Wdrożenie Dynamics 365 Energy Accelerator na bazie aplikacji Sales i Customer Service zaowocowało podwojeniem liczby klientów z obszaru energii elektrycznej i pięciokrotnym wzrostem klientów z obszaru gazu ziemnego",
+        "Integracja systemów billingowych i zarządzania fakturami obniżyła koszty operacyjne o 15% i podniosła wskaźnik Net Promoter Score (NPS) o 20 punktów ",
+        "Integracja 17 systemów zapewniła jedno źródło danych",
+        "Wdrożenie CRM na platformie chmurowej Azure zapewniło niezawodność działania na poziomie 99,99% oraz zaawansowane mechanizmy ochrony danych ",
+        "Automatyzacja procesów i funkcje samoobsługowe skróciły czas obsługi klienta o 26%, zredukowały liczbę zapytań do biura obsługi o 20% i zwiększyły liczbę interakcji samoobsługowych o 30%",
+        "Zarządzanie 3000 pracowników zewnętrznych dzięki wdrożeniu Dynamics 365 Energy Accelerator i poprawa obsługi klienta omnichannel poprzez integrację z portalem partnerskim i CRM",
+        "Wdrożenie Power BI do szczegółowych analiz klientów i wyników sprzedaży",
+        "Przygotowanie środowiska pod wdrożenie Dynamics 365 Marketing do automatyzacji kampanii i narzędzi sztucznej inteligencji do optymalizacji procesów zewnętrznych"
+      ]
+    },
+    industry: "Energetyczna",
+    companySize: "50-999 pracowników",
+    country: "Grecja",
+    solutions: [
+      {
+        name: "Dynamics 365 Sales",
+        logo: "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Sales?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain",
+        link: "/dynamics-365-sales"
+      }
+    ],
+    imageUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/19855_HERON%20Group%20Header%20Image?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain",
+    logoUrl: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/19855_HERON%20Group%20Logo?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=786&hei=443&qlt=75&fit=constrain"
   }
 ];
 
