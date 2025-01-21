@@ -136,7 +136,7 @@ export const modules: Module[] = [
     questions: [
       {
         id: 'advanced_scm_features',
-        text: 'Czy będziesz potrzebował poniższych funkcjonalności D365 SCM (1)? Jeśli tak to ilu użytkowników będzie ich potrzebowało?',
+        text: 'Czy będziesz potrzebował któejkolwiek z poniższych funkcjonalności D365 SCM (1)? Jeśli tak to ilu użytkowników będzie ich potrzebowało?',
         explanation: `1. Zaawansowane prognozowanie popytu z wykorzystaniem analiz wspieranych przez AI.
 2. Zarządzanie złożonymi procesami produkcyjnymi, takimi jak produkcja jednostkowa, lean czy procesowa.
 3. Dostęp do zaawansowanych funkcji zarządzania magazynem, w tym kompletacji falowej, liczenia cyklicznego i dyrektyw lokalizacyjnych.
@@ -216,7 +216,7 @@ export const modules: Module[] = [
       },
       {
         id: 'advanced_scm_users',
-        text: 'Ilu użytkownikom modułu SCM wystarczą poniższe funkcje (1):',
+        text: 'Ilu użytkownikom modułu Supply Chain Management wystarczy którakolwiek z poniższych funkcjonalności(1):',
         explanation: `1. Konfiguracja przepływów pracy, takich jak zatwierdzenia zamówień zakupu czy ruchy magazynowe.
 2. Planowanie i optymalizacja harmonogramów produkcyjnych lub wytwórczych.
 3. Ustawianie zaawansowanych reguł zarządzania zapasami, takich jak liczenie cykliczne czy dyrektywy lokalizacyjne.
@@ -231,7 +231,7 @@ export const modules: Module[] = [
       },
       {
         id: 'standard_scm_users',
-        text: 'Ilu użytkownikom modułu SCM wystarczą poniższe funkcje (2):',
+        text: 'Ilu użytkownikom modułu Supply Chain Management wystarczy którakolwiek z poniższych funkcjonalności (2):',
         explanation: `1. Tworzenie i przetwarzanie zamówień zakupu lub zapotrzebowań.
 2. Wykonywanie korekt zapasów lub transferów towarów między lokalizacjami.
 3. Rejestrowanie zużycia materiałów lub wyników produkcji.
@@ -246,7 +246,7 @@ export const modules: Module[] = [
       },
       {
         id: 'basic_scm_users',
-        text: 'Ilu użytkownikom modułu SCM wystarczą poniższe funkcje (3):',
+        text: 'Ilu użytkownikom modułu Supply Chain Management wystarczy którakolwiek z poniższych funkcjonalności (3):',
         explanation: `1. Przeglądanie poziomów zapasów i dostępności towarów w celu uzyskania informacji referencyjnych.
 2. Składanie kart czasu pracy lub raportów wydatków związanych z operacjami łańcucha dostaw.
 3. Zatwierdzanie przepływów pracy, takich jak zapotrzebowania zakupowe czy zatwierdzenia wydatków.
@@ -390,7 +390,7 @@ export const modules: Module[] = [
       },
       {
         id: 'standard_field_service_users',
-        text: 'Ilu użytkownikom modułu Field Service wystarczą poniższe funkcje (1):',
+        text: 'Ilu użytkownikom modułu Field Service wystarczy którakolwiek z poniższych funkcjonalności (1):',
         explanation: `1. Tworzenie i aktualizacja zleceń serwisowych oraz planowanie zasobów.
 2. Potwierdzanie terminów wizyt serwisowych i powiadamianie klientów.
 3. Aktualizacja zużycia zapasów po zakończeniu wizyt serwisowych.
@@ -405,7 +405,7 @@ export const modules: Module[] = [
       },
       {
         id: 'basic_field_service_users',
-        text: 'Ilu użytkownikom modułu Field Service wystarczą poniższe funkcje (2):',
+        text: 'Ilu użytkownikom modułu Field Service wystarczy którakolwiek z poniższych funkcjonalności (2):',
         explanation: `1. Przeglądanie zleceń serwisowych i harmonogramów usług bez możliwości edycji.
 2. Zatwierdzanie lub odrzucanie zmian w zleceniach serwisowych lub wniosków o zmianę harmonogramu.
 3. Dostęp do pulpitów nawigacyjnych w celu monitorowania wydajności usług i wskaźników KPI.
@@ -549,7 +549,7 @@ export const modules: Module[] = [
       },
       {
         id: 'standard_project_operations_users',
-        text: 'Ilu użytkownikom modułu Project Operations wystarczą poniższe funkcje (1):',
+        text: 'Ilu użytkownikom modułu Project Operations wystarczy którakolwiek z poniższych funkcjonalności (1):',
         explanation: `1. Rejestrowanie czasu pracy i wydatków związanych z realizacją projektów.
 2. Aktualizacja zadań projektowych i śledzenie postępów.
 3. Składanie wniosków o zasoby lub zarządzanie prostymi alokacjami zasobów.
@@ -564,7 +564,7 @@ export const modules: Module[] = [
       },
       {
         id: 'basic_project_operations_users',
-        text: 'Ilu użytkownikom modułu Project Operations wystarczą poniższe funkcje (2):',
+        text: 'Ilu użytkownikom modułu Project Operations wystarczy którakolwiek z poniższych funkcjonalności (2):',
         explanation: `1. Przeglądanie statusu i postępów projektów bez możliwości wprowadzania zmian.
 2. Przeglądanie i zatwierdzanie przepływów pracy związanych z projektami, takich jak zmiany w zadaniach lub budżecie.
 3. Monitorowanie pulpitów nawigacyjnych projektów i predefiniowanych raportów.
@@ -648,7 +648,7 @@ export const modules: Module[] = [
       },
       {
         id: 'social_media_support',
-        text: 'Czy obsługują obsługę klienta za pośrednictwem platform mediów społecznościowych?',
+        text: 'Czy prowadzą obsługę klienta za pośrednictwem platform mediów społecznościowych?',
         explanation: 'Dotyczy obsługi klienta w mediach społecznościowych.',
         type: 'yesNoCount'
       },
@@ -702,7 +702,7 @@ export const modules: Module[] = [
       },
       {
         id: 'standard_customer_service_users',
-        text: 'Ilu użytkownikom modułu Customer Service wystarczą poniższe funkcje (1):',
+        text: 'Ilu użytkownikom modułu Customer Service wystarczy którakolwiek z poniższych funkcjonalności (1):',
         explanation: `1. Tworzenie i przypisywanie nowych spraw.
 2. Rejestrowanie problemów lub zgłoszeń klientów dla innych zespołów.
 3. Aktualizacja statusów spraw oraz dodawanie notatek dotyczących rozwiązań.
@@ -717,7 +717,7 @@ export const modules: Module[] = [
       },
       {
         id: 'basic_customer_service_users',
-        text: 'Ilu użytkownikom modułu Customer Service wystarczą poniższe funkcje (2):',
+        text: 'Ilu użytkownikom modułu Customer Service wystarczy którakolwiek z poniższych funkcjonalności (2):',
         explanation: `1. Przeglądanie statusów spraw i raportów serwisowych bez możliwości edycji.
 2. Przekazywanie aktualizacji lub opinii na temat zakończonych spraw.
 3. Przeglądanie profili klientów w celach referencyjnych.
@@ -912,7 +912,7 @@ export const modules: Module[] = [
       },
       {
         id: 'standard_commerce_users',
-        text: 'Ilu użytkownikom modułu Commerce wystarczą poniższe funkcje (1):',
+        text: 'Ilu użytkownikom modułu Commerce wystarczy którakolwiek z poniższych funkcjonalności (1):',
         explanation: `1. Przetwarzanie transakcji sprzedażowych i zarządzanie operacjami punktów sprzedaży (POS).
 2. Wykonywanie podstawowych aktualizacji zapasów, takich jak przyjęcia towarów lub korekty stanów magazynowych.
 3. Obsługa zwrotów, wymian i refundacji produktów.
@@ -927,7 +927,7 @@ export const modules: Module[] = [
       },
       {
         id: 'basic_commerce_users',
-        text: 'Ilu użytkownikom modułu Commerce wystarczą poniższe funkcje (2):',
+        text: 'Ilu użytkownikom modułu Commerce wystarczy którakolwiek z poniższych funkcjonalności (2):',
         explanation: `1. Przegląd wyników sprzedaży sklepu i poziomów zapasów.
 2. Zatwierdzanie zmian cen lub kampanii promocyjnych inicjowanych przez personel sklepu.
 3. Dostęp do współdzielonych raportów i pulpitów nawigacyjnych związanych z handlem detalicznym.
@@ -950,20 +950,8 @@ export const modules: Module[] = [
     imageUrl: 'https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Dynamics-365-Human-Resources?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=24&hei=24&qlt=100&fit=constrain',
     questions: [
       {
-        id: 'hr_1',
-        text: 'Do you need advanced talent analytics?',
-        explanation: 'Talent analytics provides insights into workforce trends, helping optimize recruitment, retention, and employee development strategies.',
-        type: 'yesNoCount'
-      },
-      {
-        id: 'hr_2',
-        text: 'Do you require AI-powered performance prediction?',
-        explanation: 'AI performance prediction helps identify high-potential employees and provides early warnings about potential performance issues.',
-        type: 'yesNoCount'
-      },
-      {
         id: 'hr_admin_functions',
-        text: 'Ilu użytkownikom modułu Human Resources wystarczą poniższe funkcje (1):',
+        text: 'Ilu użytkownikom modułu Human Resources wystarczy którakolwiek z poniższych funkcjonalności (1):',
         explanation: `1. Zarządzanie ewidencją pracowników, w tym informacjami osobowymi i historią zatrudnienia.
 2. Konfiguracja i zarządzanie politykami dotyczącymi urlopów i nieobecności.
 3. Obsługa konfiguracji i administracji świadczeń pracowniczych.
@@ -978,7 +966,7 @@ export const modules: Module[] = [
       },
       {
         id: 'hr_employee_functions',
-        text: 'Ilu użytkownikom modułu Human Resources wystarczą poniższe funkcje (2):',
+        text: 'Ilu użytkownikom modułu Human Resources wystarczy którakolwiek z poniższych funkcjonalności (2):',
         explanation: `1. Przeglądanie danych HR osobistych, takich jak odcinki wypłat czy świadczenia.
 2. Składanie wniosków urlopowych i aktualizacja dostępności.
 3. Dostęp do celów wydajnościowych i składanie samoocen.
@@ -993,7 +981,7 @@ export const modules: Module[] = [
       },
       {
         id: 'hr_manager_functions',
-        text: 'Ilu użytkownikom modułu Human Resources wystarczą poniższe funkcje (3):',
+        text: 'Ilu użytkownikom modułu Human Resources wystarczy którakolwiek z poniższych funkcjonalności (3):',
         explanation: `1. Aktualizacja danych osobowych pracowników, takich jak dane kontaktowe czy numery kont bankowych.
 2. Przegląd odcinków wypłat, świadczeń i sald urlopowych.
 3. Składanie wniosków o urlop lub zgłoszenia nieobecności przez pracowników.
