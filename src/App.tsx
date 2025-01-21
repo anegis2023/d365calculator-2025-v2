@@ -26,6 +26,7 @@ import PrzykladyWdrozen from './pages/PrzykladyWdrozen';
 import { useModuleStore } from './store/moduleStore';
 import { ModuleBasketProvider } from './context/ModuleBasketContext';
 import Footer from './components/Footer';
+import { TotalUsersSummary } from './components/TotalUsersSummary';
 
 function MainApp() {
   const [step, setStep] = useState<'selection' | 'questions' | 'review'>('selection');
@@ -222,79 +223,90 @@ function MainApp() {
           )}
 
           {step === 'questions' && currentModule && (
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-semibold text-[#323130] mb-2">
-                  {currentModule.name}
-                </h2>
-                <p className="text-[#605e5c]">
-                  Odpowiedz na poniższe pytania, abyśmy mogli lepiej poznać Twoje oczekiwania.
-                </p>
-              </div>
+            <div className="min-h-screen lg:pt-20">
+              <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+                {/* Sticky sidebar for mobile - at top */}
+                <div className="block lg:hidden sticky top-0 z-10 bg-gray-50">
+                  <TotalUsersSummary moduleSelections={moduleSelections} className="shadow-none rounded-none" />
+                </div>
 
-              <SharedUsersForm
-                users={currentSelection?.users || 0}
-                onUsersChange={handleUsers}
-                otherModules={selectedModules.filter(m => m.id !== currentModule.id)}
-                sharedUsers={currentSelection?.sharedUsers || []}
-                onSharedUsersChange={handleSharedUsers}
-              />
+                {/* Main content column */}
+                <div className="flex-1">
+                  <h2 className="text-2xl lg:text-3xl font-semibold text-[#323130] mb-2">
+                    {currentModule.name}
+                  </h2>
+                  <p className="text-[#605e5c] mb-4 lg:mb-8">
+                    Odpowiedz na pytania dotyczące modułu.
+                  </p>
 
-              <div className="space-y-6">
-                {currentModule.questions.map((question) => (
-                  <QuestionForm
-                    key={question.id}
-                    question={question}
-                    moduleUsers={currentSelection?.users || 0}
-                    value={currentSelection?.answers?.[question.id]}
-                    onChange={(answer) => handleAnswer(question.id, answer)}
+                  <SharedUsersForm
+                    users={currentSelection.users}
+                    onUsersChange={handleUsers}
+                    sharedUsers={currentSelection.sharedUsers || []}
+                    onSharedUsersChange={handleSharedUsers}
+                    otherModules={selectedModules.filter(
+                      (m) => m.id !== currentModule.id
+                    )}
                   />
-                ))}
-              </div>
 
-              <div className="flex justify-between items-center">
-                <button
-                  onClick={() => {
-                    setStep('selection');
-                    window.scrollTo(0, 0);
-                  }}
-                  className="ms-button-secondary"
-                >
-                  Powrót
-                </button>
-                <div className="flex flex-col items-end">
-                  {!areAllQuestionsAnswered() && (
-                    <p className="text-sm text-red-600 mb-2">
-                      Wszystkie pytania wymagają odpowiedzi
-                    </p>
-                  )}
-                  <button
-                    onClick={() => {
-                      if (!areAllQuestionsAnswered()) {
-                        return;
-                      }
-                      
-                      if (currentModuleIndex < selectedModules.length - 1) {
-                        setCurrentModuleIndex(currentModuleIndex + 1);
-                      } else {
-                        window.scrollTo(0, 0);
-                        setTimeout(() => {
+                  <div className="space-y-6">
+                    {currentModule.questions?.map((question) => (
+                      <QuestionForm
+                        key={question.id}
+                        question={question}
+                        moduleUsers={currentSelection.users}
+                        value={currentSelection.answers?.[question.id]}
+                        onChange={(value) => handleAnswer(question.id, value)}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="flex justify-between items-center mt-8">
+                    <button
+                      onClick={() => {
+                        if (currentModuleIndex > 0) {
+                          setCurrentModuleIndex(currentModuleIndex - 1);
+                        } else {
+                          setStep('selection');
+                        }
+                      }}
+                      className="ms-button-secondary"
+                    >
+                      {currentModuleIndex === 0 ? 'Wróć do wyboru modułów' : 'Poprzedni moduł'}
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (currentModuleIndex < selectedModules.length - 1) {
+                          setCurrentModuleIndex(currentModuleIndex + 1);
+                        } else {
                           setStep('review');
-                        }, 50);
-                      }
-                    }}
-                    disabled={!areAllQuestionsAnswered()}
-                    className={`ms-button-primary ${!areAllQuestionsAnswered() ? 'opacity-50 cursor-not-allowed' : ''}`}
-                  >
-                    {currentModuleIndex < selectedModules.length - 1 ? 'Następny moduł' : 'Dalej'}
-                  </button>
+                        }
+                      }}
+                      disabled={!areAllQuestionsAnswered()}
+                      className={`ms-button-primary ${!areAllQuestionsAnswered() ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    >
+                      {currentModuleIndex < selectedModules.length - 1 ? 'Następny moduł' : 'Dalej'}
+                    </button>
+                  </div>
+                </div>
+
+                {/* Sticky sidebar for desktop - below navbar */}
+                <div className="hidden lg:block w-full lg:w-auto lg:min-w-[300px]">
+                  <div className="sticky top-20">
+                    <TotalUsersSummary moduleSelections={moduleSelections} />
+                  </div>
                 </div>
               </div>
             </div>
           )}
 
           {step === 'review' && (
-            <div className="space-y-8">
+            <div className="space-y-8 lg:pt-20">
+              {/* Sticky summary for mobile - at top */}
+              <div className="block lg:hidden sticky top-0 z-10 bg-gray-50">
+                <TotalUsersSummary moduleSelections={moduleSelections} className="shadow-none rounded-none" />
+              </div>
+
               {/* Header and Summary Section */}
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 lg:gap-8">
                 <div className="flex-1">
@@ -305,26 +317,12 @@ function MainApp() {
                     Sprawdź wybrane moduły i ich konfigurację.
                   </p>
                 </div>
-
-                {/* Total Users Summary Card */}
-                <div className="w-full lg:w-auto lg:min-w-[300px] bg-white rounded-xl shadow-lg p-4 lg:p-6 flex-shrink-0">
-                  <h3 className="text-lg lg:text-xl font-semibold text-[#323130] mb-3 lg:mb-4">Łączna liczba użytkowników</h3>
-                  <div className="flex items-center justify-between bg-gray-50 rounded-lg p-4">
-                    <div>
-                      <p className="text-sm text-[#605e5c] mb-1">Wszyscy użytkownicy</p>
-                      <p className="text-2xl lg:text-3xl font-semibold text-[#323130]">
-                        {moduleSelections.reduce((total, selection) => total + selection.users, 0)}
-                      </p>
-                    </div>
-                    <div className="w-10 h-10 lg:w-12 lg:h-12 bg-[#0078d4] rounded-full flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 lg:h-6 lg:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                      </svg>
-                    </div>
-                  </div>
+                {/* Sticky summary for desktop - below navbar */}
+                <div className="hidden lg:block lg:sticky lg:top-20 lg:self-start">
+                  <TotalUsersSummary moduleSelections={moduleSelections} />
                 </div>
               </div>
-
+              
               {/* Modules Grid */}
               <div className={`grid gap-4 lg:gap-8 mx-auto w-full ${
                 moduleSelections.length === 1 
