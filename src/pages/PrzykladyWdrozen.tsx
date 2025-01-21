@@ -3,7 +3,6 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { getPageMetaData } from '../components/SEO/pageMetaData';
 import { X } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
-import Footer from '../components/Footer';
 
 interface Solution {
   name: string;
@@ -645,8 +644,6 @@ const PrzykladyWdrozen: React.FC = () => {
             </div>
           )}
         </main>
-
-        <Footer />
       </div>
     </>
   );
