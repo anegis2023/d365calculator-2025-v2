@@ -62,4 +62,13 @@
     @apply text-[#0078d4] border-[#8a8886]
            focus:ring-2 focus:ring-[#0078d4] focus:ring-offset-2;
   }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }

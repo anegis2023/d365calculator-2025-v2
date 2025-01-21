@@ -200,7 +200,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ moduleSelections, onCl
 
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-2">Formularz kalkulacji</h2>
           <p className="text-gray-600">Wypełnij poniższy formularz, aby otrzymać szczegółową wycenę</p>
