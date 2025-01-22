@@ -136,7 +136,7 @@ export const modules: Module[] = [
     questions: [
       {
         id: 'advanced_scm_features',
-        text: 'Czy będziesz potrzebował któejkolwiek z poniższych funkcjonalności D365 SCM (1)? Jeśli tak to ilu użytkowników będzie ich potrzebowało?',
+        text: 'Czy będziesz potrzebował którejkolwiek z poniższych funkcjonalności D365 SCM (1)? Jeśli tak to ilu użytkowników będzie ich potrzebowało?',
         explanation: `1. Zaawansowane prognozowanie popytu z wykorzystaniem analiz wspieranych przez AI.
 2. Zarządzanie złożonymi procesami produkcyjnymi, takimi jak produkcja jednostkowa, lean czy procesowa.
 3. Dostęp do zaawansowanych funkcji zarządzania magazynem, w tym kompletacji falowej, liczenia cyklicznego i dyrektyw lokalizacyjnych.
