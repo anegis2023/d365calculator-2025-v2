@@ -92,7 +92,7 @@ const faqData = [
   },
   {
     question: "Jak Dynamics 365 Finance pomaga w zarządzaniu przepływem gotówkowym?",
-    answer: "System oferuje zaawansowane narzędzia do prognozowania przepływów gotówkowych, co pozwala na precyzyjne planowanie finansowe i identyfikację potencjalnych problemów z płynnością."
+    answer: "System oferuje zaawansowane narzędzia do prognozowania przepływów gotówkowych, co pozwala na precyzyjne planowanie finansowe."
   },
   {
     question: "Czy Dynamics 365 Finance integruje się z innymi systemami?",
@@ -145,7 +145,7 @@ const faqData = [
 ];
 
 export default function DynamicsFinance() {
-  const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'faq'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'faq' | 'integrations'>('overview');
   const { selectedModules, addModule } = useModuleBasket();
   const hasModules = selectedModules.length > 0;
   
@@ -217,6 +217,11 @@ export default function DynamicsFinance() {
             onClick={() => setActiveTab('features')}
           />
           <Tab
+            label="Integracje i wsparcie technologiczne"
+            isActive={activeTab === 'integrations'}
+            onClick={() => setActiveTab('integrations')}
+          />
+          <Tab
             label="FAQ"
             isActive={activeTab === 'faq'}
             onClick={() => setActiveTab('faq')}
@@ -271,7 +276,7 @@ export default function DynamicsFinance() {
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold">Zalety korzystania z Microsoft Dynamics 365 Finance</h3>
                 <p className="text-base leading-relaxed mb-6">
-                  Microsoft Dynamics 365 Finance to zaawansowane narzędzie, które wspiera organizacje w zarządzaniu finansami, automatyzując kluczowe procesy i zwiększając efektywność operacyjną. Dzięki jego funkcjonalnościom firmy z różnych branż mogą osiągać wyższy poziom produktywności i lepszą kontrolę nad swoimi finansami.
+                  Microsoft Dynamics 365 Finance to zaawansowany system, który wspiera organizacje w zarządzaniu finansami, automatyzując kluczowe procesy i zwiększając efektywność operacyjną. Dzięki jego funkcjonalnościom firmy z różnych branż mogą osiągać wyższy poziom produktywności i lepszą kontrolę nad swoimi finansami.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
@@ -370,11 +375,15 @@ export default function DynamicsFinance() {
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">AI-Driven Insights</h4>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Analiza oparta na sztucznej inteligencji, która identyfikuje potencjalne oszczędności oraz ryzyka.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Analiza oparta na sztucznej inteligencji, która identyfikuje potencjalne oszczędności oraz ryzyka.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Predykcyjne modelowanie gotówki</h4>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">System prognozuje przepływy pieniężne, umożliwiając lepsze planowanie finansowe.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      System prognozuje przepływy pieniężne, umożliwiając lepsze planowanie finansowe.
+                    </p>
                   </div>
                 </div>
 
@@ -404,19 +413,27 @@ export default function DynamicsFinance() {
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Produkcja</h4>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja rozliczeń kosztów produkcji oraz lepsze monitorowanie wydajności operacyjnej.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Automatyzacja rozliczeń kosztów produkcji oraz lepsze monitorowanie wydajności operacyjnej.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Handel detaliczny</h4>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Zarządzanie zapasami i finansami w czasie rzeczywistym, co pozwala szybciej reagować na zmiany rynkowe.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Zarządzanie zapasami i finansami w czasie rzeczywistym, co pozwala na lepsze wykorzystanie kapitału obrotowego.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Sektor publiczny</h4>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Transparentne zarządzanie budżetami i zgodność z przepisami podatkowymi.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Transparentność finansowa, zgodność z lokalnymi przepisami podatkowymi.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Usługi finansowe</h4>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Precyzyjna analiza rentowności projektów i redukcja ryzyka operacyjnego.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Precyzyjna analiza rentowności projektów i redukcja ryzyka operacyjnego.
+                    </p>
                   </div>
                 </div>
 
@@ -450,28 +467,209 @@ export default function DynamicsFinance() {
                 </div>
               </div>
 
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold">Zarządzanie finansami</h3>
+                <p className="text-base leading-relaxed mb-6">
+                  Microsoft Dynamics 365 Finance dostarcza kompleksowe narzędzia do zarządzania finansami, które wspierają firmy w osiąganiu lepszej kontroli nad swoimi zasobami oraz poprawie efektywności operacyjnej. System pozwala na bieżące monitorowanie, analizowanie i optymalizowanie procesów finansowych, co przekłada się na szybsze podejmowanie decyzji i większą przejrzystość działań.
+                </p>
+
+                <h4 className="text-xl font-semibold mb-4">Funkcje zarządzania finansami:</h4>
+                <div className="bg-white p-6 rounded-lg shadow mb-6">
+                  <p className="text-gray-600 mb-4">Dynamics 365 Finance oferuje rozwiązania takie jak:</p>
+                  <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>Automatyczne księgowanie operacji finansowych, co eliminuje manualne błędy i zwiększa dokładność danych.</li>
+                    <li>Budżetowanie i monitorowanie wydatków, które umożliwiają lepszą alokację zasobów w firmie.</li>
+                    <li>Zarządzanie należnościami i zobowiązaniami, ułatwiające utrzymanie płynności finansowej poprzez śledzenie terminów płatności.</li>
+                  </ul>
+                </div>
+
+                <h4 className="text-xl font-semibold mb-4">Przykłady zastosowania w praktyce:</h4>
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h5 className="font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Usprawnienie procesów finansowych</h5>
+                    <p className="text-gray-600">Automatyzacja raportowania księgowego pozwala firmom na generowanie kompleksowych raportów w ułamku czasu potrzebnego przy tradycyjnych metodach.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h5 className="font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Optymalizacja przepływów pieniężnych</h5>
+                    <p className="text-gray-600">Prognozowanie gotówki w czasie rzeczywistym umożliwia lepsze planowanie i minimalizację ryzyka braku płynności.</p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h5 className="font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Precyzyjne budżetowanie</h5>
+                    <p className="text-gray-600">Dzięki integracji z narzędziami analitycznymi firmy mogą tworzyć dynamiczne budżety uwzględniające zmienne rynkowe.</p>
+                  </div>
+                </div>
+
+                <h4 className="text-xl font-semibold mb-4">Lista przypadków użycia w różnych branżach:</h4>
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                      <li><span className="font-semibold">Produkcja:</span> Optymalizacja kosztów produkcji dzięki dokładnemu monitorowaniu wydatków i lepszej kontroli nad budżetem.</li>
+                      <li><span className="font-semibold">Handel detaliczny:</span> Usprawnienie rozliczeń i zarządzanie zapasami, co pozwala na lepsze wykorzystanie kapitału obrotowego.</li>
+                    </ul>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                      <li><span className="font-semibold">Usługi finansowe:</span> Wsparcie w analizie rentowności inwestycji i zgodności z regulacjami.</li>
+                      <li><span className="font-semibold">Sektor publiczny:</span> Transparentność w zarządzaniu środkami publicznymi oraz zgodność z przepisami prawnymi.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow">
+                  <p className="text-gray-600 leading-relaxed">
+                    Dzięki rozbudowanym funkcjom zarządzania finansami, Dynamics 365 Finance umożliwia firmom efektywne prowadzenie operacji, jednocześnie wspierając długoterminową strategię wzrostu i stabilności finansowej.
+                  </p>
+                </div>
+              </div>
             </div>
           )}
 
           {activeTab === 'features' && (
-            <div className="space-y-12">
-              <h3 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Dynamics 365 Finance</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {features.map((feature, index) => (
-                  <Feature
-                    key={index}
-                    icon={feature.icon}
-                    number={index + 1}
-                    title={feature.title}
-                    description={feature.description}
-                  />
-                ))}
+            <div className="space-y-8">
+              <h2 className="text-3xl font-bold text-center mb-8">Cechy i funkcjonalności</h2>
+              
+              <div className="space-y-6">
+                <p className="text-base leading-relaxed mb-6">
+                  Microsoft Dynamics 365 Finance to zaawansowane rozwiązanie oferujące szeroką gamę funkcjonalności, które wspierają zarządzanie finansami na każdym etapie działalności przedsiębiorstwa. System ten łączy automatyzację procesów z rozbudowaną analityką, zapewniając firmom większą efektywność i precyzję w podejmowaniu decyzji.
+                </p>
+
+                <h3 className="text-2xl font-bold mb-6">Kluczowe funkcje:</h3>
+
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">1. Zarządzanie finansami</h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Dynamics 365 Finance umożliwia pełną kontrolę nad finansami dzięki kompleksowym narzędziom do księgowości, budżetowania oraz raportowania. Automatyczne księgowanie, monitoring należności i zobowiązań oraz generowanie raportów w czasie rzeczywistym wspierają precyzyjne planowanie finansowe.
+                    </p>
+                  </div>
+
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">2. Zarządzanie podatkami</h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      System zapewnia zgodność z przepisami podatkowymi w wielu jurysdykcjach, automatyzując obliczenia podatkowe oraz generowanie deklaracji. Dzięki funkcjom zgodności, przedsiębiorstwa mogą łatwiej dostosować się do zmieniających się regulacji.
+                    </p>
+                  </div>
+
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">3. Zarządzanie gotówką</h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Funkcje monitorowania przepływów pieniężnych pozwalają na optymalizację płynności finansowej. Moduły prognozowania i analizy gotówki umożliwiają szybkie reagowanie na zmiany w sytuacji finansowej firmy.
+                    </p>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold mb-6">Cechy Dynamics 365 Finance:</h3>
+                <div className="grid md:grid-cols-1 gap-6 mb-8">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                      <li>Planowanie finansowe i analiza: Narzędzia do prognozowania i tworzenia zaawansowanych raportów.</li>
+                      <li>Automatyzacja procesów finansowych: Redukcja ręcznej pracy poprzez automatyczne księgowanie, generowanie raportów i zarządzanie płatnościami.</li>
+                      <li>Analiza danych w czasie rzeczywistym: Integracja z narzędziami analitycznymi, które wspierają podejmowanie decyzji opartych na danych.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold mb-6">Korzyści dla użytkowników:</h3>
+                <div className="overflow-x-auto mb-8">
+                  <table className="w-full bg-white rounded-lg shadow">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Korzyść</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Opis</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Zwiększona efektywność</td>
+                        <td className="px-6 py-4 text-sm text-gray-500">Automatyzacja procesów zmniejsza czasochłonność zadań manualnych.</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Lepsze zarządzanie finansami</td>
+                        <td className="px-6 py-4 text-sm text-gray-500">Pełna kontrola nad budżetami, gotówką i zobowiązaniami.</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dokładniejsza analiza danych</td>
+                        <td className="px-6 py-4 text-sm text-gray-500">Wykorzystanie analityki do identyfikacji trendów i ryzyk finansowych.</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Zgodność z regulacjami</td>
+                        <td className="px-6 py-4 text-sm text-gray-500">Ułatwienie spełnienia wymogów prawnych w różnych krajach.</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Większa przejrzystość</td>
+                        <td className="px-6 py-4 text-sm text-gray-500">Jasny obraz sytuacji finansowej dzięki raportom w czasie rzeczywistym.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="bg-gradient-to-r from-[#107c10] to-[#159019] p-6 rounded-lg shadow-lg text-white">
+                  <p className="leading-relaxed">
+                    Dynamics 365 Finance łączy zaawansowane technologie z intuicyjnością, wspierając firmy w zarządzaniu finansami, analizie oraz automatyzacji kluczowych procesów. Dzięki temu organizacje mogą osiągnąć wyższy poziom efektywności i przewidywalności działań biznesowych.
+                  </p>
+                </div>
+
+                <div className="space-y-6 mt-12 border-t pt-12">
+                  <h3 className="text-2xl font-bold">Zarządzanie finansami</h3>
+                  <p className="text-base leading-relaxed mb-6">
+                    Microsoft Dynamics 365 Finance dostarcza kompleksowe narzędzia do zarządzania finansami, które wspierają firmy w osiąganiu lepszej kontroli nad swoimi zasobami oraz poprawie efektywności operacyjnej. System pozwala na bieżące monitorowanie, analizowanie i optymalizowanie procesów finansowych, co przekłada się na szybsze podejmowanie decyzji i większą przejrzystość działań.
+                  </p>
+
+                  <h4 className="text-xl font-semibold mb-4">Funkcje zarządzania finansami:</h4>
+                  <div className="bg-white p-6 rounded-lg shadow mb-6">
+                    <p className="text-gray-600 mb-4">Dynamics 365 Finance oferuje rozwiązania takie jak:</p>
+                    <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                      <li>Automatyczne księgowanie operacji finansowych, co eliminuje manualne błędy i zwiększa dokładność danych.</li>
+                      <li>Budżetowanie i monitorowanie wydatków, które umożliwiają lepszą alokację zasobów w firmie.</li>
+                      <li>Zarządzanie należnościami i zobowiązaniami, ułatwiające utrzymanie płynności finansowej poprzez śledzenie terminów płatności.</li>
+                    </ul>
+                  </div>
+
+                  <h4 className="text-xl font-semibold mb-4">Przykłady zastosowania w praktyce:</h4>
+                  <div className="grid md:grid-cols-3 gap-6 mb-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h5 className="font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Usprawnienie procesów finansowych</h5>
+                      <p className="text-gray-600">Automatyzacja raportowania księgowego pozwala firmom na generowanie kompleksowych raportów w ułamku czasu potrzebnego przy tradycyjnych metodach.</p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h5 className="font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Optymalizacja przepływów pieniężnych</h5>
+                      <p className="text-gray-600">Prognozowanie gotówki w czasie rzeczywistym umożliwia lepsze planowanie i minimalizację ryzyka braku płynności.</p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h5 className="font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Precyzyjne budżetowanie</h5>
+                      <p className="text-gray-600">Dzięki integracji z narzędziami analitycznymi firmy mogą tworzyć dynamiczne budżety uwzględniające zmienne rynkowe.</p>
+                    </div>
+                  </div>
+
+                  <h4 className="text-xl font-semibold mb-4">Lista przypadków użycia w różnych branżach:</h4>
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                        <li><span className="font-semibold">Produkcja:</span> Optymalizacja kosztów produkcji dzięki dokładnemu monitorowaniu wydatków i lepszej kontroli nad budżetem.</li>
+                        <li><span className="font-semibold">Handel detaliczny:</span> Usprawnienie rozliczeń i zarządzanie zapasami, co pozwala na lepsze wykorzystanie kapitału obrotowego.</li>
+                      </ul>
+                    </div>
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                        <li><span className="font-semibold">Usługi finansowe:</span> Wsparcie w analizie rentowności inwestycji i zgodności z regulacjami.</li>
+                        <li><span className="font-semibold">Sektor publiczny:</span> Transparentność w zarządzaniu środkami publicznymi oraz zgodność z przepisami prawnymi.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow">
+                    <p className="text-gray-600 leading-relaxed">
+                      Dzięki rozbudowanym funkcjom zarządzania finansami, Dynamics 365 Finance umożliwia firmom efektywne prowadzenie operacji, jednocześnie wspierając długoterminową strategię wzrostu i stabilności finansowej.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           )}
 
           {activeTab === 'faq' && (
             <div className="space-y-8">
+              <h2 className="text-3xl font-bold text-center mb-8">Najczęściej zadawane pytania</h2>
               <div className="grid gap-6">
                 {faqData.map((faq, index) => (
                   <div
@@ -486,6 +684,245 @@ export default function DynamicsFinance() {
                     </p>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'integrations' && (
+            <div className="space-y-8">
+              <h2 className="text-3xl font-bold text-center mb-8">Integracje i wsparcie technologiczne</h2>
+              
+              {/* Integration and Technology Support Section */}
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold">Integracja i wsparcie technologiczne</h3>
+                <p className="text-base leading-relaxed mb-6">
+                  Microsoft Dynamics 365 Finance oferuje zaawansowaną integrację z innymi produktami z ekosystemu Microsoft, co pozwala na płynną wymianę danych, automatyzację procesów oraz pełne wykorzystanie zaawansowanych narzędzi analitycznych i chmurowych. Takie podejście zapewnia użytkownikom zarówno elastyczność, jak i niezawodność w zarządzaniu finansami.
+                </p>
+
+                <h4 className="text-xl font-semibold mb-3">Kluczowe narzędzia wspierające integrację:</h4>
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Power BI</h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Zaawansowane wizualizacje danych finansowych w czasie rzeczywistym, wspierające podejmowanie decyzji.
+                    </p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Microsoft Azure</h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Chmurowa infrastruktura zapewniająca skalowalność, bezpieczeństwo oraz integrację między systemami.
+                    </p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Microsoft 365</h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Łatwa synchronizacja z aplikacjami, takimi jak Excel czy Teams, usprawniająca współpracę i raportowanie.
+                    </p>
+                  </div>
+                </div>
+
+                <h4 className="text-xl font-semibold mb-3">Przykłady integracji:</h4>
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Power BI</h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Wykorzystanie zaawansowanych raportów do analizy rentowności i monitorowania kluczowych wskaźników finansowych (KPI).
+                    </p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Azure AI</h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Wspieranie procesów prognozowania dzięki modelom opartym na sztucznej inteligencji.
+                    </p>
+                  </div>
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Microsoft Teams</h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Automatyczne przesyłanie raportów finansowych i ułatwiona komunikacja w zespołach.
+                    </p>
+                  </div>
+                </div>
+
+                <h4 className="text-xl font-semibold mb-3">Integracje i ich korzyści:</h4>
+                <div className="overflow-x-auto">
+                  <table className="w-full bg-white rounded-lg shadow">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Narzędzie</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Funkcjonalność</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Korzyści</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Power BI</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Wizualizacja danych i raportowanie</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Szybkie podejmowanie decyzji na podstawie danych</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Azure AI</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Automatyzacja analizy i prognozowania</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Precyzyjne planowanie finansowe i minimalizacja ryzyka</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Excel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Synchronizacja arkuszy danych</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Efektywna praca z danymi w znanym środowisku</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Azure Active Directory</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Zabezpieczenia i zarządzanie dostępami</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Zwiększenie bezpieczeństwa i łatwość zarządzania użytkownikami</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h4 className="text-xl font-semibold mt-6 mb-3">Znaczenie wsparcia technologicznego:</h4>
+                <p className="text-base leading-relaxed mb-6 text-gray-600">
+                  Wsparcie technologiczne w Dynamics 365 Finance pozwala użytkownikom na łatwiejsze wdrożenie systemu oraz bieżące wsparcie w zakresie integracji i skalowania. Dzięki temu firmy mogą korzystać z najbardziej zaawansowanych narzędzi przy minimalnym ryzyku technicznym, a wsparcie ze strony Microsoft zapewnia ciągły rozwój systemu oraz jego zgodność z najnowszymi standardami.
+                </p>
+
+                {/* Power BI Integration Section */}
+                <div className="space-y-6 mt-12 border-t pt-12">
+                  <h3 className="text-2xl font-bold">Integracja z Power BI</h3>
+                  <p className="text-base leading-relaxed mb-6">
+                    Integracja Microsoft Dynamics 365 Finance z Power BI to kluczowe wsparcie dla firm w zakresie analityki biznesowej. Power BI umożliwia przekształcanie surowych danych finansowych w interaktywne wizualizacje i raporty, wspierając zespoły w podejmowaniu trafnych decyzji strategicznych. Dzięki tej integracji użytkownicy mają dostęp do bieżących analiz w czasie rzeczywistym, co zwiększa efektywność działania organizacji.
+                  </p>
+
+                  <h4 className="text-xl font-semibold mb-3">Korzyści z integracji:</h4>
+                  <div className="grid md:grid-cols-1 gap-6 mb-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                        <li>Wizualizacja danych: Zaawansowane dashboardy umożliwiają przedstawienie danych finansowych w przejrzysty i intuicyjny sposób.</li>
+                        <li>Automatyczne raportowanie: Power BI generuje raporty na podstawie aktualnych danych z Dynamics 365 Finance, eliminując potrzebę manualnego przygotowywania zestawień.</li>
+                        <li>Analiza trendów: Narzędzia analityczne pozwalają identyfikować kluczowe wzorce i przewidywać przyszłe wyniki finansowe.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <h4 className="text-xl font-semibold mb-3">Przykłady zastosowania analityki biznesowej:</h4>
+                  <div className="grid md:grid-cols-3 gap-6 mb-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Monitorowanie wskaźników</h4>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Tworzenie dashboardów KPI, które pokazują rentowność, przepływy pieniężne oraz wyniki finansowe w czasie rzeczywistym.
+                      </p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Analiza wydajności</h4>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Ocena kosztów i efektywności działań w różnych obszarach organizacji, takich jak produkcja czy sprzedaż.
+                      </p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Prognozowanie finansowe</h4>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Modelowanie przyszłych przepływów pieniężnych na podstawie historycznych danych i aktualnych wskaźników.
+                      </p>
+                    </div>
+                  </div>
+
+                  <h4 className="text-xl font-semibold mb-3">Korzyści z integracji Dynamics 365 Finance i Power BI:</h4>
+                  <div className="overflow-x-auto">
+                    <table className="w-full bg-white rounded-lg shadow">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Korzyść</th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Opis</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-200">
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Szybsze podejmowanie decyzji</td>
+                          <td className="px-6 py-4 text-sm text-gray-500">Dane w czasie rzeczywistym wspierają dynamiczne działania.</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Lepsza kontrola finansowa</td>
+                          <td className="px-6 py-4 text-sm text-gray-500">Monitorowanie kluczowych wskaźników na interaktywnych dashboardach.</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Oszczędność czasu</td>
+                          <td className="px-6 py-4 text-sm text-gray-500">Automatyczne generowanie raportów eliminuje powtarzalne zadania.</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Większa przejrzystość danych</td>
+                          <td className="px-6 py-4 text-sm text-gray-500">Dane finansowe są dostępne w przejrzystej formie wizualnej.</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ułatwienie współpracy</td>
+                          <td className="px-6 py-4 text-sm text-gray-500">Udostępnianie analiz między zespołami bez potrzeby eksportu danych.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4 className="text-xl font-semibold mt-6 mb-3">Znaczenie analizy danych:</h4>
+                  <p className="text-base leading-relaxed mb-6 text-gray-600">
+                    Dzięki integracji Dynamics 365 Finance z Power BI organizacje zyskują narzędzie, które nie tylko poprawia dostęp do danych, ale także umożliwia ich głębszą analizę. Lepsze zrozumienie danych pozwala na eliminację ryzyk finansowych, skuteczniejsze planowanie oraz osiąganie celów strategicznych. Integracja ta wspiera firmy w tworzeniu przewagi konkurencyjnej poprzez wykorzystanie zaawansowanej analityki.
+                  </p>
+                </div>
+
+                {/* Azure Support Section */}
+                <div className="space-y-6 mt-12 border-t pt-12">
+                  <h3 className="text-2xl font-bold">Wsparcie Microsoft Azure</h3>
+                  <p className="text-base leading-relaxed mb-6">
+                    Microsoft Azure zapewnia niezawodne wsparcie chmurowe dla Dynamics 365 Finance, umożliwiając firmom zarządzanie finansami w skalowalnym, bezpiecznym i nowoczesnym środowisku. Dzięki wykorzystaniu infrastruktury Azure, przedsiębiorstwa mogą czerpać korzyści z wysokiej dostępności usług, zaawansowanych funkcji analitycznych oraz automatyzacji operacji finansowych.
+                  </p>
+
+                  <h4 className="text-xl font-semibold mb-3">Przykłady zastosowania chmury w zarządzaniu finansami:</h4>
+                  <div className="grid md:grid-cols-3 gap-6 mb-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Automatyczna archiwizacja</h4>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Chmura Azure umożliwia przechowywanie historycznych danych finansowych, zapewniając łatwy dostęp do nich w każdej chwili.
+                      </p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowanie zasobów</h4>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        W miarę wzrostu firmy, Azure dynamicznie dostosowuje zasoby, aby obsłużyć zwiększone zapotrzebowanie na przetwarzanie danych.
+                      </p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Disaster recovery</h4>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Zintegrowane rozwiązania backupu i odzyskiwania danych minimalizują ryzyko utraty kluczowych informacji finansowych w przypadku awarii.
+                      </p>
+                    </div>
+                  </div>
+
+                  <h4 className="text-xl font-semibold mb-3">Znaczenie bezpieczeństwa i zgodności danych:</h4>
+                  <div className="bg-white p-6 rounded-lg shadow mb-6">
+                    <p className="text-gray-600 leading-relaxed">
+                      Microsoft Azure stosuje najwyższe standardy bezpieczeństwa, w tym szyfrowanie danych oraz narzędzia do monitorowania potencjalnych zagrożeń w czasie rzeczywistym. Dzięki temu firmy mogą zarządzać swoimi finansami z pełną pewnością, że dane są chronione. Co więcej, platforma spełnia globalne wymogi prawne i regulacyjne, co jest kluczowe dla przedsiębiorstw działających w różnych jurysdykcjach.
+                    </p>
+                  </div>
+
+                  <h4 className="text-xl font-semibold mb-3">Lista korzyści z używania chmury Azure:</h4>
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                        <li>Bezpieczeństwo na najwyższym poziomie: Zaawansowane szyfrowanie danych i ochrona przed cyberatakami.</li>
+                        <li>Zgodność z regulacjami: Spełnianie międzynarodowych standardów, takich jak GDPR czy ISO 27001.</li>
+                        <li>Wysoka dostępność usług: Gwarancja działania systemu dzięki globalnej sieci centrów danych.</li>
+                      </ul>
+                    </div>
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                        <li>Oszczędność kosztów: Redukcja wydatków na lokalną infrastrukturę IT.</li>
+                        <li>Elastyczność: Możliwość skalowania w zależności od potrzeb firmy.</li>
+                        <li>Integracja z innymi narzędziami: Płynne połączenie z Power BI, Microsoft 365 oraz innymi rozwiązaniami Microsoft.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-[#107c10] to-[#159019] p-6 rounded-lg shadow-lg text-white">
+                    <p className="leading-relaxed">
+                      Wsparcie chmurowe Microsoft Azure stanowi fundament stabilnego i efektywnego zarządzania finansami w Dynamics 365 Finance. Dzięki zaawansowanym funkcjom Azure firmy mogą działać szybciej, bezpieczniej i bardziej elastycznie, dostosowując się do zmieniających się warunków rynkowych.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           )}
