@@ -41,7 +41,7 @@ const Tab: React.FC<{
         : 'text-gray-500'
     }`}
   >
-    {label}
+    <h2 className="m-0 p-0 text-inherit font-inherit">{label}</h2>
   </button>
 );
 
@@ -88,7 +88,7 @@ const faqData = [
   },
   {
     question: "Jak Dynamics 365 Sales pomaga w prognozowaniu sprzedaży?",
-    answer: "Platforma wykorzystuje sztuczną inteligencję i analizę danych historycznych, aby przewidywać wyniki sprzedaży, identyfikować potencjalne szanse i wspierać podejmowanie decyzji."
+    answer: "Platforma wykorzystuje sztuczną inteligencję i analizę danych historycznych, aby przewidywać wyniki sprzedaży. Użytkownicy mogą tworzyć prognozy na podstawie historycznych danych, bieżących trendów i analizy potencjalnych transakcji. Funkcja ta pomaga nie tylko w planowaniu, ale także w optymalizacji działań sprzedażowych."
   },
   {
     question: "Czy Dynamics 365 Sales integruje się z innymi narzędziami?",
@@ -170,34 +170,44 @@ export default function DynamicsSales() {
 
   const features = [
     {
-      icon: <FaChartLine />,
-      title: "Inteligentne prognozowanie sprzedaży",
-      description: "Dzięki analizie danych i algorytmom opartym na sztucznej inteligencji (AI), Dynamics 365 Sales pozwala dokładnie przewidywać wyniki sprzedaży. Użytkownicy mogą tworzyć prognozy na podstawie historycznych danych, bieżących trendów i analizy potencjalnych transakcji. Funkcja ta pomaga nie tylko w planowaniu, ale także w optymalizacji działań sprzedażowych."
+      icon: <FaRobot />,
+      title: "Automatyzacja procesów sprzedażowych",
+      description: "Usprawnia codzienne zadania, takie jak generowanie ofert, prognozowanie sprzedaży i planowanie spotkań, redukując czas poświęcany na czynności manualne."
     },
     {
       icon: <FaUserFriends />,
-      title: "Personalizacja doświadczeń klientów",
-      description: "Współczesny klient oczekuje indywidualnego podejścia. Dynamics 365 Sales umożliwia gromadzenie szczegółowych informacji o klientach, takich jak historia zakupów, preferencje czy dane demograficzne. Dzięki temu sprzedawcy mogą dostosować swoje oferty i komunikację do konkretnych potrzeb klientów, zwiększając szanse na zamknięcie transakcji."
+      title: "Zarządzanie relacjami z klientami (CRM)",
+      description: "Centralizuje dane o klientach, umożliwiając budowanie trwałych relacji poprzez personalizację komunikacji i lepsze zrozumienie potrzeb odbiorców."
     },
     {
-      icon: <FaRobot />,
-      title: "Automatyzacja procesów sprzedażowych",
-      description: "Codzienne zadania, takie jak aktualizacja danych, tworzenie ofert czy śledzenie potencjalnych klientów, mogą być czasochłonne. Dynamics 365 Sales automatyzuje wiele z tych procesów, pozwalając zespołom sprzedaży skupić się na budowaniu relacji i realizacji strategicznych celów."
+      icon: <FaChartLine />,
+      title: "Śledzenie kont i kontaktów",
+      description: "Ułatwia zarządzanie informacjami o klientach oraz rejestrowanie interakcji, co pozwala zespołom na bardziej efektywne zarządzanie bazą klientów."
     },
     {
       icon: <FaChartBar />,
-      title: "Wbudowana analiza danych",
-      description: "Platforma oferuje zaawansowane narzędzia analityczne, które dostarczają wglądu w kluczowe metryki, takie jak wydajność zespołu, wskaźniki konwersji czy średni czas zamknięcia transakcji. Wizualizacje danych i interaktywne raporty umożliwiają łatwe monitorowanie wyników i podejmowanie lepszych decyzji."
+      title: "Analiza wydajności sprzedaży",
+      description: "Oferuje zaawansowane narzędzia analityczne, które dostarczają kluczowych informacji o wynikach zespołu sprzedażowego oraz identyfikują obszary wymagające poprawy."
     },
     {
       icon: <FaMicrosoft />,
-      title: "Integracja z ekosystemem Microsoft",
-      description: "Dynamics 365 Sales działa w pełnej integracji z innymi narzędziami Microsoft, takimi jak Outlook, Teams, Excel czy SharePoint. Dzięki temu użytkownicy mogą płynnie współpracować, wymieniać informacje i zarządzać projektami, nie opuszczając znanych aplikacji."
+      title: "Tworzenie i zarządzanie kampaniami",
+      description: "Integruje działania marketingowe i sprzedażowe, umożliwiając zespołom łatwe prowadzenie kampanii oraz monitorowanie ich skuteczności."
     },
     {
-      icon: <FaMobile />,
-      title: "Mobilność i dostępność",
-      description: "Dzięki aplikacjom mobilnym sprzedawcy mogą pracować z dowolnego miejsca, mając dostęp do wszystkich niezbędnych informacji. Rozwiązanie to idealnie sprawdza się w przypadku zespołów pracujących w terenie lub zdalnie."
+      icon: <FaChartLine />,
+      title: "Zarządzanie lejkiem sprzedaży",
+      description: "Zapewnia pełną widoczność statusu poszczególnych transakcji i umożliwia monitorowanie postępów w realizacji celów."
+    },
+    {
+      icon: <FaChartBar />,
+      title: "Prognozowanie sprzedaży",
+      description: "Dostarcza precyzyjnych przewidywań, które wspierają planowanie działań strategicznych."
+    },
+    {
+      icon: <FaMicrosoft />,
+      title: "Integracja z Microsoft Teams i Outlook",
+      description: "Ułatwia współpracę między członkami zespołu i usprawnia komunikację z klientami."
     }
   ];
 
@@ -214,14 +224,19 @@ export default function DynamicsSales() {
         {/* Tabs Navigation */}
         <div className="flex justify-center mb-8 border-b">
           <Tab
-            label="Przegląd"
+            label="Microsoft Dynamics 365 Sales"
             isActive={activeTab === 'overview'}
             onClick={() => setActiveTab('overview')}
           />
           <Tab
-            label="Funkcje"
+            label="Funkcje Microsoft Dynamics 365 Sales"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
+          />
+          <Tab
+            label="Integracje z innymi produktami Microsoft"
+            isActive={activeTab === 'integrations'}
+            onClick={() => setActiveTab('integrations')}
           />
           <Tab
             label="FAQ"
@@ -238,10 +253,10 @@ export default function DynamicsSales() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                      <strong>Microsoft Dynamics 365 Sales</strong> to zaawansowane rozwiązanie CRM, które kompleksowo wspiera zespoły sprzedażowe w realizacji celów i budowaniu trwałych relacji z klientami. System <strong>automatyzuje kluczowe etapy procesu sprzedaży</strong>, od generowania leadów po finalizację transakcji, co pozwala zespołom skupić się na działaniach strategicznych. Dzięki <strong>zaawansowanym narzędziom analitycznym</strong> umożliwia analizę kluczowych wskaźników wydajności (KPI), prognozowanie wyników sprzedaży oraz ocenę efektywności działań. 
+                      <strong>Microsoft Dynamics 365 Sales</strong> to nowoczesne rozwiązanie CRM oparte na sztucznej inteligencji, które rewolucjonizuje sposób zarządzania sprzedażą. System wspiera zespoły sprzedażowe w osiąganiu ambitnych celów i przekraczaniu oczekiwań klientów, dostarczając zaawansowane narzędzia do analizy danych, automatyzacji procesów oraz budowania relacji z klientami.
                     </p>
                     <p className="text-lg leading-relaxed mt-4">
-                      Dynamics 365 Sales <strong>integruje się z innymi narzędziami Microsoft</strong>, takimi jak Microsoft 365, LinkedIn czy Power BI, co zwiększa produktywność i ułatwia współpracę. Wykorzystanie <strong>sztucznej inteligencji</strong> pozwala na analizę interakcji z klientami, sugerowanie najlepszych działań i przewidywanie wyników, co przyspiesza zamykanie transakcji i budowanie wartościowych relacji. To nowoczesne narzędzie dostarcza zespołom sprzedażowym wszystko, czego potrzebują, aby sprostać wyzwaniom rynku i przewyższać oczekiwania klientów.
+                      Dynamics 365 Sales umożliwia zespołom sprzedaży efektywne zarządzanie procesami, co przekłada się na zwiększenie ich skuteczności i osiąganie lepszych wyników biznesowych.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -260,19 +275,20 @@ export default function DynamicsSales() {
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Kluczowe wyzwania zespołów sprzedażowych</h2>
+                <h2 className="text-2xl font-bold">Kluczowe cechy i funkcjonalności</h2>
                 <div className="space-y-4">
-                  <p className="text-gray-700">
-                    Zanim przejdziemy do omówienia funkcji Dynamics 365 Sales, warto zrozumieć, z jakimi wyzwaniami mierzą się współczesne działy sprzedaży:
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>Rośnie liczba interakcji z klientami, a każde spotkanie wymaga indywidualnego podejścia.</li>
-                    <li>Złożone procesy sprzedażowe mogą prowadzić do utraty efektywności i opóźnień.</li>
-                    <li>Brak spójnych danych o klientach często utrudnia podejmowanie trafnych decyzji.</li>
-                    <li>Różnorodność kanałów komunikacji wymaga integracji narzędzi i danych w jednym miejscu.</li>
+                  
+                  <ul className="list-disc pl-6 space-y-4 text-gray-700">
+                    <li><strong>CRM oparty na sztucznej inteligencji:</strong> Automatyzuje procesy sprzedażowe i dostarcza prognozy, które wspierają zespoły w podejmowaniu lepszych decyzji.</li>
+                    <li><strong>Zaawansowana analiza danych:</strong> Umożliwia identyfikację trendów sprzedażowych i potrzeb klientów dzięki integracji z narzędziami analitycznymi, takimi jak Power BI.</li>
+                    <li><strong>Automatyzacja procesów sprzedaży:</strong> Redukuje czas poświęcany na zadania manualne, pozwalając zespołom skupić się na budowaniu relacji z klientami.</li>
+                    <li><strong>Personalizacja interakcji z klientem:</strong> Dzięki analizie danych o klientach system sugeruje najbardziej efektywne działania sprzedażowe.</li>
+                    <li><strong>Integracja z ekosystemem Microsoft:</strong> Bezproblemowa współpraca z aplikacjami takimi jak Microsoft Teams, Outlook czy SharePoint zwiększa produktywność i usprawnia komunikację w zespole.</li>
+                    <li><strong>Zarządzanie lejkiem sprzedażowym:</strong> Umożliwia monitorowanie postępu transakcji na każdym etapie procesu sprzedaży.</li>
+                    <li><strong>Obsługa mobilna:</strong> Zapewnia dostęp do wszystkich funkcji systemu z poziomu urządzeń mobilnych, umożliwiając pracę zdalną i w terenie.</li>
                   </ul>
                   <p className="text-gray-700 font-medium">
-                    Microsoft Dynamics 365 Sales odpowiada na te potrzeby, oferując kompleksowe wsparcie na każdym etapie procesu sprzedażowego.
+                  Microsoft Dynamics 365 Sales to narzędzie, które pomaga zespołom sprzedaży osiągać nowe poziomy efektywności, oferując niezawodne wsparcie na każdym etapie procesu sprzedaży.
                   </p>
                 </div>
               </div>
@@ -281,23 +297,23 @@ export default function DynamicsSales() {
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności zespołu sprzedażowego</h3>
+                    <h3 className="text-xl font-bold">Zwiększenie efektywności zespołu sprzedażowego</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dynamics 365 Sales pozwala sprzedawcom zaoszczędzić czas na rutynowych zadaniach, takich jak wprowadzanie danych czy generowanie raportów. Dzięki temu mogą oni skupić się na budowaniu wartościowych relacji z klientami.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Poprawa wyników sprzedaży</h3>
+                    <h3 className="text-xl font-bold">Poprawa wyników sprzedaży</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dostęp do zaawansowanych narzędzi analitycznych i prognoz opartych na danych pozwala zespołom sprzedaży działać bardziej efektywnie i podejmować lepsze decyzje.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze zrozumienie potrzeb klientów</h3>
+                    <h3 className="text-xl font-bold">Lepsze zrozumienie potrzeb klientów</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Zgromadzone dane o klientach dają pełen obraz ich potrzeb, co umożliwia personalizację ofert i budowanie długoterminowych relacji.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skrócenie cyklu sprzedaży</h3>
+                    <h3 className="text-xl font-bold">Skrócenie cyklu sprzedaży</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki automatyzacji procesów i szybkiemu dostępowi do informacji, sprzedawcy mogą szybciej finalizować transakcje, co przekłada się na lepsze wyniki finansowe firmy.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Skalowalność i elastyczność</h3>
+                    <h3 className="text-xl font-bold">Skalowalność i elastyczność</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dynamics 365 Sales dostosowuje się do potrzeb zarówno małych, jak i dużych przedsiębiorstw. W miarę rozwoju firmy, platforma może być łatwo rozbudowywana o dodatkowe funkcje.</p>
                   </div>
                 </div>
@@ -316,9 +332,14 @@ export default function DynamicsSales() {
           )}
 
           {activeTab === 'features' && (
-            <div className="space-y-12">
-              <h2 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Dynamics 365 Sales</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <p className="text-lg leading-relaxed text-gray-700">
+                  <strong>Microsoft Dynamics 365 Sale</strong> oferuje zaawansowane funkcje, które wspierają zespoły sprzedażowe w skutecznym zarządzaniu procesami i relacjami z klientami. System umożliwia automatyzację procesów sprzedażowych, dzięki czemu zespoły mogą skupić się na realizacji strategicznych celów, a także dostarcza narzędzia do analizy wydajności, wspierając podejmowanie lepszych decyzji biznesowych.
+                </p>
+                <h2 className="text-2xl font-bold mt-6">Główne funkcje Dynamics 365 Sales</h2>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
                 {features.map((feature, index) => (
                   <Feature
                     key={index}
@@ -328,6 +349,282 @@ export default function DynamicsSales() {
                     description={feature.description}
                   />
                 ))}
+              </div>
+
+              {/* Process Automation Section */}
+              <div className="mt-12 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8 space-y-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="text-[#107c10] text-3xl">
+                    <FaRobot />
+                  </div>
+                  <h2 className="text-2xl font-bold">Automatyzacja procesów sprzedażowych</h2>
+                </div>
+
+                <div className="space-y-6 text-gray-700">
+                  <p className="text-lg leading-relaxed">
+                    Microsoft Dynamics 365 Sales automatyzuje kluczowe procesy sprzedażowe, począwszy od generowania potencjalnych klientów, aż po finalizację zamówień. System upraszcza takie zadania, jak zarządzanie kontaktami, tworzenie ofert, rejestrowanie interakcji z klientami oraz planowanie działań sprzedażowych. Dzięki temu zespoły sprzedażowe mogą skupić się na budowaniu relacji z klientami i osiąganiu wyznaczonych celów.
+                  </p>
+
+                  <p className="text-lg leading-relaxed">
+                    Jednym z najważniejszych aspektów automatyzacji w Dynamics 365 Sales jest możliwość automatycznego przypisywania potencjalnych klientów do odpowiednich członków zespołu na podstawie wcześniej ustalonych kryteriów. Ponadto system generuje szczegółowe raporty oraz prognozy, co pozwala na bardziej świadome planowanie działań sprzedażowych.
+                  </p>
+
+                  <div className="mt-8">
+                    <h3 className="text-xl font-semibold mb-4">Korzyści z automatyzacji:</h3>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Zwiększa efektywność zespołów sprzedażowych</h4>
+                        <p>Eliminacja rutynowych, czasochłonnych zadań pozwala zespołom skupić się na działaniach przynoszących realną wartość biznesową.</p>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Redukcja błędów ludzkich</h4>
+                        <p>Automatyzacja zmniejsza ryzyko pomyłek, np. przy wprowadzaniu danych lub tworzeniu ofert.</p>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Poprawa jakości obsługi klienta</h4>
+                        <p>Dzięki automatycznym przypomnieniom i aktualizacjom zespół może szybko reagować na potrzeby klientów, budując lepsze relacje.</p>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Optymalizacja procesów sprzedaży</h4>
+                        <p>Lepsza organizacja pracy i dostęp do zaawansowanych narzędzi analitycznych pozwalają zespołom działać bardziej strategicznie.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-lg leading-relaxed mt-8 font-medium">
+                    Automatyzacja w Dynamics 365 Sales to rozwiązanie, które przekształca codzienne operacje sprzedażowe, umożliwiając zespołom osiąganie lepszych wyników i efektywne zarządzanie procesami.
+                  </p>
+                </div>
+              </div>
+
+              {/* CRM Section */}
+              <div className="mt-12 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8 space-y-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="text-[#107c10] text-3xl">
+                    <FaUserFriends />
+                  </div>
+                  <h2 className="text-2xl font-bold">Zarządzanie relacjami z klientami</h2>
+                </div>
+
+                <div className="space-y-6 text-gray-700">
+                  <p className="text-lg leading-relaxed">
+                    Microsoft Dynamics 365 Sales to zaawansowane narzędzie, które wspiera firmy w zarządzaniu relacjami z klientami, umożliwiając budowanie trwałych i wartościowych kontaktów biznesowych. System gromadzi i centralizuje wszystkie dane o klientach, takie jak historia zakupów, preferencje czy wcześniejsze interakcje, co pozwala zespołom sprzedażowym lepiej dostosować swoje działania do indywidualnych potrzeb odbiorców.
+                  </p>
+
+                  <p className="text-lg leading-relaxed">
+                    Budowanie relacji z klientami jest kluczowe dla osiągnięcia sukcesu w sprzedaży. Dzięki Dynamics 365 Sales zespoły mogą personalizować komunikację, co zwiększa zaangażowanie klientów i buduje ich lojalność. Dodatkowo narzędzie pomaga monitorować każdy etap podróży klienta, co pozwala na szybsze reagowanie na zmieniające się potrzeby.
+                  </p>
+
+                  <p className="text-lg leading-relaxed">
+                    Dynamics 365 Sales umożliwia także automatyczne przypomnienia o ważnych działaniach, takich jak spotkania czy follow-upy, co pomaga zespołom utrzymywać wysoką jakość obsługi.
+                  </p>
+                </div>
+              </div>
+
+              {/* Performance Analysis Section */}
+              <div className="mt-12 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8 space-y-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="text-[#107c10] text-3xl">
+                    <FaChartBar />
+                  </div>
+                  <h2 className="text-2xl font-bold">Analiza wydajności sprzedaży</h2>
+                </div>
+
+                <div className="space-y-6 text-gray-700">
+                  <p className="text-lg leading-relaxed">
+                    Dynamics 365 Sales oferuje zaawansowane narzędzia do analizy wydajności sprzedaży, które pomagają zespołom sprzedażowym monitorować swoje wyniki oraz podejmować lepsze decyzje strategiczne. System dostarcza precyzyjne dane w czasie rzeczywistym, co pozwala na pełny wgląd w kluczowe wskaźniki i trendy.
+                  </p>
+
+                  <div className="mt-8">
+                    <h3 className="text-xl font-semibold mb-4">Kluczowe narzędzia analityczne dostępne w Dynamics 365 Sales:</h3>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Raportowanie</h4>
+                        <p>Tworzenie szczegółowych raportów dotyczących wyników zespołu, transakcji oraz efektywności działań sprzedażowych.</p>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Prognozowanie</h4>
+                        <p>Przewidywanie wyników sprzedaży na podstawie analizy danych historycznych i aktualnych trendów rynkowych.</p>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Dashboardy w czasie rzeczywistym</h4>
+                        <p>Intuicyjne wizualizacje danych, które umożliwiają szybkie podejmowanie decyzji.</p>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Analiza trendów sprzedażowych</h4>
+                        <p>Identyfikacja wzorców zachowań klientów oraz kluczowych czynników wpływających na wyniki.</p>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Ocena wyników zespołu</h4>
+                        <p>Możliwość porównywania osiągnięć poszczególnych członków zespołu w celu lepszego zarządzania efektywnością.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-lg leading-relaxed mt-8 font-medium">
+                    Dzięki funkcjom takim jak raportowanie i prognozowanie, Dynamics 365 Sales wspiera firmy w skutecznym zarządzaniu procesami sprzedażowymi oraz w optymalnym wykorzystaniu zasobów.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'integrations' && (
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <p className="text-lg leading-relaxed text-gray-700">
+                  Microsoft Dynamics 365 Sales oferuje szerokie możliwości integracji z innymi produktami Microsoft, co zwiększa funkcjonalność systemu i ułatwia codzienną pracę użytkownikom. Dzięki bezproblemowej współpracy z popularnymi narzędziami biznesowymi, system umożliwia efektywniejsze zarządzanie sprzedażą oraz poprawia komunikację i analizę danych w organizacji.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8">
+                <h2 className="text-2xl font-bold mb-6">Kluczowe integracje Dynamics 365 Sales</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="text-[#107c10] text-2xl">
+                        <FaMicrosoft />
+                      </div>
+                      <h3 className="text-xl font-bold">Microsoft 365</h3>
+                    </div>
+                    <p className="text-gray-700">
+                      Współdzielenie dokumentów, zarządzanie zadaniami i planowanie spotkań za pomocą narzędzi takich jak Word, Excel i SharePoint.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="text-[#107c10] text-2xl">
+                        <FaMicrosoft />
+                      </div>
+                      <h3 className="text-xl font-bold">LinkedIn Sales Navigator</h3>
+                    </div>
+                    <p className="text-gray-700">
+                      Umożliwia wyszukiwanie i nawiązywanie kontaktów z potencjalnymi klientami, a także personalizację interakcji na podstawie danych z LinkedIn.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="text-[#107c10] text-2xl">
+                        <FaChartBar />
+                      </div>
+                      <h3 className="text-xl font-bold">Power BI</h3>
+                    </div>
+                    <p className="text-gray-700">
+                      Tworzenie interaktywnych raportów i dashboardów, które dostarczają kluczowych informacji o wynikach sprzedaży i pomagają w podejmowaniu lepszych decyzji biznesowych.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="text-[#107c10] text-2xl">
+                        <FaMicrosoft />
+                      </div>
+                      <h3 className="text-xl font-bold">Microsoft Teams</h3>
+                    </div>
+                    <p className="text-gray-700">
+                      Usprawnia współpracę między członkami zespołu poprzez funkcje czatu, wideokonferencji i wspólnego zarządzania dokumentami w czasie rzeczywistym.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="text-[#107c10] text-2xl">
+                        <FaMicrosoft />
+                      </div>
+                      <h3 className="text-xl font-bold">Microsoft Outlook</h3>
+                    </div>
+                    <p className="text-gray-700">
+                      Synchronizacja e-maili, kalendarzy i kontaktów pozwala na lepsze zarządzanie komunikacją z klientami i organizację pracy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8">
+                <h2 className="text-2xl font-bold mb-6">Korzyści integracji</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-[#107c10] mb-2">Zwiększa efektywność zespołów sprzedażowych</h4>
+                    <p className="text-gray-700">
+                      Umożliwia pracę w jednym, zintegrowanym środowisku pracy, eliminując potrzebę przełączania się między aplikacjami.
+                    </p>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-[#107c10] mb-2">Poprawia komunikację i współpracę</h4>
+                    <p className="text-gray-700">
+                      Narzędzia takie jak Teams czy Outlook usprawniają przepływ informacji i organizację zadań w zespołach.
+                    </p>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-[#107c10] mb-2">Ułatwia analizę danych</h4>
+                    <p className="text-gray-700">
+                      Dzięki integracji z Power BI użytkownicy mogą łatwo analizować kluczowe wskaźniki i podejmować bardziej świadome decyzje.
+                    </p>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-lg font-semibold text-[#107c10] mb-2">Personalizuje działania sprzedażowe</h4>
+                    <p className="text-gray-700">
+                      Integracja z LinkedIn dostarcza cennych informacji o klientach, co pozwala na skuteczniejsze budowanie relacji.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-lg leading-relaxed mt-8 text-gray-700 font-medium">
+                  Integracje Dynamics 365 Sales z produktami Microsoft tworzą spójny ekosystem, który wspiera organizacje w osiąganiu wyższej efektywności i lepszych wyników sprzedażowych.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8">
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                  <div className="text-[#107c10] text-3xl">
+                    <FaMicrosoft />
+                  </div>
+                  Integracja z Microsoft 365
+                </h2>
+                
+                <div className="space-y-6">
+                  <p className="text-gray-700 leading-relaxed">
+                    Microsoft Dynamics 365 Sales integruje się z Microsoft 365, tworząc zintegrowane środowisko pracy, które automatyzuje procesy i wspiera zespoły sprzedażowe w realizacji codziennych zadań. Dzięki integracji z aplikacjami takimi jak Word, Excel, Outlook czy SharePoint, użytkownicy mogą efektywnie zarządzać dokumentami, komunikacją oraz planowaniem, bez konieczności przełączania się między różnymi platformami.
+                  </p>
+
+                  <p className="text-gray-700 leading-relaxed">
+                    System umożliwia tworzenie i edycję ofert sprzedażowych bezpośrednio w Microsoft Word, a także automatyczne generowanie raportów w Excelu na podstawie danych zgromadzonych w Dynamics 365 Sales. Dzięki integracji z SharePoint zespoły mogą centralizować dokumenty i dzielić się nimi w czasie rzeczywistym, co znacznie ułatwia współpracę.
+                  </p>
+
+                  <p className="text-gray-700 leading-relaxed">
+                    Współpraca jest również wspierana poprzez funkcje synchronizacji e-maili, kontaktów i kalendarzy w Microsoft Outlook, co umożliwia lepsze zarządzanie relacjami z klientami i organizację pracy. Integracja pozwala na przypisywanie zadań i śledzenie ich postępów, co zwiększa efektywność działań zespołowych.
+                  </p>
+
+                  <div className="mt-8">
+                    <h3 className="text-xl font-bold mb-4">Kluczowe korzyści</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Współpraca</h4>
+                        <p className="text-gray-700">
+                          Ułatwia dzielenie się informacjami i zarządzanie zadaniami w jednym, spójnym środowisku pracy.
+                        </p>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Produktywność</h4>
+                        <p className="text-gray-700">
+                          Automatyzacja codziennych procesów, takich jak tworzenie dokumentów czy zarządzanie kalendarzem, pozwala zaoszczędzić czas i skupić się na kluczowych celach sprzedażowych.
+                        </p>
+                      </div>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Łatwość obsługi</h4>
+                        <p className="text-gray-700">
+                          Znane i intuicyjne narzędzia Microsoft 365 zwiększają komfort pracy i skracają czas potrzebny na wdrożenie nowych użytkowników.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-lg leading-relaxed mt-6 text-gray-700 font-medium">
+                    Integracja Dynamics 365 Sales z Microsoft 365 to rozwiązanie, które znacząco podnosi produktywność i efektywność zespołów, wspierając jednocześnie ich codzienną współpracę.
+                  </p>
+                </div>
               </div>
             </div>
           )}
