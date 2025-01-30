@@ -185,20 +185,20 @@ export default function DynamicsFieldService() {
         onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
-        {/* Tabs */}
-        <div className="flex border-b mb-8">
+        {/* Tabs Navigation */}
+        <div className="flex justify-center mb-8 border-b">
           <Tab
-            label="Przegląd"
+            label="Microsoft Dynamics 365 Field Service"
             isActive={activeTab === 'overview'}
             onClick={() => setActiveTab('overview')}
           />
           <Tab
-            label="Funkcje"
+            label="Kluczowe funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
           />
           <Tab
-            label="Integracje"
+            label="Integracje z innymi produktami Microsoft"
             isActive={activeTab === 'integrations'}
             onClick={() => setActiveTab('integrations')}
           />
@@ -949,42 +949,42 @@ export default function DynamicsFieldService() {
                   <div>
                     <h3 className="text-xl font-semibold mb-4">Funkcje AI w Dynamics 365 Field Service</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                         <div className="flex items-start gap-4">
                           <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <FaBrain />
                           </div>
                           <div>
                             <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[#107c10]">Predykcyjne utrzymanie</h4>
-                            <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                               AI analizuje dane z urządzeń podłączonych do Internetu rzeczy (IoT), identyfikując potencjalne problemy zanim wpłyną one na działanie sprzętu. Dzięki temu firmy mogą zapobiegać awariom i minimalizować przestoje.
                             </p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                         <div className="flex items-start gap-4">
                           <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <FaFileAlt />
                           </div>
                           <div>
                             <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[#107c10]">Generowanie podsumowań</h4>
-                            <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                               Po zakończeniu zlecenia system automatycznie tworzy szczegółowe raporty podsumowujące, co ułatwia dokumentowanie działań i oszczędza czas zespołom serwisowym.
                             </p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                         <div className="flex items-start gap-4">
                           <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <FaCalendarCheck />
                           </div>
                           <div>
                             <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[#107c10]">Inteligentne harmonogramowanie</h4>
-                            <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                               Algorytmy AI optymalizują przydzielanie zasobów, uwzględniając dostępność, lokalizację i wymagania techniczne zleceń.
                             </p>
                           </div>
@@ -996,56 +996,56 @@ export default function DynamicsFieldService() {
                   <div>
                     <h3 className="text-xl font-semibold mb-4">Korzyści płynące z wykorzystania AI</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                         <div className="flex items-start gap-4">
                           <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <FaChartLine />
                           </div>
                           <div>
                             <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie efektywności</h4>
-                            <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                               AI eliminuje potrzebę ręcznego analizowania dużych ilości danych, przyspieszając podejmowanie decyzji.
                             </p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                         <div className="flex items-start gap-4">
                           <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <FaCogs />
                           </div>
                           <div>
                             <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[#107c10]">Lepsze wykorzystanie zasobów</h4>
-                            <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                               Predykcyjne utrzymanie pozwala uniknąć nieplanowanych napraw, co zmniejsza koszty operacyjne.
                             </p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                         <div className="flex items-start gap-4">
                           <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <FaLightbulb />
                           </div>
                           <div>
                             <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[#107c10]">Dostęp do informacji</h4>
-                            <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                               Analizy oparte na AI dostarczają firmom kluczowych wglądów w dane, umożliwiając lepsze planowanie.
                             </p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                         <div className="flex items-start gap-4">
                           <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <FaSmile />
                           </div>
                           <div>
                             <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[#107c10]">Poprawa doświadczeń</h4>
-                            <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                               Proaktywne serwisowanie i precyzyjne raporty budują zaufanie i zwiększają zadowolenie klientów.
                             </p>
                           </div>
@@ -1136,6 +1136,105 @@ export default function DynamicsFieldService() {
 
                 <p className="text-lg leading-relaxed mt-6">
                   Dzięki tym integracjom Microsoft Dynamics 365 Field Service staje się wszechstronnym rozwiązaniem wspierającym nowoczesne podejście do zarządzania usługami w terenie.
+                </p>
+
+                <h3 className="text-2xl font-semibold mt-6 mb-4">Integracja z Microsoft Power Apps</h3>
+                <p className="text-lg leading-relaxed">
+                  Microsoft Dynamics 365 Field Service integruje się z Microsoft Power Apps, umożliwiając firmom dostosowanie i rozszerzenie funkcjonalności systemu zgodnie z ich indywidualnymi potrzebami. Power Apps pozwala na tworzenie dedykowanych aplikacji, które usprawniają zarządzanie zleceniami serwisowymi oraz poprawiają dostępność informacji dla klientów i pracowników terenowych.
+                </p>
+
+                <h3 className="text-xl font-semibold mb-4">Korzyści z integracji:</h3>
+                <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-start gap-4">
+                      <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <FaDesktop />
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Lepsza widoczność portalu klienta</h4>
+                        <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                          Dzięki Power Apps firmy mogą tworzyć interaktywne portale samoobsługowe, umożliwiające klientom monitorowanie statusu zgłoszeń, przeglądanie historii serwisowej i planowanie wizyt.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-start gap-4">
+                      <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <FaUsers />
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększone zaangażowanie klientów</h4>
+                        <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                          Integracja usprawnia komunikację, pozwalając klientom na szybki dostęp do kluczowych informacji bez konieczności kontaktu z działem obsługi.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-start gap-4">
+                      <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <FaUserCog />
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Usprawniona współpraca zespołów</h4>
+                        <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                          Pracownicy mogą korzystać z niestandardowych aplikacji mobilnych do zarządzania zleceniami, śledzenia zasobów i raportowania postępów w czasie rzeczywistym.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-4 mt-8">Przykłady zastosowania:</h3>
+                <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-start gap-4">
+                      <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <FaLaptopCode />
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Portal klienta</h4>
+                        <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                          Firmy mogą stworzyć aplikację, w której klienci będą śledzić status swoich zgłoszeń, otrzymywać powiadomienia i planować wizyty serwisowe.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-start gap-4">
+                      <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <FaMobile />
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Aplikacja dla techników</h4>
+                        <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                          Mobilne rozwiązanie zbudowane na Power Apps umożliwia pracownikom szybki dostęp do szczegółowych informacji o zleceniach i historii klientów.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-start gap-4">
+                      <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <FaCogs />
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Automatyzacja przepływów pracy</h4>
+                        <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                          Power Apps pozwala na tworzenie niestandardowych formularzy i automatyzacji, które usprawniają obieg dokumentów i procesy decyzyjne.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-lg leading-relaxed mt-6">
+                  Integracja Dynamics 365 Field Service z Power Apps zapewnia firmom większą elastyczność, poprawia zaangażowanie klientów i umożliwia budowanie bardziej wydajnych procesów operacyjnych.
                 </p>
               </div>
             </div>
