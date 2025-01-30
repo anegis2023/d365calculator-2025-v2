@@ -229,7 +229,7 @@ export default function DynamicsSales() {
             onClick={() => setActiveTab('overview')}
           />
           <Tab
-            label="Funkcje Microsoft Dynamics 365 Sales"
+            label="Kluczowe funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
           />
@@ -247,7 +247,7 @@ export default function DynamicsSales() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          {activeTab === 'overview' && (
+          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -329,9 +329,9 @@ export default function DynamicsSales() {
               </div>
 
             </div>
-          )}
+          </div>
 
-          {activeTab === 'features' && (
+          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-8">
               <div className="space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
@@ -436,7 +436,7 @@ export default function DynamicsSales() {
                   </p>
 
                   <div className="mt-8">
-                    <h3 className="text-xl font-semibold mb-4">Kluczowe narzędzia analityczne dostępne w Dynamics 365 Sales:</h3>
+                    <h3 className="text-xl font-bold mb-4">Kluczowe narzędzia analityczne dostępne w Dynamics 365 Sales:</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Raportowanie</h4>
@@ -467,169 +467,19 @@ export default function DynamicsSales() {
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'integrations' && (
+          <div className={`tab-content ${activeTab === 'integrations' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="integrations-tab">
             <div className="space-y-8">
               <div className="space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
                   Microsoft Dynamics 365 Sales oferuje szerokie możliwości integracji z innymi produktami Microsoft, co zwiększa funkcjonalność systemu i ułatwia codzienną pracę użytkownikom. Dzięki bezproblemowej współpracy z popularnymi narzędziami biznesowymi, system umożliwia efektywniejsze zarządzanie sprzedażą oraz poprawia komunikację i analizę danych w organizacji.
                 </p>
               </div>
-
-              <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold mb-6">Kluczowe integracje Dynamics 365 Sales</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="text-[#107c10] text-2xl">
-                        <FaMicrosoft />
-                      </div>
-                      <h3 className="text-xl font-bold">Microsoft 365</h3>
-                    </div>
-                    <p className="text-gray-700">
-                      Współdzielenie dokumentów, zarządzanie zadaniami i planowanie spotkań za pomocą narzędzi takich jak Word, Excel i SharePoint.
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="text-[#107c10] text-2xl">
-                        <FaMicrosoft />
-                      </div>
-                      <h3 className="text-xl font-bold">LinkedIn Sales Navigator</h3>
-                    </div>
-                    <p className="text-gray-700">
-                      Umożliwia wyszukiwanie i nawiązywanie kontaktów z potencjalnymi klientami, a także personalizację interakcji na podstawie danych z LinkedIn.
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="text-[#107c10] text-2xl">
-                        <FaChartBar />
-                      </div>
-                      <h3 className="text-xl font-bold">Power BI</h3>
-                    </div>
-                    <p className="text-gray-700">
-                      Tworzenie interaktywnych raportów i dashboardów, które dostarczają kluczowych informacji o wynikach sprzedaży i pomagają w podejmowaniu lepszych decyzji biznesowych.
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="text-[#107c10] text-2xl">
-                        <FaMicrosoft />
-                      </div>
-                      <h3 className="text-xl font-bold">Microsoft Teams</h3>
-                    </div>
-                    <p className="text-gray-700">
-                      Usprawnia współpracę między członkami zespołu poprzez funkcje czatu, wideokonferencji i wspólnego zarządzania dokumentami w czasie rzeczywistym.
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="text-[#107c10] text-2xl">
-                        <FaMicrosoft />
-                      </div>
-                      <h3 className="text-xl font-bold">Microsoft Outlook</h3>
-                    </div>
-                    <p className="text-gray-700">
-                      Synchronizacja e-maili, kalendarzy i kontaktów pozwala na lepsze zarządzanie komunikacją z klientami i organizację pracy.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold mb-6">Korzyści integracji</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-[#107c10] mb-2">Zwiększa efektywność zespołów sprzedażowych</h4>
-                    <p className="text-gray-700">
-                      Umożliwia pracę w jednym, zintegrowanym środowisku pracy, eliminując potrzebę przełączania się między aplikacjami.
-                    </p>
-                  </div>
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-[#107c10] mb-2">Poprawia komunikację i współpracę</h4>
-                    <p className="text-gray-700">
-                      Narzędzia takie jak Teams czy Outlook usprawniają przepływ informacji i organizację zadań w zespołach.
-                    </p>
-                  </div>
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-[#107c10] mb-2">Ułatwia analizę danych</h4>
-                    <p className="text-gray-700">
-                      Dzięki integracji z Power BI użytkownicy mogą łatwo analizować kluczowe wskaźniki i podejmować bardziej świadome decyzje.
-                    </p>
-                  </div>
-                  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-lg font-semibold text-[#107c10] mb-2">Personalizuje działania sprzedażowe</h4>
-                    <p className="text-gray-700">
-                      Integracja z LinkedIn dostarcza cennych informacji o klientach, co pozwala na skuteczniejsze budowanie relacji.
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-lg leading-relaxed mt-8 text-gray-700 font-medium">
-                  Integracje Dynamics 365 Sales z produktami Microsoft tworzą spójny ekosystem, który wspiera organizacje w osiąganiu wyższej efektywności i lepszych wyników sprzedażowych.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                  <div className="text-[#107c10] text-3xl">
-                    <FaMicrosoft />
-                  </div>
-                  Integracja z Microsoft 365
-                </h2>
-                
-                <div className="space-y-6">
-                  <p className="text-gray-700 leading-relaxed">
-                    Microsoft Dynamics 365 Sales integruje się z Microsoft 365, tworząc zintegrowane środowisko pracy, które automatyzuje procesy i wspiera zespoły sprzedażowe w realizacji codziennych zadań. Dzięki integracji z aplikacjami takimi jak Word, Excel, Outlook czy SharePoint, użytkownicy mogą efektywnie zarządzać dokumentami, komunikacją oraz planowaniem, bez konieczności przełączania się między różnymi platformami.
-                  </p>
-
-                  <p className="text-gray-700 leading-relaxed">
-                    System umożliwia tworzenie i edycję ofert sprzedażowych bezpośrednio w Microsoft Word, a także automatyczne generowanie raportów w Excelu na podstawie danych zgromadzonych w Dynamics 365 Sales. Dzięki integracji z SharePoint zespoły mogą centralizować dokumenty i dzielić się nimi w czasie rzeczywistym, co znacznie ułatwia współpracę.
-                  </p>
-
-                  <p className="text-gray-700 leading-relaxed">
-                    Współpraca jest również wspierana poprzez funkcje synchronizacji e-maili, kontaktów i kalendarzy w Microsoft Outlook, co umożliwia lepsze zarządzanie relacjami z klientami i organizację pracy. Integracja pozwala na przypisywanie zadań i śledzenie ich postępów, co zwiększa efektywność działań zespołowych.
-                  </p>
-
-                  <div className="mt-8">
-                    <h3 className="text-xl font-bold mb-4">Kluczowe korzyści</h3>
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Współpraca</h4>
-                        <p className="text-gray-700">
-                          Ułatwia dzielenie się informacjami i zarządzanie zadaniami w jednym, spójnym środowisku pracy.
-                        </p>
-                      </div>
-                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Produktywność</h4>
-                        <p className="text-gray-700">
-                          Automatyzacja codziennych procesów, takich jak tworzenie dokumentów czy zarządzanie kalendarzem, pozwala zaoszczędzić czas i skupić się na kluczowych celach sprzedażowych.
-                        </p>
-                      </div>
-                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-                        <h4 className="text-lg font-semibold text-[#107c10] mb-2">Łatwość obsługi</h4>
-                        <p className="text-gray-700">
-                          Znane i intuicyjne narzędzia Microsoft 365 zwiększają komfort pracy i skracają czas potrzebny na wdrożenie nowych użytkowników.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-lg leading-relaxed mt-6 text-gray-700 font-medium">
-                    Integracja Dynamics 365 Sales z Microsoft 365 to rozwiązanie, które znacząco podnosi produktywność i efektywność zespołów, wspierając jednocześnie ich codzienną współpracę.
-                  </p>
-                </div>
-              </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'faq' && (
+          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
             <div className="space-y-8">
               <div className="grid gap-6">
                 {faqData.map((faq, index) => (
@@ -647,7 +497,7 @@ export default function DynamicsSales() {
                 ))}
               </div>
             </div>
-          )}
+          </div>
         </div>
       </DynamicsPageLayout>
     </>

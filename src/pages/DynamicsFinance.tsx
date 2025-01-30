@@ -230,7 +230,7 @@ function DynamicsFinance() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          {activeTab === 'overview' && (
+          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -468,9 +468,9 @@ function DynamicsFinance() {
               </div>
 
             </div>
-          )}
+          </div>
 
-          {activeTab === 'features' && (
+          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-8">
               <h2 className="text-3xl font-bold text-center mb-8">Cechy i funkcjonalności</h2>
               
@@ -691,19 +691,19 @@ function DynamicsFinance() {
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Spójność z regulacjami</h4>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                         Dzięki integracji z różnymi systemami prawnymi, firmy mogą łatwo dostosować się do wymogów podatkowych w różnych krajach.
                       </p>
                     </div>
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Redukcja ryzyka</h4>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                         Automatyzacja procesów podatkowych minimalizuje ryzyko błędów, które mogłyby prowadzić do kosztownych konsekwencji prawnych.
                       </p>
                     </div>
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Przejrzystość</h4>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                         System zapewnia pełną widoczność wszystkich operacji podatkowych, co ułatwia audyt i kontrolę wewnętrzną.
                       </p>
                     </div>
@@ -809,19 +809,19 @@ function DynamicsFinance() {
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Unikanie braku płynności</h4>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                         Szybkie identyfikowanie potencjalnych niedoborów gotówki i podejmowanie działań zapobiegawczych.
                       </p>
                     </div>
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Optymalizacja zasobów</h4>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                         Lepsze zarządzanie gotówką pozwala na efektywniejsze alokowanie środków finansowych.
                       </p>
                     </div>
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Stabilność finansowa</h4>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                         Regularne monitorowanie i analiza przepływów pieniężnych przyczyniają się do długoterminowej stabilności firmy.
                       </p>
                     </div>
@@ -851,30 +851,9 @@ function DynamicsFinance() {
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'faq' && (
-            <div className="space-y-8">
-              <h2 className="text-3xl font-bold text-center mb-8">Najczęściej zadawane pytania</h2>
-              <div className="grid gap-6">
-                {faqData.map((faq, index) => (
-                  <div
-                    key={index}
-                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
-                  >
-                    <h4 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
-                      {faq.question}
-                    </h4>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
-                      {faq.answer}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'integrations' && (
+          <div className={`tab-content ${activeTab === 'integrations' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="integrations-tab">
             <div className="space-y-8">
               <h2 className="text-3xl font-bold text-center mb-8">Integracje i wsparcie technologiczne</h2>
               
@@ -1111,7 +1090,28 @@ function DynamicsFinance() {
                 </div>
               </div>
             </div>
-          )}
+          </div>
+
+          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
+            <div className="space-y-8">
+              <h2 className="text-3xl font-bold text-center mb-8">Najczęściej zadawane pytania</h2>
+              <div className="grid gap-6">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50"
+                  >
+                    <h4 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
+                      {faq.question}
+                    </h4>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </DynamicsPageLayout>
     </>

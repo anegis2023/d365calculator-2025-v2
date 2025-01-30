@@ -121,7 +121,7 @@ export default function DynamicsCommerce() {
   const faqData = [
     {
       question: "Czym jest Microsoft Dynamics 365 Commerce?",
-      answer: "Microsoft Dynamics 365 Commerce to kompleksowa platforma do zarządzania handlem detalicznym, która łączy sprzedaż stacjonarną, online i mobilną. System umożliwia tworzenie spójnych, spersonalizowanych doświadczeń zakupowych we wszystkich kanałach sprzedaży."
+      answer: "Microsoft Dynamics 365 Commerce to kompleksowa platforma do zarządzania handlem detalicznym, która łączy sprzedaż stacjonarną, online i mobilną. System umożliwia tworzenie spójnych, spersonalizowanych i skutecznych strategii handlowych, niezależnie od kanału sprzedaży. System pomaga w integracji sprzedaży online i offline, umożliwiając lepszą obsługę klientów oraz optymalizację operacji biznesowych. Dzięki zaawansowanym narzędziom analitycznym pozwala również przewidywać trendy i dostosowywać działania do dynamicznie zmieniającego się rynku."
     },
     {
       question: "Jakie są główne funkcje Dynamics 365 Commerce?",
@@ -201,7 +201,7 @@ export default function DynamicsCommerce() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          {activeTab === 'overview' && (
+          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -279,9 +279,9 @@ export default function DynamicsCommerce() {
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'features' && (
+          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-12">
               <h2 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Dynamics 365 Commerce</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -296,9 +296,9 @@ export default function DynamicsCommerce() {
                 ))}
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'faq' && (
+          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
             <div className="space-y-8">
               <div className="grid gap-6">
                 {faqData.map((faq, index) => (
@@ -316,7 +316,7 @@ export default function DynamicsCommerce() {
                 ))}
               </div>
             </div>
-          )}
+          </div>
         </div>
       </DynamicsPageLayout>
     </>

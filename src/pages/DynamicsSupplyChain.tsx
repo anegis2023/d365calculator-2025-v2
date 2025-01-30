@@ -206,7 +206,7 @@ export default function DynamicsSupplyChain() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          {activeTab === 'overview' && (
+          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -291,9 +291,9 @@ export default function DynamicsSupplyChain() {
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'features' && (
+          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed">
@@ -429,9 +429,9 @@ export default function DynamicsSupplyChain() {
                 </p>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'integrations' && (
+          <div className={`tab-content ${activeTab === 'integrations' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="integrations-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed">
@@ -762,9 +762,9 @@ export default function DynamicsSupplyChain() {
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'faq' && (
+          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
             <div className="space-y-8">
               <div className="grid gap-6">
                 {faqData.map((faq, index) => (
@@ -782,7 +782,7 @@ export default function DynamicsSupplyChain() {
                 ))}
               </div>
             </div>
-          )}
+          </div>
         </div>
       </DynamicsPageLayout>
     </>
