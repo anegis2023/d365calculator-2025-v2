@@ -180,8 +180,8 @@ export default function DynamicsCustomerService() {
         onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
-        {/* Tabs */}
-        <div className="flex border-b mb-8">
+        {/* Tabs Navigation */}
+        <div className="flex justify-center mb-8 border-b">
           <Tab
             label="Przegląd"
             isActive={activeTab === 'overview'}
@@ -201,7 +201,7 @@ export default function DynamicsCustomerService() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
+          {activeTab === 'overview' && (
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -241,9 +241,7 @@ export default function DynamicsCustomerService() {
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">
-                      1. Poprawa satysfakcji klientów
-                    </h3>
+                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">1. Poprawa satysfakcji klientów</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki spersonalizowanej obsłudze i szybkiemu rozwiązywaniu problemów klienci czują się docenieni i bardziej lojalni wobec marki.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
@@ -277,10 +275,10 @@ export default function DynamicsCustomerService() {
                 </div>
               </div>
             </div>
-          </div>
+          )}
 
-          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
-            <div className="space-y-8">
+          {activeTab === 'features' && (
+            <div className="space-y-12">
               <h2 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Dynamics 365 Customer Service</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
@@ -294,9 +292,9 @@ export default function DynamicsCustomerService() {
                 ))}
               </div>
             </div>
-          </div>
+          )}
 
-          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
+          {activeTab === 'faq' && (
             <div className="space-y-8">
               <div className="grid gap-6">
                 {faqData.map((faq, index) => (
@@ -314,7 +312,7 @@ export default function DynamicsCustomerService() {
                 ))}
               </div>
             </div>
-          </div>
+          )}
         </div>
       </DynamicsPageLayout>
     </>

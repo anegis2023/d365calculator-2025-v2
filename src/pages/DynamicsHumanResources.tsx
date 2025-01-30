@@ -180,8 +180,8 @@ export default function DynamicsHumanResources() {
         onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
-        {/* Tabs */}
-        <div className="flex border-b mb-8">
+        {/* Tabs Navigation */}
+        <div className="flex justify-center mb-8 border-b">
           <Tab
             label="Przegląd"
             isActive={activeTab === 'overview'}
@@ -201,7 +201,7 @@ export default function DynamicsHumanResources() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
+          {activeTab === 'overview' && (
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -275,10 +275,10 @@ export default function DynamicsHumanResources() {
                 </div>
               </div>
             </div>
-          </div>
+          )}
 
-          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
-            <div className="space-y-8">
+          {activeTab === 'features' && (
+            <div className="space-y-12">
               <h2 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Dynamics 365 Human Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
@@ -292,9 +292,9 @@ export default function DynamicsHumanResources() {
                 ))}
               </div>
             </div>
-          </div>
+          )}
 
-          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
+          {activeTab === 'faq' && (
             <div className="space-y-8">
               <div className="grid gap-6">
                 {faqData.map((faq, index) => (
@@ -312,7 +312,7 @@ export default function DynamicsHumanResources() {
                 ))}
               </div>
             </div>
-          </div>
+          )}
         </div>
       </DynamicsPageLayout>
     </>

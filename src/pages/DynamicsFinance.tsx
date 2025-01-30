@@ -204,17 +204,22 @@ function DynamicsFinance() {
         onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
-        {/* Tabs */}
-        <div className="flex border-b mb-8">
+        {/* Tabs Navigation */}
+        <div className="flex justify-center mb-8 border-b">
           <Tab
-            label="Przegląd"
+            label="Microsoft Dynamics 365 Finance"
             isActive={activeTab === 'overview'}
             onClick={() => setActiveTab('overview')}
           />
           <Tab
-            label="Funkcje"
+            label="Cechy i funkcjonalności"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
+          />
+          <Tab
+            label="Integracje i wsparcie technologiczne"
+            isActive={activeTab === 'integrations'}
+            onClick={() => setActiveTab('integrations')}
           />
           <Tab
             label="FAQ"
@@ -225,7 +230,7 @@ function DynamicsFinance() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
+          {activeTab === 'overview' && (
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -463,9 +468,9 @@ function DynamicsFinance() {
               </div>
 
             </div>
-          </div>
+          )}
 
-          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
+          {activeTab === 'features' && (
             <div className="space-y-8">
               <h2 className="text-3xl font-bold text-center mb-8">Cechy i funkcjonalności</h2>
               
@@ -686,19 +691,19 @@ function DynamicsFinance() {
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Spójność z regulacjami</h4>
-                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      <p className="text-gray-600">
                         Dzięki integracji z różnymi systemami prawnymi, firmy mogą łatwo dostosować się do wymogów podatkowych w różnych krajach.
                       </p>
                     </div>
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Redukcja ryzyka</h4>
-                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      <p className="text-gray-600">
                         Automatyzacja procesów podatkowych minimalizuje ryzyko błędów, które mogłyby prowadzić do kosztownych konsekwencji prawnych.
                       </p>
                     </div>
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Przejrzystość</h4>
-                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      <p className="text-gray-600">
                         System zapewnia pełną widoczność wszystkich operacji podatkowych, co ułatwia audyt i kontrolę wewnętrzną.
                       </p>
                     </div>
@@ -804,19 +809,19 @@ function DynamicsFinance() {
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Unikanie braku płynności</h4>
-                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      <p className="text-gray-600">
                         Szybkie identyfikowanie potencjalnych niedoborów gotówki i podejmowanie działań zapobiegawczych.
                       </p>
                     </div>
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Optymalizacja zasobów</h4>
-                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      <p className="text-gray-600">
                         Lepsze zarządzanie gotówką pozwala na efektywniejsze alokowanie środków finansowych.
                       </p>
                     </div>
                     <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                       <h4 className="text-lg font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Stabilność finansowa</h4>
-                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      <p className="text-gray-600">
                         Regularne monitorowanie i analiza przepływów pieniężnych przyczyniają się do długoterminowej stabilności firmy.
                       </p>
                     </div>
@@ -846,9 +851,9 @@ function DynamicsFinance() {
                 </div>
               </div>
             </div>
-          </div>
+          )}
 
-          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
+          {activeTab === 'faq' && (
             <div className="space-y-8">
               <h2 className="text-3xl font-bold text-center mb-8">Najczęściej zadawane pytania</h2>
               <div className="grid gap-6">
@@ -867,9 +872,9 @@ function DynamicsFinance() {
                 ))}
               </div>
             </div>
-          </div>
+          )}
 
-          <div className={`tab-content ${activeTab === 'integrations' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="integrations-tab">
+          {activeTab === 'integrations' && (
             <div className="space-y-8">
               <h2 className="text-3xl font-bold text-center mb-8">Integracje i wsparcie technologiczne</h2>
               
@@ -1106,7 +1111,7 @@ function DynamicsFinance() {
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </DynamicsPageLayout>
     </>
