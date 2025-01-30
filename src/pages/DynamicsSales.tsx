@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaChartLine, FaUserFriends, FaRobot, FaChartBar, FaMicrosoft, FaMobile } from 'react-icons/fa';
+import { FaChartLine, FaUserFriends, FaRobot, FaChartBar, FaMicrosoft, FaMobile, FaLinkedin, FaChartPie, FaUsers, FaEnvelope, FaClock, FaTasks, FaRocket, FaHandshake, FaSync, FaProductHunt, FaDatabase } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -298,23 +298,33 @@ export default function DynamicsSales() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h3 className="text-xl font-bold">Zwiększenie efektywności zespołu sprzedażowego</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dynamics 365 Sales pozwala sprzedawcom zaoszczędzić czas na rutynowych zadaniach, takich jak wprowadzanie danych czy generowanie raportów. Dzięki temu mogą oni skupić się na budowaniu wartościowych relacji z klientami.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Dynamics 365 Sales pozwala sprzedawcom zaoszczędzić czas na rutynowych zadaniach, takich jak wprowadzanie danych czy generowanie raportów. Dzięki temu mogą oni skupić się na budowaniu relacji z klientami i osiąganiu wyznaczonych celów.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h3 className="text-xl font-bold">Poprawa wyników sprzedaży</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dostęp do zaawansowanych narzędzi analitycznych i prognoz opartych na danych pozwala zespołom sprzedaży działać bardziej efektywnie i podejmować lepsze decyzje.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Dostęp do zaawansowanych narzędzi analitycznych i prognoz opartych na danych pozwala zespołom sprzedaży działać bardziej efektywnie i podejmować lepsze decyzje.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h3 className="text-xl font-bold">Lepsze zrozumienie potrzeb klientów</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Zgromadzone dane o klientach dają pełen obraz ich potrzeb, co umożliwia personalizację ofert i budowanie długoterminowych relacji.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Zgromadzone dane o klientach dają pełen obraz ich potrzeb, co umożliwia personalizację ofert i budowanie długoterminowych relacji.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h3 className="text-xl font-bold">Skrócenie cyklu sprzedaży</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki automatyzacji procesów i szybkiemu dostępowi do informacji, sprzedawcy mogą szybciej finalizować transakcje, co przekłada się na lepsze wyniki finansowe firmy.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Dzięki automatyzacji procesów i szybkiemu dostępowi do informacji, sprzedawcy mogą szybciej finalizować transakcje, co przekłada się na lepsze wyniki finansowe firmy.
+                    </p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
                     <h3 className="text-xl font-bold">Skalowalność i elastyczność</h3>
-                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dynamics 365 Sales dostosowuje się do potrzeb zarówno małych, jak i dużych przedsiębiorstw. W miarę rozwoju firmy, platforma może być łatwo rozbudowywana o dodatkowe funkcje.</p>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Dynamics 365 Sales dostosowuje się do potrzeb zarówno małych, jak i dużych przedsiębiorstw. W miarę rozwoju firmy, platforma może być łatwo rozbudowywana o dodatkowe funkcje.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -370,23 +380,25 @@ export default function DynamicsSales() {
                   </p>
 
                   <div className="mt-8">
-                    <h3 className="text-xl font-semibold mb-4">Korzyści z automatyzacji:</h3>
+                    <h3 className="text-xl font-bold mb-4">Korzyści z automatyzacji:</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Zwiększa efektywność zespołów sprzedażowych</h4>
-                        <p>Eliminacja rutynowych, czasochłonnych zadań pozwala zespołom skupić się na działaniach przynoszących realną wartość biznesową.</p>
+                        <p className="text-gray-700">Eliminacja rutynowych, czasochłonnych zadań pozwala zespołom skupić się na działaniach przynoszących realną wartość biznesową.</p>
                       </div>
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Redukcja błędów ludzkich</h4>
-                        <p>Automatyzacja zmniejsza ryzyko pomyłek, np. przy wprowadzaniu danych lub tworzeniu ofert.</p>
+                        <p className="text-gray-700">Automatyzacja zmniejsza ryzyko pomyłek, np. przy wprowadzaniu danych lub tworzeniu ofert.</p>
                       </div>
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Poprawa jakości obsługi klienta</h4>
-                        <p>Dzięki automatycznym przypomnieniom i aktualizacjom zespół może szybko reagować na potrzeby klientów, budując lepsze relacje.</p>
+                        <p className="text-gray-700">
+                          Dzięki automatycznym przypomnieniom i aktualizacjom zespół może szybko reagować na potrzeby klientów, budując lepsze relacje.</p>
                       </div>
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Optymalizacja procesów sprzedaży</h4>
-                        <p>Lepsza organizacja pracy i dostęp do zaawansowanych narzędzi analitycznych pozwalają zespołom działać bardziej strategicznie.</p>
+                        <p className="text-gray-700">
+                          Lepsza organizacja pracy i dostęp do zaawansowanych narzędzi analitycznych pozwalają zespołom działać bardziej strategicznie.</p>
                       </div>
                     </div>
                   </div>
@@ -432,7 +444,7 @@ export default function DynamicsSales() {
 
                 <div className="space-y-6 text-gray-700">
                   <p className="text-lg leading-relaxed">
-                    Dynamics 365 Sales oferuje zaawansowane narzędzia do analizy wydajności sprzedaży, które pomagają zespołom sprzedażowym monitorować swoje wyniki oraz podejmować lepsze decyzje strategiczne. System dostarcza precyzyjne dane w czasie rzeczywistym, co pozwala na pełny wgląd w kluczowe wskaźniki i trendy.
+                    Dynamics 365 Sales oferuje zaawansowane narzędzia do analizy wydajności sprzedaży, które pomagają zespołom sprzedaży monitorować swoje wyniki oraz podejmować lepsze decyzje strategiczne. System dostarcza precyzyjne dane w czasie rzeczywistym, co pozwala na pełny wgląd w kluczowe wskaźniki i trendy.
                   </p>
 
                   <div className="mt-8">
@@ -440,23 +452,24 @@ export default function DynamicsSales() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Raportowanie</h4>
-                        <p>Tworzenie szczegółowych raportów dotyczących wyników zespołu, transakcji oraz efektywności działań sprzedażowych.</p>
+                        <p className="text-gray-700">Tworzenie szczegółowych raportów dotyczących wyników zespołu, transakcji oraz efektywności działań sprzedażowych.</p>
                       </div>
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Prognozowanie</h4>
-                        <p>Przewidywanie wyników sprzedaży na podstawie analizy danych historycznych i aktualnych trendów rynkowych.</p>
+                        <p className="text-gray-700">Przewidywanie wyników sprzedaży na podstawie analizy danych historycznych i aktualnych trendów rynkowych.</p>
                       </div>
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Dashboardy w czasie rzeczywistym</h4>
-                        <p>Intuicyjne wizualizacje danych, które umożliwiają szybkie podejmowanie decyzji.</p>
+                        <p className="text-gray-700">Intuicyjne wizualizacje danych, które umożliwiają szybkie podejmowanie decyzji.</p>
                       </div>
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Analiza trendów sprzedażowych</h4>
-                        <p>Identyfikacja wzorców zachowań klientów oraz kluczowych czynników wpływających na wyniki.</p>
+                        <p className="text-gray-700">Identyfikacja wzorców zachowań klientów oraz kluczowych czynników wpływających na wyniki.</p>
                       </div>
                       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                         <h4 className="text-lg font-semibold text-[#107c10] mb-2">Ocena wyników zespołu</h4>
-                        <p>Możliwość porównywania osiągnięć poszczególnych członków zespołu w celu lepszego zarządzania efektywnością.</p>
+                        <p className="text-gray-700">
+                          Możliwość porównywania osiągnięć poszczególnych członków zespołu w celu lepszego zarządzania efektywnością.</p>
                       </div>
                     </div>
                   </div>
@@ -473,8 +486,169 @@ export default function DynamicsSales() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  Microsoft Dynamics 365 Sales oferuje szerokie możliwości integracji z innymi produktami Microsoft, co zwiększa funkcjonalność systemu i ułatwia codzienną pracę użytkownikom. Dzięki bezproblemowej współpracy z popularnymi narzędziami biznesowymi, system umożliwia efektywniejsze zarządzanie sprzedażą oraz poprawia komunikację i analizę danych w organizacji.
+                  Microsoft Dynamics 365 Sales płynnie współpracuje z innymi produktami Microsoft, zapewniając spójne środowisko pracy, lepszą organizację i dostęp do kluczowych danych w czasie rzeczywistym. Dzięki integracji z popularnymi narzędziami zwiększa się efektywność zespołów sprzedażowych, a procesy biznesowe stają się bardziej intuicyjne i automatyzowane.
                 </p>
+                <h2 className="text-2xl font-bold mt-6">Kluczowe integracje</h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FaMicrosoft className="text-2xl text-[#107c10]" />
+                    <h3 className="text-xl font-bold">Microsoft 365</h3>
+                  </div>
+                  <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                    Natywna współpraca z aplikacjami pakietu Office, takimi jak Excel, Word i SharePoint, ułatwia tworzenie ofert, raportowanie i współdzielenie dokumentów.
+                  </p>
+                </div>
+
+                <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FaLinkedin className="text-2xl text-[#107c10]" />
+                    <h3 className="text-xl font-bold">LinkedIn</h3>
+                  </div>
+                  <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                    Bezpośredni dostęp do danych i aktywności klientów, dzięki czemu handlowcy mogą skuteczniej budować relacje i docierać do właściwych osób.
+                  </p>
+                </div>
+
+                <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FaChartPie className="text-2xl text-[#107c10]" />
+                    <h3 className="text-xl font-bold">Power BI</h3>
+                  </div>
+                  <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                    Zaawansowana analiza danych sprzedażowych pozwala na bieżące monitorowanie wyników i podejmowanie trafnych decyzji biznesowych.
+                  </p>
+                </div>
+
+                <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FaUsers className="text-2xl text-[#107c10]" />
+                    <h3 className="text-xl font-bold">Microsoft Teams</h3>
+                  </div>
+                  <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                    Usprawniona komunikacja zespołowa oraz możliwość współdzielenia informacji o klientach bezpośrednio w kanałach Teams.
+                  </p>
+                </div>
+
+                <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FaEnvelope className="text-2xl text-[#107c10]" />
+                    <h3 className="text-xl font-bold">Microsoft Outlook</h3>
+                  </div>
+                  <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                    Synchronizacja e-maili, kalendarza i kontaktów z Dynamics 365 Sales zwiększa przejrzystość i efektywność zarządzania interakcjami z klientami.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold">Korzyści integracji</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center gap-3 mb-2">
+                      <FaClock className="text-2xl text-[#107c10]" />
+                      <h3 className="text-xl font-bold">Oszczędność czasu</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Automatyczna synchronizacja danych eliminuje konieczność ręcznego wprowadzania informacji.
+                    </p>
+                  </div>
+
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center gap-3 mb-2">
+                      <FaTasks className="text-2xl text-[#107c10]" />
+                      <h3 className="text-xl font-bold">Lepsza organizacja pracy</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Wszystkie niezbędne narzędzia są dostępne w jednym ekosystemie, co usprawnia codzienne zadania.
+                    </p>
+                  </div>
+
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center gap-3 mb-2">
+                      <FaRocket className="text-2xl text-[#107c10]" />
+                      <h3 className="text-xl font-bold">Większa efektywność sprzedaży</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Dostęp do aktualnych informacji o klientach i automatyczne analizy pomagają podejmować bardziej świadome decyzje.
+                    </p>
+                  </div>
+
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center gap-3 mb-2">
+                      <FaHandshake className="text-2xl text-[#107c10]" />
+                      <h3 className="text-xl font-bold">Bezproblemowa współpraca</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Zespoły sprzedażowe, marketingowe i operacyjne mogą pracować na tych samych danych, co poprawia komunikację i koordynację działań.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#00a2ed] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#0091d4] cursor-pointer group">
+                <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Integracja z ekosystemem Microsoft</h2>
+                <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                  Integracja Dynamics 365 Sales z ekosystemem Microsoft to klucz do bardziej produktywnej i skutecznej sprzedaży. Dzięki płynnej współpracy między narzędziami, zespoły sprzedażowe mogą skupić się na tym, co najważniejsze - budowaniu relacji z klientami i zwiększaniu wyników sprzedaży.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold">Integracja z Microsoft 365</h2>
+                <div className="space-y-6">
+                  <p className="text-lg leading-relaxed text-gray-700">
+                    Microsoft Dynamics 365 Sales ściśle integruje się z Microsoft 365, tworząc kompleksowe środowisko pracy dla zespołów sprzedażowych. Dzięki tej współpracy użytkownicy mogą płynnie przełączać się między narzędziami, automatyzować procesy i efektywniej zarządzać danymi klientów.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed text-gray-700">
+                    Integracja obejmuje m.in. synchronizację poczty e-mail, kalendarza i kontaktów z Outlookiem, co pozwala na lepsze zarządzanie relacjami z klientami i eliminację ręcznego wprowadzania danych. Dokumenty i arkusze kalkulacyjne w SharePoint i OneDrive są bezpośrednio dostępne w Dynamics 365 Sales, co ułatwia współdzielenie plików i śledzenie zmian. Automatyczne generowanie ofert i raportów w Wordzie i Excelu pozwala na szybkie przygotowywanie profesjonalnych materiałów sprzedażowych.
+                  </p>
+
+                  <div className="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 className="text-xl font-bold mb-6">Jak integracja wspiera współpracę i produktywność?</h3>
+                    <div className="space-y-6">
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                          <div className="flex items-center gap-3 mb-4">
+                            <FaUsers className="text-2xl text-[#107c10]" />
+                            <h3 className="text-xl font-bold">Współpraca</h3>
+                          </div>
+                          <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                            Zespoły sprzedażowe mogą wspólnie pracować nad dokumentami, śledzić historię interakcji z klientami i łatwo udostępniać istotne informacje w całym ekosystemie Microsoft 365.
+                          </p>
+                        </div>
+
+                        <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                          <div className="flex items-center gap-3 mb-4">
+                            <FaProductHunt className="text-2xl text-[#107c10]" />
+                            <h3 className="text-xl font-bold">Produktywność</h3>
+                          </div>
+                          <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                            Automatyzacja procesów, takich jak harmonogramowanie spotkań, generowanie dokumentów i śledzenie e-maili, pozwala oszczędzać czas i skupić się na budowaniu relacji z klientami.
+                          </p>
+                        </div>
+
+                        <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                          <div className="flex items-center gap-3 mb-4">
+                            <FaDatabase className="text-2xl text-[#107c10]" />
+                            <h3 className="text-xl font-bold">Spójność danych</h3>
+                          </div>
+                          <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                            Wszystkie informacje są dostępne w jednym miejscu, co minimalizuje ryzyko błędów i zapewnia aktualność danych w czasie rzeczywistym.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#00a2ed] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#0091d4] cursor-pointer group">
+                    <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
+                      Integracja Dynamics 365 Sales z Microsoft 365 sprawia, że sprzedaż staje się bardziej efektywna, a zespoły mogą działać szybciej i skuteczniej, bez konieczności przełączania się między aplikacjami.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
