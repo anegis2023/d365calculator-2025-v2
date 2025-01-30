@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaTools, FaMapMarkedAlt, FaCalendarAlt, FaMobile, FaChartLine, FaCog, FaUsers, FaRobot, FaMicrosoft, FaBell, FaLaptopCode, FaDesktop, FaMicrochip, FaShieldAlt, FaSmile, FaCalendarCheck, FaChartBar, FaFileAlt, FaUserCog, FaClipboardCheck, FaClock, FaStar, FaWrench, FaHardHat, FaHammer, FaPencilAlt, FaBrain, FaCogs, FaLightbulb, FaComments, FaPiggyBank } from 'react-icons/fa';
+import { FaTools, FaMapMarkedAlt, FaCalendarAlt, FaMobile, FaChartLine, FaCog, FaUsers, FaRobot, FaMicrosoft, FaBell, FaLaptopCode, FaDesktop, FaMicrochip, FaShieldAlt, FaSmile, FaCalendarCheck, FaChartBar, FaFileAlt, FaUserCog, FaClipboardCheck, FaClock, FaStar, FaWrench, FaHardHat, FaHammer, FaPencilAlt, FaBrain, FaCogs, FaLightbulb, FaComments, FaPiggyBank, FaRoute } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -185,15 +185,15 @@ export default function DynamicsFieldService() {
         onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
-        {/* Tabs Navigation */}
-        <div className="flex justify-center mb-8 border-b">
+        {/* Tabs */}
+        <div className="flex border-b mb-8">
           <Tab
-            label="Microsoft Dynamics 365 Field Service"
+            label="Przegląd"
             isActive={activeTab === 'overview'}
             onClick={() => setActiveTab('overview')}
           />
           <Tab
-            label="Kluczowe funkcje"
+            label="Funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
           />
@@ -206,7 +206,7 @@ export default function DynamicsFieldService() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          {activeTab === 'overview' && (
+          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -280,7 +280,7 @@ export default function DynamicsFieldService() {
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
                 <p className="text-lg leading-relaxed mb-6">
-                  Microsoft Dynamics 365 Field Service to rozwiązanie, które przynosi firmom znaczące korzyści w zakresie zarządzania usługami terenowymi. Dzięki zastosowaniu nowoczesnych technologii, takich jak AI i IoT, system poprawia kluczowe aspekty operacji serwisowych, zwiększając efektywność i satysfakcję klientów.
+                  Microsoft Dynamics 365 Field Service to rozwiązanie, które wspiera organizacje w dostarczaniu usług na najwyższym poziomie, jednocześnie zwiększając ich efektywność i redukując koszty.
                 </p>
 
                 <h3 className="text-xl font-semibold mb-4">Główne korzyści</h3>
@@ -432,7 +432,141 @@ export default function DynamicsFieldService() {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-[#ff6a00] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#e65f00] cursor-pointer group">
+                <h2 className="text-2xl font-bold">Lepsza komunikacja z klientem</h2>
+                <p className="text-lg leading-relaxed mb-6">
+                  Microsoft Dynamics 365 Field Service znacząco poprawia jakość komunikacji z klientami, zapewniając przejrzystość, szybkość i dostęp do istotnych informacji w czasie rzeczywistym. Dzięki zaawansowanym funkcjom, takim jak automatyzowane powiadomienia i portal samoobsługowy, firmy mogą budować silniejsze relacje z klientami oraz zwiększać ich satysfakcję.
+                </p>
+
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4">Kluczowe funkcje poprawiające komunikację:</h3>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start gap-2">
+                        <div className="text-[#107c10] mt-1"><FaBell /></div>
+                        <span><strong>Automatyzowane powiadomienia:</strong> System automatycznie informuje klientów o terminach wizyt, statusie zleceń oraz zmianach harmonogramu. Dzięki temu klienci są na bieżąco, co zmniejsza liczbę zapytań i poprawia doświadczenie użytkownika.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="text-[#107c10] mt-1"><FaUserCog /></div>
+                        <span><strong>Portal samoobsługowy:</strong> Klienci mogą samodzielnie planować wizyty serwisowe, monitorować status zleceń oraz uzyskiwać dostęp do potrzebnych informacji bez konieczności kontaktu z działem obsługi. To narzędzie zwiększa ich niezależność i wygodę.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4">Korzyści wynikające z lepszej komunikacji:</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                        <div className="flex items-start gap-4">
+                          <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            <FaSmile />
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększenie satysfakcji klientów</h4>
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                              Jasne i regularne komunikaty budują zaufanie, a możliwość samoobsługi sprawia, że proces serwisowy jest bardziej przyjazny dla użytkownika.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                        <div className="flex items-start gap-4">
+                          <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            <FaClock />
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Redukcja liczby zapytań</h4>
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                              Automatyzacja przepływu informacji zmniejsza obciążenie działów obsługi klienta, pozwalając im skupić się na bardziej złożonych problemach.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                        <div className="flex items-start gap-4">
+                          <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            <FaChartLine />
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Poprawa efektywności operacyjnej</h4>
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                              Transparentna komunikacja zmniejsza ryzyko nieporozumień i przyspiesza procesy serwisowe.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
+                  <h2 className="text-2xl font-bold mb-6">Optymalizacja kosztów</h2>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                    Microsoft Dynamics 365 Field Service wspiera firmy w optymalizacji kosztów operacyjnych poprzez inteligentne zarządzanie zasobami i efektywne planowanie tras. Dzięki automatyzacji i zaawansowanym algorytmom system pomaga zminimalizować zbędne wydatki, zwiększając jednocześnie wydajność operacyjną.
+                  </p>
+
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold mb-4">Kluczowe funkcje wspierające redukcję kosztów:</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                        <div className="flex items-start gap-4">
+                          <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            <FaRoute />
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Planowanie tras</h4>
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                              System wykorzystuje algorytmy optymalizacji do wyznaczania najkrótszych i najbardziej efektywnych tras dla techników serwisowych. To pozwala na zmniejszenie kosztów paliwa oraz skrócenie czasu dojazdu.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                        <div className="flex items-start gap-4">
+                          <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            <FaUsers />
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zarządzanie zasobami</h4>
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                              Dynamics 365 Field Service pomaga w lepszym przydzielaniu techników oraz sprzętu, dzięki czemu firmy unikają nadmiernych wydatków na nieefektywne wykorzystanie siły roboczej i materiałów.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="group bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                        <div className="flex items-start gap-4">
+                          <div className="text-[#107c10] text-2xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            <FaCog />
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Predykcyjne utrzymanie</h4>
+                            <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                              Dzięki integracji z IoT system umożliwia przewidywanie awarii i zapobieganie im przed ich wystąpieniem, co pozwala uniknąć kosztownych interwencji naprawczych.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-6">
+                    <h3 className="text-xl font-semibold mb-4">Wysoki zwrot z inwestycji:</h3>
+                    <div className="flex items-start gap-4">
+                      <div className="text-[#107c10] text-2xl pt-1">
+                        <FaChartLine />
+                      </div>
+                      <p className="text-gray-700">
+                        Według badania Forrester Consulting, firmy wdrażające Dynamics 365 Field Service odnotowały zwrot z inwestycji (ROI) na poziomie 346%, co pokazuje realne korzyści finansowe płynące z optymalizacji procesów operacyjnych.
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-lg text-gray-700 leading-relaxed mt-8">
+                    Dzięki inteligentnym funkcjom redukującym koszty, Microsoft Dynamics 365 Field Service stanowi doskonałe rozwiązanie dla firm dążących do maksymalnej efektywności przy jednoczesnej minimalizacji wydatków.
+                  </p>
+                </div>
+
+                <div className="bg-[#ff6a00] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#e65f00] cursor-pointer group mt-8">
                   <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Field Service?</h2>
                   <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
                     Microsoft Dynamics 365 Field Service to zaawansowane rozwiązanie do zarządzania serwisem terenowym, które optymalizuje pracę techników i podnosi jakość obsługi klienta. Dzięki inteligentnym funkcjom planowania, monitorowania i raportowania, organizacje mogą zwiększać efektywność operacyjną i satysfakcję klientów.
@@ -447,9 +581,9 @@ export default function DynamicsFieldService() {
 
               
             </div>
-          )}
+          </div>
 
-          {activeTab === 'features' && (
+          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-8">
               <div>
                 <p className="text-lg leading-relaxed mb-6">
@@ -645,7 +779,7 @@ export default function DynamicsFieldService() {
                           <div>
                             <h4 className="font-semibold mb-2 transition-colors duration-300 group-hover:text-[#107c10]">Raportowanie i analiza</h4>
                             <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
-                              Po zakończeniu zlecenia generowane są automatyczne raporty, które pomagają w analizie efektywności działań.
+                              System generuje raporty podsumowujące, dostępne zarówno dla firmy, jak i klienta.
                             </p>
                           </div>
                         </div>
@@ -921,9 +1055,9 @@ export default function DynamicsFieldService() {
                 </p>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'faq' && (
+          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
             <div className="space-y-8">
               <div className="grid gap-6">
                 {faqData.map((faq, index) => (
@@ -941,7 +1075,7 @@ export default function DynamicsFieldService() {
                 ))}
               </div>
             </div>
-          )}
+          </div>
         </div>
       </DynamicsPageLayout>
     </>

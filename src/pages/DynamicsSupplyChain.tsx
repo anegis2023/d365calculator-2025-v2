@@ -180,22 +180,17 @@ export default function DynamicsSupplyChain() {
         onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
-        {/* Tabs Navigation */}
-        <div className="flex justify-center mb-8 border-b">
+        {/* Tabs */}
+        <div className="flex border-b mb-8">
           <Tab
-            label="Microsoft Dynamics 365 Supply Chain Management"
+            label="Przegląd"
             isActive={activeTab === 'overview'}
             onClick={() => setActiveTab('overview')}
           />
           <Tab
-            label="Możliwości i funkcje"
+            label="Funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
-          />
-          <Tab
-            label="Integracje z innymi produktami Microsoft"
-            isActive={activeTab === 'integrations'}
-            onClick={() => setActiveTab('integrations')}
           />
           <Tab
             label="FAQ"
@@ -206,7 +201,7 @@ export default function DynamicsSupplyChain() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          {activeTab === 'overview' && (
+          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -291,9 +286,9 @@ export default function DynamicsSupplyChain() {
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'features' && (
+          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed">
@@ -429,342 +424,9 @@ export default function DynamicsSupplyChain() {
                 </p>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'integrations' && (
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <p className="text-lg leading-relaxed">
-                  <strong>Microsoft Dynamics 365 Supply Chain Management</strong> bezproblemowo integruje się z innymi rozwiązaniami oferowanymi przez Microsoft, tworząc spójny i wydajny ekosystem wspierający zarządzanie łańcuchem dostaw. Dzięki tym integracjom użytkownicy mogą wykorzystać zaawansowane narzędzia analityczne i automatyzacyjne, które zwiększają efektywność operacyjną oraz ułatwiają podejmowanie decyzji biznesowych.
-                </p>
-
-                <h2 className="text-2xl font-semibold mb-6">Kluczowe produkty i korzyści integracji:</h2>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <div className="space-y-4">
-                      <div className="text-[#107c10] text-3xl">
-                        <FaMicrosoft className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                      </div>
-                      <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                        Microsoft Power Platform
-                      </h3>
-                      <ul className="space-y-3 text-gray-600">
-                        <li>• Możliwość tworzenia niestandardowych aplikacji bez potrzeby zaawansowanego kodowania</li>
-                        <li>• Automatyzacja powtarzalnych procesów, co pozwala oszczędzić czas i zredukować błędy</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <div className="space-y-4">
-                      <div className="text-[#107c10] text-3xl">
-                        <FaChartBar className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                      </div>
-                      <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                        Microsoft Power BI
-                      </h3>
-                      <ul className="space-y-3 text-gray-600">
-                        <li>• Wizualizacja danych w czasie rzeczywistym, co ułatwia analizę i interpretację kluczowych wskaźników wydajności</li>
-                        <li>• Dostęp do szczegółowych raportów wspierających podejmowanie strategicznych decyzji</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <div className="space-y-4">
-                      <div className="text-[#107c10] text-3xl">
-                        <FaCloud className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                      </div>
-                      <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                        Microsoft Azure Data Lake
-                      </h3>
-                      <ul className="space-y-3 text-gray-600">
-                        <li>• Przechowywanie dużych ilości danych w elastyczny i skalowalny sposób</li>
-                        <li>• Wykorzystanie zaawansowanych algorytmów do analizy danych i prognozowania</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-12">
-                  <h2 className="text-2xl font-semibold mb-6">Korzyści dla użytkowników:</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                      <div className="space-y-4">
-                        <div className="text-[#107c10] text-3xl">
-                          <FaChartLine className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                        </div>
-                        <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                          Lepsza analityka
-                        </h3>
-                        <p className="text-gray-600">
-                          Integracje zapewniają dostęp do zaawansowanych narzędzi analitycznych, co pozwala na dokładne monitorowanie procesów i przewidywanie trendów.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                      <div className="space-y-4">
-                        <div className="text-[#107c10] text-3xl">
-                          <FaRobot className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                        </div>
-                        <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                          Automatyzacja procesów
-                        </h3>
-                        <p className="text-gray-600">
-                          Połączenie z produktami Microsoft umożliwia automatyzację wielu zadań, co znacząco zwiększa produktywność i zmniejsza ryzyko błędów ludzkich.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <p className="text-lg leading-relaxed mt-8">
-                  Dzięki integracji z produktami takimi jak Microsoft Power Platform, Microsoft Power BI oraz Microsoft Azure Data Lake, platforma <strong>Microsoft Dynamics 365 Supply Chain Management</strong> staje się wszechstronnym narzędziem dostosowanym do potrzeb nowoczesnych przedsiębiorstw, które cenią innowacyjne i efektywne rozwiązania.
-                </p>
-
-                <div className="mt-16 space-y-8">
-                  <h2 className="text-2xl font-semibold">Microsoft Power Platform</h2>
-                  <p className="text-lg leading-relaxed">
-                    Integracja <strong>Microsoft Power Platform</strong> z <strong>Microsoft Dynamics 365 Supply Chain Management</strong> pozwala na tworzenie niestandardowych aplikacji oraz automatyzację procesów, co znacząco poprawia efektywność operacyjną i umożliwia szybsze reagowanie na zmiany w łańcuchu dostaw. Dzięki tej współpracy użytkownicy mogą korzystać z intuicyjnych narzędzi, które ułatwiają dostosowanie platformy do unikalnych potrzeb biznesowych.
-                  </p>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-6">Kluczowe funkcje integracji:</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaRobot className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Automatyzacja procesów
-                          </h3>
-                          <ul className="space-y-3 text-gray-600">
-                            <li>• Wykorzystanie Power Automate do automatyzacji powtarzalnych zadań, takich jak zatwierdzanie zamówień czy generowanie raportów</li>
-                            <li>• Redukcja błędów ludzkich i przyspieszenie realizacji codziennych operacji</li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaMicrosoft className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Budowa aplikacji
-                          </h3>
-                          <ul className="space-y-3 text-gray-600">
-                            <li>• Tworzenie niestandardowych aplikacji za pomocą Power Apps, bez potrzeby zaawansowanego kodowania</li>
-                            <li>• Możliwość projektowania interfejsów dostosowanych do specyficznych procesów biznesowych</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8">
-                    <h3 className="text-xl font-semibold mb-6">Korzyści dla użytkowników:</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaTools className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Łatwość tworzenia aplikacji
-                          </h3>
-                          <p className="text-gray-600">
-                            Intuicyjne narzędzia umożliwiają szybkie i efektywne wdrażanie niestandardowych rozwiązań w całym przedsiębiorstwie.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaCogs className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Automatyzacja procesów
-                          </h3>
-                          <p className="text-gray-600">
-                            Usprawnienie codziennych operacji dzięki eliminacji ręcznych, czasochłonnych zadań.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-lg leading-relaxed mt-8">
-                    Dzięki integracji z <strong>Microsoft Power Platform</strong>, <strong>Microsoft Dynamics 365 Supply Chain Management</strong> staje się jeszcze bardziej elastycznym i funkcjonalnym narzędziem, pozwalającym firmom skutecznie dostosowywać się do dynamicznie zmieniających się potrzeb rynku.
-                  </p>
-                </div>
-
-                <div className="mt-16 space-y-8">
-                  <h2 className="text-2xl font-semibold">Microsoft Power BI</h2>
-                  <p className="text-lg leading-relaxed">
-                    Integracja <strong>Microsoft Power BI</strong> z <strong>Microsoft Dynamics 365 Supply Chain Management</strong> pozwala na zaawansowaną analizę danych i wizualizację wyników, co wspiera podejmowanie trafnych decyzji biznesowych. Dzięki funkcjom raportowania i analityki biznesowej użytkownicy mają dostęp do kluczowych informacji w czasie rzeczywistym, prezentowanych w przejrzystej i intuicyjnej formie.
-                  </p>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-6">Kluczowe funkcje integracji:</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaChartBar className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Raportowanie
-                          </h3>
-                          <ul className="space-y-3 text-gray-600">
-                            <li>• Tworzenie dynamicznych raportów dostosowanych do specyficznych potrzeb organizacji</li>
-                            <li>• Automatyczna aktualizacja raportów na podstawie bieżących danych z Microsoft Dynamics 365 Supply Chain Management</li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaBrain className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Analityka biznesowa
-                          </h3>
-                          <ul className="space-y-3 text-gray-600">
-                            <li>• Wykorzystanie zaawansowanych narzędzi analitycznych do identyfikacji trendów i wzorców w danych</li>
-                            <li>• Możliwość przeprowadzania szczegółowych analiz na różnych poziomach operacyjnych i strategicznych</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8">
-                    <h3 className="text-xl font-semibold mb-6">Korzyści dla użytkowników:</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaChartLine className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Lepsza analityka danych
-                          </h3>
-                          <p className="text-gray-600">
-                            Umożliwia podejmowanie decyzji opartych na danych dzięki precyzyjnym i aktualnym analizom.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaEye className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Wizualizacja wyników
-                          </h3>
-                          <p className="text-gray-600">
-                            Przejrzyste i interaktywne wykresy oraz dashboardy ułatwiają zrozumienie złożonych danych.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-lg leading-relaxed mt-8">
-                    Dzięki integracji z <strong>Microsoft Power BI</strong>, <strong>Microsoft Dynamics 365 Supply Chain Management</strong> staje się potężnym narzędziem analitycznym, które dostarcza firmom niezbędnych informacji do optymalizacji procesów i poprawy efektywności działania.
-                  </p>
-                </div>
-
-                <div className="mt-16 space-y-8">
-                  <h2 className="text-2xl font-semibold">Microsoft Azure Data Lake</h2>
-                  <p className="text-lg leading-relaxed">
-                    Integracja <strong>Microsoft Azure Data Lake</strong> z <strong>Microsoft Dynamics 365 Supply Chain Management</strong> umożliwia skuteczne zarządzanie i analizę dużych zbiorów danych, co jest kluczowe dla firm operujących w złożonych i dynamicznych środowiskach biznesowych. Platforma pozwala na gromadzenie, przechowywanie i przetwarzanie danych w sposób elastyczny, wspierając decyzje oparte na szczegółowej analizie.
-                  </p>
-
-                  <div>
-                    <h3 className="text-xl font-semibold mb-6">Kluczowe funkcje integracji:</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaDatabase className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Analiza dużych zbiorów danych
-                          </h3>
-                          <ul className="space-y-3 text-gray-600">
-                            <li>• Przechowywanie i przetwarzanie danych z różnych źródeł, w tym danych historycznych i bieżących</li>
-                            <li>• Obsługa zaawansowanych narzędzi analitycznych do identyfikacji wzorców, prognozowania i oceny wydajności</li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaCloud className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Wsparcie dla big data
-                          </h3>
-                          <ul className="space-y-3 text-gray-600">
-                            <li>• Skalowalne środowisko pozwalające na efektywną obsługę rosnących wolumenów danych</li>
-                            <li>• Możliwość integracji z innymi narzędziami analitycznymi, takimi jak Microsoft Power BI, w celu lepszej wizualizacji wyników</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8">
-                    <h3 className="text-xl font-semibold mb-6">Korzyści dla użytkowników:</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaSearchPlus className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Efektywna analiza danych
-                          </h3>
-                          <p className="text-gray-600">
-                            Umożliwia szczegółowe badanie dużych zbiorów danych, co wspiera optymalizację procesów i identyfikację obszarów do poprawy.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                        <div className="space-y-4">
-                          <div className="text-[#107c10] text-3xl">
-                            <FaServer className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" />
-                          </div>
-                          <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">
-                            Wsparcie dla big data
-                          </h3>
-                          <p className="text-gray-600">
-                            Zapewnia infrastrukturę potrzebną do efektywnego zarządzania i analizy danych o dużej skali, co pozwala firmom lepiej dostosować się do wymagań rynkowych.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-lg leading-relaxed mt-8">
-                    Dzięki integracji z <strong>Microsoft Azure Data Lake</strong>, <strong>Microsoft Dynamics 365 Supply Chain Management</strong> zyskuje możliwość przekształcenia danych w cenne informacje, wspierając firmy w podejmowaniu strategicznych decyzji i zwiększaniu efektywności operacyjnej.
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'faq' && (
+          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
             <div className="space-y-8">
               <div className="grid gap-6">
                 {faqData.map((faq, index) => (
@@ -782,7 +444,7 @@ export default function DynamicsSupplyChain() {
                 ))}
               </div>
             </div>
-          )}
+          </div>
         </div>
       </DynamicsPageLayout>
     </>

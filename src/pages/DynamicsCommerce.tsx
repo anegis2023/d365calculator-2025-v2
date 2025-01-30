@@ -180,8 +180,8 @@ export default function DynamicsCommerce() {
         onAddToBasket={!isModuleInBasket ? handleAddToBasket : undefined}
       />
       <DynamicsPageLayout>
-        {/* Tabs Navigation */}
-        <div className="flex justify-center mb-8 border-b">
+        {/* Tabs */}
+        <div className="flex border-b mb-8">
           <Tab
             label="Przegląd"
             isActive={activeTab === 'overview'}
@@ -201,7 +201,7 @@ export default function DynamicsCommerce() {
 
         {/* Content */}
         <div className="prose max-w-none">
-          {activeTab === 'overview' && (
+          <div className={`tab-content ${activeTab === 'overview' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="overview-tab">
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
@@ -279,10 +279,10 @@ export default function DynamicsCommerce() {
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'features' && (
-            <div className="space-y-12">
+          <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
+            <div className="space-y-8">
               <h2 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Dynamics 365 Commerce</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
@@ -296,9 +296,9 @@ export default function DynamicsCommerce() {
                 ))}
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'faq' && (
+          <div className={`tab-content ${activeTab === 'faq' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="faq-tab">
             <div className="space-y-8">
               <div className="grid gap-6">
                 {faqData.map((faq, index) => (
@@ -316,7 +316,7 @@ export default function DynamicsCommerce() {
                 ))}
               </div>
             </div>
-          )}
+          </div>
         </div>
       </DynamicsPageLayout>
     </>
