@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaTools, FaMapMarkedAlt, FaCalendarAlt, FaMobile, FaChartLine, FaCog, FaUsers, FaRobot, FaMicrosoft, FaBell, FaLaptopCode, FaDesktop, FaMicrochip, FaShieldAlt, FaSmile, FaCalendarCheck, FaChartBar, FaFileAlt, FaUserCog, FaClipboardCheck, FaClock, FaStar, FaWrench, FaHardHat, FaHammer, FaPencilAlt, FaBrain, FaCogs, FaLightbulb, FaComments, FaPiggyBank, FaRoute } from 'react-icons/fa';
+import { FaTools, FaMapMarkedAlt, FaCalendarAlt, FaMobile, FaChartLine, FaCog, FaUsers, FaRobot, FaMicrosoft, FaBell, FaLaptopCode, FaDesktop, FaMicrochip, FaShieldAlt, FaSmile, FaCalendarCheck, FaChartBar, FaFileAlt, FaUserCog, FaClipboardCheck, FaClock, FaStar, FaWrench, FaHardHat, FaHammer, FaPencilAlt, FaBrain, FaCogs, FaLightbulb, FaComments, FaPiggyBank, FaRoute, FaGlasses } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -196,6 +196,11 @@ export default function DynamicsFieldService() {
             label="Funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
+          />
+          <Tab
+            label="Integracje"
+            isActive={activeTab === 'integrations'}
+            onClick={() => setActiveTab('integrations')}
           />
           <Tab
             label="FAQ"
@@ -1052,6 +1057,85 @@ export default function DynamicsFieldService() {
 
                 <p className="text-lg leading-relaxed mt-6">
                   Wykorzystanie AI w Dynamics 365 Field Service to krok w stronę nowoczesnych i bardziej zrównoważonych operacji serwisowych, dostosowanych do potrzeb dynamicznego rynku.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className={`tab-content ${activeTab === 'integrations' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="integrations-tab">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <p className="text-lg leading-relaxed">
+                  Microsoft Dynamics 365 Field Service oferuje szerokie możliwości integracji z nowoczesnymi technologiami, które wspierają automatyzację procesów, poprawiają jakość usług i zwiększają produktywność zespołów serwisowych. Dzięki połączeniu z Microsoft Power Apps, IoT oraz Microsoft HoloLens, organizacje mogą jeszcze lepiej zarządzać swoimi operacjami serwisowymi.
+                </p>
+
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8">
+                  <h2 className="text-2xl font-bold mb-6">Kluczowe integracje</h2>
+                  <div className="grid md:grid-cols-1 gap-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-start gap-4">
+                        <div className="text-[#107c10] text-3xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                          <FaMicrosoft />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Integracja z Microsoft Power Apps</h3>
+                          <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                            Umożliwia tworzenie niestandardowych aplikacji mobilnych i desktopowych, które usprawniają przepływy pracy i umożliwiają łatwy dostęp do danych.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-start gap-4">
+                        <div className="text-[#107c10] text-3xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                          <FaRobot />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Integracja z IoT</h3>
+                          <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                            Pozwala na monitorowanie urządzeń w czasie rzeczywistym i automatyczne wykrywanie usterek, co wspiera predykcyjne utrzymanie ruchu.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-start gap-4">
+                        <div className="text-[#107c10] text-3xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                          <FaGlasses />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Integracja z Microsoft HoloLens</h3>
+                          <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                            Umożliwia technikom korzystanie z rozszerzonej rzeczywistości (AR) do zdalnej współpracy i interaktywnej diagnostyki urządzeń.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8 mt-8">
+                  <h2 className="text-2xl font-bold mb-6">Korzyści płynące z integracji</h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Zwiększona produktywność</h3>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Automatyzacja i łatwiejszy dostęp do kluczowych danych pozwala pracownikom działać szybciej i efektywniej.
+                      </p>
+                    </div>
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">Poprawiona jakość usług</h3>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Lepsze zarządzanie informacjami i zdalne wsparcie techniczne skracają czas realizacji zleceń i zwiększają zadowolenie klientów.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-lg leading-relaxed mt-6">
+                  Dzięki tym integracjom Microsoft Dynamics 365 Field Service staje się wszechstronnym rozwiązaniem wspierającym nowoczesne podejście do zarządzania usługami w terenie.
                 </p>
               </div>
             </div>
