@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaShoppingCart, FaUsers, FaBoxes, FaStore, FaChartLine, FaMicrosoft } from 'react-icons/fa';
+import { FaShoppingCart, FaUsers, FaBoxes, FaStore, FaChartLine, FaMicrosoft, FaTshirt, FaLaptop, FaBuilding } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -41,7 +41,7 @@ const Tab: React.FC<{
         : 'text-gray-500'
     }`}
   >
-    {label}
+    <h2 className="text-inherit font-inherit m-0">{label}</h2>
   </button>
 );
 
@@ -183,12 +183,12 @@ export default function DynamicsCommerce() {
         {/* Tabs Navigation */}
         <div className="flex justify-center mb-8 border-b">
           <Tab
-            label="Przegląd"
+            label="Microsoft Dynamics 365 Commerce"
             isActive={activeTab === 'overview'}
             onClick={() => setActiveTab('overview')}
           />
           <Tab
-            label="Funkcje"
+            label="Kluczowe funkcje"
             isActive={activeTab === 'features'}
             onClick={() => setActiveTab('features')}
           />
@@ -207,7 +207,9 @@ export default function DynamicsCommerce() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                    Handel, zarówno tradycyjny, jak i cyfrowy, zmienia się w dynamicznym tempie. Firmy muszą sprostać rosnącym oczekiwaniom klientów, zarządzać złożonymi procesami wielokanałowymi i zapewnić doskonałe doświadczenia na każdym etapie podróży zakupowej. Microsoft Dynamics 365 Commerce to nowoczesna platforma, która wspiera organizacje w tworzeniu spójnych, personalizowanych i skutecznych strategii handlowych, niezależnie od kanału sprzedaży. System pomaga w integracji sprzedaży online i offline, umożliwiając lepszą obsługę klientów oraz optymalizację operacji biznesowych. Dzięki zaawansowanym narzędziom analitycznym pozwala również przewidywać trendy i dostosowywać działania do dynamicznie zmieniającego się rynku.
+                    Microsoft Dynamics 365 Commerce to kompleksowe rozwiązanie dla nowoczesnego handlu detalicznego, które pozwala firmom zarządzać sprzedażą wielokanałową, personalizować doświadczenia klientów i optymalizować operacje biznesowe. Jest częścią ekosystemu Microsoft Dynamics 365, co zapewnia jego pełną integrację z innymi narzędziami biznesowymi, takimi jak Microsoft Power Platform, Microsoft Teams czy Azure AI.
+
+Dzięki jednolitemu środowisku sprzedaży firmy mogą połączyć swoje sklepy stacjonarne, e-commerce, marketplace'y, aplikacje mobilne oraz centra obsługi klienta, tworząc spójny ekosystem sprzedaży. Wbudowane funkcje analizy danych i sztucznej inteligencji umożliwiają lepsze zrozumienie klientów, przewidywanie ich potrzeb i oferowanie spersonalizowanych doświadczeń.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -226,19 +228,104 @@ export default function DynamicsCommerce() {
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Kluczowe wyzwania w handlu detalicznym</h2>
+                <h2 className="text-2xl font-bold">Kluczowe możliwości Microsoft Dynamics 365 Commerce</h2>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-lg font-semibold">1. Zintegrowana sprzedaż wielokanałowa</h3>
+                    <ul className="list-disc pl-6 space-y-2">
+                      <li>Zapewnia spójne doświadczenia zakupowe w sklepach stacjonarnych, online i mobilnych.</li>
+                      <li>Obsługuje różne modele sprzedaży, w tym B2C, B2B oraz D2C (direct-to-consumer).</li>
+                      <li>Pozwala na synchronizację zamówień, płatności i dostępności produktów w czasie rzeczywistym.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold">2. Personalizacja doświadczeń klientów</h3>
+                    <ul className="list-disc pl-6 space-y-2">
+                      <li>Wykorzystuje zaawansowaną analitykę i sztuczną inteligencję, aby dostosowywać ofertę do indywidualnych preferencji klientów.</li>
+                      <li>Umożliwia segmentację klientów i automatyczne rekomendacje produktów oparte na ich historii zakupów.</li>
+                      <li>Obsługuje programy lojalnościowe i promocje dostosowane do potrzeb klientów.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold">3. Centralne zarządzanie produktami i zapasami</h3>
+                    <ul className="list-disc pl-6 space-y-2">
+                      <li>Umożliwia spójne zarządzanie katalogiem produktów w różnych kanałach sprzedaży.</li>
+                      <li>Synchronizuje stany magazynowe, aby uniknąć błędów wynikających z nieaktualnych informacji o dostępności towarów.</li>
+                      <li>Ułatwia zarządzanie cenami, promocjami i rabatami w skali globalnej.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold">4. Optymalizacja operacji biznesowych</h3>
+                    <ul className="list-disc pl-6 space-y-2">
+                      <li>Automatyzuje procesy związane z realizacją zamówień, logistyką i zwrotami.</li>
+                      <li>Integruje się z systemami ERP i CRM, umożliwiając pełny wgląd w dane dotyczące klientów i operacji biznesowych.</li>
+                      <li>Obsługuje wielowalutowe i wielojęzyczne transakcje, co pozwala na łatwą ekspansję na nowe rynki.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold">5. Bezproblemowa integracja z ekosystemem Microsoft</h3>
+                    <p className="text-lg leading-relaxed">Zapewnia pełną kompatybilność z innymi aplikacjami Microsoft, w tym:</p>
+                    <ul className="list-disc pl-6 space-y-2">
+                      <li>Dynamics 365 Supply Chain Management – umożliwia efektywne zarządzanie łańcuchem dostaw.</li>
+                      <li>Microsoft Power BI – dostarcza zaawansowane raporty i analizy sprzedaży.</li>
+                      <li>Microsoft Azure AI – wykorzystuje sztuczną inteligencję do automatyzacji i optymalizacji działań sprzedażowych.</li>
+                      <li>Microsoft Teams – wspiera komunikację i współpracę zespołów odpowiedzialnych za sprzedaż i obsługę klientów.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold">Dla kogo jest Microsoft Dynamics 365 Commerce?</h2>
                 <p className="text-lg leading-relaxed">
-                  Współczesny handel wiąże się z wieloma wyzwaniami, które wymagają innowacyjnych rozwiązań:
+                  Microsoft Dynamics 365 Commerce to rozwiązanie dla przedsiębiorstw każdej wielkości, które chcą zwiększyć efektywność sprzedaży, poprawić obsługę klienta i zoptymalizować procesy biznesowe. System sprawdzi się w branżach takich jak:
                 </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Zapewnienie spójnego doświadczenia klienta w wielu kanałach (sklepy stacjonarne, online, aplikacje mobilne).</li>
-                  <li>Brak centralizacji danych o klientach i ich zakupach.</li>
-                  <li>Złożoność procesów logistycznych i zarządzania zapasami.</li>
-                  <li>Rosnąca konkurencja na rynku e-commerce i konieczność wyróżnienia się ofertą.</li>
-                </ul>
-                <p className="text-lg leading-relaxed">
-                  Dynamics 365 Commerce pomaga firmom skutecznie rozwiązywać te problemy, dostarczając narzędzia do kompleksowego zarządzania operacjami handlowymi.
-                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="text-3xl text-[#107c10] group-hover:scale-110 transition-transform duration-300">
+                        <FaStore />
+                      </div>
+                      <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">Handel detaliczny i e-commerce</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Usprawnia sprzedaż w różnych kanałach i zapewnia płynne zarządzanie produktami.</p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="text-3xl text-[#107c10] group-hover:scale-110 transition-transform duration-300">
+                        <FaTshirt />
+                      </div>
+                      <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">Moda i dobra luksusowe</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Umożliwia precyzyjną personalizację oferty dla klientów premium.</p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="text-3xl text-[#107c10] group-hover:scale-110 transition-transform duration-300">
+                        <FaLaptop />
+                      </div>
+                      <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">Elektronika użytkowa i AGD</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Pozwala na efektywne zarządzanie katalogami produktów i realizację zamówień w wielu kanałach.</p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="text-3xl text-[#107c10] group-hover:scale-110 transition-transform duration-300">
+                        <FaBuilding />
+                      </div>
+                      <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">Sprzedaż B2B</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Ułatwia obsługę dużych zamówień i zarządzanie relacjami z klientami biznesowymi.</p>
+                  </div>
+                </div>
               </div>
 
               <div className="space-y-6">
