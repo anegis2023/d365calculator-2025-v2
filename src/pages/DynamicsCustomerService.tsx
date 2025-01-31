@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaHeadset, FaUser, FaCogs, FaRobot, FaBook, FaMicrosoft } from 'react-icons/fa';
+import { FaHeadset, FaUser, FaCogs, FaRobot, FaBook, FaMicrosoft, FaTicketAlt, FaComments, FaUserCog, FaChartLine, FaTools, FaEnvelope, FaPhone, FaCommentDots, FaHashtag, FaSms, FaUserCircle } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -121,7 +121,8 @@ export default function DynamicsCustomerService() {
   const faqData = [
     {
       question: "Czym jest Microsoft Dynamics 365 Customer Service?",
-      answer: "Microsoft Dynamics 365 Customer Service to kompleksowe rozwiązanie do obsługi klienta, które umożliwia firmom dostarczanie spersonalizowanego wsparcia poprzez wiele kanałów komunikacji, automatyzację procesów i wykorzystanie sztucznej inteligencji."
+      answer: "Microsoft Dynamics 365 Customer Service to kompleksowe rozwiązanie do obsługi klienta, które umożliwia organizacjom efektywne zarządzanie obsługą klienta. Dzięki wielokanałowej komunikacji, inteligentnej automatyzacji i ścisłej integracji z innymi produktami Microsoft, firmy mogą podnieść jakość swoich usług, zwiększyć satysfakcję klientów i zoptymalizować wewnętrzne procesy."
+
     },
     {
       question: "Jakie są główne funkcje Dynamics 365 Customer Service?",
@@ -182,21 +183,27 @@ export default function DynamicsCustomerService() {
       <DynamicsPageLayout>
         {/* Tabs Navigation */}
         <div className="flex justify-center mb-8 border-b">
-          <Tab
-            label="Przegląd"
-            isActive={activeTab === 'overview'}
-            onClick={() => setActiveTab('overview')}
-          />
-          <Tab
-            label="Funkcje"
-            isActive={activeTab === 'features'}
-            onClick={() => setActiveTab('features')}
-          />
-          <Tab
-            label="FAQ"
-            isActive={activeTab === 'faq'}
-            onClick={() => setActiveTab('faq')}
-          />
+          <h2>
+            <Tab
+              label="Microsoft Dynamics 365 Customer Service"
+              isActive={activeTab === 'overview'}
+              onClick={() => setActiveTab('overview')}
+            />
+          </h2>
+          <h2>
+            <Tab
+              label="Funkcje"
+              isActive={activeTab === 'features'}
+              onClick={() => setActiveTab('features')}
+            />
+          </h2>
+          <h2>
+            <Tab
+              label="FAQ"
+              isActive={activeTab === 'faq'}
+              onClick={() => setActiveTab('faq')}
+            />
+          </h2>
         </div>
 
         {/* Content */}
@@ -207,7 +214,9 @@ export default function DynamicsCustomerService() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                    Współczesny klient oczekuje nie tylko produktów najwyższej jakości, ale również obsługi, która sprosta jego potrzebom i oczekiwaniom. W dynamicznym środowisku biznesowym firmy muszą szybko reagować na pytania klientów, rozwiązywać problemy i budować długotrwałe relacje oparte na zaufaniu. Takim narzędziem jest Microsoft Dynamics 365 Customer Service – zaawansowana platforma, która umożliwia firmom dostarczanie spersonalizowanej, efektywnej i niezawodnej obsługi klienta.
+                    Microsoft Dynamics 365 Customer Service to zaawansowane, chmurowe rozwiązanie opracowane przez Microsoft, które umożliwia organizacjom efektywne zarządzanie obsługą klienta. Dzięki wielokanałowej komunikacji, inteligentnej automatyzacji i ścisłej integracji z innymi produktami Microsoft, firmy mogą podnieść jakość swoich usług, zwiększyć satysfakcję klientów i zoptymalizować wewnętrzne procesy.
+
+Rozwiązanie jest skalowalne, co oznacza, że mogą z niego korzystać zarówno małe firmy, jak i duże przedsiębiorstwa o złożonych strukturach obsługi klienta. Oparte na chmurze środowisko gwarantuje wysoką dostępność, bezpieczeństwo danych i możliwość dostępu do systemu z dowolnego miejsca.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -226,62 +235,241 @@ export default function DynamicsCustomerService() {
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Kluczowe wyzwania w obsłudze klienta</h2>
-                <p>Zanim przejdziemy do omówienia funkcji Dynamics 365 Customer Service, warto zrozumieć, jakie wyzwania stoją przed współczesnymi organizacjami:</p>
+                <h2 className="text-2xl font-bold text-left">Kluczowe cechy</h2>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Klienci oczekują szybkich i spersonalizowanych odpowiedzi w różnych kanałach komunikacji.</li>
-                  <li>Rozproszone dane o klientach utrudniają skuteczne zarządzanie ich zgłoszeniami.</li>
-                  <li>Brak narzędzi do automatyzacji procesów zwiększa czas i koszty obsługi klienta.</li>
-                  <li>Organizacje potrzebują systemu, który pozwoli im przewidywać problemy klientów i działać proaktywnie.</li>
+                  <li><span className="font-semibold">Wielokanałowa komunikacja</span> – Obsługa klientów poprzez różne kanały, w tym e-mail, telefon, czat na żywo i media społecznościowe, co zapewnia wygodny dostęp do wsparcia.</li>
+                  <li><span className="font-semibold">Integracja z ekosystemem Microsoft</span> – Bezproblemowe połączenie z Microsoft Teams, Power BI i innymi narzędziami ułatwia współpracę między zespołami oraz analizę kluczowych wskaźników wydajności.</li>
+                  <li><span className="font-semibold">Zaawansowane AI, w tym Copilot</span> – Automatyzacja procesów, analiza zapytań oraz rekomendacje w czasie rzeczywistym pomagają pracownikom szybciej i skuteczniej odpowiadać na potrzeby klientów.</li>
+                  <li><span className="font-semibold">Chmurowe środowisko</span> – Skalowalna infrastruktura zapewnia elastyczność, bezpieczeństwo i możliwość pracy zdalnej.</li>
+                  <li><span className="font-semibold">Lepsza personalizacja obsługi</span> – Gromadzenie i analiza danych o klientach pozwala na dostosowanie usług do ich indywidualnych preferencji i historii interakcji.</li>
                 </ul>
-                <p>Dynamics 365 Customer Service oferuje rozwiązania, które pomagają firmom sprostać tym wyzwaniom.</p>
+                <p className="text-lg leading-relaxed text-left">
+                  Dzięki Microsoft Dynamics 365 Customer Service firmy mogą zoptymalizować procesy obsługi klienta, podnieść jakość interakcji i zwiększyć efektywność zespołów. Jest to kluczowe narzędzie dla organizacji, które dążą do budowania długoterminowych relacji z klientami oraz zwiększania ich lojalności.
+                </p>
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
+                <div className="text-left space-y-4">
+                  <h2 className="text-3xl font-bold">Zarządzanie obsługą klienta</h2>
+                  <p className="text-lg leading-relaxed text-left">
+                    Microsoft Dynamics 365 Customer Service to kompleksowe narzędzie do zarządzania obsługą klienta, które umożliwia firmom skuteczne organizowanie i monitorowanie interakcji z klientami. Dzięki zaawansowanemu systemowi zarządzania przypadkami oraz wielokanałowej komunikacji, przedsiębiorstwa mogą szybko reagować na potrzeby klientów i zapewniać im spójne doświadczenia na każdym etapie kontaktu.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <FaTicketAlt className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Zarządzanie przypadkami</h3>
+                    </div>
+                    <p className="text-gray-600">Możliwość rejestrowania, monitorowania i rozwiązywania zgłoszeń klientów w sposób uporządkowany, zapewniając pełną historię interakcji.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <FaComments className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Wielokanałowa komunikacja</h3>
+                    </div>
+                    <p className="text-gray-600">Obsługa klientów za pośrednictwem różnych kanałów, takich jak e-mail, telefon, czat na żywo i media społecznościowe, co zapewnia wygodny dostęp do wsparcia.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <FaUserCog className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Automatyczne przypisywanie zgłoszeń</h3>
+                    </div>
+                    <p className="text-gray-600">System inteligentnie kieruje zapytania klientów do odpowiednich agentów na podstawie kompetencji, priorytetu i obciążenia zespołu.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <FaBook className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Baza wiedzy</h3>
+                    </div>
+                    <p className="text-gray-600">Dostęp do rozbudowanej bazy artykułów i poradników umożliwia agentom szybkie znajdowanie odpowiedzi na najczęściej zadawane pytania.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <FaChartLine className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Monitorowanie wskaźników jakości obsługi</h3>
+                    </div>
+                    <p className="text-gray-600">Integracja z Power BI pozwala analizować kluczowe metryki, takie jak czas odpowiedzi, średni czas rozwiązania zgłoszenia i poziom satysfakcji klientów.</p>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <FaTools className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Automatyzacja procesów</h3>
+                    </div>
+                    <p className="text-gray-600">Wykorzystanie reguł biznesowych i przepływów pracy do przyspieszenia realizacji zadań i eliminacji manualnych operacji.</p>
+                  </div>
+                </div>
+                
+                <p className="text-lg leading-relaxed text-left">
+                  Dzięki tym funkcjom firmy mogą efektywnie zarządzać interakcjami z klientami, minimalizować czas reakcji oraz podnosić jakość świadczonych usług, co przekłada się na wyższą lojalność i zadowolenie klientów.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold text-left">Wielokanałowa komunikacja</h2>
+                <p className="text-lg leading-relaxed">
+                  Microsoft Dynamics 365 Customer Service zapewnia wielokanałową komunikację, umożliwiając firmom obsługę klientów przez różne kanały w jednym, zintegrowanym systemie. Dzięki temu klienci mogą kontaktować się w najwygodniejszy dla siebie sposób, a firmy mogą zapewnić spójne i szybkie wsparcie bez względu na wybraną metodę komunikacji.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaEnvelope className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">E-mail</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Automatyczna obsługa zapytań e-mailowych z możliwością kategoryzacji, przypisywania do agentów i śledzenia historii wiadomości.
+                    </p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaPhone className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Telefon</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Integracja z systemami telefonicznymi umożliwia odbieranie i prowadzenie rozmów bezpośrednio w interfejsie Dynamics 365.
+                    </p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaCommentDots className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Czat na żywo</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Możliwość natychmiastowej interakcji z klientami poprzez czat na stronie internetowej lub w aplikacjach mobilnych.
+                    </p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaHashtag className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Media społecznościowe</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Obsługa zgłoszeń i zapytań klientów z Facebooka, Twittera, WhatsApp i innych platform bezpośrednio w systemie.
+                    </p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaSms className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">SMS</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Wysyłanie powiadomień i odpowiedzi na zapytania klientów przez wiadomości tekstowe.
+                    </p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaUserCircle className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Portale samoobsługowe</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Klienci mogą samodzielnie wyszukiwać rozwiązania w bazie wiedzy i zgłaszać problemy bez potrzeby kontaktu z agentem.
+                    </p>
+                  </div>
+                </div>
+                
+                <p className="text-lg leading-relaxed">
+                  Dzięki scentralizowanemu zarządzaniu komunikacją, agenci mają pełny wgląd w historię interakcji klienta, niezależnie od używanego kanału. To pozwala na szybsze i bardziej spersonalizowane wsparcie, zwiększając satysfakcję i lojalność klientów.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold">Integracja z narzędziami Microsoft</h2>
+                <p className="text-lg leading-relaxed">
+                  Microsoft Dynamics 365 Customer Service jest w pełni zintegrowane z innymi narzędziami Microsoft, co umożliwia firmom skuteczne zarządzanie obsługą klienta, lepszą analizę danych i automatyzację procesów. Dzięki ścisłej współpracy z ekosystemem Microsoft, zespoły mogą pracować efektywniej, bez konieczności przełączania się między różnymi aplikacjami.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaMicrosoft className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Microsoft Teams</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Umożliwia agentom szybkie konsultacje z ekspertami w firmie, współpracę w czasie rzeczywistym oraz organizowanie wideokonferencji bezpośrednio w interfejsie Dynamics 365.
+                    </p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaChartLine className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Power BI</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Dostarcza zaawansowane raportowanie i analitykę, umożliwiając monitorowanie wydajności obsługi klienta oraz identyfikowanie trendów na podstawie rzeczywistych danych.
+                    </p>
+                  </div>
+                  
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaCogs className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Power Apps</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Pozwala na tworzenie niestandardowych aplikacji i rozszerzeń dostosowanych do specyficznych potrzeb organizacji, bez konieczności zaawansowanego kodowania.
+                    </p>
+                  </div>
+                </div>
+                
+                <p className="text-lg leading-relaxed">
+                  Integracja tych narzędzi pozwala firmom usprawnić przepływ pracy, zwiększyć przejrzystość danych i zautomatyzować powtarzalne procesy, co prowadzi do wyższej jakości obsługi klienta i większej efektywności operacyjnej.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold text-left">Korzyści dla organizacji</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">
                       1. Poprawa satysfakcji klientów
                     </h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki spersonalizowanej obsłudze i szybkiemu rozwiązywaniu problemów klienci czują się docenieni i bardziej lojalni wobec marki.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">2. Redukcja kosztów obsługi klienta</h3>
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">2. Redukcja kosztów obsługi klienta</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Automatyzacja procesów i możliwość samodzielnego rozwiązywania problemów przez klientów pozwala obniżyć koszty operacyjne.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">3. Zwiększenie efektywności zespołu</h3>
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">3. Zwiększenie efektywności zespołu</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Pracownicy mają dostęp do pełnych danych o klientach i zaawansowanych narzędzi, co pozwala im pracować szybciej i skuteczniej.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">4. Proaktywne podejście do obsługi</h3>
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">4. Proaktywne podejście do obsługi</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">Dzięki AI i analizie danych firmy mogą przewidywać potrzeby klientów i rozwiązywać problemy, zanim one się pojawią.</p>
                   </div>
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">5. Skalowalność i elastyczność</h3>
+                    <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#107c10]">5. Skalowalność i elastyczność</h3>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">System można dostosować do specyficznych potrzeb firmy, co sprawia, że jest idealnym rozwiązaniem zarówno dla małych, jak i dużych organizacji.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-6">
-                <div className="bg-[#8c1f91] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#7a1b7e] cursor-pointer group">
-                  <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2">Dlaczego warto wybrać Dynamics 365 Customer Service?</h2>
-                  <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
-                    Microsoft Dynamics 365 Customer Service to zaawansowana platforma, która umożliwia firmom dostarczanie wyjątkowej obsługi klienta. Dzięki spersonalizowanemu podejściu, automatyzacji i integracji z innymi narzędziami Microsoft, organizacje mogą budować długotrwałe relacje z klientami, zwiększać ich satysfakcję i osiągać lepsze wyniki biznesowe.
-                  </p>
-                  <p className="text-lg leading-relaxed opacity-90 mt-4 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2">
-                    Zainwestuj w Dynamics 365 Customer Service, aby zapewnić swoim klientom obsługę na najwyższym poziomie i wyróżnić swoją firmę na tle konkurencji.
-                  </p>
-                </div>
+              <div className="bg-[#8c1f91] text-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] hover:bg-[#7a1b7e] cursor-pointer group">
+                <h2 className="text-2xl font-bold mb-4 transform transition-transform duration-500 group-hover:translate-x-2 text-left">Dlaczego warto wybrać Dynamics 365 Customer Service?</h2>
+                <p className="text-lg leading-relaxed opacity-90 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2 text-left">
+                  Microsoft Dynamics 365 Customer Service to zaawansowana platforma, która umożliwia firmom dostarczanie wyjątkowej obsługi klienta. Dzięki spersonalizowanemu podejściu, automatyzacji i integracji z innymi narzędziami Microsoft, organizacje mogą budować długoterminowe relacje z klientami, zwiększać ich satysfakcję i osiągać lepsze wyniki biznesowe.
+                </p>
+                <p className="text-lg leading-relaxed opacity-90 mt-4 transform transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-2 text-left">
+                  Zainwestuj w Dynamics 365 Customer Service, aby zapewnić swoim klientom obsługę na najwyższym poziomie i wyróżnić swoją firmę na tle konkurencji.
+                </p>
               </div>
             </div>
           </div>
 
           <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-12">
-              <h2 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Dynamics 365 Customer Service</h2>
+              <h2 className="text-3xl font-bold text-left mb-8">Funkcje, które wyróżniają Dynamics 365 Customer Service</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
                   <Feature
@@ -314,6 +502,9 @@ export default function DynamicsCustomerService() {
                 ))}
               </div>
             </div>
+          </div>
+
+          <div className="mt-12 space-y-8">
           </div>
         </div>
       </DynamicsPageLayout>
