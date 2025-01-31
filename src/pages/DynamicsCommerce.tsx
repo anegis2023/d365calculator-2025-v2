@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaShoppingCart, FaUsers, FaBoxes, FaStore, FaChartLine, FaMicrosoft, FaTshirt, FaLaptop, FaBuilding } from 'react-icons/fa';
+import { FaShoppingCart, FaUsers, FaBoxes, FaStore, FaChartLine, FaMicrosoft, FaTshirt, FaLaptop, FaBuilding, FaBullseye, FaComments, FaHeadset, FaUserFriends, FaTools, FaRobot } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -45,30 +45,6 @@ const Tab: React.FC<{
   </button>
 );
 
-// Feature component
-const Feature: React.FC<{
-  icon: React.ReactNode;
-  number: number;
-  title: string;
-  description: string;
-}> = ({ icon, number, title, description }) => (
-  <div className="group bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-    <div className="flex items-start gap-4">
-      <div className="text-[#107c10] text-3xl pt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-        {icon}
-      </div>
-      <div>
-        <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">
-          {number}. {title}
-        </h3>
-        <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
-          {description}
-        </p>
-      </div>
-    </div>
-  </div>
-);
-
 export default function DynamicsCommerce() {
   const [activeTab, setActiveTab] = useState('overview');
   const { selectedModules, addModule } = useModuleBasket();
@@ -85,87 +61,101 @@ export default function DynamicsCommerce() {
     }
   };
 
-  const features = [
-    {
-      icon: <FaShoppingCart />,
-      title: "Wielokanałowe zarządzanie sprzedażą",
-      description: "Platforma umożliwia integrację różnych kanałów sprzedaży, zapewniając klientom spójne doświadczenia zakupowe, niezależnie od miejsca zakupu."
+  const features = {
+    introduction: {
+      title: "Microsoft Dynamics 365 Commerce",
+      description: "Microsoft Dynamics 365 Commerce oferuje zaawansowane funkcje sprzedażowe, które pomagają firmom zwiększyć efektywność operacyjną, poprawić obsługę klientów i usprawnić zarządzanie procesami handlowymi. System zapewnia pełną integrację z innymi produktami Microsoft, co umożliwia płynne zarządzanie wszystkimi aspektami sprzedaży i operacji biznesowych."
     },
-    {
-      icon: <FaUsers />,
-      title: "Personalizacja doświadczeń klienta",
-      description: "Dzięki dostępowi do danych o preferencjach, historii zakupów i zachowaniach klientów, system pozwala tworzyć spersonalizowane oferty i kampanie marketingowe."
-    },
-    {
-      icon: <FaBoxes />,
-      title: "Zarządzanie zapasami i logistyką",
-      description: "Dynamics 365 Commerce zapewnia pełną kontrolę nad stanami magazynowymi i procesami logistycznymi, co minimalizuje ryzyko braków produktowych i usprawnia dostawy."
-    },
-    {
-      icon: <FaStore />,
-      title: "Integracja sprzedaży online i offline",
-      description: "System łączy dane ze sklepów stacjonarnych i platform e-commerce, umożliwiając centralne zarządzanie operacjami i lepszą obsługę klientów."
-    },
-    {
-      icon: <FaChartLine />,
-      title: "Zaawansowana analityka",
-      description: "Wbudowane narzędzia analityczne wspierane przez AI umożliwiają monitorowanie wskaźników sprzedaży, zachowań klientów i skuteczności kampanii w czasie rzeczywistym."
-    },
-    {
-      icon: <FaMicrosoft />,
-      title: "Integracja z ekosystemem Microsoft",
-      description: "Pełna kompatybilność z aplikacjami Microsoft, takimi jak Power BI, Dynamics 365 Supply Chain Management czy Microsoft Teams, pozwala na efektywną współpracę między działami i usprawnienie procesów."
+    mainFeatures: [
+      {
+        icon: <FaStore />,
+        title: "Zintegrowane rozwiązania sprzedażowe",
+        description: "Umożliwia zarządzanie sprzedażą w wielu kanałach – stacjonarnych, online i mobilnych – w jednym systemie.",
+        benefits: [
+          "Umożliwia zarządzanie sprzedażą z jednego miejsca, bez konieczności korzystania z wielu niezależnych systemów",
+          "Zmniejsza błędy wynikające z niespójności danych pomiędzy kanałami sprzedaży",
+          "Ułatwia monitorowanie sprzedaży i wyników w czasie rzeczywistym"
+        ]
+      },
+      {
+        icon: <FaShoppingCart />,
+        title: "Obsługa wielokanałowa (omnichannel)",
+        description: "Zapewnia spójne doświadczenia zakupowe niezależnie od miejsca i sposobu dokonywania transakcji.",
+        benefits: [
+          "Klienci mogą kupować online i odbierać w sklepie stacjonarnym, co zwiększa wygodę zakupów",
+          "Spójne doświadczenie zakupowe buduje lojalność klientów i zwiększa ich satysfakcję",
+          "Sprzedawcy mogą śledzić interakcje klientów we wszystkich kanałach i dostosować strategię sprzedaży"
+        ]
+      },
+      {
+        icon: <FaUsers />,
+        title: "Personalizacja doświadczeń klientów",
+        description: "Wykorzystuje AI i analizę danych do dostosowania oferty oraz rekomendacji produktów na podstawie zachowań klientów.",
+        benefits: [
+          "Wykorzystuje sztuczną inteligencję do przewidywania preferencji klientów i sugerowania odpowiednich produktów",
+          "Segmentacja klientów pozwala na precyzyjne dostosowanie promocji i kampanii marketingowych",
+          "Dynamiczne rekomendacje zwiększają wartość koszyka zakupowego i poprawiają konwersję"
+        ]
+      },
+      {
+        icon: <FaBoxes />,
+        title: "Zarządzanie produktami i zapasami",
+        description: "Umożliwia synchronizację stanów magazynowych i automatyzację procesów logistycznych.",
+        benefits: [
+          "Synchronizacja stanów magazynowych eliminuje problem braków i nadmiarów towarów",
+          "Automatyzacja procesów logistycznych przyspiesza realizację zamówień i zmniejsza koszty operacyjne",
+          "Możliwość szybkiego wprowadzania zmian w katalogach produktowych poprawia elastyczność firmy"
+        ]
+      },
+      {
+        icon: <FaMicrosoft />,
+        title: "Integracja z innymi produktami Microsoft",
+        description: "Łączy się z Dynamics 365, Power BI, Azure AI, Microsoft Teams, ułatwiając analizę danych, współpracę i automatyzację procesów.",
+        benefits: [
+          "Microsoft Power BI – dostarcza zaawansowane raporty i analizy sprzedaży",
+          "Azure AI – wykorzystuje sztuczną inteligencję do analizy trendów i przewidywania zachowań klientów",
+          "Microsoft Teams – ułatwia współpracę między zespołami sprzedaży, marketingu i obsługi klienta",
+          "Dynamics 365 Supply Chain Management – zapewnia pełną kontrolę nad łańcuchem dostaw i magazynowaniem"
+        ]
+      }
+    ],
+    conclusion: {
+      description: "Dzięki tym funkcjom Microsoft Dynamics 365 Commerce pozwala firmom szybciej reagować na potrzeby rynku, lepiej zarządzać relacjami z klientami i zwiększać rentowność sprzedaży."
     }
-  ];
+  };
 
   const faqData = [
     {
       question: "Czym jest Microsoft Dynamics 365 Commerce?",
-      answer: "Microsoft Dynamics 365 Commerce to kompleksowa platforma do zarządzania handlem detalicznym, która łączy sprzedaż stacjonarną, online i mobilną. System umożliwia tworzenie spójnych, spersonalizowanych i skutecznych strategii handlowych, niezależnie od kanału sprzedaży. System pomaga w integracji sprzedaży online i offline, umożliwiając lepszą obsługę klientów oraz optymalizację operacji biznesowych. Dzięki zaawansowanym narzędziom analitycznym pozwala również przewidywać trendy i dostosowywać działania do dynamicznie zmieniającego się rynku."
+      answer: "Microsoft Dynamics 365 Commerce to zaawansowana platforma sprzedażowa, która pomaga firmom zwiększyć efektywność operacyjną i usprawnić zarządzanie procesami handlowymi. System zapewnia pełną integrację z produktami Microsoft, umożliwiając płynne zarządzanie wszystkimi aspektami sprzedaży i operacji biznesowych."
     },
     {
-      question: "Jakie są główne funkcje Dynamics 365 Commerce?",
-      answer: "Główne funkcje obejmują: zarządzanie sklepem internetowym, obsługę punktów sprzedaży (POS), zarządzanie zapasami, marketing i promocje, obsługę klienta, analitykę sprzedaży oraz integrację z systemami płatności."
+      question: "Jakie są główne korzyści z zintegrowanych rozwiązań sprzedażowych?",
+      answer: "Główne korzyści to: zarządzanie sprzedażą z jednego miejsca bez potrzeby wielu systemów, redukcja błędów wynikających z niespójności danych między kanałami oraz łatwe monitorowanie sprzedaży i wyników w czasie rzeczywistym."
     },
     {
-      question: "Jak system wspiera sprzedaż wielokanałową?",
-      answer: "Platforma zapewnia spójne doświadczenie zakupowe we wszystkich kanałach, synchronizację danych w czasie rzeczywistym, jednolity system zarządzania zamówieniami oraz zintegrowaną obsługę klienta."
+      question: "Jak działa obsługa wielokanałowa (omnichannel)?",
+      answer: "System umożliwia klientom płynne przechodzenie między kanałami sprzedaży - mogą kupować online i odbierać w sklepie stacjonarnym. Zapewnia spójne doświadczenie zakupowe, buduje lojalność klientów i pozwala sprzedawcom śledzić interakcje we wszystkich kanałach."
     },
     {
-      question: "Jakie są możliwości personalizacji?",
-      answer: "System oferuje zaawansowane narzędzia do personalizacji treści, rekomendacji produktów, promocji i ofert specjalnych w oparciu o zachowania klientów i dane analityczne."
+      question: "W jaki sposób system personalizuje doświadczenia klientów?",
+      answer: "System wykorzystuje sztuczną inteligencję do przewidywania preferencji klientów i sugerowania produktów. Umożliwia precyzyjną segmentację klientów, dostosowanie promocji i kampanii marketingowych oraz tworzenie dynamicznych rekomendacji."
     },
     {
-      question: "Jak działa system POS?",
-      answer: "System POS oferuje nowoczesne rozwiązania dla sprzedaży stacjonarnej, w tym obsługę transakcji, zarządzanie kasami, programy lojalnościowe, oraz integrację z urządzeniami peryferyjnymi."
+      question: "Jak wygląda zarządzanie produktami i zapasami?",
+      answer: "System zapewnia synchronizację stanów magazynowych w czasie rzeczywistym, automatyzację procesów logistycznych oraz szybkie wprowadzanie zmian w katalogach. Eliminuje problem braków i nadmiarów towarów, optymalizując koszty operacyjne."
     },
     {
-      question: "Jakie są możliwości zarządzania zapasami?",
-      answer: "Platforma umożliwia zarządzanie zapasami w czasie rzeczywistym, synchronizację stanów magazynowych między kanałami, automatyczne uzupełnianie zapasów oraz optymalizację dostępności produktów."
+      question: "Jakie są możliwości integracji z produktami Microsoft?",
+      answer: "System integruje się z Power BI (zaawansowane raporty), Azure AI (analiza trendów), Microsoft Teams (współpraca zespołowa) oraz Dynamics 365 Supply Chain Management (kontrola łańcucha dostaw), zapewniając kompleksowe rozwiązanie biznesowe."
     },
     {
-      question: "Jak system wspiera marketing i promocje?",
-      answer: "System oferuje narzędzia do zarządzania kampaniami marketingowymi, programami lojalnościowymi, promocjami i rabatami, z możliwością personalizacji ofert dla różnych segmentów klientów."
+      question: "Jakie są korzyści z zaawansowanej analityki biznesowej?",
+      answer: "System dostarcza szczegółowe raporty i analizy sprzedaży w czasie rzeczywistym, wykorzystuje AI do analizy trendów rynkowych i zachowań klientów, co pozwala na podejmowanie lepszych decyzji biznesowych."
     },
     {
-      question: "Jakie są możliwości analityczne?",
-      answer: "Dynamics 365 Commerce dostarcza zaawansowane narzędzia analityczne do śledzenia sprzedaży, zachowań klientów, efektywności promocji oraz wydajności kanałów sprzedaży."
-    },
-    {
-      question: "Jak wygląda integracja z innymi systemami?",
-      answer: "Platforma integruje się z innymi aplikacjami Microsoft Dynamics 365, systemami płatności, dostawcami logistycznymi oraz zewnętrznymi marketplace'ami."
-    },
-    {
-      question: "Czy system wspiera sprzedaż międzynarodową?",
-      answer: "Tak, platforma obsługuje sprzedaż międzynarodową, w tym wielojęzyczność, różne waluty, lokalne regulacje podatkowe oraz dostosowanie do specyfiki różnych rynków."
-    },
-    {
-      question: "Jak wygląda proces wdrożenia?",
-      answer: "Wdrożenie obejmuje konfigurację sklepu online, systemów POS, integrację z istniejącymi systemami, migrację danych, szkolenia pracowników oraz wsparcie techniczne."
-    },
-    {
-      question: "Czy dostępna jest wersja testowa?",
-      answer: "Tak, Microsoft oferuje wersję próbną Dynamics 365 Commerce, która pozwala na przetestowanie funkcjonalności przed podjęciem decyzji o wdrożeniu."
+      question: "Jak system wspiera automatyzację procesów?",
+      answer: "Automatyzacja obejmuje procesy związane z realizacją zamówień, logistyką i zwrotami. Przyspiesza to realizację zamówień i redukuje koszty operacyjne."
     }
   ];
 
@@ -371,16 +361,226 @@ Dzięki jednolitemu środowisku sprzedaży firmy mogą połączyć swoje sklepy 
           <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-12">
               <h2 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Dynamics 365 Commerce</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {features.map((feature, index) => (
-                  <Feature
-                    key={index}
-                    icon={feature.icon}
-                    number={index + 1}
-                    title={feature.title}
-                    description={feature.description}
-                  />
-                ))}
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold">{features.introduction.title}</h3>
+                  <p className="text-lg leading-relaxed">{features.introduction.description}</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {features.mainFeatures.map((feature, index) => (
+                    <div key={index} className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="text-3xl text-[#107c10] group-hover:scale-110 transition-transform duration-300">
+                          {feature.icon}
+                        </div>
+                        <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-[#107c10]">{feature.title}</h3>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">{feature.description}</p>
+                      <div className="space-y-2 mt-4">
+                        <h4 className="text-lg font-semibold">Korzyści:</h4>
+                        <ul className="list-disc pl-6 space-y-2">
+                          {feature.benefits.map((benefit, index) => (
+                            <li key={index}>{benefit}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-4">
+                  <p className="text-lg leading-relaxed">{features.conclusion.description}</p>
+                </div>
+
+                {/* Integrated Sales Solutions Section */}
+                <div className="bg-white rounded-lg shadow-lg p-8 mt-12">
+                  <h3 className="text-2xl font-bold text-[#107c10] mb-4">Zintegrowane rozwiązania sprzedażowe</h3>
+                  <p className="text-lg leading-relaxed mb-6">
+                    Microsoft Dynamics 365 Commerce łączy sprzedaż online i offline w jeden, spójny system, umożliwiając firmom efektywne zarządzanie wszystkimi kanałami sprzedaży. Dzięki temu klienci mogą korzystać z tych samych ofert, metod płatności i poziomu obsługi niezależnie od miejsca zakupu – w sklepie stacjonarnym, na stronie internetowej czy poprzez aplikację mobilną.
+                  </p>
+
+                  <div className="mb-8">
+                    <h4 className="text-xl font-semibold mb-4">Korzyści z integracji sprzedaży online i offline:</h4>
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                      <li>Zwiększenie efektywności operacyjnej – automatyzacja procesów sprzedażowych, synchronizacja zamówień i lepsza kontrola nad magazynem.</li>
+                      <li>Poprawa doświadczeń klientów – możliwość składania zamówień online i odbioru w sklepie, spójne promocje we wszystkich kanałach sprzedaży.</li>
+                      <li>Lepsza analiza i zarządzanie danymi – pełny wgląd w zachowania klientów i wyniki sprzedażowe, co ułatwia podejmowanie trafnych decyzji biznesowych.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold mb-4">Przykłady zastosowania zintegrowanych rozwiązań sprzedażowych</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaShoppingCart className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Click & Collect</h5>
+                        </div>
+                        <p className="text-gray-700">Klient zamawia produkt na stronie internetowej i odbiera go w najbliższym sklepie stacjonarnym. Sprzedawca otrzymuje powiadomienie o zamówieniu i może przygotować je do wydania, zapewniając szybką i wygodną realizację.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaBoxes className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Unified Inventory Management</h5>
+                        </div>
+                        <p className="text-gray-700">Dane o stanach magazynowych są automatycznie synchronizowane między e-commerce, magazynami i sklepami fizycznymi, co minimalizuje ryzyko sprzedaży produktów, których faktycznie brak na stanie.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaUsers className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Personalizowane doświadczenia zakupowe</h5>
+                        </div>
+                        <p className="text-gray-700">Klient przegląda ofertę online, dodaje produkty do koszyka, ale nie finalizuje zakupu. Dzięki integracji danych sprzedawca w sklepie stacjonarnym może zaoferować mu te same produkty z dodatkowym rabatem, co zwiększa szanse na finalizację transakcji.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaChartLine className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Spójna polityka rabatowa</h5>
+                        </div>
+                        <p className="text-gray-700">Promocje i oferty specjalne obowiązują zarówno w sklepach stacjonarnych, jak i online, co daje klientom większą elastyczność i zachęca do zakupów w preferowanym kanale.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-lg leading-relaxed mt-8">
+                    Integracja sprzedaży online i offline w ramach Microsoft Dynamics 365 Commerce eliminuje silosy danych, usprawnia procesy operacyjne i podnosi jakość obsługi klientów, co przekłada się na wyższą sprzedaż i lojalność konsumentów.
+                  </p>
+                </div>
+
+                {/* Multichannel Support Section */}
+                <div className="bg-white rounded-lg shadow-lg p-8 mt-12">
+                  <h3 className="text-2xl font-bold text-[#107c10] mb-4">Obsługa wielokanałowa</h3>
+                  <p className="text-lg leading-relaxed mb-6">
+                    Microsoft Dynamics 365 Commerce zapewnia kompleksową obsługę wielokanałową, umożliwiając klientom interakcję z marką w sposób płynny i spójny – bez względu na to, czy kupują w sklepie stacjonarnym, online, przez aplikację mobilną, czy na marketplace'ach. Dzięki temu firmy mogą dostarczać klientom spójne doświadczenia zakupowe, eliminując bariery pomiędzy różnymi kanałami sprzedaży i obsługi.
+                  </p>
+
+                  <div className="mb-8">
+                    <h4 className="text-xl font-semibold mb-4">Znaczenie obsługi wielokanałowej:</h4>
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                      <li>Poprawa doświadczeń klientów – klienci mogą rozpocząć zakupy w jednym kanale i dokończyć je w innym bez utraty kontekstu.</li>
+                      <li>Większa elastyczność sprzedaży – umożliwia firmom dostosowanie się do preferencji klientów i dynamicznych zmian rynkowych.</li>
+                      <li>Lepsza spójność danych – centralne zarządzanie zamówieniami, produktami i danymi klientów pozwala uniknąć niespójności w ofertach i dostępności towarów.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold mb-4">Przykłady zastosowania obsługi wielokanałowej w różnych branżach</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaStore className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Handel detaliczny (Retail)</h5>
+                        </div>
+                        <p className="text-gray-700">Klient przegląda ofertę na stronie internetowej, zamawia produkt i odbiera go w najbliższym sklepie stacjonarnym. W przypadku braku towaru na miejscu może skorzystać z usługi dostawy do domu, realizowanej z innej lokalizacji.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaTshirt className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Branża modowa</h5>
+                        </div>
+                        <p className="text-gray-700">Klient korzysta z aplikacji mobilnej, aby sprawdzić dostępność wybranego rozmiaru w najbliższym sklepie. Po zakupie w sklepie stacjonarnym system automatycznie aktualizuje historię zamówień w jego profilu, co pozwala na późniejsze spersonalizowane rekomendacje online.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaLaptop className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Elektronika i AGD</h5>
+                        </div>
+                        <p className="text-gray-700">Kupujący dokonuje zakupu telewizora online, ale decyduje się na odbiór w salonie, aby skorzystać z usługi montażu i konfiguracji. Pracownik sklepu ma dostęp do szczegółów zamówienia i może zaproponować dodatkowe akcesoria.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaBuilding className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Branża B2B</h5>
+                        </div>
+                        <p className="text-gray-700">Firma zamawia materiały eksploatacyjne dla swojego zakładu produkcyjnego przez platformę e-commerce, ale finalizuje negocjacje cenowe i warunki dostawy podczas wideokonferencji z przedstawicielem handlowym.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-lg leading-relaxed mt-8">
+                    Obsługa wielokanałowa w Microsoft Dynamics 365 Commerce eliminuje bariery między kanałami sprzedaży i obsługi klienta, zapewniając płynne, zintegrowane doświadczenie zakupowe, które zwiększa lojalność klientów i poprawia wyniki sprzedażowe.
+                  </p>
+                </div>
+
+                {/* Customer Experience Personalization Section */}
+                <div className="bg-white rounded-lg shadow-lg p-8 mt-12">
+                  <h3 className="text-2xl font-bold text-[#107c10] mb-4">Personalizacja doświadczeń klientów</h3>
+                  <p className="text-lg leading-relaxed mb-6">
+                    Microsoft Dynamics 365 Commerce personalizuje doświadczenia klientów, dostosowując ofertę, rekomendacje i komunikację do ich indywidualnych preferencji i zachowań zakupowych. Wykorzystuje do tego sztuczną inteligencję (AI) oraz Microsoft Copilot, które analizują dane o klientach w czasie rzeczywistym i automatycznie dostosowują interakcje w różnych kanałach sprzedaży. Dzięki temu firmy mogą zwiększyć zaangażowanie klientów, poprawić ich satysfakcję i zwiększyć konwersję sprzedaży.
+                  </p>
+
+                  <div className="mb-8">
+                    <h4 className="text-xl font-semibold mb-4">Korzyści wynikające z personalizacji</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaBullseye className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Indywidualne rekomendacje produktów</h5>
+                        </div>
+                        <p className="text-gray-700">System analizuje historię zakupów i preferencje klientów, proponując dopasowane produkty i usługi, co zwiększa szanse na finalizację transakcji.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaChartLine className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Dynamiczne oferty i promocje</h5>
+                        </div>
+                        <p className="text-gray-700">Personalizowane rabaty i kampanie promocyjne dostosowane do segmentów klientów zwiększają skuteczność sprzedaży i lojalność klientów.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaComments className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Spójna komunikacja</h5>
+                        </div>
+                        <p className="text-gray-700">Niezależnie od tego, czy klient korzysta ze sklepu online, aplikacji mobilnej czy kontaktuje się z obsługą, system zapewnia jednolite i kontekstowe doświadczenie.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaRobot className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Zautomatyzowana obsługa klienta</h5>
+                        </div>
+                        <p className="text-gray-700">Dzięki Microsoft Copilot system może automatycznie odpowiadać na pytania klientów, sugerować produkty oraz pomagać w procesie zakupowym, zwiększając efektywność obsługi.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaUserFriends className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Lepsza segmentacja klientów</h5>
+                        </div>
+                        <p className="text-gray-700">AI analizuje dane w czasie rzeczywistym, identyfikując wzorce zachowań i tworząc segmenty klientów, do których można kierować spersonalizowane kampanie marketingowe.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold mb-4">Narzędzia wspierające personalizację</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaRobot className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">AI w Dynamics 365 Commerce</h5>
+                        </div>
+                        <p className="text-gray-700">Analizuje dane klientów, przewiduje ich potrzeby i dostosowuje ofertę do ich oczekiwań.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaMicrosoft className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Microsoft Copilot</h5>
+                        </div>
+                        <p className="text-gray-700">Automatyzuje obsługę klienta, sugeruje produkty oraz wspiera sprzedawców w dostarczaniu spersonalizowanych rekomendacji.</p>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <div className="flex items-center gap-3 mb-3">
+                          <FaChartLine className="text-2xl text-[#107c10]" />
+                          <h5 className="text-lg font-semibold text-[#107c10]">Power BI</h5>
+                        </div>
+                        <p className="text-gray-700">Dostarcza zaawansowane analizy zachowań klientów, umożliwiając lepsze dopasowanie strategii sprzedażowej.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-lg leading-relaxed mt-8">
+                    Personalizacja w Microsoft Dynamics 365 Commerce pozwala budować trwałe relacje z klientami, zwiększać ich lojalność oraz maksymalizować przychody dzięki precyzyjnie dopasowanym ofertom i rekomendacjom.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
