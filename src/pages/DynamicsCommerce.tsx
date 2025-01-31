@@ -360,10 +360,10 @@ Dzięki jednolitemu środowisku sprzedaży firmy mogą połączyć swoje sklepy 
 
           <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-12">
-              <h2 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Dynamics 365 Commerce</h2>
+              <h2 className="text-3xl font-bold text-center mb-8">Funkcje, które wyróżniają Microsoft Dynamics 365 Commerce</h2>
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">{features.introduction.title}</h3>
+                  
                   <p className="text-lg leading-relaxed">{features.introduction.description}</p>
                 </div>
 
