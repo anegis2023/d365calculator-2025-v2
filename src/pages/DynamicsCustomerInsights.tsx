@@ -3,7 +3,10 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaChartPie, FaUsers, FaRobot, FaChartBar, FaDatabase, FaLock, FaUserPlus, FaRoute, FaMicrosoft } from 'react-icons/fa';
+import { FaHeadset, FaUser, FaCogs, FaRobot, FaBook, FaMicrosoft, FaTicketAlt, 
+         FaComments, FaUserCog, FaChartLine, FaTools, FaEnvelope, FaPhone, 
+         FaCommentDots, FaHashtag, FaSms, FaUserCircle, FaBrain, FaDatabase, 
+         FaChartBar, FaShieldAlt, FaUsers, FaRegClock, FaUserFriends, FaUserPlus, FaRoute } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -35,13 +38,13 @@ const Tab: React.FC<{
 }> = ({ label, isActive, onClick }) => (
   <button
     onClick={onClick}
-    className={`px-6 py-3 font-medium ${
-      isActive
-        ? 'border-b-2 border-[#107c10] text-[#107c10]'
-        : 'text-gray-500'
+    className={`px-6 py-3 font-medium text-lg border-b-2 transition-colors duration-300 ${
+      isActive 
+        ? 'border-[#107c10] text-[#107c10]' 
+        : 'border-transparent text-gray-500 hover:text-[#107c10]'
     }`}
   >
-    {label}
+    <h2 className="text-inherit font-inherit m-0">{label}</h2>
   </button>
 );
 
@@ -202,7 +205,7 @@ export default function DynamicsCustomerInsights() {
         {/* Tabs Navigation */}
         <div className="flex justify-center mb-8 border-b">
           <Tab
-            label="Przegląd"
+            label="Microsoft Dynamics 365 Customer Insights "
             isActive={activeTab === 'overview'}
             onClick={() => setActiveTab('overview')}
           />
@@ -226,7 +229,10 @@ export default function DynamicsCustomerInsights() {
                 <div className={`flex flex-col ${hasModules ? '' : 'lg:flex-row'} gap-8 items-start`}>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
                     <p className="text-lg leading-relaxed">
-                    Budowanie trwałych relacji z klientami wymaga zrozumienia ich potrzeb i preferencji. Współczesne organizacje poszukują narzędzi, które umożliwią im integrację danych z różnych źródeł, analizę zachowań oraz personalizację działań. Takim rozwiązaniem jest Microsoft Dynamics 365 Customer Insights – zaawansowana platforma, która rewolucjonizuje sposób, w jaki firmy zarządzają danymi klientów i budują z nimi relacje.
+                    Microsoft Dynamics 365 Customer Insights to zaawansowana platforma danych klientów (Customer Data Platform, CDP), zaprojektowana przez Microsoft w celu integracji i analizy danych klientów w czasie rzeczywistym. Rozwiązanie to umożliwia firmom tworzenie pełnego profilu klienta, łącząc dane z różnych źródeł i dostarczając wartościowych insightów, które pomagają w personalizacji interakcji oraz optymalizacji strategii biznesowych.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                    W dobie cyfrowej transformacji organizacje gromadzą ogromne ilości danych pochodzących z różnych systemów – od CRM i ERP, przez platformy e-commerce, po interakcje w mediach społecznościowych. Microsoft Dynamics 365 Customer Insights pozwala przekształcić te rozproszone informacje w kompleksowy widok klienta, który pomaga firmom podejmować bardziej świadome decyzje i zwiększać poziom zaangażowania użytkowników.
                     </p>
                   </div>
                   <div className={hasModules ? 'w-full' : 'lg:w-1/2 w-full'}>
@@ -245,52 +251,75 @@ export default function DynamicsCustomerInsights() {
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Kluczowe wyzwania w zarządzaniu relacjami z klientami</h2>
-                <p className="mb-4">
-                  Zanim przejdziemy do omówienia funkcji Dynamics 365 Customer Insights, warto zrozumieć wyzwania, które stoją przed firmami:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Dane klientów są rozproszone w różnych systemach, co utrudnia ich analizę.</li>
-                  <li>Brak pełnego obrazu klienta ogranicza możliwości personalizacji działań.</li>
-                  <li>Skomplikowane procesy analityczne wymagają dużo czasu i zasobów.</li>
-                  <li>Trudności w dostarczaniu spersonalizowanych doświadczeń w czasie rzeczywistym.</li>
-                </ul>
-                <p className="mt-4">
-                  Dynamics 365 Customer Insights oferuje rozwiązania pozwalające na pokonanie tych przeszkód.
-                </p>
-              </div>
+                <h2 className="text-2xl font-bold">Kluczowe funkcje</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaDatabase className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Integracja danych z różnych źródeł</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Możliwość łączenia informacji z systemów CRM, ERP, stron internetowych, aplikacji mobilnych, mediów społecznościowych oraz zewnętrznych baz danych w celu stworzenia jednego, spójnego profilu klienta.
+                    </p>
+                  </div>
 
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Korzyści dla organizacji</h2>
-                <div className="grid md:grid-cols-2 gap-6">
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">1. Lepsze zrozumienie klientów</h3>
+                    <div className="flex items-center mb-4">
+                      <FaRegClock className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Wgląd w czasie rzeczywistym</h3>
+                    </div>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
-                      Dzięki ujednoliceniu danych organizacje zyskują pełny obraz klientów, co pozwala na lepsze dostosowanie oferty i komunikacji.
+                      System przetwarza dane w trybie ciągłym, umożliwiając szybkie reagowanie na zmieniające się potrzeby klientów i dostarczanie spersonalizowanych doświadczeń.
                     </p>
                   </div>
+
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">2. Personalizacja działań marketingowych</h3>
+                    <div className="flex items-center mb-4">
+                      <FaUserFriends className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Segmentacja i personalizacja</h3>
+                    </div>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
-                      System umożliwia tworzenie precyzyjnie dopasowanych kampanii marketingowych, co zwiększa ich skuteczność.
+                      Dzięki zaawansowanym algorytmom AI i uczeniu maszynowemu, organizacje mogą tworzyć dynamiczne segmenty klientów, dostosowując oferty i komunikację do ich indywidualnych preferencji oraz zachowań zakupowych.
                     </p>
                   </div>
+
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">3. Zwiększenie efektywności sprzedaży</h3>
+                    <div className="flex items-center mb-4">
+                      <FaBrain className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Analiza predykcyjna i rekomendacje</h3>
+                    </div>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
-                      Zespoły sprzedaży mają dostęp do aktualnych informacji o klientach, co pozwala na bardziej trafne działania i szybsze zamykanie transakcji.
+                      Platforma wykorzystuje sztuczną inteligencję do przewidywania zachowań klientów, takich jak prawdopodobieństwo zakupu, skłonność do rezygnacji z usług czy preferowane kanały komunikacji.
                     </p>
                   </div>
+
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">4. Szybsze podejmowanie decyzji</h3>
+                    <div className="flex items-center mb-4">
+                      <FaChartBar className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Zaawansowane pulpity analityczne</h3>
+                    </div>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
-                      Zaawansowana analityka i prognozy wspierają menedżerów w podejmowaniu decyzji opartych na danych.
+                      Użytkownicy mogą korzystać z interaktywnych paneli do wizualizacji danych, a integracja z Microsoft Power BI umożliwia jeszcze bardziej szczegółową analizę i raportowanie.
                     </p>
                   </div>
+
                   <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-semibold mb-3 transition-colors duration-300 group-hover:text-[#107c10]">5. Skalowalność i elastyczność</h3>
+                    <div className="flex items-center mb-4">
+                      <FaShieldAlt className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Zarządzanie zgodnością z przepisami</h3>
+                    </div>
                     <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
-                      System można łatwo dostosować do specyficznych potrzeb firmy, zarówno w małych, jak i dużych organizacjach.
+                      Narzędzia zapewniają zgodność z międzynarodowymi regulacjami dotyczącymi ochrony danych, takimi jak GDPR, CCPA i inne przepisy dotyczące prywatności.
+                    </p>
+                  </div>
+
+                  <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                    <div className="flex items-center mb-4">
+                      <FaMicrosoft className="text-2xl text-[#107c10] mr-3" />
+                      <h3 className="text-xl font-semibold">Integracja z innymi aplikacjami Microsoft</h3>
+                    </div>
+                    <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      Możliwość rozszerzenia funkcjonalności dzięki integracji z Microsoft Dynamics 365, Power Apps, Power Automate i Azure AI, co pozwala na automatyzację procesów i jeszcze lepszą analizę danych.
                     </p>
                   </div>
                 </div>
