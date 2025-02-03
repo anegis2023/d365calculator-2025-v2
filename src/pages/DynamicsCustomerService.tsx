@@ -3,7 +3,7 @@ import { MetaTags } from '../components/SEO/MetaTags';
 import { Navbar } from '../components/Navbar';
 import { DynamicsHeroSection } from '../components/DynamicsHeroSection';
 import { DynamicsPageLayout } from '../components/DynamicsPageLayout';
-import { FaHeadset, FaUser, FaCogs, FaRobot, FaBook, FaMicrosoft, FaTicketAlt, FaComments, FaUserCog, FaChartLine, FaTools, FaEnvelope, FaPhone, FaCommentDots, FaHashtag, FaSms, FaUserCircle } from 'react-icons/fa';
+import { FaHeadset, FaUser, FaCogs, FaRobot, FaBook, FaMicrosoft, FaTicketAlt, FaComments, FaUserCog, FaChartLine, FaTools, FaEnvelope, FaPhone, FaCommentDots, FaHashtag, FaSms, FaUserCircle, FaBrain, FaClock, FaBullseye, FaHistory, FaSearch, FaCheckCircle, FaLevelUpAlt, FaListAlt } from 'react-icons/fa';
 import { useModuleBasket } from '../context/ModuleBasketContext';
 import { modules } from '../data/modules';
 
@@ -87,34 +87,39 @@ export default function DynamicsCustomerService() {
 
   const features = [
     {
-      icon: <FaHeadset />,
-      title: "Zarządzanie wieloma kanałami komunikacji",
-      description: "System integruje różne kanały, takie jak e-mail, czat, media społecznościowe czy telefon, umożliwiając klientom wybór najwygodniejszego sposobu kontaktu."
+      icon: <FaRobot />,
+      title: "Wsparcie AI, w tym Copilot",
+      description: "Sztuczna inteligencja wspomaga agentów w analizie zgłoszeń, sugerowaniu odpowiedzi oraz automatycznym klasyfikowaniu spraw."
     },
     {
-      icon: <FaUser />,
-      title: "Pełny widok klienta",
-      description: "Dynamics 365 Customer Service konsoliduje dane z różnych źródeł, tworząc kompleksowy profil klienta, który jest dostępny dla pracowników obsługi w czasie rzeczywistym."
+      icon: <FaTicketAlt />,
+      title: "Zarządzanie przypadkami",
+      description: "Umożliwia skuteczne śledzenie i obsługę zgłoszeń klientów, zapewniając pełną historię interakcji i szybkie rozwiązywanie problemów."
     },
     {
       icon: <FaCogs />,
-      title: "Automatyzacja procesów obsługi",
-      description: "System wspiera automatyzację rutynowych zadań, takich jak przypisywanie zgłoszeń czy generowanie odpowiedzi, co pozwala pracownikom skupić się na bardziej złożonych problemach."
+      title: "Automatyzacja procesów",
+      description: "Redukuje manualne zadania dzięki regułom biznesowym, przepływom pracy i botom obsługowym, które automatycznie przetwarzają zgłoszenia."
     },
     {
-      icon: <FaRobot />,
-      title: "Wykorzystanie sztucznej inteligencji (AI)",
-      description: "Platforma wykorzystuje AI do analizy zgłoszeń, przewidywania problemów klientów oraz sugerowania najlepszych rozwiązan."
+      icon: <FaComments />,
+      title: "Wielokanałowa obsługa",
+      description: "Integracja z e-mailem, telefonem, czatem na żywo i mediami społecznościowymi pozwala klientom kontaktować się w preferowany sposób."
     },
     {
       icon: <FaBook />,
       title: "Baza wiedzy",
-      description: "Dynamics 365 Customer Service umożliwia tworzenie i zarządzanie bazą wiedzy, co pozwala klientom na samodzielne znajdowanie odpowiedzi na pytania."
+      description: "Dostęp do artykułów i przewodników umożliwia agentom szybkie znajdowanie rozwiązań i poprawia efektywność obsługi."
     },
     {
       icon: <FaMicrosoft />,
-      title: "Integracja z ekosystemem Microsoft",
-      description: "Pełna integracja z narzędziami, takimi jak Teams, Outlook czy Power BI, umożliwia efektywną współpracę między zespołami oraz zaawansowaną analizę danych."
+      title: "Integracja z narzędziami Microsoft",
+      description: "Ścisłe połączenie z Microsoft Teams, Power BI i Power Apps usprawnia współpracę, analizę danych i tworzenie niestandardowych rozwiązań."
+    },
+    {
+      icon: <FaChartLine />,
+      title: "Zaawansowana analityka i raportowanie",
+      description: "Monitorowanie kluczowych wskaźników efektywności (KPI) pozwala na optymalizację procesów i zwiększenie jakości obsługi."
     }
   ];
 
@@ -306,7 +311,7 @@ Rozwiązanie jest skalowalne, co oznacza, że mogą z niego korzystać zarówno 
                   </div>
                 </div>
                 
-                <p className="text-lg leading-relaxed text-left">
+                <p className="text-lg leading-relaxed">
                   Dzięki tym funkcjom firmy mogą efektywnie zarządzać interakcjami z klientami, minimalizować czas reakcji oraz podnosić jakość świadczonych usług, co przekłada się na wyższą lojalność i zadowolenie klientów.
                 </p>
               </div>
@@ -469,7 +474,12 @@ Rozwiązanie jest skalowalne, co oznacza, że mogą z niego korzystać zarówno 
 
           <div className={`tab-content ${activeTab === 'features' ? 'block' : 'hidden sm:hidden'}`} role="tabpanel" aria-labelledby="features-tab">
             <div className="space-y-12">
-              <h2 className="text-3xl font-bold text-left mb-8">Funkcje, które wyróżniają Dynamics 365 Customer Service</h2>
+              <div>
+                <h2 className="text-3xl font-bold text-left mb-6">Funkcje, które wyróżniają Dynamics 365 Customer Service</h2>
+                <p className="text-lg leading-relaxed mb-8">
+                  Microsoft Dynamics 365 Customer Service oferuje szeroki zakres funkcji, które wspierają firmy w efektywnym zarządzaniu obsługą klienta. Dzięki zaawansowanej automatyzacji, wsparciu AI i inteligentnemu zarządzaniu przypadkami, organizacje mogą szybciej rozwiązywać zgłoszenia i dostarczać spersonalizowane doświadczenia.
+                </p>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
                   <Feature
@@ -480,6 +490,192 @@ Rozwiązanie jest skalowalne, co oznacza, że mogą z niego korzystać zarówno 
                     description={feature.description}
                   />
                 ))}
+              </div>
+
+              <div className="space-y-6 mt-12">
+                <h2 className="text-2xl font-bold">Wsparcie AI i Copilot</h2>
+                <p className="text-lg leading-relaxed">
+                  Microsoft Dynamics 365 Customer Service wykorzystuje zaawansowane AI, aby zwiększyć efektywność obsługi klienta i przyspieszyć rozwiązywanie problemów. Dzięki inteligentnym algorytmom i analizie danych w czasie rzeczywistym, system potrafi automatycznie klasyfikować zgłoszenia, sugerować rozwiązania oraz wspierać agentów w podejmowaniu decyzji.
+                </p>
+                
+                <p className="text-lg leading-relaxed">
+                  Kluczowym elementem tej technologii jest Copilot, który pełni rolę wirtualnego asystenta dla zespołów obsługi klienta. Copilot analizuje treść zgłoszeń i dostarcza agentom inteligentne podpowiedzi, przyspieszając odpowiedzi na zapytania klientów. Może również sugerować najlepsze rozwiązania na podstawie wcześniejszych przypadków, co znacząco redukuje czas potrzebny na znalezienie optymalnej odpowiedzi.
+                </p>
+
+                <div className="mt-8">
+                  <h3 className="text-xl font-semibold mb-4">Dzięki wsparciu AI i Copilot, firmy mogą:</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaBrain className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Automatyczna diagnostyka</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Automatycznie diagnozować problemy klientów, identyfikując powtarzające się wzorce w zgłoszeniach.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaClock className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Szybsza obsługa</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Skracać czas obsługi zgłoszeń, dostarczając agentom gotowe odpowiedzi i rekomendacje.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaBullseye className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Większa dokładność</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Zwiększać dokładność odpowiedzi, wykorzystując analizę danych i historię interakcji.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaUserCog className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Personalizacja</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Personalizować obsługę klienta, dostosowując komunikację do indywidualnych potrzeb użytkowników.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-lg leading-relaxed mt-8">
+                  Dzięki wykorzystaniu sztucznej inteligencji i Copilot, Microsoft Dynamics 365 Customer Service pomaga firmom nie tylko przyspieszyć obsługę klientów, ale także zwiększyć satysfakcję użytkowników, oferując bardziej precyzyjne i spersonalizowane wsparcie.
+                </p>
+              </div>
+
+              <div className="space-y-6 mt-12">
+                <h2 className="text-2xl font-bold">Zarządzanie przypadkami</h2>
+                <p className="text-lg leading-relaxed">
+                  Microsoft Dynamics 365 Customer Service oferuje kompleksowy system zarządzania przypadkami, który umożliwia firmom skuteczne monitorowanie, organizowanie i rozwiązywanie zgłoszeń klientów. Każda interakcja jest rejestrowana i śledzona, co pozwala na szybkie reagowanie i zapewnienie spójnej obsługi na każdym etapie kontaktu.
+                </p>
+
+                <div className="mt-8">
+                  <h3 className="text-xl font-semibold mb-4">Proces zarządzania przypadkami:</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaTicketAlt className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Rejestracja zgłoszenia</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Automatyczne lub ręczne tworzenie nowego przypadku na podstawie zgłoszenia klienta, niezależnie od wybranego kanału komunikacji.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaHistory className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Śledzenie interakcji</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Każda wiadomość, rozmowa telefoniczna, czat czy e-mail jest rejestrowany, umożliwiając pełną historię kontaktu w jednym miejscu.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaUserCog className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Przypisywanie do agenta</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Inteligentne algorytmy przypisują przypadek do najlepiej dopasowanego pracownika na podstawie jego kompetencji i obciążenia.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaSearch className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Analiza i diagnostyka</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Copilot i AI sugerują rozwiązania na podstawie poprzednich przypadków i dostępnej bazy wiedzy.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaCheckCircle className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Rozwiązanie sprawy</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Agent podejmuje działania, konsultując się z zespołem lub wykorzystując automatyczne przepływy pracy.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaChartLine className="text-2xl text-[#107c10] mr-3" />
+                        <h4 className="text-lg font-semibold">Monitorowanie i raportowanie</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Śledzenie statusu przypadków, analiza wydajności obsługi oraz generowanie raportów z wykorzystaniem Power BI.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-lg leading-relaxed mt-8">
+                  Dzięki możliwości śledzenia i rejestrowania interakcji, firmy mogą zachować pełną historię obsługi klientów, co ułatwia analizę problemów, szybsze rozwiązywanie zgłoszeń i zapewnienie spójnego poziomu obsługi.
+                </p>
+              </div>
+
+              <div className="space-y-6 mt-12">
+                <h2 className="text-2xl font-bold">Automatyzacja procesów</h2>
+                <p className="text-lg leading-relaxed">
+                  Microsoft Dynamics 365 Customer Service wykorzystuje zaawansowaną automatyzację procesów, aby usprawnić obsługę klienta, eliminując manualne zadania i zwiększając efektywność zespołów wsparcia. Dzięki temu agenci mogą skupić się na bardziej złożonych problemach, a rutynowe operacje są realizowane przez system w tle.
+                </p>
+
+                <p className="text-lg leading-relaxed">
+                  Kluczowym elementem jest automatyzacja zadań, która umożliwia szybkie i bezbłędne wykonywanie powtarzalnych operacji, takich jak przypisywanie zgłoszeń, wysyłanie powiadomień czy eskalacja spraw. System analizuje treść zgłoszenia i na podstawie reguł biznesowych automatycznie kieruje je do odpowiedniego działu lub agenta, redukując czas reakcji i poprawiając organizację pracy.
+                </p>
+
+                <div className="mt-8">
+                  <h3 className="text-xl font-semibold mb-4">Automatyzacja przepływów pracy:</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaEnvelope className="text-2xl text-[#107c10] mr-3" />
+                      <h4 className="text-lg font-semibold">Automatyczne powiadomienia</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Automatyczne wysyłanie e-maili z potwierdzeniem zgłoszenia lub statusem sprawy.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaLevelUpAlt className="text-2xl text-[#107c10] mr-3" />
+                      <h4 className="text-lg font-semibold">Eskalacja zgłoszeń</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Eskalacja zgłoszenia do wyższego poziomu wsparcia po przekroczeniu określonego czasu odpowiedzi.
+                      </p>
+                    </div>
+
+                    <div className="group bg-white p-6 rounded-lg shadow transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-gradient-to-br from-white to-gray-50">
+                      <div className="flex items-center mb-4">
+                        <FaListAlt className="text-2xl text-[#107c10] mr-3" />
+                      <h4 className="text-lg font-semibold">Generowanie zadań</h4>
+                      </div>
+                      <p className="text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                        Generowanie zadań dla agentów na podstawie priorytetu zgłoszenia.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-lg leading-relaxed mt-8">
+                  Dzięki inteligentnej automatyzacji zadań i przepływów pracy, Microsoft Dynamics 365 Customer Service pozwala firmom skrócić czas obsługi, zwiększyć dokładność procesów i podnieść jakość świadczonych usług, co przekłada się na wyższą satysfakcję klientów.
+                </p>
               </div>
             </div>
           </div>
